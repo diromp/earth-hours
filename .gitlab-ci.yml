@@ -1,0 +1,85 @@
+variables:
+  PHP_VERSION: php-fpm-8
+
+stages:
+  - deploy
+  # - install_node_package
+  # - build_frontend
+
+deploy_to_staging:
+  stage: deploy
+  environment:
+    name: staging
+    url: https://earthhour2024.staging.catalyze.id/
+  script:
+    - mkdir -p /projects/$CI_PROJECT_NAME
+    - git --work-tree=/projects/$CI_PROJECT_NAME checkout -f
+    # - cat $ENV_STAGING > /projects/$CI_PROJECT_NAME/.env
+  only:
+    - staging
+  tags:
+    - staging-runner
+
+# update_node_package:
+#   stage: install_dependencies
+#   script:
+#     - docker exec $PHP_VERSION npm --prefix /projects/$CI_PROJECT_NAME ci
+#   only:
+#     refs:
+#       - staging
+#     changes:
+#       - package-lock.json
+#       - package.json
+#   tags:
+#     - staging-runner
+
+# compile_frontend_assets:
+#   stage: build_frontend
+#   script:
+#     - docker exec $PHP_VERSION npm --prefix /projects/$CI_PROJECT_NAME run production
+#   only:
+#     refs:
+#       - staging
+#   tags:
+#     - staging-runner
+
+
+
+### Production Stage ###
+
+# deploy_to_production:
+#   stage: deploy
+#   environment:
+#     name: production
+#     url: https://earthhour2024.com/
+#   script:
+#     - git --work-tree=$ROOT_FOLDER_PRODUCTION checkout -f
+#     - cat $ENV_PRODUCTION > $ROOT_FOLDER_PRODUCTION/.env
+#   only:
+#     - main
+#   tags:
+#     - earth-hour
+
+
+# update_node_package_production:
+#   stage: install_dependencies
+#   script:
+#     - npm --prefix $ROOT_FOLDER_PRODUCTION install --legacy-peer-deps
+#   only:
+#     refs:
+#       - main
+#     changes:
+#       - package-lock.json
+#       - package.json
+#   tags:
+#     - earth-hour
+
+# compile_frontend_assets_production:
+#   stage: build_frontend
+#   script:
+#     - npm --prefix $ROOT_FOLDER_PRODUCTION run production
+#   only:
+#     refs:
+#       - main
+#   tags:
+#     - earth-hour
