@@ -3,7 +3,6 @@
         position: relative;
         width: 328px !important;
         height: 28px;
-
         .select2-selection {
             border: 0px;
             background-color: transparent;
@@ -40,28 +39,69 @@
 }
 
 .select2-dropdown {
+    border-radius: 8px !important;
+    top: 40px !important;
+    background: #313131;
+    box-shadow: 0px 3px 35px 0px rgba(0, 0, 0, 0.50);
+    border: 0px !important;
+
     .select2-search--dropdown {
+        background: #313131;
+        padding: 12px 10px;
+        border-top-right-radius: 7px;
+        border-top-left-radius: 7px;
         input {
             border: 0px !important;
-            border-radius: 8px;
             outline: 0 !important;
+            padding: 0px !important;
+            background: #313131;
+            font-family: Poppins;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            color: #fff;
+            line-height: 28px;
         }
     }
     .select2-results {
+        background: #313131;
+        .select2-results__options{
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            .select2-results__option--selected, .select2-results__option--highlighted {
+                background: linear-gradient(90deg, rgba(160, 223, 158, 0.20) 12.41%, rgba(69, 135, 194, 0.20) 89.87%);
+            }
+            .select2-results__message {
+                font-family: 'Poppins';
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px; 
+                color: #fff;
+            }
+            .select2-results__option {
+                
+                padding: 12px 8px;
+                &:last-child {
+                    border-bottom-left-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                }
+            }
+        }
         .item-select {
             display: flex;
             align-items: center;
             svg {
                 margin-right: 8px;
-                color: rgba(0, 0, 0, 0.9);
+                color: #fff;
             }
             &__title {
-                color: rgba(0, 0, 0, 0.9);
-                font-family: "Poppins";
-                font-size: 18px;
+                font-family: 'Poppins';
+                font-size: 14px;
                 font-style: normal;
-                font-weight: 700;
-                line-height: 28px;
+                font-weight: 400;
+                line-height: 28px; 
+                color: #fff;
             }
         }
     }

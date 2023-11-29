@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    var slider = $('.new-card');
+    var slider = $('#slide-discovery');
+    var savedSlider = $('#savedSlider');
     var sliderQuestions = $('.question-slide');
     var container = $('.section-discovery');
     var containerQuestions = $('.section-question');
@@ -104,6 +105,59 @@ $(document).ready(function () {
         ]
     });
 
+    savedSlider.slick({
+        dots: false,
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: false,
+        vertical: true,
+        verticalSwiping: true,
+        centerMode: true,
+        appendArrows: container.find('.arrows-2'),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    centerPadding: '0px',
+
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    centerMode: false,
+                    centerPadding: '0px',
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    centerPadding: '0px',
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    variableWidth: true,
+                }
+            }
+        ]
+    });
+
 
     sliderQuestions.slick({
         dots: false,
@@ -158,14 +212,46 @@ $(document).ready(function () {
     function expandSeeMore() {
         seeMore.append(`  <img src="./public/img/ic-plus.svg"><span>See More</span>`);
     }
-
     expandSeeMore();
+
+    var fullWidth = $('.section-discovery').width();
+    $('.saved-list').css({
+        'transform': `translateX(-${fullWidth}px)`
+    });
+    $('.slide-1').css({
+        'transform': `translateX(-${fullWidth}px)`
+    });
+
+    $('.event > .count').on('click', function(e) {
+        console.log(e.target)
+        $('.saved-list').css({
+            'transform': 'translateX(0px)',
+            'transition': 'all 1s',
+        })
+        $('.slide-1').css({
+            'transform': `translateX(${fullWidth * 2}px)`,
+            'transition': 'all 2s',
+        })
+    });
+
+
+    $('.close-saved').on('click', function() {
+        $('.saved-list').css({
+            'transform': `translateX(-${fullWidth}px)`,
+            'transition': 'all 2s'
+        });
+        $('.slide-1').css({
+            'transform': `translateX(-${fullWidth}px)`,
+            'transition': 'all 2s'
+        });
+    });
 
     $('.close').on('click', function(e) {
         $('.collapse-menu').toggleClass('collapsed');
         $('.filter').toggleClass('!hidden');
         $(this).toggleClass('active');
     });
+
     $(seeMore).on('click', function(e) {
         $('.site').toggleClass('hidden');
         $('.family-frendly').toggleClass('hidden');
@@ -177,7 +263,6 @@ $(document).ready(function () {
     });
     $('.item-card').on('click', function(e) {
         var fullWidth = $('.section-discovery').width();
-        console.log('fullWidth', fullWidth);
 
         $('.slide-1').css({
             'transform': `translateX(-${fullWidth}px)`,

@@ -28,21 +28,57 @@
       .select .select2-container .select2-selection__arrow b {
         border-color: #fff transparent transparent transparent !important; }
 
-.select2-dropdown .select2-search--dropdown input {
-  border: 0px !important;
-  border-radius: 8px;
-  outline: 0 !important; }
-
-.select2-dropdown .select2-results .item-select {
-  display: flex;
-  align-items: center; }
-  .select2-dropdown .select2-results .item-select svg {
-    margin-right: 8px;
-    color: rgba(0, 0, 0, 0.9); }
-  .select2-dropdown .select2-results .item-select__title {
-    color: rgba(0, 0, 0, 0.9);
-    font-family: "Poppins";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 28px; }
+.select2-dropdown {
+  border-radius: 8px !important;
+  top: 40px !important;
+  background: #313131;
+  box-shadow: 0px 3px 35px 0px rgba(0, 0, 0, 0.5);
+  border: 0px !important; }
+  .select2-dropdown .select2-search--dropdown {
+    background: #313131;
+    padding: 12px 10px;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px; }
+    .select2-dropdown .select2-search--dropdown input {
+      border: 0px !important;
+      outline: 0 !important;
+      padding: 0px !important;
+      background: #313131;
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      color: #fff;
+      line-height: 28px; }
+  .select2-dropdown .select2-results {
+    background: #313131; }
+    .select2-dropdown .select2-results .select2-results__options {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px; }
+      .select2-dropdown .select2-results .select2-results__options .select2-results__option--selected, .select2-dropdown .select2-results .select2-results__options .select2-results__option--highlighted {
+        background: linear-gradient(90deg, rgba(160, 223, 158, 0.2) 12.41%, rgba(69, 135, 194, 0.2) 89.87%); }
+      .select2-dropdown .select2-results .select2-results__options .select2-results__message {
+        font-family: 'Poppins';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        color: #fff; }
+      .select2-dropdown .select2-results .select2-results__options .select2-results__option {
+        padding: 12px 8px; }
+        .select2-dropdown .select2-results .select2-results__options .select2-results__option:last-child {
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 8px; }
+    .select2-dropdown .select2-results .item-select {
+      display: flex;
+      align-items: center; }
+      .select2-dropdown .select2-results .item-select svg {
+        margin-right: 8px;
+        color: #fff; }
+      .select2-dropdown .select2-results .item-select__title {
+        font-family: 'Poppins';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        color: #fff; }

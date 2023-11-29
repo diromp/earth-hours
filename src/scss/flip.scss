@@ -19,6 +19,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: bottom center;
+        z-index: 1;
         &::after {
             content: "";
             width: 100%;
