@@ -54,14 +54,14 @@ $(document).ready(function () {
         templateResult: formatTextSelect2,
         templateSelection: formatIcon,
         placeholder: "Select Language",
-    }).on('change', function(e) {
-        if(e.target.value === 'Turkye') {
+    }).on('change', function (e) {
+        if (e.target.value === 'Turkye') {
             $('.select-location-container').hide();
         } else {
             $('.select-location-container').show();
         }
     });
-    
+
     $('.select-location').select2({
         templateResult: formatTextSelect2,
         templateSelection: formatIconGobal,
@@ -245,27 +245,22 @@ $(document).ready(function () {
     });
 
     $('.event > .count').on('click', function (e) {
-        console.log(e.target)
-        $('.saved-list').css({
-            'transform': 'translateX(0px)',
-            'transition': 'all 1s',
-        })
-        $('.slide-1').css({
-            'transform': `translateX(${fullWidth * 2}px)`,
-            'transition': 'all 2s',
-        })
+        $('.slide-1').fadeOut(
+            'slow'
+        );
+        $('.saved-list').fadeIn(
+            'slow'
+        );
     });
 
 
     $('.close-saved').on('click', function () {
-        $('.saved-list').css({
-            'transform': `translateX(-${fullWidth}px)`,
-            'transition': 'all 2s'
-        });
-        $('.slide-1').css({
-            'transform': `translateX(-${fullWidth}px)`,
-            'transition': 'all 2s'
-        });
+        $('.saved-list').fadeOut(
+            'slow'
+        );
+        $('.slide-1').fadeIn(
+            'slow'
+        );
     });
 
     $('.close').on('click', function (e) {
@@ -343,7 +338,7 @@ $(document).ready(function () {
     });
     $('.back-to').on('click', function () {
         const backTo = $(this).parents();
-        
+
         if (backTo[3].className === 'slide-content slide-2') {
             console.log('Back to slide;');
             $('.slide-1').fadeIn(
@@ -360,7 +355,7 @@ $(document).ready(function () {
                     'display': 'block',
                 })
             }, 1100);
-        } else if(backTo[3].className === 'slide-content slide-3') {
+        } else if (backTo[3].className === 'slide-content slide-3') {
             $('.slide-2').fadeIn(
                 'slow'
             );
