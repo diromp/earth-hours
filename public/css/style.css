@@ -1222,7 +1222,7 @@ body {
       background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(to right, #a0df9e 12.41%, #4587c2 89.87%) border-box;
       position: relative;
       display: flex;
-      max-height: 78rem;
+      max-height: 54rem;
       height: 100%;
       overflow: hidden; }
       .section-discovery .slide-content .main .listing {
@@ -1369,9 +1369,11 @@ body {
       .section-discovery .slide-content .main .slick-slider .slick-list {
         margin-right: 0px;
         margin-top: 10px;
-        padding: 35px 0px 0px 60px !important; }
+        padding: 35px 0px 0px 80px !important; }
       .section-discovery .slide-content .main .slick-slider .slick-track {
         margin-top: -40px; }
+      .section-discovery .slide-content .main .collapsed-slide .slick-list {
+        padding: 35px 0px 0px 0px !important; }
       .section-discovery .slide-content .main .slick-arrow {
         width: 48px;
         height: 48px;
@@ -1401,7 +1403,7 @@ body {
         .section-discovery .slide-content .main .content-dis .arrows-2,
         .section-discovery .slide-content .main .content-wrapper .arrows-2 {
           position: absolute;
-          top: 35%;
+          top: 20%;
           right: 25px; }
         .section-discovery .slide-content .main .content-dis .announcment p,
         .section-discovery .slide-content .main .content-wrapper .announcment p {
@@ -1412,6 +1414,22 @@ body {
           font-style: normal;
           font-weight: 700;
           line-height: 26px; }
+        .section-discovery .slide-content .main .content-dis .close,
+        .section-discovery .slide-content .main .content-wrapper .close {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          z-index: 9;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 0px;
+          width: 0px;
+          border-left: solid 24px #1A1A1A;
+          border-top: solid 48px transparent;
+          border-bottom: solid 48px transparent; }
         .section-discovery .slide-content .main .content-dis .new-card .item-card,
         .section-discovery .slide-content .main .content-wrapper .new-card .item-card {
           width: 260px !important;
@@ -1517,32 +1535,24 @@ body {
             right: 0;
             bottom: 0; }
       .section-discovery .slide-content .main .collapse-menu {
-        margin-bottom: 48px;
-        width: 583px;
+        padding-bottom: 48px;
+        width: 100%;
         padding-left: 32px;
         padding-right: 32px;
         padding-top: 61px;
         position: relative;
-        transition: width 0.9s linear; }
+        transition: width 0.9s linear;
+        overflow-y: scroll;
+        overflow-x: hidden; }
+        .section-discovery .slide-content .main .collapse-menu::-webkit-scrollbar {
+          width: 5px;
+          background-color: transparent; }
+        .section-discovery .slide-content .main .collapse-menu::-webkit-scrollbar-thumb {
+          background-color: #A8A8A8;
+          height: 80px; }
         .section-discovery .slide-content .main .collapse-menu.collapsed {
-          width: 400px;
+          width: 57%;
           transition: width 0.9s linear; }
-        .section-discovery .slide-content .main .collapse-menu .close {
-          position: absolute;
-          right: -24px;
-          top: 40px;
-          z-index: 9;
-          background: #4587C2;
-          cursor: pointer;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          height: 72px;
-          width: 24px;
-          border-radius: 0px 8px 8px 0px; }
-          .section-discovery .slide-content .main .collapse-menu .close.active img {
-            transform: rotate(180deg); }
         .section-discovery .slide-content .main .collapse-menu .desc {
           max-width: 625px;
           width: 100%; }
@@ -1732,23 +1742,6 @@ body {
               font-style: normal;
               font-weight: 400;
               line-height: 26px; }
-        .section-discovery .slide-content .main .event-detail .checkbox-group {
-          display: flex;
-          align-items: center;
-          gap: 16px; }
-          .section-discovery .slide-content .main .event-detail .checkbox-group input {
-            width: 24px;
-            height: 24px;
-            border-radius: 8px;
-            display: block; }
-          .section-discovery .slide-content .main .event-detail .checkbox-group label {
-            color: #FFF;
-            font-family: 'Poppins';
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            display: block; }
         .section-discovery .slide-content .main .event-detail .sosmedia {
           display: flex;
           gap: 14px; }
@@ -1807,25 +1800,35 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
   align-items: center;
-  background-color: #fff; }
+  background-image: url("../../public/img/bg-gradient.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative; }
+  .section-question::after {
+    position: absolute;
+    background: linear-gradient(0deg, #fff 24.07%, rgba(0, 0, 0, 0) 62.2%);
+    width: 100%;
+    height: 100%;
+    content: "";
+    bottom: -20px; }
+  .section-question .love.active svg #stroke {
+    color: transparent; }
+  .section-question .love.active svg #full {
+    color: #ED1B1B; }
+  .section-question .love svg #stroke {
+    color: #fff; }
+  .section-question .love svg #full {
+    color: transparent; }
   .section-question .list-question {
-    background-image: url("../../public/img/bg-gradient.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    height: 100%;
     min-width: 100%;
-    min-height: 100vh;
     padding-top: 56px;
     padding-bottom: 86px;
     margin-top: -20px;
-    position: relative; }
-    .section-question .list-question::after {
-      position: absolute;
-      background: linear-gradient(0deg, #fff 24.07%, rgba(0, 0, 0, 0) 62.2%);
-      width: 100%;
-      height: 100%;
-      content: "";
-      bottom: -20px; }
+    position: relative;
+    z-index: 9; }
     .section-question .list-question .progressbar {
       display: flex;
       justify-content: flex-start;
@@ -2040,3 +2043,64 @@ body {
     font-weight: 700;
     line-height: 16px;
     padding: 6px; }
+
+.form-check-default {
+  display: flex;
+  align-items: center;
+  gap: 16px; }
+  .form-check-default label {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+    margin-left: 8px; }
+  .form-check-default .form-check-input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    color: #1a1a1a;
+    background: #fff;
+    border: 1px solid #fff;
+    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.31));
+    border-radius: 4px;
+    border: none;
+    transition: 0.3s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+    cursor: pointer; }
+    .form-check-default .form-check-input[type="checkbox"]:checked::before {
+      animation: scale-in 0.1s 0.2s linear forwards;
+      transform: scale(1);
+      z-index: 1;
+      padding: 3px; }
+    .form-check-default .form-check-input[type="checkbox"]:checked::after {
+      transform: scale(1);
+      width: 24px;
+      height: 24px;
+      border: 1px solid #fff;
+      background-color: #a0df9e;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .form-check-default .form-check-input[type="checkbox"]::before {
+      position: absolute;
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18px' height='18px' fill='none' stroke-width='2px' stroke='black' stroke-linecap='round' viewBox='0 0 21 21'%3E%3Cpolyline points='5 10.75 8.5 14.25 16 6'%3E%3C/polyline%3E%3C/svg%3E");
+      transform: scale(0);
+      width: 24px;
+      height: 24px; }
+    .form-check-default .form-check-input[type="checkbox"]::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: #fff;
+      border: 1px solid #fff;
+      border-radius: inherit;
+      transition: 0.2s; }
