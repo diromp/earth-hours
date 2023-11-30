@@ -42,14 +42,30 @@ $(document).ready(function () {
         </span>`);
         return $item;
     }
+    function formatTextSelect2(state) {
+        if (!state.id) { return state.text; }
+        const $item = $(` <span class="item-select">
+            <span class="item-select__title">${state.element.text}</span>
+        </span>`);
+        return $item;
+    }
 
     $('.select-country').select2({
-        templateResult: formatIcon,
+        templateResult: formatTextSelect2,
         templateSelection: formatIcon,
+        placeholder: "Select Language",
+    }).on('change', function(e) {
+        if(e.target.value === 'Turkye') {
+            $('.select-location-container').hide();
+        } else {
+            $('.select-location-container').show();
+        }
     });
+    
     $('.select-location').select2({
-        templateResult: formatIconGobal,
+        templateResult: formatTextSelect2,
         templateSelection: formatIconGobal,
+        placeholder: "Select Location",
     });
 
     slider.slick({
@@ -216,13 +232,19 @@ $(document).ready(function () {
 
     var fullWidth = $('.section-discovery').width();
     $('.saved-list').css({
-        'transform': `translateX(-${fullWidth}px)`
+        'display': `none`
     });
-    $('.slide-1').css({
-        'transform': `translateX(-${fullWidth}px)`
+    $('.slide-2').css({
+        'display': `none`
+    });
+    $('.slide-3').css({
+        'display': `none`
+    });
+    $('.slide-4').css({
+        'display': `none`
     });
 
-    $('.event > .count').on('click', function(e) {
+    $('.event > .count').on('click', function (e) {
         console.log(e.target)
         $('.saved-list').css({
             'transform': 'translateX(0px)',
@@ -235,7 +257,7 @@ $(document).ready(function () {
     });
 
 
-    $('.close-saved').on('click', function() {
+    $('.close-saved').on('click', function () {
         $('.saved-list').css({
             'transform': `translateX(-${fullWidth}px)`,
             'transition': 'all 2s'
@@ -246,65 +268,54 @@ $(document).ready(function () {
         });
     });
 
-    $('.close').on('click', function(e) {
+    $('.close').on('click', function (e) {
         $('.collapse-menu').toggleClass('collapsed');
         $('#slide-discovery').toggleClass('collapsed-slide');
         $('.filter').toggleClass('!hidden');
         $(this).toggleClass('active');
     });
 
-    $(seeMore).on('click', function(e) {
+    $(seeMore).on('click', function (e) {
         $('.site').toggleClass('hidden');
         $('.family-frendly').toggleClass('hidden');
-        if(!$('.site').hasClass('hidden')) {
+        if (!$('.site').hasClass('hidden')) {
             $(this).find('img').attr('src', './public/img/ic-minus.svg');
         } else {
             $(this).find('img').attr('src', './public/img/ic-plus.svg');
         }
     });
-    $('.item-card').on('click', function(e) {
-        $('.slide-1').css({
-            'transform': `translateX(-${fullWidth*2}px)`,
-            'transition': 'all 2s',
-        })
-        $('.slide-2').css({
-            'transform': `translateX(-${fullWidth*2}px)`,
-            'transition': 'all 2s',
-        })
-        $('.slide-3').css({
-            'display': 'none',
-        })
-        $('.slide-4').css({
-            'display': 'none',
-        })
+    $('.next-detail').on('click', function (e) {
+        $('.slide-1').fadeOut(
+            'slow'
+        );
+        $('.slide-2').fadeIn(
+            'slow'
+        );
 
-        setTimeout(function() {
+        setTimeout(function () {
             $('.slide-2').css({
                 'display': 'block',
             })
-         
-        },1100);
+
+        }, 1100);
         $('.slide-2').find('.main').css({
             'max-height': '52rem',
             'border': '0px',
             'border-radius': '0px',
         })
     });
-    $('#counting').on('click', function(e) {
-        var fullWidth = $('.section-discovery').width() * 2;
-        $('.slide-2').css({
-            'transform': `translateX(-${fullWidth*2}px)`,
-            'transition': 'all 2s',
-        })
-        $('.slide-3').css({
-            'transform': `translateX(-${fullWidth*1.5}px)`,
-            'transition': 'all 2s',
-        })
-        setTimeout(function() {
+    $('#counting').on('click', function (e) {
+        $('.slide-2').fadeOut(
+            'slow'
+        );
+        $('.slide-3').fadeIn(
+            'slow'
+        );
+        setTimeout(function () {
             $('.slide-3').css({
                 'display': 'block',
             })
-        },1100);
+        }, 1100);
 
         $('.slide-3').find('.main').css({
             'max-height': '52rem',
@@ -312,52 +323,77 @@ $(document).ready(function () {
             'border-radius': '0px',
         })
     });
-    $('#finish-form').on('click', function(e) {
-        var normalWidth = $('.section-discovery').width();
-        $('.slide-3').css({
-            'transform': `translateX(-${normalWidth*4}px)`,
-            'transition': 'all 2s',
-        })
-        $('.slide-4').css({
-            'transform': `translateX(-${normalWidth*4}px)`,
-            'transition': 'all 2s',
-        })
-        setTimeout(function() {
+    $('#finish-form').on('click', function (e) {
+        $('.slide-3').fadeOut(
+            'slow'
+        );
+        $('.slide-4').fadeIn(
+            'slow'
+        );
+        setTimeout(function () {
             $('.slide-4').css({
                 'display': 'block',
             })
-        },1100);
+        }, 1100);
         $('.slide-4').find('.main').css({
             'max-height': '52rem',
             'border': '0px',
             'border-radius': '0px',
         })
     });
-    $('.back-to').on('click', function(){
-        var fullWidth = $('.section-discovery').width();
-
-        $('.slide-1').css({
-            'transform': `translateX(-${fullWidth*1}px)`,
-            'transition': 'all 1s',
-        })
-        $('.slide-2').css({
-            // 'transform': `translateX(${fullWidth*3}px)`,
-            // 'transition': 'all 2s',
-            'display': 'none'
-        })
-        $('.slide-3').css({
-            // 'transform': `translateX(${fullWidth*4}px)`,
-            // 'transition': 'all 2s',
-            'display': 'none'
-        })
-        $('.slide-4').css({
-            // 'transform': `translateX(${fullWidth*5}px)`,
-            // 'transition': 'all 2s',
-            'display': 'none'
-        })
+    $('.back-to').on('click', function () {
+        const backTo = $(this).parents();
+        
+        if (backTo[3].className === 'slide-content slide-2') {
+            console.log('Back to slide;');
+            $('.slide-1').fadeIn(
+                'slow'
+            );
+            $('.slide-2').fadeOut(
+                'slow'
+            );
+            $('.slide-2').css({
+                'display': 'none'
+            })
+            setTimeout(function () {
+                $('.slide-1').css({
+                    'display': 'block',
+                })
+            }, 1100);
+        } else if(backTo[3].className === 'slide-content slide-3') {
+            $('.slide-2').fadeIn(
+                'slow'
+            );
+            $('.slide-3').fadeOut(
+                'slow'
+            );
+            $('.slide-3').css({
+                'display': 'none'
+            })
+            setTimeout(function () {
+                $('.slide-2').css({
+                    'display': 'block',
+                })
+            }, 1100);
+        } else if (backTo[3].className === 'slide-content slide-4') {
+            $('.slide-3').fadeIn(
+                'slow'
+            );
+            $('.slide-4').fadeOut(
+                'slow'
+            );
+            $('.slide-4').css({
+                'display': 'none'
+            })
+            setTimeout(function () {
+                $('.slide-3').css({
+                    'display': 'block',
+                })
+            }, 1100);
+        }
     });
 
-    $('#questioner').on('click', function(e) {
+    $('#questioner').on('click', function (e) {
         var fullWidth = $('.section-question').width();
         $('.question-1').css({
             'transform': `translateX(-${fullWidth}px)`,
@@ -368,7 +404,7 @@ $(document).ready(function () {
             'transition': 'all 2s',
         })
     });
-    $('#back-to-question').on('click', function(){
+    $('#back-to-question').on('click', function () {
         var fullWidth = $('.section-question').width();
 
         $('.question-1').css({
@@ -381,11 +417,11 @@ $(document).ready(function () {
         })
     });
 
-    $('.love').on('click', function(){
+    $('.love').on('click', function () {
         console.log('masik  ')
         $(this).toggleClass('active');
     });
-    $('.form-check-input').on('click', function(){
+    $('.form-check-input').on('click', function () {
         $(this).closest('.checklist-item').toggleClass('active');
     });
 });

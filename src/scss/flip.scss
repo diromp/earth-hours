@@ -130,7 +130,7 @@
                 }
 
                 h6 {
-                    color: #0a1367;
+                    color: #4587C2;
                     text-align: center;
                     font-family: "Poppins";
                     font-size: 24px;
@@ -138,7 +138,7 @@
                     font-weight: 700;
                     line-height: normal;
                     margin-bottom: 12px;
-                    border-bottom: 2px solid #0a1367;
+                    border-bottom: 2px solid #4587C2;
                 }
                 h4 {
                     color: #4587C2;
@@ -165,6 +165,7 @@
                 h6 {
                     color: #0A1367 !important;
                     font-size: 24px !important;
+                    border-color: #0A1367;
                 }
                 h4 {
                     text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
@@ -389,9 +390,9 @@ body {
 .flip {
 	.primary {
 		&:before {
-			animation: animate-top 250ms;
+			animation: animate-top 450ms;
 			-moz-animation-fill-mode: forwards;
-			-webkit-animation: animate-top 250ms;
+			-webkit-animation: animate-top 450ms;
 			-webkit-animation-fill-mode: forwards;
             background: rgba(228, 228, 228, 0.26);
 			background: -moz-linear-gradient(top, rgba(228, 228, 228, 0.26) 0%, rgba(228, 228, 228, 0.26) 100%);
@@ -403,12 +404,12 @@ body {
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(228, 228, 228, 0.26)', endColorstr='rgba(228, 228, 228, 0.26)',GradientType=0 );
 		}
 		&:after {
-			animation: animate-bottom 250ms;
+			animation: animate-bottom 650ms;
 			-moz-animation-fill-mode: forwards;
-			animation-delay: 250ms;
-			-webkit-animation: animate-bottom 250ms;
+			animation-delay: 450ms;
+			-webkit-animation: animate-bottom 450ms;
 			-webkit-animation-fill-mode: forwards;
-			-webkit-animation-delay: 250ms;
+			-webkit-animation-delay: 450ms;
 		}
 	}
 }

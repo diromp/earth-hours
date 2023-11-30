@@ -199,6 +199,7 @@ body {
                     font-weight: 700;
                     line-height: 50px;
                 }
+
                 .count {
                     background-color: #D91F1F;
                     width: 34px;
@@ -219,6 +220,7 @@ body {
         .main {
             background-color: #fff !important;
             flex-direction: column !important;
+
             .content-wrapper {
                 padding-top: 0px !important;
                 padding-right: 0px !important;
@@ -256,6 +258,7 @@ body {
                 .content {
                     margin-bottom: 42px;
                     max-width: 475px;
+
                     span {
                         color: #fff;
                         font-family: "Poppins";
@@ -561,6 +564,7 @@ body {
                     padding: 35px 0px 0px 0px !important;
                 }
             }
+
             .slick-arrow {
                 width: 48px;
                 height: 48px;
@@ -612,7 +616,7 @@ body {
                         line-height: 26px;
                     }
                 }
-                
+
                 .close {
                     position: absolute;
                     left: 0;
@@ -651,6 +655,7 @@ body {
                             width: 32px;
                             height: 32px;
                             border-radius: 50%;
+                            padding: 5px;
                             background-color: #9191918a;
                             right: 16px;
                             top: 16px;
@@ -659,8 +664,8 @@ body {
                             align-items: center;
 
                             svg {
-                                width: 28px;
-                                height: 28px;
+                                width: 24px;
+                                height: 24px;
                             }
                         }
 
@@ -763,14 +768,15 @@ body {
                 transition: width 0.9s linear;
                 overflow-y: scroll;
                 overflow-x: hidden;
+                margin-right: 14px;
 
                 &::-webkit-scrollbar {
                     width: 5px;
                     background-color: transparent;
                 }
+
                 &::-webkit-scrollbar-thumb {
                     background-color: #A8A8A8;
-                    height: 80px;
                 }
 
                 &.collapsed {
@@ -859,7 +865,24 @@ body {
             .event-detail {
                 padding-top: 64px;
                 padding-left: 64px;
-                padding-bottom: 64px;
+                height: 718px;
+
+                .scrollable {
+                    height: 100%;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    padding-bottom: 12px;
+                    padding-right: 29px;
+
+                    &::-webkit-scrollbar {
+                        width: 5px;
+                        background-color: transparent;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: #A8A8A8;
+                    }
+                }
 
                 .back-to {
                     width: 40px;
@@ -1127,28 +1150,7 @@ body {
         height: 100%;
         content: "";
         bottom: -20px;
-        
-    }
 
-    .love {
-        &.active {
-            svg {
-                #stroke {
-                    color: transparent;
-                }
-                #full {
-                    color: #ED1B1B;
-                }
-            }
-        }
-        svg {
-            #stroke {
-                color: #fff;
-            }
-            #full {
-                color: transparent;
-            }
-        }
     }
 
     .list-question {
@@ -1159,7 +1161,7 @@ body {
         margin-top: -20px;
         position: relative;
         z-index: 9;
-        
+
         .progressbar {
             display: flex;
             justify-content: flex-start;
@@ -1525,6 +1527,31 @@ body {
             border: 1px solid #fff;
             border-radius: inherit;
             transition: 0.2s;
+        }
+    }
+}
+
+
+.love {
+    &.active {
+        svg {
+            #stroke {
+                color: transparent;
+            }
+
+            #full {
+                color: #ED1B1B;
+            }
+        }
+    }
+
+    svg {
+        #stroke {
+            color: #fff;
+        }
+
+        #full {
+            color: transparent;
         }
     }
 }
