@@ -229,8 +229,6 @@ $(document).ready(function () {
         seeMore.append(`  <img src="./public/img/ic-plus.svg"><span>See More</span>`);
     }
     expandSeeMore();
-
-    var fullWidth = $('.section-discovery').width();
     $('.saved-list').css({
         'display': `none`
     });
@@ -371,7 +369,7 @@ $(document).ready(function () {
                 })
             }, 1100);
         } else if (backTo[3].className === 'slide-content slide-4') {
-            $('.slide-3').fadeIn(
+            $('.slide-1').fadeIn(
                 'slow'
             );
             $('.slide-4').fadeOut(
