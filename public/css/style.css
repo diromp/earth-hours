@@ -1406,21 +1406,24 @@ body {
           position: absolute;
           top: 50%;
           right: 25px; }
-          .section-discovery .slide-content .main .content-dis .arrows .button,
-          .section-discovery .slide-content .main .content-wrapper .arrows .button {
+          .section-discovery .slide-content .main .content-dis .arrows .button, .section-discovery .slide-content .main .content-dis .arrows .button2,
+          .section-discovery .slide-content .main .content-wrapper .arrows .button,
+          .section-discovery .slide-content .main .content-wrapper .arrows .button2 {
             width: 48px;
             height: 48px;
             display: block;
             font-size: 0px !important;
             border: 0px;
             background-color: transparent; }
-            .section-discovery .slide-content .main .content-dis .arrows .button.next,
-            .section-discovery .slide-content .main .content-wrapper .arrows .button.next {
+            .section-discovery .slide-content .main .content-dis .arrows .button.next, .section-discovery .slide-content .main .content-dis .arrows .button2.next,
+            .section-discovery .slide-content .main .content-wrapper .arrows .button.next,
+            .section-discovery .slide-content .main .content-wrapper .arrows .button2.next {
               background-image: url("../../public/img/ic-arrow-up.svg");
               background-repeat: no-repeat;
               background-size: contain; }
-            .section-discovery .slide-content .main .content-dis .arrows .button.prev,
-            .section-discovery .slide-content .main .content-wrapper .arrows .button.prev {
+            .section-discovery .slide-content .main .content-dis .arrows .button.prev, .section-discovery .slide-content .main .content-dis .arrows .button2.prev,
+            .section-discovery .slide-content .main .content-wrapper .arrows .button.prev,
+            .section-discovery .slide-content .main .content-wrapper .arrows .button2.prev {
               background-image: url("../../public/img/ic-arrow-down.svg");
               background-repeat: no-repeat;
               background-size: contain;

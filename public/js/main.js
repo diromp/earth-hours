@@ -68,124 +68,22 @@ $(document).ready(function () {
         placeholder: "Select Location",
     });
 
-    // slider.slick({
-    //     dots: false,
-    //     infinite: false,
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1,
-    //     arrows: true,
-    //     autoplay: false,
-    //     vertical: true,
-    //     verticalSwiping: true,
-    //     centerMode: true,
-    //     appendArrows: container.find('.arrows'),
-    //     responsive: [
-    //         {
-    //             breakpoint: 1024,
-    //             settings: {
-    //                 slidesToShow: 2,
-    //                 slidesToScroll: 1,
-    //                 centerMode: false,
-    //                 centerPadding: '0px',
-
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 768,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1,
-    //                 infinite: true,
-    //                 centerMode: false,
-    //                 centerPadding: '0px',
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 600,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1,
-    //                 centerMode: false,
-    //                 centerPadding: '0px',
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 480,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1,
-    //                 centerMode: false,
-    //                 variableWidth: true,
-    //             }
-    //         }
-    //     ]
-    // });
-
     slider.flipbox({
         vertical: true
     });
+    savedSlider.flipbox({vertical: true});
 
-    $('.button.prev').click(function() {
+    $('.btn-discovery.prev').click(function() {
         slider.flipbox('prev', $(this).hasClass('reverse'));
-        console.log(this);
-    });
-    $('.button.next').click(function() {
+    })
+    $('.btn-discovery.next').click(function() {
         slider.flipbox('next', $(this).hasClass('reverse'));
-        console.log(this);
-
     });
-
-    savedSlider.slick({
-        dots: false,
-        infinite: false,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: true,
-        autoplay: false,
-        vertical: true,
-        verticalSwiping: true,
-        centerMode: true,
-        appendArrows: container.find('.arrows-2'),
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    centerMode: false,
-                    centerPadding: '0px',
-
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    centerMode: false,
-                    centerPadding: '0px',
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: false,
-                    centerPadding: '0px',
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: false,
-                    variableWidth: true,
-                }
-            }
-        ]
+    $('.btn-saved.prev').click(function() {
+        savedSlider.flipbox('prev', $(this).hasClass('reverse'));
+    })
+    $('.btn-saved.next').click(function() {
+        savedSlider.flipbox('next', $(this).hasClass('reverse'));
     });
 
 
