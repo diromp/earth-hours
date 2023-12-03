@@ -190,13 +190,24 @@ $(document).ready(function () {
         }
     });
     $('.next-detail').on('click', function (e) {
-        $('.slide-1').fadeOut(
-            'slow'
-        );
-        $('.slide-2').fadeIn(
-            'slow'
-        );
+        var containerName =$(this).closest('.new-card').attr('id');
 
+        if(containerName === 'savedSlider') {
+            $('.saved-list').fadeOut(
+                'slow'
+            );
+            $('.slide-2').fadeIn(
+                'slow'
+            );
+        } else {
+            $('.slide-1').fadeOut(
+                'slow'
+            );
+            $('.slide-2').fadeIn(
+                'slow'
+            );
+        }
+        
         setTimeout(function () {
             $('.slide-2').css({
                 'display': 'block',
