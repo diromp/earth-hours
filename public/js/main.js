@@ -68,57 +68,71 @@ $(document).ready(function () {
         placeholder: "Select Location",
     });
 
-    slider.slick({
-        dots: false,
-        infinite: false,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: true,
-        autoplay: false,
-        vertical: true,
-        verticalSwiping: true,
-        centerMode: true,
-        appendArrows: container.find('.arrows'),
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    centerMode: false,
-                    centerPadding: '0px',
+    // slider.slick({
+    //     dots: false,
+    //     infinite: false,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     arrows: true,
+    //     autoplay: false,
+    //     vertical: true,
+    //     verticalSwiping: true,
+    //     centerMode: true,
+    //     appendArrows: container.find('.arrows'),
+    //     responsive: [
+    //         {
+    //             breakpoint: 1024,
+    //             settings: {
+    //                 slidesToShow: 2,
+    //                 slidesToScroll: 1,
+    //                 centerMode: false,
+    //                 centerPadding: '0px',
 
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    centerMode: false,
-                    centerPadding: '0px',
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: false,
-                    centerPadding: '0px',
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: false,
-                    variableWidth: true,
-                }
-            }
-        ]
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 768,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //                 infinite: true,
+    //                 centerMode: false,
+    //                 centerPadding: '0px',
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 600,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //                 centerMode: false,
+    //                 centerPadding: '0px',
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 480,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //                 centerMode: false,
+    //                 variableWidth: true,
+    //             }
+    //         }
+    //     ]
+    // });
+
+    slider.flipbox({
+        vertical: true
+    });
+
+    $('.button.prev').click(function() {
+        slider.flipbox('prev', $(this).hasClass('reverse'));
+        console.log(this);
+    });
+    $('.button.next').click(function() {
+        slider.flipbox('next', $(this).hasClass('reverse'));
+        console.log(this);
+
     });
 
     savedSlider.slick({
@@ -263,7 +277,7 @@ $(document).ready(function () {
 
     $('.close').on('click', function (e) {
         $('.collapse-menu').toggleClass('collapsed');
-        $('#slide-discovery').toggleClass('collapsed-slide');
+        $('.content-dis').toggleClass('collapsed');
         $('.filter').toggleClass('!hidden');
         $(this).toggleClass('active');
     });

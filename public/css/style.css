@@ -1395,12 +1395,36 @@ body {
         padding-right: 32px;
         padding-left: 32px;
         position: relative;
-        background-color: #fff; }
+        background-color: #fff;
+        width: 100%;
+        overflow: hidden; }
+        .section-discovery .slide-content .main .content-dis.collapsed,
+        .section-discovery .slide-content .main .content-wrapper.collapsed {
+          margin-left: 1%; }
         .section-discovery .slide-content .main .content-dis .arrows,
         .section-discovery .slide-content .main .content-wrapper .arrows {
           position: absolute;
           top: 50%;
           right: 25px; }
+          .section-discovery .slide-content .main .content-dis .arrows .button,
+          .section-discovery .slide-content .main .content-wrapper .arrows .button {
+            width: 48px;
+            height: 48px;
+            display: block;
+            font-size: 0px !important;
+            border: 0px;
+            background-color: transparent; }
+            .section-discovery .slide-content .main .content-dis .arrows .button.next,
+            .section-discovery .slide-content .main .content-wrapper .arrows .button.next {
+              background-image: url("../../public/img/ic-arrow-up.svg");
+              background-repeat: no-repeat;
+              background-size: contain; }
+            .section-discovery .slide-content .main .content-dis .arrows .button.prev,
+            .section-discovery .slide-content .main .content-wrapper .arrows .button.prev {
+              background-image: url("../../public/img/ic-arrow-down.svg");
+              background-repeat: no-repeat;
+              background-size: contain;
+              margin-top: 30px; }
         .section-discovery .slide-content .main .content-dis .arrows-2,
         .section-discovery .slide-content .main .content-wrapper .arrows-2 {
           position: absolute;
@@ -1431,114 +1455,127 @@ body {
           border-left: solid 24px #1A1A1A;
           border-top: solid 48px transparent;
           border-bottom: solid 48px transparent; }
-        .section-discovery .slide-content .main .content-dis .new-card .item-card,
-        .section-discovery .slide-content .main .content-wrapper .new-card .item-card {
-          width: 260px !important;
-          height: 328px;
-          box-shadow: 0px 3px 15px 0px rgba(27, 27, 28, 0.37);
-          border-radius: 18px;
-          position: relative;
-          cursor: pointer; }
-          .section-discovery .slide-content .main .content-dis .new-card .item-card img,
-          .section-discovery .slide-content .main .content-wrapper .new-card .item-card img {
-            -o-object-fit: cover;
-               object-fit: cover;
-            width: 100%;
-            height: 100%;
-            border-radius: 18px; }
-          .section-discovery .slide-content .main .content-dis .new-card .item-card .love,
-          .section-discovery .slide-content .main .content-wrapper .new-card .item-card .love {
-            position: absolute;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            padding: 5px;
-            background-color: #9191918a;
-            right: 16px;
-            top: 16px;
+        .section-discovery .slide-content .main .content-dis .new-card,
+        .section-discovery .slide-content .main .content-wrapper .new-card {
+          width: 100%;
+          height: 718px;
+          margin-top: 30px; }
+          .section-discovery .slide-content .main .content-dis .new-card .item-card-container,
+          .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container {
             display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center; }
-            .section-discovery .slide-content .main .content-dis .new-card .item-card .love svg,
-            .section-discovery .slide-content .main .content-wrapper .new-card .item-card .love svg {
-              width: 24px;
-              height: 24px; }
-          .section-discovery .slide-content .main .content-dis .new-card .item-card .desc,
-          .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc {
-            padding-right: 16px;
-            padding-left: 16px;
-            padding-top: 20px;
-            padding-bottom: 37px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background: rgba(26, 26, 26, 0.9);
-            height: 151px;
-            border-bottom-left-radius: 18px;
-            border-bottom-right-radius: 18px; }
-            .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon,
-            .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon {
+            align-items: center;
+            background-color: #fff; }
+          .section-discovery .slide-content .main .content-dis .new-card .item-card,
+          .section-discovery .slide-content .main .content-wrapper .new-card .item-card {
+            width: 260px !important;
+            height: 328px;
+            box-shadow: 0px 3px 15px 0px rgba(27, 27, 28, 0.37);
+            border-radius: 18px;
+            position: relative;
+            cursor: pointer; }
+            .section-discovery .slide-content .main .content-dis .new-card .item-card img,
+            .section-discovery .slide-content .main .content-wrapper .new-card .item-card img {
+              -o-object-fit: cover;
+                 object-fit: cover;
+              width: 100%;
+              height: 100%;
+              border-radius: 18px; }
+            .section-discovery .slide-content .main .content-dis .new-card .item-card .love,
+            .section-discovery .slide-content .main .content-wrapper .new-card .item-card .love {
+              position: absolute;
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              padding: 5px;
+              background-color: #9191918a;
+              right: 16px;
+              top: 16px;
               display: flex;
-              justify-content: flex-start;
-              align-items: center;
-              margin-bottom: 12px;
-              gap: 6px; }
-              .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item,
-              .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item {
+              justify-content: center;
+              align-items: center; }
+              .section-discovery .slide-content .main .content-dis .new-card .item-card .love svg,
+              .section-discovery .slide-content .main .content-wrapper .new-card .item-card .love svg {
                 width: 24px;
-                height: 24px;
+                height: 24px; }
+            .section-discovery .slide-content .main .content-dis .new-card .item-card .desc,
+            .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc {
+              padding-right: 16px;
+              padding-left: 16px;
+              padding-top: 20px;
+              padding-bottom: 37px;
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              background: rgba(26, 26, 26, 0.9);
+              height: 151px;
+              border-bottom-left-radius: 18px;
+              border-bottom-right-radius: 18px; }
+              .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon,
+              .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon {
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
-                border-radius: 100px; }
-                .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item img,
-                .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item img {
-                  width: 13px;
-                  height: 13px;
-                  display: block;
-                  -o-object-fit: contain;
-                     object-fit: contain; }
-                .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.yellow,
-                .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.yellow {
-                  border: 1px solid #feff4c;
-                  background: #feff4c; }
-                .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.orange,
-                .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.orange {
-                  border: 1px solid #ffc592;
-                  background: #ffc592; }
-                .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.purple,
-                .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.purple {
-                  border: 1px solid #ffc0ff;
-                  background: #ffc0ff; }
-                .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.green,
-                .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.green {
-                  border: 1px solid #a0df9e;
-                  background: #a0df9e; }
-                .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.blue,
-                .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.blue {
-                  border: 1px solid #4587c2;
-                  background: #4587c2; }
-            .section-discovery .slide-content .main .content-dis .new-card .item-card .desc p,
-            .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc p {
-              color: #fff;
-              font-family: Poppins;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 700;
-              line-height: 24px; }
-          .section-discovery .slide-content .main .content-dis .new-card .item-card .divider,
-          .section-discovery .slide-content .main .content-wrapper .new-card .item-card .divider {
-            position: absolute;
-            height: 9px;
-            background-color: #D9D9D9;
-            width: 100%;
-            top: 51%;
-            left: 0;
-            right: 0;
-            bottom: 0; }
+                margin-bottom: 12px;
+                gap: 6px; }
+                .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item,
+                .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item {
+                  width: 24px;
+                  height: 24px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border-radius: 100px; }
+                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item img,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item img {
+                    width: 13px;
+                    height: 13px;
+                    display: block;
+                    -o-object-fit: contain;
+                       object-fit: contain; }
+                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.yellow,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.yellow {
+                    border: 1px solid #feff4c;
+                    background: #feff4c; }
+                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.orange,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.orange {
+                    border: 1px solid #ffc592;
+                    background: #ffc592; }
+                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.purple,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.purple {
+                    border: 1px solid #ffc0ff;
+                    background: #ffc0ff; }
+                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.green,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.green {
+                    border: 1px solid #a0df9e;
+                    background: #a0df9e; }
+                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.blue,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.blue {
+                    border: 1px solid #4587c2;
+                    background: #4587c2; }
+              .section-discovery .slide-content .main .content-dis .new-card .item-card .desc p,
+              .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc p {
+                color: #fff;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px; }
+            .section-discovery .slide-content .main .content-dis .new-card .item-card .divider,
+            .section-discovery .slide-content .main .content-wrapper .new-card .item-card .divider {
+              position: absolute;
+              height: 9px;
+              background-color: #D9D9D9;
+              width: 100%;
+              top: 51%;
+              left: 0;
+              right: 0;
+              bottom: 0; }
       .section-discovery .slide-content .main .collapse-menu {
         padding-bottom: 48px;
-        width: 100%;
+        width: 70%;
         padding-left: 32px;
         padding-right: 32px;
         padding-top: 61px;
@@ -1553,7 +1590,7 @@ body {
         .section-discovery .slide-content .main .collapse-menu::-webkit-scrollbar-thumb {
           background-color: #A8A8A8; }
         .section-discovery .slide-content .main .collapse-menu.collapsed {
-          width: 57%;
+          width: 27%;
           transition: width 0.9s linear; }
         .section-discovery .slide-content .main .collapse-menu .desc {
           max-width: 625px;
