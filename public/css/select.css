@@ -16,6 +16,10 @@
         .select .select2-container .select2-selection__rendered .item-select svg {
           margin-right: 8px;
           color: #fff; }
+          @media screen and (max-width: 768px) {
+            .select .select2-container .select2-selection__rendered .item-select svg {
+              width: 16px;
+              height: 16px; } }
         .select .select2-container .select2-selection__rendered .item-select__title {
           color: #fff;
           font-family: "Poppins";
@@ -23,8 +27,17 @@
           font-style: normal;
           font-weight: 700;
           line-height: 28px; }
+          @media screen and (max-width: 768px) {
+            .select .select2-container .select2-selection__rendered .item-select__title {
+              font-size: 11px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 16px; } }
     .select .select2-container .select2-selection__arrow {
       top: 50% !important; }
+      @media screen and (max-width: 768px) {
+        .select .select2-container .select2-selection__arrow {
+          top: 30% !important; } }
       .select .select2-container .select2-selection__arrow b {
         border-color: #fff transparent transparent transparent !important; }
 
@@ -55,7 +68,8 @@
     .select2-dropdown .select2-results .select2-results__options {
       border-bottom-left-radius: 8px;
       border-bottom-right-radius: 8px; }
-      .select2-dropdown .select2-results .select2-results__options .select2-results__option--selected, .select2-dropdown .select2-results .select2-results__options .select2-results__option--highlighted {
+      .select2-dropdown .select2-results .select2-results__options .select2-results__option--selected,
+      .select2-dropdown .select2-results .select2-results__options .select2-results__option--highlighted {
         background: linear-gradient(90deg, rgba(160, 223, 158, 0.2) 12.41%, rgba(69, 135, 194, 0.2) 89.87%); }
       .select2-dropdown .select2-results .select2-results__options .select2-results__message {
         font-family: 'Poppins';

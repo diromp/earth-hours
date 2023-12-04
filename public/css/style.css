@@ -16,6 +16,10 @@
         .select .select2-container .select2-selection__rendered .item-select svg {
           margin-right: 8px;
           color: #fff; }
+          @media screen and (max-width: 768px) {
+            .select .select2-container .select2-selection__rendered .item-select svg {
+              width: 16px;
+              height: 16px; } }
         .select .select2-container .select2-selection__rendered .item-select__title {
           color: #fff;
           font-family: "Poppins";
@@ -23,8 +27,17 @@
           font-style: normal;
           font-weight: 700;
           line-height: 28px; }
+          @media screen and (max-width: 768px) {
+            .select .select2-container .select2-selection__rendered .item-select__title {
+              font-size: 11px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 16px; } }
     .select .select2-container .select2-selection__arrow {
       top: 50% !important; }
+      @media screen and (max-width: 768px) {
+        .select .select2-container .select2-selection__arrow {
+          top: 30% !important; } }
       .select .select2-container .select2-selection__arrow b {
         border-color: #fff transparent transparent transparent !important; }
 
@@ -55,7 +68,8 @@
     .select2-dropdown .select2-results .select2-results__options {
       border-bottom-left-radius: 8px;
       border-bottom-right-radius: 8px; }
-      .select2-dropdown .select2-results .select2-results__options .select2-results__option--selected, .select2-dropdown .select2-results .select2-results__options .select2-results__option--highlighted {
+      .select2-dropdown .select2-results .select2-results__options .select2-results__option--selected,
+      .select2-dropdown .select2-results .select2-results__options .select2-results__option--highlighted {
         background: linear-gradient(90deg, rgba(160, 223, 158, 0.2) 12.41%, rgba(69, 135, 194, 0.2) 89.87%); }
       .select2-dropdown .select2-results .select2-results__options .select2-results__message {
         font-family: 'Poppins';
@@ -1226,10 +1240,20 @@ body {
       max-height: 54rem;
       height: 100%;
       overflow: hidden; }
+      @media screen and (max-width: 768px) {
+        .section-discovery .slide-content .main {
+          flex-direction: column;
+          overflow: scroll; } }
       .section-discovery .slide-content .main .listing {
         padding-bottom: 24px;
         padding-top: 32px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+        @media screen and (max-width: 767px) {
+          .section-discovery .slide-content .main .listing {
+            padding-top: 16px;
+            padding-bottom: 0px;
+            padding-left: 16px;
+            padding-right: 16px; } }
         .section-discovery .slide-content .main .listing .seamore {
           display: flex;
           justify-content: center;
@@ -1263,6 +1287,12 @@ body {
           gap: 8px;
           flex-flow: wrap;
           align-items: center; }
+          @media screen and (max-width: 768px) {
+            .section-discovery .slide-content .main .listing .list {
+              overflow-x: auto;
+              scroll-snap-type: x mandatory;
+              scrollbar-width: none;
+              flex-flow: nowrap; } }
           .section-discovery .slide-content .main .listing .list .list-group {
             border-radius: 30px;
             border: 2px solid;
@@ -1272,14 +1302,23 @@ body {
             padding: 10px 16px;
             cursor: pointer;
             margin-bottom: 8px; }
+            @media screen and (max-width: 768px) {
+              .section-discovery .slide-content .main .listing .list .list-group {
+                margin-bottom: 16px;
+                padding: 8px 14px; } }
             .section-discovery .slide-content .main .listing .list .list-group span {
               font-family: Poppins;
               font-size: 12px;
               font-style: normal;
               font-weight: 700;
               line-height: 24px;
-              /* 200% */
               text-transform: uppercase; }
+              @media screen and (max-width: 768px) {
+                .section-discovery .slide-content .main .listing .list .list-group span {
+                  font-size: 11px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 16px; } }
             .section-discovery .slide-content .main .listing .list .list-group.green-outline {
               border-color: #a0df9e;
               background: rgba(160, 223, 158, 0.1);
@@ -1398,6 +1437,13 @@ body {
         background-color: #fff;
         width: 100%;
         overflow: hidden; }
+        @media screen and (max-width: 768px) {
+          .section-discovery .slide-content .main .content-dis,
+          .section-discovery .slide-content .main .content-wrapper {
+            overflow-y: auto;
+            padding-top: 32px;
+            padding-right: 16px;
+            padding-left: 16px; } }
         .section-discovery .slide-content .main .content-dis.collapsed,
         .section-discovery .slide-content .main .content-wrapper.collapsed {
           margin-left: 1%; }
@@ -1406,7 +1452,8 @@ body {
           position: absolute;
           top: 50%;
           right: 25px; }
-          .section-discovery .slide-content .main .content-dis .arrows .button, .section-discovery .slide-content .main .content-dis .arrows .button2,
+          .section-discovery .slide-content .main .content-dis .arrows .button,
+          .section-discovery .slide-content .main .content-dis .arrows .button2,
           .section-discovery .slide-content .main .content-wrapper .arrows .button,
           .section-discovery .slide-content .main .content-wrapper .arrows .button2 {
             width: 48px;
@@ -1415,13 +1462,15 @@ body {
             font-size: 0px !important;
             border: 0px;
             background-color: transparent; }
-            .section-discovery .slide-content .main .content-dis .arrows .button.next, .section-discovery .slide-content .main .content-dis .arrows .button2.next,
+            .section-discovery .slide-content .main .content-dis .arrows .button.next,
+            .section-discovery .slide-content .main .content-dis .arrows .button2.next,
             .section-discovery .slide-content .main .content-wrapper .arrows .button.next,
             .section-discovery .slide-content .main .content-wrapper .arrows .button2.next {
               background-image: url("../../public/img/ic-arrow-up.svg");
               background-repeat: no-repeat;
               background-size: contain; }
-            .section-discovery .slide-content .main .content-dis .arrows .button.prev, .section-discovery .slide-content .main .content-dis .arrows .button2.prev,
+            .section-discovery .slide-content .main .content-dis .arrows .button.prev,
+            .section-discovery .slide-content .main .content-dis .arrows .button2.prev,
             .section-discovery .slide-content .main .content-wrapper .arrows .button.prev,
             .section-discovery .slide-content .main .content-wrapper .arrows .button2.prev {
               background-image: url("../../public/img/ic-arrow-down.svg");
@@ -1442,6 +1491,13 @@ body {
           font-style: normal;
           font-weight: 700;
           line-height: 26px; }
+          @media screen and (max-width: 768px) {
+            .section-discovery .slide-content .main .content-dis .announcment p,
+            .section-discovery .slide-content .main .content-wrapper .announcment p {
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 18px; } }
         .section-discovery .slide-content .main .content-dis .close,
         .section-discovery .slide-content .main .content-wrapper .close {
           position: absolute;
@@ -1458,6 +1514,12 @@ body {
           border-left: solid 24px #1A1A1A;
           border-top: solid 48px transparent;
           border-bottom: solid 48px transparent; }
+          @media screen and (max-width: 768px) {
+            .section-discovery .slide-content .main .content-dis .close,
+            .section-discovery .slide-content .main .content-wrapper .close {
+              left: 47%;
+              top: -43px;
+              transform: rotate(90deg); } }
         .section-discovery .slide-content .main .content-dis .new-card,
         .section-discovery .slide-content .main .content-wrapper .new-card {
           width: 100%;
@@ -1471,6 +1533,11 @@ body {
             justify-content: center;
             align-items: center;
             background-color: #fff; }
+            @media screen and (max-width: 768px) {
+              .section-discovery .slide-content .main .content-dis .new-card .item-card-container,
+              .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container {
+                flex-wrap: nowrap;
+                gap: 8px; } }
           .section-discovery .slide-content .main .content-dis .new-card .item-card,
           .section-discovery .slide-content .main .content-wrapper .new-card .item-card {
             width: 260px !important;
@@ -1479,6 +1546,11 @@ body {
             border-radius: 18px;
             position: relative;
             cursor: pointer; }
+            @media screen and (max-width: 768px) {
+              .section-discovery .slide-content .main .content-dis .new-card .item-card,
+              .section-discovery .slide-content .main .content-wrapper .new-card .item-card {
+                width: 50% !important;
+                height: 216px; } }
             .section-discovery .slide-content .main .content-dis .new-card .item-card img,
             .section-discovery .slide-content .main .content-wrapper .new-card .item-card img {
               -o-object-fit: cover;
@@ -1587,6 +1659,15 @@ body {
         overflow-y: scroll;
         overflow-x: hidden;
         margin-right: 14px; }
+        @media screen and (max-width: 768px) {
+          .section-discovery .slide-content .main .collapse-menu {
+            width: 100%;
+            overflow: unset;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 32px;
+            padding-bottom: 0;
+            margin-right: 0px; } }
         .section-discovery .slide-content .main .collapse-menu::-webkit-scrollbar {
           width: 5px;
           background-color: transparent; }
@@ -1595,9 +1676,18 @@ body {
         .section-discovery .slide-content .main .collapse-menu.collapsed {
           width: 27%;
           transition: width 0.9s linear; }
+          @media screen and (max-width: 768px) {
+            .section-discovery .slide-content .main .collapse-menu.collapsed {
+              height: 28vh;
+              width: 100% !important;
+              transition: height 0.9s linear; } }
         .section-discovery .slide-content .main .collapse-menu .desc {
           max-width: 625px;
           width: 100%; }
+          @media screen and (max-width: 768px) {
+            .section-discovery .slide-content .main .collapse-menu .desc {
+              padding-left: 24px;
+              padding-right: 24px; } }
           .section-discovery .slide-content .main .collapse-menu .desc h2 {
             text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
             font-family: "Poppins";
@@ -1607,27 +1697,56 @@ body {
             line-height: 64px;
             margin-bottom: 30px;
             color: #fff; }
+            @media screen and (max-width: 768px) {
+              .section-discovery .slide-content .main .collapse-menu .desc h2 {
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 30px;
+                margin-bottom: 24px; } }
           .section-discovery .slide-content .main .collapse-menu .desc p {
             color: #fff;
-            /* Desktop/Body 18 */
-            font-family: Poppins;
+            font-family: 'Poppins';
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
             line-height: 28px; }
+            @media screen and (max-width: 768px) {
+              .section-discovery .slide-content .main .collapse-menu .desc p {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px; } }
         .section-discovery .slide-content .main .collapse-menu .filter {
           margin-top: 58px; }
+          @media screen and (max-width: 768px) {
+            .section-discovery .slide-content .main .collapse-menu .filter {
+              margin-top: 24px; } }
           .section-discovery .slide-content .main .collapse-menu .filter .select {
             margin-bottom: 38px;
             display: flex;
             gap: 16px; }
+            @media screen and (max-width: 768px) {
+              .section-discovery .slide-content .main .collapse-menu .filter .select {
+                margin-bottom: 5px;
+                padding-left: 24px;
+                padding-right: 24px; } }
           .section-discovery .slide-content .main .collapse-menu .filter .choose {
             padding-top: 32px; }
+            @media screen and (max-width: 768px) {
+              .section-discovery .slide-content .main .collapse-menu .filter .choose {
+                padding-top: 24px; } }
             .section-discovery .slide-content .main .collapse-menu .filter .choose .title {
-              margin-bottom: 12px;
+              padding-bottom: 12px;
               display: flex;
               justify-content: space-between;
               align-items: center; }
+              @media screen and (max-width: 768px) {
+                .section-discovery .slide-content .main .collapse-menu .filter .choose .title {
+                  background: rgba(255, 255, 255, 0.04);
+                  padding-top: 16px;
+                  padding-left: 16px;
+                  padding-right: 16px; } }
               .section-discovery .slide-content .main .collapse-menu .filter .choose .title h3 {
                 color: #fff;
                 font-family: "Poppins";
@@ -1635,6 +1754,12 @@ body {
                 font-style: normal;
                 font-weight: 700;
                 line-height: 26px; }
+                @media screen and (max-width: 768px) {
+                  .section-discovery .slide-content .main .collapse-menu .filter .choose .title h3 {
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 18px; } }
               .section-discovery .slide-content .main .collapse-menu .filter .choose .title a {
                 text-align: right;
                 font-family: "Poppins";
@@ -1642,13 +1767,22 @@ body {
                 font-style: normal;
                 font-weight: 700;
                 line-height: 28px;
-                /* 175% */
                 text-decoration-line: underline;
                 color: #fff; }
+                @media screen and (max-width: 768px) {
+                  .section-discovery .slide-content .main .collapse-menu .filter .choose .title a {
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 18px; } }
             .section-discovery .slide-content .main .collapse-menu .filter .choose .content-choose {
               padding: 16px 16px 24px 16px;
               border-radius: 8px;
               background: rgba(255, 255, 255, 0.1); }
+              @media screen and (max-width: 768px) {
+                .section-discovery .slide-content .main .collapse-menu .filter .choose .content-choose {
+                  background: rgba(255, 255, 255, 0.04);
+                  padding: 0px; } }
       .section-discovery .slide-content .main .event-detail {
         padding-top: 64px;
         padding-left: 64px;
@@ -2065,6 +2199,12 @@ body {
   gap: 8px;
   margin-bottom: 48px;
   cursor: pointer; }
+  @media screen and (max-width: 768px) {
+    .event {
+      display: none; }
+    .event.mobile-event {
+      margin-bottom: 0;
+      display: flex; } }
   .event span {
     display: inline-block;
     color: #1a1a1a;
