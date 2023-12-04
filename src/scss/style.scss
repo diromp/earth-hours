@@ -288,6 +288,13 @@ body {
                         font-style: normal;
                         font-weight: 400;
                         line-height: 28px;
+
+                        @media screen and (max-width: 768px) {
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 18px;
+                        }
                     }
                 }
             }
@@ -331,18 +338,22 @@ body {
             @media screen and (max-width: 768px) {
                 flex-direction: column;
                 overflow: scroll;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                max-height: 100vh !important;
             }
 
             .listing {
                 padding-bottom: 24px;
                 padding-top: 32px;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
                 @media screen and (max-width: 767px) {
                     padding-top: 16px;
                     padding-bottom: 0px;
                     padding-left: 16px;
                     padding-right: 16px;
-                    
+
                 }
 
                 .seamore {
@@ -388,11 +399,12 @@ body {
                     gap: 8px;
                     flex-flow: wrap;
                     align-items: center;
+
                     @media screen and (max-width: 768px) {
                         overflow-x: auto;
                         scroll-snap-type: x mandatory;
                         scrollbar-width: none;
-                        flex-flow:nowrap;
+                        flex-flow: nowrap;
                     }
 
                     .list-group {
@@ -404,6 +416,7 @@ body {
                         padding: 10px 16px;
                         cursor: pointer;
                         margin-bottom: 8px;
+
                         @media screen and (max-width: 768px) {
                             margin-bottom: 16px;
                             padding: 8px 14px;
@@ -416,6 +429,7 @@ body {
                             font-weight: 700;
                             line-height: 24px;
                             text-transform: uppercase;
+
                             @media screen and (max-width: 768px) {
                                 font-size: 11px;
                                 font-style: normal;
@@ -622,7 +636,7 @@ body {
                 overflow: hidden;
 
                 @media screen and(max-width: 768px) {
-                    overflow-y: auto;
+                    overflow: visible;
                     padding-top: 32px;
                     padding-right: 16px;
                     padding-left: 16px;
@@ -630,12 +644,29 @@ body {
 
                 &.collapsed {
                     margin-left: 1%;
+
+                    @media screen and(max-width: 768px) {
+                        margin-left: 0;
+                    }
                 }
 
                 .arrows {
                     position: absolute;
                     top: 50%;
                     right: 25px;
+
+                    @media screen and(max-width: 768px) {
+                        width: 100%;
+                        left: 0;
+                        right: 0px;
+                        display: flex;
+                        justify-content: space-between;
+                        padding-right: 8px;
+                        padding-left: 8px;
+                        top: 40%;
+                    }
+
+
 
                     .button,
                     .button2 {
@@ -645,11 +676,22 @@ body {
                         font-size: 0px !important;
                         border: 0px;
                         background-color: transparent;
+                        filter: drop-shadow(0px 8px 28px rgba(13, 34, 42, 0.30));
+
+                        @media screen and(max-width: 768px) {
+                            width: 40px;
+                            height: 40px;
+                        }
 
                         &.next {
                             background-image: url("../../public/img/ic-arrow-up.svg");
                             background-repeat: no-repeat;
                             background-size: contain;
+
+                            @media screen and(max-width: 768px) {
+                                background-image: url("../../public/img/ic_arrow_left.png");
+                            }
+
                         }
 
                         &.prev {
@@ -657,6 +699,11 @@ body {
                             background-repeat: no-repeat;
                             background-size: contain;
                             margin-top: 30px;
+
+                            @media screen and(max-width: 768px) {
+                                background-image: url("../../public/img/ic_arrow_right.png");
+                                margin-top: 0;
+                            }
                         }
                     }
                 }
@@ -676,6 +723,7 @@ body {
                         font-style: normal;
                         font-weight: 700;
                         line-height: 26px;
+
                         @media screen and (max-width: 768px) {
                             font-size: 14px;
                             font-style: normal;
@@ -700,6 +748,7 @@ body {
                     border-left: solid 24px #1A1A1A;
                     border-top: solid 48px transparent;
                     border-bottom: solid 48px transparent;
+
                     @media screen and (max-width: 768px) {
                         left: 47%;
                         top: -43px;
@@ -712,6 +761,11 @@ body {
                     height: 718px;
                     margin-top: 30px;
 
+                    @media screen and (max-width: 768px) {
+                        margin-top: 24px;
+                    }
+
+
                     .item-card-container {
                         display: flex;
                         gap: 16px;
@@ -719,9 +773,11 @@ body {
                         justify-content: center;
                         align-items: center;
                         background-color: #fff;
+
                         @media screen and (max-width: 768px) {
-                            flex-wrap: nowrap;
                             gap: 8px;
+                            justify-content: space-evenly;
+                            align-items: stretch;
                         }
                     }
 
@@ -732,9 +788,12 @@ body {
                         border-radius: 18px;
                         position: relative;
                         cursor: pointer;
+
                         @media screen and (max-width: 768px) {
                             width: 50% !important;
                             height: 216px;
+                            flex-basis: 48%;
+                            flex-grow: 1;
 
                         }
 
@@ -758,9 +817,19 @@ body {
                             justify-content: center;
                             align-items: center;
 
+                            @media screen and (max-width: 768px) {
+                                width: 20px;
+                                height: 20px;
+                            }
+
                             svg {
                                 width: 24px;
                                 height: 24px;
+
+                                @media screen and (max-width: 768px) {
+                                    width: 15px;
+                                    height: 15px;
+                                }
                             }
                         }
 
@@ -777,11 +846,27 @@ body {
                             border-bottom-left-radius: 18px;
                             border-bottom-right-radius: 18px;
 
+                            @media screen and (max-width: 768px) {
+                                height: 99px;
+                                padding-right: 8px;
+                                padding-left: 8px;
+                                padding-bottom: 8px;
+                                padding-top: 12px;
+                                border-bottom-left-radius: 14px;
+                                border-bottom-right-radius: 14px;
+
+                            }
+
                             .icon {
                                 display: flex;
                                 justify-content: flex-start;
                                 align-items: center;
                                 margin-bottom: 12px;
+
+                                @media screen and (max-width: 768px) {
+                                    margin-bottom: 8px;
+                                }
+
                                 gap: 6px;
 
                                 .icon-item {
@@ -792,7 +877,17 @@ body {
                                     align-items: center;
                                     border-radius: 100px;
 
+                                    @media screen and (max-width: 768px) {
+                                        width: 18px;
+                                        height: 18px;
+                                    }
+
                                     img {
+                                        @media screen and (max-width: 768px) {
+                                            width: 12px;
+                                            height: 12px;
+                                        }
+
                                         width: 13px;
                                         height: 13px;
                                         display: block;
@@ -833,6 +928,17 @@ body {
                                 font-style: normal;
                                 font-weight: 700;
                                 line-height: 24px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                height: 70px;
+
+                                @media screen and (max-width: 768px) {
+                                    font-size: 11px;
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    line-height: 16px;
+                                    height: 50px;
+                                }
                             }
                         }
 
@@ -867,7 +973,7 @@ body {
 
                 @media screen and (max-width: 768px) {
                     width: 100%;
-                    overflow: unset;
+                    overflow: visible;
                     padding-left: 0px;
                     padding-right: 0px;
                     padding-top: 32px;
@@ -890,6 +996,7 @@ body {
                     -moz-transition: width 0.9s linear;
                     -o-transition: width 0.9s linear;
                     transition: width 0.9s linear;
+
                     @media screen and (max-width: 768px) {
                         height: 28vh;
                         width: 100% !important;
@@ -903,6 +1010,7 @@ body {
                 .desc {
                     max-width: 625px;
                     width: 100%;
+
                     @media screen and (max-width: 768px) {
                         padding-left: 24px;
                         padding-right: 24px;
@@ -965,22 +1073,24 @@ body {
 
                     .choose {
                         padding-top: 32px;
+
                         @media screen and (max-width: 768px) {
                             padding-top: 24px;
                         }
-                       
+
                         .title {
                             padding-bottom: 12px;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
+
                             @media screen and (max-width: 768px) {
                                 background: rgba(255, 255, 255, 0.04);
                                 padding-top: 16px;
                                 padding-left: 16px;
                                 padding-right: 16px;
                             }
-    
+
 
                             h3 {
                                 color: #fff;
@@ -1021,6 +1131,7 @@ body {
                             padding: 16px 16px 24px 16px;
                             border-radius: 8px;
                             background: rgba(255, 255, 255, 0.1);
+
                             @media screen and (max-width: 768px) {
                                 background: rgba(255, 255, 255, 0.04);
                                 padding: 0px;
@@ -1035,12 +1146,29 @@ body {
                 padding-left: 64px;
                 height: 718px;
 
+                @media screen and (max-width: 768px) {
+                    padding: 16px 16px 0px 16px;
+                    height: 100%;
+                    width: 100%;
+                }
+
                 .scrollable {
                     height: 100%;
                     overflow-y: scroll;
                     overflow-x: hidden;
                     padding-bottom: 12px;
                     padding-right: 29px;
+
+                    @media screen and (max-width: 768px) {
+                        padding-bottom: 0;
+                        padding-right: 0px;
+                        overflow: visible;
+
+                        .listing {
+                            padding-left: 0px;
+                            padding-right: 0px;
+                        }
+                    }
 
                     &::-webkit-scrollbar {
                         width: 5px;
@@ -1058,6 +1186,12 @@ body {
                     cursor: pointer;
                     margin-bottom: 32px;
 
+                    @media screen and (max-width: 768px) {
+                        width: 24px;
+                        height: 24px;
+                        margin-bottom: 24px;
+                    }
+
                     svg {
                         width: 40px;
                         height: 40px;
@@ -1074,6 +1208,14 @@ body {
                         font-weight: 700;
                         line-height: 50px;
                         margin-bottom: 32px;
+
+                        @media screen and (max-width: 768px) {
+                            margin-bottom: 24px;
+                            font-size: 28px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 36px;
+                        }
                     }
 
                     h1 {
@@ -1096,6 +1238,14 @@ body {
                         font-weight: 400;
                         line-height: 26px;
                         margin-bottom: 32px;
+
+                        @media screen and (max-width: 768px) {
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 18px;
+                            margin-bottom: 24px;
+                        }
 
                         &:last-child {
                             margin-bottom: 0px;
@@ -1127,6 +1277,13 @@ body {
                     margin-bottom: 46px;
                     height: 280px;
 
+                    @media screen and (max-width: 768px) {
+                        overflow: visible;
+                        height: 100%;
+                        margin-bottom: 0px;
+                        padding-bottom: 110px;
+                    }
+
                     &::-webkit-scrollbar {
                         width: 4px;
                         background-color: transparent;
@@ -1144,11 +1301,27 @@ body {
                         font-style: normal;
                         font-weight: 400;
                         line-height: 26px;
+
+                        @media screen and(max-width: 768px) {
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 18px;
+                        }
                     }
                 }
 
                 .button {
                     width: 100%;
+
+                    @media screen and (max-width: 768px) {
+                        background: url("../../public/img/bg-gradient.png"), lightgray 50% / cover no-repeat;
+                        width: 100vw;
+                        position: fixed;
+                        bottom: 0;
+                        left: 0;
+                        padding: 16px;
+                    }
 
                     a {
                         padding: 16px 50px 16px 48px;
@@ -1249,6 +1422,22 @@ body {
                 padding-bottom: 64px;
                 position: relative;
 
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+
+                &.mobile {
+                    display: none;
+
+                    @media screen and (max-width: 768px) {
+                        display: block;
+                        height: 327px;
+                        width: 227px;
+                        margin: 0 auto;
+                        padding: 24px 0px;
+                    }
+                }
+
                 &.last-bc {
                     .device {
                         top: 43.5%;
@@ -1293,6 +1482,10 @@ body {
                     height: 48px;
                     filter: drop-shadow(0px 3px 7px rgba(0, 0, 0, 0.31));
                     background-color: #9191918a;
+
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
                 }
             }
         }
@@ -1593,15 +1786,18 @@ body {
     gap: 8px;
     margin-bottom: 48px;
     cursor: pointer;
+
     @media screen and (max-width: 768px) {
         display: none;
     }
 
     &.mobile-event {
-        
+
         @media screen and (max-width: 768px) {
             margin-bottom: 0;
             display: flex;
+            justify-content: center;
+            padding-bottom: 24px;
         }
     }
 
@@ -1647,6 +1843,13 @@ body {
         line-height: normal;
         display: block;
         margin-left: 8px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+        }
     }
 
     .form-check-input[type="checkbox"] {
