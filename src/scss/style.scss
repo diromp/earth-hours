@@ -28,6 +28,7 @@ img {
 	@media screen and (max-width: 767px) {
 		background-size: cover;
 	}
+
 	@media (min-width: 768px) and (max-width: 1180px) {
 		background-size: cover;
 	}
@@ -36,10 +37,16 @@ img {
 		.timmer {
 			padding-top: 140px;
 			padding-bottom: 140px;
+
 			@media screen and (max-width: 767px) {
 				padding-top: 48px;
 				padding-bottom: 0px;
 			}
+			@media (min-width: 768px) and (max-width: 1180px) {
+				padding-right: 32px;
+   				padding-left: 32px;
+			}
+
 			.title {
 				text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
 				font-family: "Poppins", sans-serif;
@@ -67,11 +74,14 @@ img {
 
 			&-content {
 				margin-top: 52px;
+
 				@media screen and (max-width: 767px) {
 					margin-top: 16px;
 				}
+
 				.timmer-style {
 					margin-bottom: 32px;
+
 					@media screen and (max-width: 767px) {
 						margin-bottom: 16px;
 					}
@@ -85,6 +95,7 @@ img {
 					font-style: normal;
 					font-weight: 400;
 					line-height: 44px;
+
 					@media screen and (max-width: 767px) {
 						font-size: 12px;
 						font-style: normal;
@@ -100,14 +111,17 @@ img {
 			padding-top: 48px;
 			padding-bottom: 80px;
 			background: linear-gradient(0deg, #4687c2 23.31%, rgba(51, 59, 76, 0) 100.34%);
+
 			@media screen and (max-width: 767px) {
 				margin-top: 0px;
 				padding-top: 32px;
 				padding-bottom: 48px;
 			}
+
 			@media (min-width: 768px) and (max-width: 1180px) {
 				margin-top: 0px;
 			}
+
 			&-title {
 				max-width: 754px;
 				width: 100%;
@@ -128,6 +142,7 @@ img {
 					line-height: 50px;
 					/* 138.889% */
 					text-transform: capitalize;
+
 					@media screen and (max-width: 767px) {
 						font-size: 14px;
 						font-style: normal;
@@ -153,22 +168,26 @@ img {
 				display: flex;
 				gap: 15px;
 				justify-content: center;
-    			align-items: center;
+				align-items: center;
+
 				@media screen and (max-width: 767px) {
 					flex-wrap: wrap;
 					gap: 10px;
+
 					.item-grid {
 						flex: 50%;
 						max-width: 48%;
 						background-size: cover !important;
-					}					
+					}
 				}
-				
+
 				@media (min-width: 768px) and (max-width: 1180px) {
 					flex-wrap: wrap;
+
 					.item-grid {
 						flex: 50%;
 						max-width: 28%;
+						background-size: cover !important;
 					}
 				}
 			}
@@ -238,6 +257,7 @@ img {
 						font-weight: 700;
 						line-height: 50px;
 						text-transform: capitalize;
+
 						@media screen and (max-width: 767px) {
 							font-size: 24px;
 							font-style: normal;
@@ -271,9 +291,11 @@ img {
 			@media screen and (max-width: 767px) {
 				padding: 24px 24px 0 24px;
 			}
+
 			.close-saved {
 				width: 32px;
 				height: 32px;
+
 				svg {
 					width: 100%;
 					height: 100%;
@@ -293,6 +315,7 @@ img {
 					font-style: normal;
 					font-weight: 700;
 					line-height: 50px;
+
 					@media screen and (max-width: 767px) {
 						font-size: 14px;
 						font-style: normal;
@@ -314,6 +337,7 @@ img {
 					line-height: 14px;
 					color: #fff;
 					padding: 10px;
+
 					@media screen and (max-width: 767px) {
 						width: 24px;
 						height: 24px;
@@ -346,10 +370,11 @@ img {
 		@media screen and (max-width: 767px) {
 			min-height: 100vh;
 		}
-		@media (min-width: 768px) and (max-width: 1180px) {
-			top: -2px;		
-			min-height: 100vh;
 
+		@media (min-width: 768px) and (max-width: 1180px) {
+			top: -2px;
+			min-height: 100vh;
+			
 		}
 
 		&::after {
@@ -369,13 +394,17 @@ img {
 			display: flex;
 			align-items: initial;
 			flex-direction: column;
-
+			@media (min-width: 768px) and (max-width: 1180px) {
+				padding-left: 32px;
+				padding-right: 32px;
+			}
 			.side-left {
 				z-index: 5;
 
 				.content {
 					margin-bottom: 42px;
 					max-width: 475px;
+
 					@media screen and (max-width: 767px) {
 						margin-bottom: 16px;
 					}
@@ -389,6 +418,7 @@ img {
 						line-height: 28px;
 						margin-bottom: 16px;
 						display: block;
+
 						@media screen and (max-width: 767px) {
 							font-size: 12px;
 							font-style: normal;
@@ -407,11 +437,12 @@ img {
 						line-height: 50px;
 						text-transform: capitalize;
 						margin-bottom: 16px;
+
 						@media screen and (max-width: 767px) {
 							font-size: 24px;
 							font-style: normal;
 							font-weight: 700;
-							line-height: 30px; 
+							line-height: 30px;
 						}
 					}
 
@@ -478,6 +509,7 @@ img {
 				background: unset;
 				border-radius: 0px;
 			}
+
 			@media (min-width: 768px) and (max-width: 1180px) {
 				flex-direction: column;
 				overflow: visible;
@@ -501,6 +533,7 @@ img {
 					padding-right: 16px;
 
 				}
+
 				@media (min-width: 768px) and (max-width: 1180px) {
 					padding-top: 16px;
 					padding-bottom: 0px;
@@ -795,8 +828,9 @@ img {
 					padding-right: 16px;
 					padding-left: 16px;
 				}
+
 				@media (min-width: 768px) and (max-width: 1180px) {
-					padding-bottom: 250px;
+					padding-bottom: 310px;
 				}
 
 				&.collapsed {
@@ -805,6 +839,7 @@ img {
 					@media screen and(max-width: 767px) {
 						margin-left: 0;
 					}
+
 					@media (min-width: 768px) and (max-width: 1180px) {
 						margin-left: 0;
 					}
@@ -914,6 +949,7 @@ img {
 						top: -43px;
 						transform: rotate(90deg);
 					}
+
 					@media (min-width: 768px) and (max-width: 1180px) {
 						left: 47%;
 						top: -36px;
@@ -1145,11 +1181,12 @@ img {
 					padding-bottom: 0;
 					margin-right: 0px;
 				}
+
 				@media (min-width: 768px) and (max-width: 1180px) {
 					width: 100%;
 					overflow: visible;
-					padding-left: 16px;
-					padding-right: 16px;
+					padding-left: 32px;
+					padding-right: 32px;
 					padding-top: 32px;
 					padding-bottom: 0;
 					margin-right: 0px;
@@ -1170,6 +1207,7 @@ img {
 					-moz-transition: width 0.9s linear;
 					-o-transition: width 0.9s linear;
 					transition: width 0.9s linear;
+
 					@media screen and (max-width: 767px) {
 						height: 28vh;
 						width: 100% !important;
@@ -1179,6 +1217,7 @@ img {
 						transition: height 0.9s linear;
 						margin-bottom: 20px;
 					}
+
 					@media (min-width: 768px) and (max-width: 1180px) {
 						height: 25vh;
 						width: 100% !important;
@@ -1198,6 +1237,7 @@ img {
 						padding-left: 24px;
 						padding-right: 24px;
 					}
+
 					h2 {
 						text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
 						font-family: "Poppins";
@@ -1333,6 +1373,11 @@ img {
 					height: 100%;
 					width: 100%;
 				}
+				@media (min-width: 768px) and (max-width: 1180px) {
+					padding: 32px 32px 0px 32px;
+					height: 100%;
+					width: 100%;
+				}
 
 				.scrollable {
 					height: 100%;
@@ -1350,6 +1395,11 @@ img {
 							padding-left: 0px;
 							padding-right: 0px;
 						}
+					}
+					@media (min-width: 768px) and (max-width: 1180px) {
+						overflow: visible;
+						padding-bottom: 0;
+						padding-right: 0px;
 					}
 
 					&::-webkit-scrollbar {
@@ -1512,6 +1562,14 @@ img {
 						left: 0;
 						padding: 16px;
 					}
+					@media (min-width: 768px) and (max-width: 1180px) {
+						background: url("../../public/img/bg-gradient.png"), lightgray 50% / cover no-repeat;
+						width: 100vw;
+						position: fixed;
+						bottom: 0;
+						left: 0;
+						padding: 32px;
+					}
 
 					a {
 						padding: 16px 50px 16px 48px;
@@ -1615,10 +1673,16 @@ img {
 				@media screen and (max-width: 767px) {
 					display: none;
 				}
+				@media (min-width: 768px) and (max-width: 1180px) {
+					display: none;
+				}
 
 				&.mobile {
 					display: none;
-
+					@media (min-width: 768px) and (max-width: 1180px) {
+						display: block;
+						margin: 0 auto;
+					}
 					@media screen and (max-width: 767px) {
 						display: block;
 						height: 327px;
@@ -2106,7 +2170,6 @@ img {
 		}
 	}
 }
-
 
 .love {
 	&.active {

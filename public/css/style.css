@@ -13,6 +13,9 @@
       @media screen and (max-width: 768px) {
         .select .select2-container .select2-selection__rendered {
           background: rgba(255, 255, 255, 0.2); } }
+      @media (min-width: 768px) and (max-width: 1180px) {
+        .select .select2-container .select2-selection__rendered {
+          background: rgba(255, 255, 255, 0.2); } }
       .select .select2-container .select2-selection__rendered .item-select {
         display: flex;
         align-items: center; }
@@ -106,7 +109,7 @@
   @media screen and (max-width: 768px) {
     .side-right {
       display: none; } }
-  @media (min-width: 768px) and (max-width: 1180px) {
+  @media (min-width: 768px) and (max-width: 1366px) {
     .side-right {
       display: none; } }
   .side-right .circular-slider {
@@ -343,7 +346,7 @@ body {
     .number {
       width: 40px;
       height: 65px; } }
-  @media (min-width: 768px) and (max-width: 1180px) {
+  @media (min-width: 768px) and (max-width: 1366px) {
     .number {
       width: 100px;
       height: 150px; } }
@@ -363,7 +366,7 @@ body {
       .number span {
         font-size: 48px;
         width: 40px; } }
-    @media (min-width: 768px) and (max-width: 1180px) {
+    @media (min-width: 768px) and (max-width: 1366px) {
       .number span {
         width: 100px; } }
     .number span:before {
@@ -384,7 +387,7 @@ body {
           border-top-left-radius: 8px;
           border-top-right-radius: 8px;
           height: 50%; } }
-      @media (min-width: 768px) and (max-width: 1180px) {
+      @media (min-width: 768px) and (max-width: 1366px) {
         .number span:before {
           height: 45%; } }
     .number span:after {
@@ -1072,6 +1075,10 @@ img {
       .apps .section-hours .timmer {
         padding-top: 48px;
         padding-bottom: 0px; } }
+    @media (min-width: 768px) and (max-width: 1180px) {
+      .apps .section-hours .timmer {
+        padding-right: 32px;
+        padding-left: 32px; } }
     .apps .section-hours .timmer .title {
       text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
       font-family: "Poppins", sans-serif;
@@ -1179,7 +1186,8 @@ img {
           flex-wrap: wrap; }
           .apps .section-hours .grids-country .item-grid {
             flex: 50%;
-            max-width: 28%; } }
+            max-width: 28%;
+            background-size: cover !important; } }
     .apps .section-hours .grids .item-grid {
       width: 222px;
       height: 290px;
@@ -1336,6 +1344,10 @@ img {
       display: flex;
       align-items: initial;
       flex-direction: column; }
+      @media (min-width: 768px) and (max-width: 1180px) {
+        .apps .section-slide .slide-content {
+          padding-left: 32px;
+          padding-right: 32px; } }
       .apps .section-slide .slide-content .side-left {
         z-index: 5; }
         .apps .section-slide .slide-content .side-left .content {
@@ -1644,7 +1656,7 @@ img {
         @media (min-width: 768px) and (max-width: 1180px) {
           .section-discovery .slide-content .main .content-dis,
           .section-discovery .slide-content .main .content-wrapper {
-            padding-bottom: 250px; } }
+            padding-bottom: 310px; } }
         .section-discovery .slide-content .main .content-dis.collapsed,
         .section-discovery .slide-content .main .content-wrapper.collapsed {
           margin-left: 1%; }
@@ -1971,8 +1983,8 @@ img {
           .section-discovery .slide-content .main .collapse-menu {
             width: 100%;
             overflow: visible;
-            padding-left: 16px;
-            padding-right: 16px;
+            padding-left: 32px;
+            padding-right: 32px;
             padding-top: 32px;
             padding-bottom: 0;
             margin-right: 0px; } }
@@ -2107,6 +2119,11 @@ img {
             padding: 16px 16px 0px 16px;
             height: 100%;
             width: 100%; } }
+        @media (min-width: 768px) and (max-width: 1180px) {
+          .section-discovery .slide-content .main .event-detail {
+            padding: 32px 32px 0px 32px;
+            height: 100%;
+            width: 100%; } }
         .section-discovery .slide-content .main .event-detail .scrollable {
           height: 100%;
           overflow-y: scroll;
@@ -2121,6 +2138,11 @@ img {
               .section-discovery .slide-content .main .event-detail .scrollable .listing {
                 padding-left: 0px;
                 padding-right: 0px; } }
+          @media (min-width: 768px) and (max-width: 1180px) {
+            .section-discovery .slide-content .main .event-detail .scrollable {
+              overflow: visible;
+              padding-bottom: 0;
+              padding-right: 0px; } }
           .section-discovery .slide-content .main .event-detail .scrollable::-webkit-scrollbar {
             width: 5px;
             background-color: transparent; }
@@ -2241,6 +2263,14 @@ img {
               bottom: 0;
               left: 0;
               padding: 16px; } }
+          @media (min-width: 768px) and (max-width: 1180px) {
+            .section-discovery .slide-content .main .event-detail .button {
+              background: url("../../public/img/bg-gradient.png"), lightgray 50%/cover no-repeat;
+              width: 100vw;
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              padding: 32px; } }
           .section-discovery .slide-content .main .event-detail .button a {
             padding: 16px 50px 16px 48px;
             border-radius: 12px;
@@ -2327,8 +2357,15 @@ img {
         @media screen and (max-width: 767px) {
           .section-discovery .slide-content .main .images-background {
             display: none; } }
+        @media (min-width: 768px) and (max-width: 1180px) {
+          .section-discovery .slide-content .main .images-background {
+            display: none; } }
         .section-discovery .slide-content .main .images-background.mobile {
           display: none; }
+          @media (min-width: 768px) and (max-width: 1180px) {
+            .section-discovery .slide-content .main .images-background.mobile {
+              display: block;
+              margin: 0 auto; } }
           @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .images-background.mobile {
               display: block;

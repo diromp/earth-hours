@@ -4,7 +4,7 @@
   @media screen and (max-width: 768px) {
     .side-right {
       display: none; } }
-  @media (min-width: 768px) and (max-width: 1180px) {
+  @media (min-width: 768px) and (max-width: 1366px) {
     .side-right {
       display: none; } }
   .side-right .circular-slider {
@@ -241,7 +241,7 @@ body {
     .number {
       width: 40px;
       height: 65px; } }
-  @media (min-width: 768px) and (max-width: 1180px) {
+  @media (min-width: 768px) and (max-width: 1366px) {
     .number {
       width: 100px;
       height: 150px; } }
@@ -261,7 +261,7 @@ body {
       .number span {
         font-size: 48px;
         width: 40px; } }
-    @media (min-width: 768px) and (max-width: 1180px) {
+    @media (min-width: 768px) and (max-width: 1366px) {
       .number span {
         width: 100px; } }
     .number span:before {
@@ -282,7 +282,7 @@ body {
           border-top-left-radius: 8px;
           border-top-right-radius: 8px;
           height: 50%; } }
-      @media (min-width: 768px) and (max-width: 1180px) {
+      @media (min-width: 768px) and (max-width: 1366px) {
         .number span:before {
           height: 45%; } }
     .number span:after {
