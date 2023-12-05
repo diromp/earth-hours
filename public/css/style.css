@@ -45,7 +45,17 @@
         .select .select2-container .select2-selection__arrow {
           top: 30% !important; } }
       .select .select2-container .select2-selection__arrow b {
-        border-color: #fff transparent transparent transparent !important; }
+        background-image: url("../../public/img/ic-expand-select2.svg");
+        background-color: transparent;
+        background-size: contain;
+        border: none !important;
+        height: 24px !important;
+        width: 24px !important;
+        margin: auto !important;
+        top: auto !important;
+        left: -10px !important; }
+  .select .select2-container--open .select2-selection__arrow b {
+    transform: rotate(180deg); }
 
 .select2-dropdown {
   border-radius: 8px !important;
@@ -2406,6 +2416,13 @@ img {
           border-radius: 8px;
           padding: 16px;
           gap: 16px; }
+          .section-discovery .slide-content .main .event-detail .form-submit .form-group-extend input:not(:-moz-placeholder-shown) + label {
+            bottom: 125%;
+            opacity: 1; }
+          .section-discovery .slide-content .main .event-detail .form-submit .form-group-extend input:not(:placeholder-shown) + label,
+          .section-discovery .slide-content .main .event-detail .form-submit .form-group-extend input:focus + label {
+            bottom: 125%;
+            opacity: 1; }
           .section-discovery .slide-content .main .event-detail .form-submit .form-group-extend input {
             font-family: Poppins;
             font-size: 16px;
@@ -2424,7 +2441,7 @@ img {
                 font-weight: 400;
                 line-height: 18px; } }
             .section-discovery .slide-content .main .event-detail .form-submit .form-group-extend input:first-child {
-              flex: 5%; }
+              flex: 7%; }
             .section-discovery .slide-content .main .event-detail .form-submit .form-group-extend input::-moz-placeholder {
               color: #fff;
               font-family: Poppins;

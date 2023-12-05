@@ -57,7 +57,24 @@
                     top: 30% !important;
                 }
                 b {
-                    border-color: #fff transparent transparent transparent !important;
+                    background-image: url("../../public/img/ic-expand-select2.svg");
+                    background-color: transparent;
+                    background-size: contain;
+                    border: none !important;
+                    height: 24px !important;
+                    width: 24px !important;
+                    margin: auto !important;
+                    top: auto !important;
+                    left: -10px !important;
+                }
+            }
+        }
+        &--open{
+            .select2-selection {
+                &__arrow {
+                    b {
+                        transform: rotate(180deg);
+                    }
                 }
             }
         }

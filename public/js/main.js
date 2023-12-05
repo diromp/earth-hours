@@ -192,6 +192,8 @@ $(document).ready(function () {
     $('.next-detail').on('click', function (e) {
         var containerName =$(this).closest('.new-card').attr('id');
 
+        console.log('containerName');
+
         if(containerName === 'savedSlider') {
             $('.saved-list').fadeOut(
                 'slow'

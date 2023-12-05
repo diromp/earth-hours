@@ -1715,7 +1715,11 @@ img {
 						border-radius: 8px;
 						padding: 16px;
 						gap: 16px;
-
+						input:not(:placeholder-shown) + label,
+						input:focus + label {
+							bottom: 125%;
+							opacity: 1;
+						}
 						input {
 							font-family: Poppins;
 							font-size: 16px;
@@ -1733,8 +1737,9 @@ img {
 								font-weight: 400;
 								line-height: 18px;
 							}
+
 							&:first-child {
-								flex:5%;
+								flex:7%;
 							}
 							&::placeholder {
 								color: #fff;

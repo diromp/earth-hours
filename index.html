@@ -1236,9 +1236,9 @@
                                         <label>Email Address</label>
                                     </div>
                                     <div class="form-group-extend">
-                                        <input maxlength="3" type="text" class="form-control" placeholder="--">
+                                        <input oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="3" type="text" class="form-control" placeholder="--">
                                         <div class="input-class">
-                                            <input placeholder="Phone number" type="text" class="form-control" />
+                                            <input oninput="this.value=this.value.replace(/[^0-9]/g,'');"  placeholder="Phone number" type="text" class="form-control" />
                                             <label>Phone number</label>
                                         </div>
                                     </div>

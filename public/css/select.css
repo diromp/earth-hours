@@ -45,7 +45,17 @@
         .select .select2-container .select2-selection__arrow {
           top: 30% !important; } }
       .select .select2-container .select2-selection__arrow b {
-        border-color: #fff transparent transparent transparent !important; }
+        background-image: url("../../public/img/ic-expand-select2.svg");
+        background-color: transparent;
+        background-size: contain;
+        border: none !important;
+        height: 24px !important;
+        width: 24px !important;
+        margin: auto !important;
+        top: auto !important;
+        left: -10px !important; }
+  .select .select2-container--open .select2-selection__arrow b {
+    transform: rotate(180deg); }
 
 .select2-dropdown {
   border-radius: 8px !important;
