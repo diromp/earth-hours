@@ -495,16 +495,39 @@ img {
 		&.saved-list {
 			.main {
 				height: 100%;
+				@media screen and (max-width: 767px) {
+					margin-top: 16px;
+					border-radius: 8px;
+					background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(to right, #a0df9e 12.41%, #4587c2 89.87%) border-box;
+				}
+
 				.content-wrapper {
 					padding-bottom: 66px;
+
 					.arrows {
 						top: 38%;
 						right: 80px;
+						@media screen and (max-width: 767px) {
+							top: 40%;
+						}
 					}
 					.new-card {
-						padding-left: 110px;
-						padding-right: 110px;
+						padding-left: 80px;
+						padding-right: 80px;
 					}
+
+					@media screen and (min-width: 768px) and (max-width: 1180px) {
+						.new-card {
+							padding-left: 110px;
+							padding-right: 110px;
+						}
+					}
+
+					@media screen and (max-width: 767px) {
+						padding-left: 16px !important;
+						padding-right: 16px !important;
+					}
+					
 				}
 			}
 		}
@@ -522,18 +545,19 @@ img {
 	
 				}
 			}
+			@media screen and (min-width: 768px) and (max-width: 1180px) {
+				.images-background {
 
-			
-			.images-background {
-				> .love {
-					top: 52px !important;
-					right: 32px !important;
+					> .love {
+						top: 52px !important;
+						right: 32px !important;
+					}
 				}
 			}
 		}
 		&.slide-3 {
 			@media screen and (min-width: 768px) and (max-width: 1180px) {
-				min-height: 120vh;
+				min-height: 90rem;
 
 				.images-background {
 					display: block !important;
@@ -547,6 +571,7 @@ img {
 			@media screen and (max-width: 767px) {
 				.main {
 					overflow: visible;
+
 					.event-detail {
 						.content {
 							h2 {
@@ -559,7 +584,7 @@ img {
 		}
 		&.slide-4 {
 			@media screen and (min-width: 768px) and (max-width: 1180px) {
-				min-height: 120vh;
+				min-height: 90rem;
 			}
 			@media screen and (max-width: 767px) {
 				.main {
@@ -1610,22 +1635,25 @@ img {
 
 				.button {
 					width: 100%;
-					position: fixed;
-					width: 100vw;
-					bottom: 0;
-					left: 0;
 					z-index: 9;
 					display: none;
+					@media screen and (max-width: 767px), (min-width: 768px) and (max-width: 1180px) {
+						position: fixed;
+						bottom: 0;
+						left: 0;
+						width: 100vw;	
+					}
 					.overlay {
 						height: 100%;
-						width: 100vw;
 						position: absolute;
 						opacity: 0.8;
 						@media screen and (max-width: 767px) {
 							background: url("../../public/img/bg-gradient.png"), lightgray 50% / cover no-repeat;
+							width: 100vw;
 						}
 						@media (min-width: 768px) and (max-width: 1180px) {
 							background: url("../../public/img/bg-gradient.png"), lightgray 50% / cover no-repeat;
+							width: 100vw;
 						}
 					}
 
@@ -1653,7 +1681,6 @@ img {
 						width: 100%;
 						position: relative;
 						z-index: 3;
-						width: 100vw;
 					}
 				}
 

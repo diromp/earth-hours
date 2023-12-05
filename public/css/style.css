@@ -1424,27 +1424,42 @@ img {
       display: block !important; }
     .section-discovery .slide-content.saved-list .main {
       height: 100%; }
+      @media screen and (max-width: 767px) {
+        .section-discovery .slide-content.saved-list .main {
+          margin-top: 16px;
+          border-radius: 8px;
+          background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(to right, #a0df9e 12.41%, #4587c2 89.87%) border-box; } }
       .section-discovery .slide-content.saved-list .main .content-wrapper {
         padding-bottom: 66px; }
         .section-discovery .slide-content.saved-list .main .content-wrapper .arrows {
           top: 38%;
           right: 80px; }
+          @media screen and (max-width: 767px) {
+            .section-discovery .slide-content.saved-list .main .content-wrapper .arrows {
+              top: 40%; } }
         .section-discovery .slide-content.saved-list .main .content-wrapper .new-card {
-          padding-left: 110px;
-          padding-right: 110px; }
-    @media screen and (max-width: 767px) {
+          padding-left: 80px;
+          padding-right: 80px; }
+        @media screen and (min-width: 768px) and (max-width: 1180px) {
+          .section-discovery .slide-content.saved-list .main .content-wrapper .new-card {
+            padding-left: 110px;
+            padding-right: 110px; } }
+        @media screen and (max-width: 767px) {
+          .section-discovery .slide-content.saved-list .main .content-wrapper {
+            padding-left: 16px !important;
+            padding-right: 16px !important; }
       .section-discovery .slide-content.slide-2 .listing .list {
         gap: 8px !important;
         overflow: visible !important;
         flex-flow: wrap !important; }
         .section-discovery .slide-content.slide-2 .listing .list .list-group {
           margin-bottom: 8px !important; } }
-    .section-discovery .slide-content.slide-2 .images-background > .love {
-      top: 52px !important;
-      right: 32px !important; }
     @media screen and (min-width: 768px) and (max-width: 1180px) {
+      .section-discovery .slide-content.slide-2 .images-background > .love {
+        top: 52px !important;
+        right: 32px !important; }
       .section-discovery .slide-content.slide-3 {
-        min-height: 120vh; }
+        min-height: 90rem; }
         .section-discovery .slide-content.slide-3 .images-background {
           display: block !important;
           padding-left: 64px; }
@@ -1458,7 +1473,7 @@ img {
           margin-bottom: 24px; } }
     @media screen and (min-width: 768px) and (max-width: 1180px) {
       .section-discovery .slide-content.slide-4 {
-        min-height: 120vh; } }
+        min-height: 90rem; } }
     @media screen and (max-width: 767px) {
       .section-discovery .slide-content.slide-4 .main {
         overflow: visible; } }
@@ -2323,23 +2338,26 @@ img {
                 line-height: 18px; } }
         .section-discovery .slide-content .main .event-detail .button {
           width: 100%;
-          position: fixed;
-          width: 100vw;
-          bottom: 0;
-          left: 0;
           z-index: 9;
           display: none; }
+          @media screen and (max-width: 767px), (min-width: 768px) and (max-width: 1180px) {
+            .section-discovery .slide-content .main .event-detail .button {
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              width: 100vw; } }
           .section-discovery .slide-content .main .event-detail .button .overlay {
             height: 100%;
-            width: 100vw;
             position: absolute;
             opacity: 0.8; }
             @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .event-detail .button .overlay {
-                background: url("../../public/img/bg-gradient.png"), lightgray 50%/cover no-repeat; } }
+                background: url("../../public/img/bg-gradient.png"), lightgray 50%/cover no-repeat;
+                width: 100vw; } }
             @media (min-width: 768px) and (max-width: 1180px) {
               .section-discovery .slide-content .main .event-detail .button .overlay {
-                background: url("../../public/img/bg-gradient.png"), lightgray 50%/cover no-repeat; } }
+                background: url("../../public/img/bg-gradient.png"), lightgray 50%/cover no-repeat;
+                width: 100vw; } }
           .section-discovery .slide-content .main .event-detail .button a {
             padding: 16px 50px 16px 48px;
             border-radius: 12px;
@@ -2355,8 +2373,7 @@ img {
             display: inline-block;
             width: 100%;
             position: relative;
-            z-index: 3;
-            width: 100vw; }
+            z-index: 3; }
             @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .event-detail .button a {
                 margin: 16px;
