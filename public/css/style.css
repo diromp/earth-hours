@@ -2234,6 +2234,9 @@ img {
               height: 100%;
               margin-bottom: 0px;
               padding-bottom: 110px; } }
+          @media (min-width: 768px) and (max-width: 1366px) {
+            .section-discovery .slide-content .main .event-detail .paragraf {
+              height: 320px; } }
           .section-discovery .slide-content .main .event-detail .paragraf::-webkit-scrollbar {
             width: 4px;
             background-color: transparent; }

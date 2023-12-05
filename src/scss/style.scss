@@ -1511,7 +1511,6 @@ img {
 						}
 					}
 				}
-
 				.paragraf {
 					overflow-y: scroll;
 					margin-bottom: 46px;
@@ -1522,6 +1521,9 @@ img {
 						height: 100%;
 						margin-bottom: 0px;
 						padding-bottom: 110px;
+					}
+					@media (min-width: 768px) and (max-width: 1366px) {
+    					height: 320px;
 					}
 
 					&::-webkit-scrollbar {
