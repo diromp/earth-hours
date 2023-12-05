@@ -1116,7 +1116,6 @@ img {
 					-moz-transition: width 0.9s linear;
 					-o-transition: width 0.9s linear;
 					transition: width 0.9s linear;
-
 					@media screen and (max-width: 768px) {
 						height: 28vh;
 						width: 100% !important;
@@ -1124,6 +1123,7 @@ img {
 						-moz-transition: height 0.9s linear;
 						-o-transition: height 0.9s linear;
 						transition: height 0.9s linear;
+						margin-bottom: 20px;
 					}
 				}
 

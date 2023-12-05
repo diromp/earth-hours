@@ -1920,7 +1920,8 @@ img {
             .section-discovery .slide-content .main .collapse-menu.collapsed {
               height: 28vh;
               width: 100% !important;
-              transition: height 0.9s linear; } }
+              transition: height 0.9s linear;
+              margin-bottom: 20px; } }
         .section-discovery .slide-content .main .collapse-menu .desc {
           max-width: 625px;
           width: 100%; }
