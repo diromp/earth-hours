@@ -469,8 +469,7 @@ img {
 
 .section-discovery {
 	display: flex;
-	overflow-x: hidden;
-	overflow-y: hidden;
+	overflow: hidden;
 	background-color: #1a1a1a;
 
 	&::-webkit-scrollbar {
@@ -485,6 +484,22 @@ img {
 		height: 100%;
 		position: relative;
 		background-color: #1a1a1a;
+		&.saved-list {
+			.main {
+				height: 100%;
+				.content-wrapper {
+					padding-bottom: 66px;
+					.arrows {
+						top: 38%;
+						right: 80px;
+					}
+					.new-card {
+						padding-left: 110px;
+						padding-right: 110px;
+					}
+				}
+			}
+		}
 
 		.main {
 			margin-bottom: 32px;
@@ -496,8 +511,7 @@ img {
 				linear-gradient(to right, #a0df9e 12.41%, #4587c2 89.87%) border-box;
 			position: relative;
 			display: flex;
-			max-height: 54rem;
-			height: 100%;
+			height: 962px;
 			overflow: hidden;
 
 			@media screen and (max-width: 767px) {
@@ -523,7 +537,7 @@ img {
 
 			.listing {
 				padding-bottom: 24px;
-				padding-top: 32px;
+				padding-top: 24px;
 				border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 
 				@media screen and (max-width: 767px) {
@@ -549,6 +563,7 @@ img {
 					gap: 8px;
 					border: 0px;
 					background: transparent;
+					padding: 8px 20px;
 
 					span {
 						color: #fff;
@@ -567,6 +582,7 @@ img {
 
 				&:last-child {
 					border-bottom: 0px;
+					padding-bottom: 0px;
 				}
 
 				h4 {
@@ -600,8 +616,8 @@ img {
 						align-items: center;
 						display: flex;
 						padding: 10px 16px;
-						cursor: pointer;
 						margin-bottom: 8px;
+						user-select: none;
 						white-space: nowrap;
 
 						@media screen and (max-width: 767px) {
@@ -814,9 +830,9 @@ img {
 
 			.content-dis,
 			.content-wrapper {
-				padding-top: 32px;
-				padding-right: 32px;
-				padding-left: 32px;
+				padding-top: 48px;
+				padding-right: 48px;
+				padding-left: 48px;
 				position: relative;
 				background-color: #fff;
 				width: 100%;
@@ -847,7 +863,7 @@ img {
 
 				.arrows {
 					position: absolute;
-					top: 50%;
+					top: 48%;
 					right: 25px;
 
 					@media screen and(max-width: 767px) {
@@ -882,6 +898,9 @@ img {
 							background-image: url("../../public/img/ic-arrow-up.svg");
 							background-repeat: no-repeat;
 							background-size: contain;
+							&:hover, &:focus, &:active{
+								background-image: url("../../public/img/ic-arrow-up-active.svg");
+							}
 
 							@media screen and(max-width: 767px) {
 								background-image: url("../../public/img/ic_arrow_left.png");
@@ -894,6 +913,9 @@ img {
 							background-repeat: no-repeat;
 							background-size: contain;
 							margin-top: 30px;
+							&:hover, &:focus, &:active{
+								background-image: url("../../public/img/ic-arrow-down-active.png");
+							}
 
 							@media screen and(max-width: 767px) {
 								background-image: url("../../public/img/ic_arrow_right.png");
@@ -931,7 +953,7 @@ img {
 				.close {
 					position: absolute;
 					left: 0;
-					top: 50%;
+					top: 46%;
 					z-index: 9;
 					cursor: pointer;
 					display: flex;
@@ -960,12 +982,8 @@ img {
 				.new-card {
 					width: 100%;
 					height: 718px;
-					margin-top: 30px;
-
-					@media screen and (max-width: 767px) {
-						margin-top: 24px;
-					}
-
+					margin-top: 24px;
+					overflow: hidden;
 
 					.item-card-container {
 						display: flex;
@@ -983,8 +1001,8 @@ img {
 					}
 
 					.item-card {
-						width: 260px !important;
-						height: 328px;
+						width: 230px !important;
+						height: 350px;
 						box-shadow: 0px 3px 15px 0px rgba(27, 27, 28, 0.37);
 						border-radius: 18px;
 						position: relative;
@@ -1148,7 +1166,7 @@ img {
 							height: 9px;
 							background-color: #D9D9D9;
 							width: 100%;
-							top: 51%;
+							top: 55%;
 							left: 0;
 							right: 0;
 							bottom: 0;
@@ -1158,19 +1176,16 @@ img {
 			}
 
 			.collapse-menu {
-				padding-bottom: 48px;
-				width: 70%;
-				padding-left: 32px;
-				padding-right: 32px;
-				padding-top: 61px;
+				padding-bottom: 56px;
+				width: 90%;
+				padding-left: 48px;
+				padding-right: 48px;
+				padding-top: 66px;
 				position: relative;
 				-webkit-transition: width 0.9s linear;
 				-moz-transition: width 0.9s linear;
 				-o-transition: width 0.9s linear;
 				transition: width 0.9s linear;
-				overflow-y: scroll;
-				overflow-x: hidden;
-				margin-right: 14px;
 
 				@media screen and (max-width: 767px) {
 					width: 100%;
@@ -1202,7 +1217,7 @@ img {
 				}
 
 				&.collapsed {
-					width: 27%;
+					width: 41%;
 					-webkit-transition: width 0.9s linear;
 					-moz-transition: width 0.9s linear;
 					-o-transition: width 0.9s linear;
@@ -1245,7 +1260,7 @@ img {
 						font-style: normal;
 						font-weight: 700;
 						line-height: 64px;
-						margin-bottom: 30px;
+						margin-bottom: 24px;
 						color: #fff;
 
 						@media screen and (max-width: 767px) {
@@ -1253,7 +1268,6 @@ img {
 							font-style: normal;
 							font-weight: 700;
 							line-height: 30px;
-							margin-bottom: 24px;
 						}
 					}
 
@@ -1274,17 +1288,13 @@ img {
 					}
 				}
 
+
 				.filter {
-					margin-top: 58px;
-
-					@media screen and (max-width: 767px) {
-						margin-top: 24px;
-					}
-
+					margin-top: 24px;
 					.select {
-						margin-bottom: 38px;
 						display: flex;
 						gap: 16px;
+						height: 52px;
 
 						@media screen and (max-width: 767px) {
 							margin-bottom: 5px;
@@ -1294,11 +1304,7 @@ img {
 					}
 
 					.choose {
-						padding-top: 32px;
-
-						@media screen and (max-width: 767px) {
-							padding-top: 24px;
-						}
+						padding-top: 24px;
 
 						.title {
 							padding-bottom: 12px;
@@ -1350,7 +1356,7 @@ img {
 						}
 
 						.content-choose {
-							padding: 16px 16px 24px 16px;
+							padding: 24px;
 							border-radius: 8px;
 							background: rgba(255, 255, 255, 0.1);
 
@@ -1381,10 +1387,7 @@ img {
 
 				.scrollable {
 					height: 100%;
-					overflow-y: scroll;
-					overflow-x: hidden;
 					padding-bottom: 12px;
-					padding-right: 29px;
 
 					@media screen and (max-width: 767px) {
 						padding-bottom: 0;
@@ -1439,10 +1442,8 @@ img {
 						font-style: normal;
 						font-weight: 700;
 						line-height: 50px;
-						margin-bottom: 32px;
 
 						@media screen and (max-width: 767px) {
-							margin-bottom: 24px;
 							font-size: 28px;
 							font-style: normal;
 							font-weight: 700;
@@ -1457,14 +1458,13 @@ img {
 						font-style: normal;
 						font-weight: 700;
 						line-height: normal;
-						margin-bottom: 32px;
+						margin-bottom: 24px;
 
 						@media screen and (max-width: 767px) {
 							font-size: 24px;
 							font-style: normal;
 							font-weight: 700;
 							line-height: 30px;
-							margin-bottom: 24px;
 						}
 					}
 
@@ -1477,44 +1477,25 @@ img {
 						font-style: normal;
 						font-weight: 400;
 						line-height: 26px;
-						margin-bottom: 32px;
+						margin-bottom: 24px;
 
 						@media screen and (max-width: 767px) {
 							font-size: 12px;
 							font-style: normal;
 							font-weight: 700;
 							line-height: 18px;
-							margin-bottom: 24px;
 						}
 
 						&:last-child {
 							margin-bottom: 0px;
 						}
 					}
-
-					.notification {
-						display: flex;
-						align-items: center;
-						gap: 8px;
-
-						svg {
-							color: #fff;
-						}
-
-						span {
-							color: #fff;
-							font-family: "Poppins";
-							font-size: 14px;
-							font-style: normal;
-							font-weight: 700;
-							line-height: 28px;
-						}
-					}
 				}
 				.paragraf {
 					overflow-y: scroll;
-					margin-bottom: 46px;
+					margin-bottom: 16px;
 					height: 280px;
+					padding-right: 34px;
 
 					@media screen and (max-width: 767px) {
 						overflow: visible;
@@ -1543,6 +1524,7 @@ img {
 						font-style: normal;
 						font-weight: 400;
 						line-height: 26px;
+						margin-bottom: 16px;
 
 						@media screen and(max-width: 767px) {
 							font-size: 12px;
@@ -1608,8 +1590,90 @@ img {
 				}
 
 				.form-submit {
+					.form-group, .form-group-extend, + .form-check-default {
+						width: 492px;
+					}
+					.form-group-extend {
+						margin-bottom: 16px;
+						display: flex;
+						border: 1px solid rgba(255, 255, 255, 0.2);
+						border-radius: 8px;
+						padding: 16px;
+						gap: 16px;
+
+						input {
+							font-family: Poppins;
+							font-size: 16px;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 26px;
+							color: #fff;
+							width: 100%;
+							outline: 0;
+							border: 0px ;
+							background-color: #1a1a1a;
+							&:first-child {
+								flex:5%;
+							}
+							&::placeholder {
+								color: #fff;
+								font-family: Poppins;
+								font-size: 16px;
+								font-style: normal;
+								font-weight: 400;
+								line-height: 26px;
+							}
+						}
+						.input-class {
+							flex: 95%;
+							position: relative;
+							.form-control:not(:placeholder-shown) + label,
+							.form-control:focus + label {
+								bottom: 125%;
+								opacity: 1;
+							}
+							label {
+								position: absolute;
+								opacity: 0;
+								transition: .2s bottom, .2s opacity;
+								bottom: 0;
+								left: -48px;
+								z-index: 1;
+								color: #A8A8A8;
+								font-family: Poppins;
+								background-color: #1A1A1A;
+								padding: 0px 8px;
+								font-size: 12px;
+								font-style: normal;
+								font-weight: 400;
+								line-height: 18px;
+							}
+						}
+					}
 					.form-group {
 						margin-bottom: 16px;
+						position: relative;
+						.form-control:not(:placeholder-shown) + label,
+						.form-control:focus + label {
+							bottom: 85%;
+							opacity: 1;
+						}
+						label {
+							position: absolute;
+							opacity: 0;
+							transition: .2s bottom, .2s opacity;
+							bottom: 0;
+							left: 15px;
+							z-index: 1;
+							color: #A8A8A8;
+							font-family: Poppins;
+							background-color: #1A1A1A;
+							padding: 0px 8px;
+							font-size: 12px;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 18px;
+						}
 
 						select.form-control {
 							appearance: none;
@@ -1633,7 +1697,7 @@ img {
 							outline: 0;
 
 							&::placeholder {
-								color: #ffffff96;
+								color: #fff;
 								font-family: Poppins;
 								font-size: 16px;
 								font-style: normal;
@@ -1663,7 +1727,7 @@ img {
 			}
 
 			.images-background {
-				height: 784px;
+				height: 804px;
 				background-repeat: no-repeat;
 				background-size: cover;
 				width: 603px;
@@ -1728,14 +1792,14 @@ img {
 				.love {
 					cursor: pointer;
 					position: absolute;
-					top: 104px;
-					right: 104px;
+					top: 94px;
+					right: 94px;
 					border-radius: 50%;
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					width: 48px;
-					height: 48px;
+					width: 46px;
+					height: 46px;
 					filter: drop-shadow(0px 3px 7px rgba(0, 0, 0, 0.31));
 					background-color: #9191918a;
 
@@ -2040,7 +2104,7 @@ img {
 	align-items: center;
 	width: 100%;
 	gap: 8px;
-	margin-bottom: 48px;
+	margin-bottom: 24px;
 	cursor: pointer;
 
 	@media screen and (max-width: 767px) {
@@ -2048,11 +2112,7 @@ img {
 	}
 
 	&.mobile-event {
-
-		@media (min-width: 768px) and (max-width: 1180px) {
-			display: none;
-		}
-
+		display: none;
 		@media screen and (max-width: 767px) {
 			margin-bottom: 0;
 			display: flex;

@@ -5,6 +5,7 @@ $(document).ready(function () {
     var container = $('.section-discovery');
     var containerQuestions = $('.section-question');
     var seeMore = $('.seamore');
+    var selectLocations = $('.select-location-container');
 
 
     function formatIcon(state) {
@@ -50,16 +51,14 @@ $(document).ready(function () {
         return $item;
     }
 
+    selectLocations.hide();
+
     $('.select-country').select2({
         templateResult: formatTextSelect2,
         templateSelection: formatIcon,
         placeholder: "Select Language",
     }).on('change', function (e) {
-        if (e.target.value === 'Turkye') {
-            $('.select-location-container').hide();
-        } else {
-            $('.select-location-container').show();
-        }
+        $('.select-location-container').show();
     });
 
     $('.select-location').select2({
@@ -182,6 +181,7 @@ $(document).ready(function () {
 
     $(seeMore).on('click', function (e) {
         $('.site').toggleClass('hidden');
+        $('.collapse-menu').toggleClass('scrolling');
         $('.family-frendly').toggleClass('hidden');
         if (!$('.site').hasClass('hidden')) {
             $(this).find('img').attr('src', './public/img/ic-minus.svg');
@@ -208,7 +208,9 @@ $(document).ready(function () {
             );
         }
 
-        $('div.button').show( "slow");
+        $('div.button').css({
+            'display': 'block'
+        })
         
         setTimeout(function () {
             $('.slide-2').css({
@@ -261,6 +263,9 @@ $(document).ready(function () {
     });
     $('.back-to').on('click', function () {
         const backTo = $(this).parents();
+        $('div.button').css({
+            'display': 'none'
+        })
 
         if (backTo[3].className === 'slide-content slide-2') {
             console.log('Back to slide;');
@@ -304,7 +309,6 @@ $(document).ready(function () {
             $('.slide-4').css({
                 'display': 'none'
             })
-            $('div.button').hide();
             setTimeout(function () {
                 $('.slide-3').css({
                     'display': 'block',

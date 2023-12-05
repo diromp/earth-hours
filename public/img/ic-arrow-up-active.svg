@@ -1,0 +1,11 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="arrow_circle_up_select">
+<mask id="mask0_746_714" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<rect id="Bounding box" width="48" height="48" transform="matrix(1 0 0 -1 0 48)" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_746_714)">
+<path id="Ellipse 17" d="M43 24C43 13.5066 34.4934 5 24 5C13.5066 5 5 13.5066 5 24C5 34.4934 13.5066 43 24 43C34.4934 43 43 34.4934 43 24Z" fill="#4587C2"/>
+<path id="arrow_circle_up" d="M30.7916 23.8654L24.0109 17.1039L17.2109 23.8654L18.7917 25.4461L22.8571 21.3807V31H25.1455V21.3807L29.2109 25.4461L30.7916 23.8654Z" fill="white"/>
+</g>
+</g>
+</svg>
