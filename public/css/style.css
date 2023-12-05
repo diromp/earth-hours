@@ -114,7 +114,8 @@
         color: #fff; }
 
 .scrolling {
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  margin-right: 8px; }
 
 .side-right {
   position: relative;
