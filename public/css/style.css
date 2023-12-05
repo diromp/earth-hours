@@ -1408,6 +1408,9 @@ img {
   display: flex;
   overflow: hidden;
   background-color: #1a1a1a; }
+  @media (min-width: 768px) and (max-width: 1180px) {
+    .section-discovery {
+      overflow-y: scroll; } }
   .section-discovery::-webkit-scrollbar {
     display: none; }
   .section-discovery .slide-content {
@@ -1417,6 +1420,8 @@ img {
     height: 100%;
     position: relative;
     background-color: #1a1a1a; }
+    .section-discovery .slide-content.active .button {
+      display: block !important; }
     .section-discovery .slide-content.saved-list .main {
       height: 100%; }
       .section-discovery .slide-content.saved-list .main .content-wrapper {
@@ -1427,6 +1432,36 @@ img {
         .section-discovery .slide-content.saved-list .main .content-wrapper .new-card {
           padding-left: 110px;
           padding-right: 110px; }
+    @media screen and (max-width: 767px) {
+      .section-discovery .slide-content.slide-2 .listing .list {
+        gap: 8px !important;
+        overflow: visible !important;
+        flex-flow: wrap !important; }
+        .section-discovery .slide-content.slide-2 .listing .list .list-group {
+          margin-bottom: 8px !important; } }
+    .section-discovery .slide-content.slide-2 .images-background > .love {
+      top: 52px !important;
+      right: 32px !important; }
+    @media screen and (min-width: 768px) and (max-width: 1180px) {
+      .section-discovery .slide-content.slide-3 {
+        min-height: 120vh; }
+        .section-discovery .slide-content.slide-3 .images-background {
+          display: block !important;
+          padding-left: 64px; }
+          .section-discovery .slide-content.slide-3 .images-background > .love {
+            top: 32px !important;
+            right: 84px !important; } }
+    @media screen and (max-width: 767px) {
+      .section-discovery .slide-content.slide-3 .main {
+        overflow: visible; }
+        .section-discovery .slide-content.slide-3 .main .event-detail .content h2 {
+          margin-bottom: 24px; } }
+    @media screen and (min-width: 768px) and (max-width: 1180px) {
+      .section-discovery .slide-content.slide-4 {
+        min-height: 120vh; } }
+    @media screen and (max-width: 767px) {
+      .section-discovery .slide-content.slide-4 .main {
+        overflow: visible; } }
     .section-discovery .slide-content .main {
       margin-bottom: 32px;
       margin-top: 32px;
@@ -1469,10 +1504,8 @@ img {
             padding-right: 16px; } }
         @media (min-width: 768px) and (max-width: 1180px) {
           .section-discovery .slide-content .main .listing {
-            padding-top: 16px;
-            padding-bottom: 0px;
-            padding-left: 16px;
-            padding-right: 16px; } }
+            padding-top: 24px;
+            padding-bottom: 0px; } }
         .section-discovery .slide-content .main .listing .seamore {
           display: flex;
           justify-content: center;
@@ -1671,7 +1704,8 @@ img {
         @media (min-width: 768px) and (max-width: 1180px) {
           .section-discovery .slide-content .main .content-dis,
           .section-discovery .slide-content .main .content-wrapper {
-            padding-bottom: 310px; } }
+            overflow: visible;
+            padding-bottom: 48px; } }
         .section-discovery .slide-content .main .content-dis.collapsed,
         .section-discovery .slide-content .main .content-wrapper.collapsed {
           margin-left: 1%; }
@@ -1697,8 +1731,7 @@ img {
               display: flex;
               justify-content: space-between;
               padding-right: 8px;
-              padding-left: 8px;
-              top: 40%; } }
+              padding-left: 8px; } }
           .section-discovery .slide-content .main .content-dis .arrows .button,
           .section-discovery .slide-content .main .content-dis .arrows .button2,
           .section-discovery .slide-content .main .content-wrapper .arrows .button,
@@ -1740,7 +1773,18 @@ img {
                 .section-discovery .slide-content .main .content-dis .arrows .button2.next,
                 .section-discovery .slide-content .main .content-wrapper .arrows .button.next,
                 .section-discovery .slide-content .main .content-wrapper .arrows .button2.next {
-                  background-image: url("../../public/img/ic_arrow_left.png"); } }
+                  background-image: url("../../public/img/ic_arrow_left.png"); }
+                  .section-discovery .slide-content .main .content-dis .arrows .button.next:hover, .section-discovery .slide-content .main .content-dis .arrows .button.next:focus, .section-discovery .slide-content .main .content-dis .arrows .button.next:active,
+                  .section-discovery .slide-content .main .content-dis .arrows .button2.next:hover,
+                  .section-discovery .slide-content .main .content-dis .arrows .button2.next:focus,
+                  .section-discovery .slide-content .main .content-dis .arrows .button2.next:active,
+                  .section-discovery .slide-content .main .content-wrapper .arrows .button.next:hover,
+                  .section-discovery .slide-content .main .content-wrapper .arrows .button.next:focus,
+                  .section-discovery .slide-content .main .content-wrapper .arrows .button.next:active,
+                  .section-discovery .slide-content .main .content-wrapper .arrows .button2.next:hover,
+                  .section-discovery .slide-content .main .content-wrapper .arrows .button2.next:focus,
+                  .section-discovery .slide-content .main .content-wrapper .arrows .button2.next:active {
+                    background-image: url("../../public/img/ic_arrow_left.png"); } }
             .section-discovery .slide-content .main .content-dis .arrows .button.prev,
             .section-discovery .slide-content .main .content-dis .arrows .button2.prev,
             .section-discovery .slide-content .main .content-wrapper .arrows .button.prev,
@@ -1766,7 +1810,18 @@ img {
                 .section-discovery .slide-content .main .content-wrapper .arrows .button.prev,
                 .section-discovery .slide-content .main .content-wrapper .arrows .button2.prev {
                   background-image: url("../../public/img/ic_arrow_right.png");
-                  margin-top: 0; } }
+                  margin-top: 0; }
+                  .section-discovery .slide-content .main .content-dis .arrows .button.prev:hover, .section-discovery .slide-content .main .content-dis .arrows .button.prev:focus, .section-discovery .slide-content .main .content-dis .arrows .button.prev:active,
+                  .section-discovery .slide-content .main .content-dis .arrows .button2.prev:hover,
+                  .section-discovery .slide-content .main .content-dis .arrows .button2.prev:focus,
+                  .section-discovery .slide-content .main .content-dis .arrows .button2.prev:active,
+                  .section-discovery .slide-content .main .content-wrapper .arrows .button.prev:hover,
+                  .section-discovery .slide-content .main .content-wrapper .arrows .button.prev:focus,
+                  .section-discovery .slide-content .main .content-wrapper .arrows .button.prev:active,
+                  .section-discovery .slide-content .main .content-wrapper .arrows .button2.prev:hover,
+                  .section-discovery .slide-content .main .content-wrapper .arrows .button2.prev:focus,
+                  .section-discovery .slide-content .main .content-wrapper .arrows .button2.prev:active {
+                    background-image: url("../../public/img/ic_arrow_right.png"); } }
         .section-discovery .slide-content .main .content-dis .arrows-2,
         .section-discovery .slide-content .main .content-wrapper .arrows-2 {
           position: absolute;
@@ -1822,6 +1877,10 @@ img {
           height: 718px;
           margin-top: 24px;
           overflow: hidden; }
+          @media screen and (max-width: 767px) {
+            .section-discovery .slide-content .main .content-dis .new-card,
+            .section-discovery .slide-content .main .content-wrapper .new-card {
+              height: 440px; } }
           .section-discovery .slide-content .main .content-dis .new-card .item-card-container,
           .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container {
             display: flex;
@@ -2035,7 +2094,7 @@ img {
               margin-bottom: 20px; } }
           @media (min-width: 768px) and (max-width: 1180px) {
             .section-discovery .slide-content .main .collapse-menu.collapsed {
-              height: 25vh;
+              height: 35vh;
               width: 100% !important;
               transition: height 0.9s linear;
               margin-bottom: 20px; } }
@@ -2162,7 +2221,6 @@ img {
           @media (min-width: 768px) and (max-width: 1180px) {
             .section-discovery .slide-content .main .event-detail .scrollable {
               overflow: visible;
-              padding-bottom: 0;
               padding-right: 0px; } }
           .section-discovery .slide-content .main .event-detail .scrollable::-webkit-scrollbar {
             width: 5px;
@@ -2178,7 +2236,7 @@ img {
             .section-discovery .slide-content .main .event-detail .back-to {
               width: 24px;
               height: 24px;
-              margin-bottom: 24px; } }
+              margin-bottom: 30px; } }
           .section-discovery .slide-content .main .event-detail .back-to svg {
             width: 40px;
             height: 40px;
@@ -2236,12 +2294,13 @@ img {
           @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .event-detail .paragraf {
               overflow: visible;
-              height: 100%;
+              height: 60%;
               margin-bottom: 0px;
-              padding-bottom: 110px; } }
+              padding-right: 0px; } }
           @media (min-width: 768px) and (max-width: 1366px) {
             .section-discovery .slide-content .main .event-detail .paragraf {
-              height: 320px; } }
+              height: 320px;
+              padding-bottom: 140px; } }
           .section-discovery .slide-content .main .event-detail .paragraf::-webkit-scrollbar {
             width: 4px;
             background-color: transparent; }
@@ -2263,23 +2322,24 @@ img {
                 font-weight: 400;
                 line-height: 18px; } }
         .section-discovery .slide-content .main .event-detail .button {
-          width: 100%; }
-          @media screen and (max-width: 767px) {
-            .section-discovery .slide-content .main .event-detail .button {
-              background: url("../../public/img/bg-gradient.png"), lightgray 50%/cover no-repeat;
-              width: 100vw;
-              position: fixed;
-              bottom: 0;
-              left: 0;
-              padding: 16px; } }
-          @media (min-width: 768px) and (max-width: 1180px) {
-            .section-discovery .slide-content .main .event-detail .button {
-              background: url("../../public/img/bg-gradient.png"), lightgray 50%/cover no-repeat;
-              width: 100vw;
-              position: fixed;
-              bottom: 0;
-              left: 0;
-              padding: 32px; } }
+          width: 100%;
+          position: fixed;
+          width: 100vw;
+          bottom: 0;
+          left: 0;
+          z-index: 9;
+          display: none; }
+          .section-discovery .slide-content .main .event-detail .button .overlay {
+            height: 100%;
+            width: 100vw;
+            position: absolute;
+            opacity: 0.8; }
+            @media screen and (max-width: 767px) {
+              .section-discovery .slide-content .main .event-detail .button .overlay {
+                background: url("../../public/img/bg-gradient.png"), lightgray 50%/cover no-repeat; } }
+            @media (min-width: 768px) and (max-width: 1180px) {
+              .section-discovery .slide-content .main .event-detail .button .overlay {
+                background: url("../../public/img/bg-gradient.png"), lightgray 50%/cover no-repeat; } }
           .section-discovery .slide-content .main .event-detail .button a {
             padding: 16px 50px 16px 48px;
             border-radius: 12px;
@@ -2293,7 +2353,18 @@ img {
             line-height: 24px;
             color: #1a1a1a;
             display: inline-block;
-            width: 100%; }
+            width: 100%;
+            position: relative;
+            z-index: 3;
+            width: 100vw; }
+            @media screen and (max-width: 767px) {
+              .section-discovery .slide-content .main .event-detail .button a {
+                margin: 16px;
+                width: 91%; } }
+            @media (min-width: 768px) and (max-width: 1180px) {
+              .section-discovery .slide-content .main .event-detail .button a {
+                margin: 33px;
+                width: 92%; } }
         .section-discovery .slide-content .main .event-detail .link-to {
           text-align: center; }
           .section-discovery .slide-content .main .event-detail .link-to a {
@@ -2308,6 +2379,9 @@ img {
             line-height: 24px; }
         .section-discovery .slide-content .main .event-detail .form-submit .form-group, .section-discovery .slide-content .main .event-detail .form-submit .form-group-extend, .section-discovery .slide-content .main .event-detail .form-submit + .form-check-default {
           width: 492px; }
+          @media screen and (max-width: 767px) {
+            .section-discovery .slide-content .main .event-detail .form-submit .form-group, .section-discovery .slide-content .main .event-detail .form-submit .form-group-extend, .section-discovery .slide-content .main .event-detail .form-submit + .form-check-default {
+              width: 100%; } }
         .section-discovery .slide-content .main .event-detail .form-submit .form-group-extend {
           margin-bottom: 16px;
           display: flex;
@@ -2326,6 +2400,12 @@ img {
             outline: 0;
             border: 0px;
             background-color: #1a1a1a; }
+            @media screen and (max-width: 767px) {
+              .section-discovery .slide-content .main .event-detail .form-submit .form-group-extend input {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px; } }
             .section-discovery .slide-content .main .event-detail .form-submit .form-group-extend input:first-child {
               flex: 5%; }
             .section-discovery .slide-content .main .event-detail .form-submit .form-group-extend input::-moz-placeholder {
@@ -2342,6 +2422,17 @@ img {
               font-style: normal;
               font-weight: 400;
               line-height: 26px; }
+              @media screen and (max-width: 767px) {
+                .section-discovery .slide-content .main .event-detail .form-submit .form-group-extend input::-moz-placeholder {
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 18px; }
+                .section-discovery .slide-content .main .event-detail .form-submit .form-group-extend input::placeholder {
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 18px; } }
           .section-discovery .slide-content .main .event-detail .form-submit .form-group-extend .input-class {
             flex: 95%;
             position: relative; }
@@ -2412,6 +2503,12 @@ img {
             padding: 16px;
             width: 100%;
             outline: 0; }
+            @media screen and (max-width: 767px) {
+              .section-discovery .slide-content .main .event-detail .form-submit .form-group .form-control {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px; } }
             .section-discovery .slide-content .main .event-detail .form-submit .form-group .form-control::-moz-placeholder {
               color: #fff;
               font-family: Poppins;
@@ -2426,6 +2523,17 @@ img {
               font-style: normal;
               font-weight: 400;
               line-height: 26px; }
+              @media screen and (max-width: 767px) {
+                .section-discovery .slide-content .main .event-detail .form-submit .form-group .form-control::-moz-placeholder {
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 18px; }
+                .section-discovery .slide-content .main .event-detail .form-submit .form-group .form-control::placeholder {
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 18px; } }
         .section-discovery .slide-content .main .event-detail .sosmedia {
           display: flex;
           gap: 14px; }
@@ -2438,6 +2546,11 @@ img {
             background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(to right, #a0df9e 12.41%, #4587c2 89.87%) border-box;
             width: 69px;
             height: 69px; }
+            @media screen and (max-width: 767px) {
+              .section-discovery .slide-content .main .event-detail .sosmedia--item {
+                width: 40px;
+                height: 40px;
+                padding: 8px; } }
       .section-discovery .slide-content .main .images-background {
         height: 804px;
         background-repeat: no-repeat;
@@ -2445,27 +2558,30 @@ img {
         width: 603px;
         padding-top: 64px;
         padding-right: 64px;
-        padding-bottom: 64px;
         position: relative; }
         @media screen and (max-width: 767px) {
           .section-discovery .slide-content .main .images-background {
             display: none; } }
         @media (min-width: 768px) and (max-width: 1180px) {
           .section-discovery .slide-content .main .images-background {
-            display: none; } }
+            display: none;
+            padding-top: 16px; } }
         .section-discovery .slide-content .main .images-background.mobile {
           display: none; }
           @media (min-width: 768px) and (max-width: 1180px) {
             .section-discovery .slide-content .main .images-background.mobile {
               display: block;
-              margin: 0 auto; } }
+              margin: 0 auto;
+              padding: 24px 0px; } }
           @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .images-background.mobile {
               display: block;
               height: 327px;
               width: 227px;
               margin: 0 auto;
-              padding: 24px 0px; } }
+              margin-top: 24px;
+              margin-bottom: 24px;
+              padding: 0px; } }
         .section-discovery .slide-content .main .images-background.last-bc .device {
           top: 43.5%; }
         .section-discovery .slide-content .main .images-background img {
@@ -2728,7 +2844,8 @@ img {
         margin-bottom: 0;
         display: flex;
         justify-content: center;
-        padding-bottom: 24px; } }
+        padding-bottom: 16px;
+        padding-top: 24px; } }
   .event span {
     display: inline-block;
     color: #1a1a1a;

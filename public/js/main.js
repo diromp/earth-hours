@@ -206,11 +206,8 @@ $(document).ready(function () {
             $('.slide-2').fadeIn(
                 'slow'
             );
+            $('.slide-2').addClass('active');
         }
-
-        $('div.button').css({
-            'display': 'block'
-        })
         
         setTimeout(function () {
             $('.slide-2').css({
@@ -231,6 +228,8 @@ $(document).ready(function () {
         $('.slide-3').fadeIn(
             'slow'
         );
+        $('.slide-2').removeClass('active');
+        $('.slide-3').addClass('active');
         setTimeout(function () {
             $('.slide-3').css({
                 'display': 'block',
@@ -250,6 +249,8 @@ $(document).ready(function () {
         $('.slide-4').fadeIn(
             'slow'
         );
+        $('.slide-3').removeClass('active');
+        $('.slide-4').addClass('active');
         setTimeout(function () {
             $('.slide-4').css({
                 'display': 'block',
@@ -263,11 +264,8 @@ $(document).ready(function () {
     });
     $('.back-to').on('click', function () {
         const backTo = $(this).parents();
-        $('div.button').css({
-            'display': 'none'
-        })
 
-        if (backTo[3].className === 'slide-content slide-2') {
+        if (backTo[3].className === 'slide-content slide-2 active') {
             console.log('Back to slide;');
             $('.slide-1').fadeIn(
                 'slow'
@@ -278,13 +276,15 @@ $(document).ready(function () {
             $('.slide-2').css({
                 'display': 'none'
             })
+            $('.slide-2').removeClass('active');
+            $('.slide-1').addClass('active');
 
             setTimeout(function () {
                 $('.slide-1').css({
                     'display': 'block',
                 })
             }, 1100);
-        } else if (backTo[3].className === 'slide-content slide-3') {
+        } else if (backTo[3].className === 'slide-content slide-3 active') {
             $('.slide-2').fadeIn(
                 'slow'
             );
@@ -294,12 +294,14 @@ $(document).ready(function () {
             $('.slide-3').css({
                 'display': 'none'
             })
+            $('.slide-3').removeClass('active');
+            $('.slide-2').addClass('active');
             setTimeout(function () {
                 $('.slide-2').css({
                     'display': 'block',
                 })
             }, 1100);
-        } else if (backTo[3].className === 'slide-content slide-4') {
+        } else if (backTo[3].className === 'slide-content slide-4 active') {
             $('.slide-1').fadeIn(
                 'slow'
             );
@@ -309,6 +311,8 @@ $(document).ready(function () {
             $('.slide-4').css({
                 'display': 'none'
             })
+            $('.slide-4').removeClass('active');
+            $('.slide-1').addClass('active');
             setTimeout(function () {
                 $('.slide-3').css({
                     'display': 'block',
