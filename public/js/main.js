@@ -207,6 +207,8 @@ $(document).ready(function () {
                 'slow'
             );
         }
+
+        $('div.button').show( "slow");
         
         setTimeout(function () {
             $('.slide-2').css({
@@ -271,6 +273,7 @@ $(document).ready(function () {
             $('.slide-2').css({
                 'display': 'none'
             })
+
             setTimeout(function () {
                 $('.slide-1').css({
                     'display': 'block',
@@ -301,7 +304,7 @@ $(document).ready(function () {
             $('.slide-4').css({
                 'display': 'none'
             })
-            $('.button').hide();
+            $('div.button').hide();
             setTimeout(function () {
                 $('.slide-3').css({
                     'display': 'block',
