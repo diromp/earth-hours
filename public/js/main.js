@@ -301,6 +301,7 @@ $(document).ready(function () {
             $('.slide-4').css({
                 'display': 'none'
             })
+            $('.button').hide();
             setTimeout(function () {
                 $('.slide-3').css({
                     'display': 'block',
