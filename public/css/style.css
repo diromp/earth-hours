@@ -1422,6 +1422,9 @@ img {
   @media (min-width: 768px) and (max-width: 1180px) {
     .section-discovery {
       overflow-y: scroll; } }
+  @media screen and (max-width: 767px) {
+    .section-discovery {
+      height: 75rem; } }
   .section-discovery::-webkit-scrollbar {
     display: none; }
   .section-discovery .slide-content {
@@ -1502,7 +1505,7 @@ img {
       @media screen and (max-width: 767px) {
         .section-discovery .slide-content .main {
           flex-direction: column;
-          overflow: scroll;
+          overflow: visible;
           margin-top: 0px;
           margin-bottom: 0px;
           max-height: 101vh !important;
