@@ -106,6 +106,9 @@
   @media screen and (max-width: 768px) {
     .side-right {
       display: none; } }
+  @media (min-width: 768px) and (max-width: 1180px) {
+    .side-right {
+      display: none; } }
   .side-right .circular-slider {
     min-width: 923px;
     min-height: 452px;
@@ -340,6 +343,10 @@ body {
     .number {
       width: 40px;
       height: 65px; } }
+  @media (min-width: 768px) and (max-width: 1180px) {
+    .number {
+      width: 100px;
+      height: 150px; } }
   .number span {
     position: absolute;
     display: block;
@@ -356,6 +363,9 @@ body {
       .number span {
         font-size: 48px;
         width: 40px; } }
+    @media (min-width: 768px) and (max-width: 1180px) {
+      .number span {
+        width: 100px; } }
     .number span:before {
       display: block;
       height: 40%;
@@ -374,6 +384,9 @@ body {
           border-top-left-radius: 8px;
           border-top-right-radius: 8px;
           height: 50%; } }
+      @media (min-width: 768px) and (max-width: 1180px) {
+        .number span:before {
+          height: 45%; } }
     .number span:after {
       display: block;
       height: 43%;
@@ -1046,13 +1059,16 @@ img {
   width: 100%;
   min-height: 100vh;
   height: 100%; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
+    .apps {
+      background-size: cover; } }
+  @media (min-width: 768px) and (max-width: 1180px) {
     .apps {
       background-size: cover; } }
   .apps .section-hours .timmer {
     padding-top: 140px;
     padding-bottom: 140px; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .apps .section-hours .timmer {
         padding-top: 48px;
         padding-bottom: 0px; } }
@@ -1064,7 +1080,7 @@ img {
       font-style: normal;
       font-weight: 700;
       line-height: 68px; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         .apps .section-hours .timmer .title {
           font-family: Poppins;
           font-size: 24px;
@@ -1078,12 +1094,12 @@ img {
         -webkit-text-fill-color: transparent; }
     .apps .section-hours .timmer-content {
       margin-top: 52px; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         .apps .section-hours .timmer-content {
           margin-top: 16px; } }
       .apps .section-hours .timmer-content .timmer-style {
         margin-bottom: 32px; }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
           .apps .section-hours .timmer-content .timmer-style {
             margin-bottom: 16px; } }
       .apps .section-hours .timmer-content_desc {
@@ -1094,7 +1110,7 @@ img {
         font-style: normal;
         font-weight: 400;
         line-height: 44px; }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
           .apps .section-hours .timmer-content_desc {
             font-size: 12px;
             font-style: normal;
@@ -1105,16 +1121,19 @@ img {
     padding-top: 48px;
     padding-bottom: 80px;
     background: linear-gradient(0deg, #4687c2 23.31%, rgba(51, 59, 76, 0) 100.34%); }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .apps .section-hours .grids {
         margin-top: 0px;
         padding-top: 32px;
         padding-bottom: 48px; } }
+    @media (min-width: 768px) and (max-width: 1180px) {
+      .apps .section-hours .grids {
+        margin-top: 0px; } }
     .apps .section-hours .grids-title {
       max-width: 754px;
       width: 100%;
       margin-bottom: 68px; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         .apps .section-hours .grids-title {
           margin-bottom: 16px; } }
       .apps .section-hours .grids-title h3 {
@@ -1128,7 +1147,7 @@ img {
         line-height: 50px;
         /* 138.889% */
         text-transform: capitalize; }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
           .apps .section-hours .grids-title h3 {
             font-size: 14px;
             font-style: normal;
@@ -1147,7 +1166,7 @@ img {
       gap: 15px;
       justify-content: center;
       align-items: center; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         .apps .section-hours .grids-country {
           flex-wrap: wrap;
           gap: 10px; }
@@ -1155,6 +1174,12 @@ img {
             flex: 50%;
             max-width: 48%;
             background-size: cover !important; } }
+      @media (min-width: 768px) and (max-width: 1180px) {
+        .apps .section-hours .grids-country {
+          flex-wrap: wrap; }
+          .apps .section-hours .grids-country .item-grid {
+            flex: 50%;
+            max-width: 28%; } }
     .apps .section-hours .grids .item-grid {
       width: 222px;
       height: 290px;
@@ -1210,7 +1235,7 @@ img {
           font-weight: 700;
           line-height: 50px;
           text-transform: capitalize; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .apps .section-hours .grids .item-grid .title-content h6 {
               font-size: 24px;
               font-style: normal;
@@ -1230,7 +1255,7 @@ img {
     padding-top: 66px;
     padding-left: 49px;
     padding-right: 49px; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .apps .saved-list .title-back {
         padding: 24px 24px 0 24px; } }
     .apps .saved-list .title-back .close-saved {
@@ -1251,7 +1276,7 @@ img {
         font-style: normal;
         font-weight: 700;
         line-height: 50px; }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
           .apps .saved-list .title-back a span {
             font-size: 14px;
             font-style: normal;
@@ -1270,7 +1295,7 @@ img {
         line-height: 14px;
         color: #fff;
         padding: 10px; }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
           .apps .saved-list .title-back a .count {
             width: 24px;
             height: 24px;
@@ -1289,8 +1314,12 @@ img {
   .apps .section-slide {
     background: linear-gradient(0deg, #a0df9e 12.15%, #4587c2 89.83%);
     position: relative; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .apps .section-slide {
+        min-height: 100vh; } }
+    @media (min-width: 768px) and (max-width: 1180px) {
+      .apps .section-slide {
+        top: -2px;
         min-height: 100vh; } }
     .apps .section-slide::after {
       content: "";
@@ -1312,7 +1341,7 @@ img {
         .apps .section-slide .slide-content .side-left .content {
           margin-bottom: 42px;
           max-width: 475px; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .apps .section-slide .slide-content .side-left .content {
               margin-bottom: 16px; } }
           .apps .section-slide .slide-content .side-left .content span {
@@ -1324,7 +1353,7 @@ img {
             line-height: 28px;
             margin-bottom: 16px;
             display: block; }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 767px) {
               .apps .section-slide .slide-content .side-left .content span {
                 font-size: 12px;
                 font-style: normal;
@@ -1340,7 +1369,7 @@ img {
             line-height: 50px;
             text-transform: capitalize;
             margin-bottom: 16px; }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 767px) {
               .apps .section-slide .slide-content .side-left .content h3 {
                 font-size: 24px;
                 font-style: normal;
@@ -1353,7 +1382,7 @@ img {
             font-style: normal;
             font-weight: 400;
             line-height: 28px; }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 767px) {
               .apps .section-slide .slide-content .side-left .content p {
                 font-size: 12px;
                 font-style: normal;
@@ -1386,7 +1415,7 @@ img {
       max-height: 54rem;
       height: 100%;
       overflow: hidden; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         .section-discovery .slide-content .main {
           flex-direction: column;
           overflow: scroll;
@@ -1395,11 +1424,27 @@ img {
           max-height: 100vh !important;
           background: unset;
           border-radius: 0px; } }
+      @media (min-width: 768px) and (max-width: 1180px) {
+        .section-discovery .slide-content .main {
+          flex-direction: column;
+          overflow: visible;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          max-height: 140rem !important;
+          background: unset;
+          border-radius: 0px;
+          border: 0px; } }
       .section-discovery .slide-content .main .listing {
         padding-bottom: 24px;
         padding-top: 32px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
         @media screen and (max-width: 767px) {
+          .section-discovery .slide-content .main .listing {
+            padding-top: 16px;
+            padding-bottom: 0px;
+            padding-left: 16px;
+            padding-right: 16px; } }
+        @media (min-width: 768px) and (max-width: 1180px) {
           .section-discovery .slide-content .main .listing {
             padding-top: 16px;
             padding-bottom: 0px;
@@ -1438,7 +1483,7 @@ img {
           gap: 8px;
           flex-flow: wrap;
           align-items: center; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .listing .list {
               overflow-x: auto;
               scroll-snap-type: x mandatory;
@@ -1454,7 +1499,7 @@ img {
             cursor: pointer;
             margin-bottom: 8px;
             white-space: nowrap; }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .listing .list .list-group {
                 margin-bottom: 16px;
                 padding: 8px 14px; } }
@@ -1465,7 +1510,7 @@ img {
               font-weight: 700;
               line-height: 24px;
               text-transform: uppercase; }
-              @media screen and (max-width: 768px) {
+              @media screen and (max-width: 767px) {
                 .section-discovery .slide-content .main .listing .list .list-group span {
                   font-size: 11px;
                   font-style: normal;
@@ -1589,17 +1634,25 @@ img {
         background-color: #fff;
         width: 100%;
         overflow: hidden; }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
           .section-discovery .slide-content .main .content-dis,
           .section-discovery .slide-content .main .content-wrapper {
             overflow: visible;
             padding-top: 32px;
             padding-right: 16px;
             padding-left: 16px; } }
+        @media (min-width: 768px) and (max-width: 1180px) {
+          .section-discovery .slide-content .main .content-dis,
+          .section-discovery .slide-content .main .content-wrapper {
+            padding-bottom: 250px; } }
         .section-discovery .slide-content .main .content-dis.collapsed,
         .section-discovery .slide-content .main .content-wrapper.collapsed {
           margin-left: 1%; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
+            .section-discovery .slide-content .main .content-dis.collapsed,
+            .section-discovery .slide-content .main .content-wrapper.collapsed {
+              margin-left: 0; } }
+          @media (min-width: 768px) and (max-width: 1180px) {
             .section-discovery .slide-content .main .content-dis.collapsed,
             .section-discovery .slide-content .main .content-wrapper.collapsed {
               margin-left: 0; } }
@@ -1608,7 +1661,7 @@ img {
           position: absolute;
           top: 50%;
           right: 25px; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .content-dis .arrows,
             .section-discovery .slide-content .main .content-wrapper .arrows {
               width: 100%;
@@ -1630,7 +1683,7 @@ img {
             border: 0px;
             background-color: transparent;
             filter: drop-shadow(0px 8px 28px rgba(13, 34, 42, 0.3)); }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .content-dis .arrows .button,
               .section-discovery .slide-content .main .content-dis .arrows .button2,
               .section-discovery .slide-content .main .content-wrapper .arrows .button,
@@ -1644,7 +1697,7 @@ img {
               background-image: url("../../public/img/ic-arrow-up.svg");
               background-repeat: no-repeat;
               background-size: contain; }
-              @media screen and (max-width: 768px) {
+              @media screen and (max-width: 767px) {
                 .section-discovery .slide-content .main .content-dis .arrows .button.next,
                 .section-discovery .slide-content .main .content-dis .arrows .button2.next,
                 .section-discovery .slide-content .main .content-wrapper .arrows .button.next,
@@ -1658,7 +1711,7 @@ img {
               background-repeat: no-repeat;
               background-size: contain;
               margin-top: 30px; }
-              @media screen and (max-width: 768px) {
+              @media screen and (max-width: 767px) {
                 .section-discovery .slide-content .main .content-dis .arrows .button.prev,
                 .section-discovery .slide-content .main .content-dis .arrows .button2.prev,
                 .section-discovery .slide-content .main .content-wrapper .arrows .button.prev,
@@ -1679,7 +1732,7 @@ img {
           font-style: normal;
           font-weight: 700;
           line-height: 26px; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .content-dis .announcment p,
             .section-discovery .slide-content .main .content-wrapper .announcment p {
               font-size: 14px;
@@ -1702,18 +1755,24 @@ img {
           border-left: solid 24px #1A1A1A;
           border-top: solid 48px transparent;
           border-bottom: solid 48px transparent; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .content-dis .close,
             .section-discovery .slide-content .main .content-wrapper .close {
               left: 47%;
               top: -43px;
+              transform: rotate(90deg); } }
+          @media (min-width: 768px) and (max-width: 1180px) {
+            .section-discovery .slide-content .main .content-dis .close,
+            .section-discovery .slide-content .main .content-wrapper .close {
+              left: 47%;
+              top: -36px;
               transform: rotate(90deg); } }
         .section-discovery .slide-content .main .content-dis .new-card,
         .section-discovery .slide-content .main .content-wrapper .new-card {
           width: 100%;
           height: 718px;
           margin-top: 30px; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .content-dis .new-card,
             .section-discovery .slide-content .main .content-wrapper .new-card {
               margin-top: 24px; } }
@@ -1725,7 +1784,7 @@ img {
             justify-content: center;
             align-items: center;
             background-color: #fff; }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .content-dis .new-card .item-card-container,
               .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container {
                 gap: 8px;
@@ -1739,7 +1798,7 @@ img {
             border-radius: 18px;
             position: relative;
             cursor: pointer; }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .content-dis .new-card .item-card,
               .section-discovery .slide-content .main .content-wrapper .new-card .item-card {
                 width: 50% !important;
@@ -1766,7 +1825,7 @@ img {
               display: flex;
               justify-content: center;
               align-items: center; }
-              @media screen and (max-width: 768px) {
+              @media screen and (max-width: 767px) {
                 .section-discovery .slide-content .main .content-dis .new-card .item-card .love,
                 .section-discovery .slide-content .main .content-wrapper .new-card .item-card .love {
                   width: 20px;
@@ -1775,7 +1834,7 @@ img {
               .section-discovery .slide-content .main .content-wrapper .new-card .item-card .love svg {
                 width: 24px;
                 height: 24px; }
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 767px) {
                   .section-discovery .slide-content .main .content-dis .new-card .item-card .love svg,
                   .section-discovery .slide-content .main .content-wrapper .new-card .item-card .love svg {
                     width: 15px;
@@ -1793,7 +1852,7 @@ img {
               height: 151px;
               border-bottom-left-radius: 18px;
               border-bottom-right-radius: 18px; }
-              @media screen and (max-width: 768px) {
+              @media screen and (max-width: 767px) {
                 .section-discovery .slide-content .main .content-dis .new-card .item-card .desc,
                 .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc {
                   height: 99px;
@@ -1810,7 +1869,7 @@ img {
                 align-items: center;
                 margin-bottom: 12px;
                 gap: 6px; }
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 767px) {
                   .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon,
                   .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon {
                     margin-bottom: 8px; } }
@@ -1822,7 +1881,7 @@ img {
                   justify-content: center;
                   align-items: center;
                   border-radius: 100px; }
-                  @media screen and (max-width: 768px) {
+                  @media screen and (max-width: 767px) {
                     .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item,
                     .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item {
                       width: 18px;
@@ -1834,7 +1893,7 @@ img {
                     display: block;
                     -o-object-fit: contain;
                        object-fit: contain; }
-                    @media screen and (max-width: 768px) {
+                    @media screen and (max-width: 767px) {
                       .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item img,
                       .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item img {
                         width: 12px;
@@ -1870,7 +1929,7 @@ img {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 height: 70px; }
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 767px) {
                   .section-discovery .slide-content .main .content-dis .new-card .item-card .desc p,
                   .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc p {
                     font-size: 11px;
@@ -1899,12 +1958,21 @@ img {
         overflow-y: scroll;
         overflow-x: hidden;
         margin-right: 14px; }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
           .section-discovery .slide-content .main .collapse-menu {
             width: 100%;
             overflow: visible;
             padding-left: 0px;
             padding-right: 0px;
+            padding-top: 32px;
+            padding-bottom: 0;
+            margin-right: 0px; } }
+        @media (min-width: 768px) and (max-width: 1180px) {
+          .section-discovery .slide-content .main .collapse-menu {
+            width: 100%;
+            overflow: visible;
+            padding-left: 16px;
+            padding-right: 16px;
             padding-top: 32px;
             padding-bottom: 0;
             margin-right: 0px; } }
@@ -1916,16 +1984,22 @@ img {
         .section-discovery .slide-content .main .collapse-menu.collapsed {
           width: 27%;
           transition: width 0.9s linear; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .collapse-menu.collapsed {
               height: 28vh;
+              width: 100% !important;
+              transition: height 0.9s linear;
+              margin-bottom: 20px; } }
+          @media (min-width: 768px) and (max-width: 1180px) {
+            .section-discovery .slide-content .main .collapse-menu.collapsed {
+              height: 25vh;
               width: 100% !important;
               transition: height 0.9s linear;
               margin-bottom: 20px; } }
         .section-discovery .slide-content .main .collapse-menu .desc {
           max-width: 625px;
           width: 100%; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .collapse-menu .desc {
               padding-left: 24px;
               padding-right: 24px; } }
@@ -1938,7 +2012,7 @@ img {
             line-height: 64px;
             margin-bottom: 30px;
             color: #fff; }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .collapse-menu .desc h2 {
                 font-size: 24px;
                 font-style: normal;
@@ -1952,7 +2026,7 @@ img {
             font-style: normal;
             font-weight: 400;
             line-height: 28px; }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .collapse-menu .desc p {
                 font-size: 12px;
                 font-style: normal;
@@ -1960,21 +2034,21 @@ img {
                 line-height: 18px; } }
         .section-discovery .slide-content .main .collapse-menu .filter {
           margin-top: 58px; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .collapse-menu .filter {
               margin-top: 24px; } }
           .section-discovery .slide-content .main .collapse-menu .filter .select {
             margin-bottom: 38px;
             display: flex;
             gap: 16px; }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .collapse-menu .filter .select {
                 margin-bottom: 5px;
                 padding-left: 24px;
                 padding-right: 24px; } }
           .section-discovery .slide-content .main .collapse-menu .filter .choose {
             padding-top: 32px; }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .collapse-menu .filter .choose {
                 padding-top: 24px; } }
             .section-discovery .slide-content .main .collapse-menu .filter .choose .title {
@@ -1982,7 +2056,7 @@ img {
               display: flex;
               justify-content: space-between;
               align-items: center; }
-              @media screen and (max-width: 768px) {
+              @media screen and (max-width: 767px) {
                 .section-discovery .slide-content .main .collapse-menu .filter .choose .title {
                   background: rgba(255, 255, 255, 0.04);
                   padding-top: 16px;
@@ -1995,7 +2069,7 @@ img {
                 font-style: normal;
                 font-weight: 700;
                 line-height: 26px; }
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 767px) {
                   .section-discovery .slide-content .main .collapse-menu .filter .choose .title h3 {
                     font-size: 12px;
                     font-style: normal;
@@ -2010,7 +2084,7 @@ img {
                 line-height: 28px;
                 text-decoration-line: underline;
                 color: #fff; }
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 767px) {
                   .section-discovery .slide-content .main .collapse-menu .filter .choose .title a {
                     font-size: 12px;
                     font-style: normal;
@@ -2020,7 +2094,7 @@ img {
               padding: 16px 16px 24px 16px;
               border-radius: 8px;
               background: rgba(255, 255, 255, 0.1); }
-              @media screen and (max-width: 768px) {
+              @media screen and (max-width: 767px) {
                 .section-discovery .slide-content .main .collapse-menu .filter .choose .content-choose {
                   background: rgba(255, 255, 255, 0.04);
                   padding: 0px; } }
@@ -2028,7 +2102,7 @@ img {
         padding-top: 64px;
         padding-left: 64px;
         height: 718px; }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
           .section-discovery .slide-content .main .event-detail {
             padding: 16px 16px 0px 16px;
             height: 100%;
@@ -2039,7 +2113,7 @@ img {
           overflow-x: hidden;
           padding-bottom: 12px;
           padding-right: 29px; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .event-detail .scrollable {
               padding-bottom: 0;
               padding-right: 0px;
@@ -2057,7 +2131,7 @@ img {
           height: 40px;
           cursor: pointer;
           margin-bottom: 32px; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .event-detail .back-to {
               width: 24px;
               height: 24px;
@@ -2074,7 +2148,7 @@ img {
           font-weight: 700;
           line-height: 50px;
           margin-bottom: 32px; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .event-detail .content h2 {
               margin-bottom: 24px;
               font-size: 28px;
@@ -2089,7 +2163,7 @@ img {
           font-weight: 700;
           line-height: normal;
           margin-bottom: 32px; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .event-detail .content h1 {
               font-size: 24px;
               font-style: normal;
@@ -2106,7 +2180,7 @@ img {
           font-weight: 400;
           line-height: 26px;
           margin-bottom: 32px; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .event-detail .content p {
               font-size: 12px;
               font-style: normal;
@@ -2132,7 +2206,7 @@ img {
           overflow-y: scroll;
           margin-bottom: 46px;
           height: 280px; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .event-detail .paragraf {
               overflow: visible;
               height: 100%;
@@ -2151,7 +2225,7 @@ img {
             font-style: normal;
             font-weight: 400;
             line-height: 26px; }
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .event-detail .paragraf p {
                 font-size: 12px;
                 font-style: normal;
@@ -2159,7 +2233,7 @@ img {
                 line-height: 18px; } }
         .section-discovery .slide-content .main .event-detail .button {
           width: 100%; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .event-detail .button {
               background: url("../../public/img/bg-gradient.png"), lightgray 50%/cover no-repeat;
               width: 100vw;
@@ -2250,12 +2324,12 @@ img {
         padding-right: 64px;
         padding-bottom: 64px;
         position: relative; }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
           .section-discovery .slide-content .main .images-background {
             display: none; } }
         .section-discovery .slide-content .main .images-background.mobile {
           display: none; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .images-background.mobile {
               display: block;
               height: 327px;
@@ -2293,7 +2367,7 @@ img {
           height: 48px;
           filter: drop-shadow(0px 3px 7px rgba(0, 0, 0, 0.31));
           background-color: #9191918a; }
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .images-background .love {
               display: none; } }
 
@@ -2514,9 +2588,13 @@ img {
   gap: 8px;
   margin-bottom: 48px;
   cursor: pointer; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .event {
-      display: none; }
+      display: none; } }
+  @media (min-width: 768px) and (max-width: 1180px) {
+    .event.mobile-event {
+      display: none; } }
+  @media screen and (max-width: 767px) {
     .event.mobile-event {
       margin-bottom: 0;
       display: flex;
@@ -2559,7 +2637,7 @@ img {
     line-height: normal;
     display: block;
     margin-left: 8px; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .form-check-default label {
         font-size: 11px;
         font-style: normal;

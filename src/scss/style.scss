@@ -25,7 +25,10 @@ img {
 	min-height: 100vh;
 	height: 100%;
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 767px) {
+		background-size: cover;
+	}
+	@media (min-width: 768px) and (max-width: 1180px) {
 		background-size: cover;
 	}
 
@@ -33,12 +36,10 @@ img {
 		.timmer {
 			padding-top: 140px;
 			padding-bottom: 140px;
-			@media screen and (max-width: 768px) {
+			@media screen and (max-width: 767px) {
 				padding-top: 48px;
 				padding-bottom: 0px;
-	
 			}
-
 			.title {
 				text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
 				font-family: "Poppins", sans-serif;
@@ -48,7 +49,7 @@ img {
 				font-weight: 700;
 				line-height: 68px;
 
-				@media screen and (max-width: 768px) {
+				@media screen and (max-width: 767px) {
 					font-family: Poppins;
 					font-size: 24px;
 					font-style: normal;
@@ -66,12 +67,12 @@ img {
 
 			&-content {
 				margin-top: 52px;
-				@media screen and (max-width: 768px) {
+				@media screen and (max-width: 767px) {
 					margin-top: 16px;
 				}
 				.timmer-style {
 					margin-bottom: 32px;
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						margin-bottom: 16px;
 					}
 				}
@@ -84,7 +85,7 @@ img {
 					font-style: normal;
 					font-weight: 400;
 					line-height: 44px;
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						font-size: 12px;
 						font-style: normal;
 						font-weight: 400;
@@ -99,17 +100,20 @@ img {
 			padding-top: 48px;
 			padding-bottom: 80px;
 			background: linear-gradient(0deg, #4687c2 23.31%, rgba(51, 59, 76, 0) 100.34%);
-			@media screen and (max-width: 768px) {
+			@media screen and (max-width: 767px) {
 				margin-top: 0px;
 				padding-top: 32px;
 				padding-bottom: 48px;
+			}
+			@media (min-width: 768px) and (max-width: 1180px) {
+				margin-top: 0px;
 			}
 			&-title {
 				max-width: 754px;
 				width: 100%;
 				margin-bottom: 68px;
 
-				@media screen and (max-width: 768px) {
+				@media screen and (max-width: 767px) {
 					margin-bottom: 16px;
 				}
 
@@ -124,7 +128,7 @@ img {
 					line-height: 50px;
 					/* 138.889% */
 					text-transform: capitalize;
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						font-size: 14px;
 						font-style: normal;
 						font-weight: 700;
@@ -150,7 +154,7 @@ img {
 				gap: 15px;
 				justify-content: center;
     			align-items: center;
-				@media screen and (max-width: 768px) {
+				@media screen and (max-width: 767px) {
 					flex-wrap: wrap;
 					gap: 10px;
 					.item-grid {
@@ -158,6 +162,14 @@ img {
 						max-width: 48%;
 						background-size: cover !important;
 					}					
+				}
+				
+				@media (min-width: 768px) and (max-width: 1180px) {
+					flex-wrap: wrap;
+					.item-grid {
+						flex: 50%;
+						max-width: 28%;
+					}
 				}
 			}
 
@@ -226,7 +238,7 @@ img {
 						font-weight: 700;
 						line-height: 50px;
 						text-transform: capitalize;
-						@media screen and (max-width: 768px) {
+						@media screen and (max-width: 767px) {
 							font-size: 24px;
 							font-style: normal;
 							font-weight: 700;
@@ -256,7 +268,7 @@ img {
 			padding-left: 49px;
 			padding-right: 49px;
 
-			@media screen and (max-width: 768px) {
+			@media screen and (max-width: 767px) {
 				padding: 24px 24px 0 24px;
 			}
 			.close-saved {
@@ -281,7 +293,7 @@ img {
 					font-style: normal;
 					font-weight: 700;
 					line-height: 50px;
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						font-size: 14px;
 						font-style: normal;
 						font-weight: 700;
@@ -302,7 +314,7 @@ img {
 					line-height: 14px;
 					color: #fff;
 					padding: 10px;
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						width: 24px;
 						height: 24px;
 						font-size: 12px;
@@ -331,8 +343,13 @@ img {
 		background: linear-gradient(0deg, #a0df9e 12.15%, #4587c2 89.83%);
 		position: relative;
 
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 767px) {
 			min-height: 100vh;
+		}
+		@media (min-width: 768px) and (max-width: 1180px) {
+			top: -2px;		
+			min-height: 100vh;
+
 		}
 
 		&::after {
@@ -359,7 +376,7 @@ img {
 				.content {
 					margin-bottom: 42px;
 					max-width: 475px;
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						margin-bottom: 16px;
 					}
 
@@ -372,7 +389,7 @@ img {
 						line-height: 28px;
 						margin-bottom: 16px;
 						display: block;
-						@media screen and (max-width: 768px) {
+						@media screen and (max-width: 767px) {
 							font-size: 12px;
 							font-style: normal;
 							font-weight: 400;
@@ -390,7 +407,7 @@ img {
 						line-height: 50px;
 						text-transform: capitalize;
 						margin-bottom: 16px;
-						@media screen and (max-width: 768px) {
+						@media screen and (max-width: 767px) {
 							font-size: 24px;
 							font-style: normal;
 							font-weight: 700;
@@ -406,7 +423,7 @@ img {
 						font-weight: 400;
 						line-height: 28px;
 
-						@media screen and (max-width: 768px) {
+						@media screen and (max-width: 767px) {
 							font-size: 12px;
 							font-style: normal;
 							font-weight: 400;
@@ -452,7 +469,7 @@ img {
 			height: 100%;
 			overflow: hidden;
 
-			@media screen and (max-width: 768px) {
+			@media screen and (max-width: 767px) {
 				flex-direction: column;
 				overflow: scroll;
 				margin-top: 0px;
@@ -461,6 +478,16 @@ img {
 				background: unset;
 				border-radius: 0px;
 			}
+			@media (min-width: 768px) and (max-width: 1180px) {
+				flex-direction: column;
+				overflow: visible;
+				margin-top: 0px;
+				margin-bottom: 0px;
+				max-height: 140rem !important;
+				background: unset;
+				border-radius: 0px;
+				border: 0px;
+			}
 
 			.listing {
 				padding-bottom: 24px;
@@ -468,6 +495,13 @@ img {
 				border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 
 				@media screen and (max-width: 767px) {
+					padding-top: 16px;
+					padding-bottom: 0px;
+					padding-left: 16px;
+					padding-right: 16px;
+
+				}
+				@media (min-width: 768px) and (max-width: 1180px) {
 					padding-top: 16px;
 					padding-bottom: 0px;
 					padding-left: 16px;
@@ -519,7 +553,7 @@ img {
 					flex-flow: wrap;
 					align-items: center;
 
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						overflow-x: auto;
 						scroll-snap-type: x mandatory;
 						scrollbar-width: none;
@@ -537,7 +571,7 @@ img {
 						margin-bottom: 8px;
 						white-space: nowrap;
 
-						@media screen and (max-width: 768px) {
+						@media screen and (max-width: 767px) {
 							margin-bottom: 16px;
 							padding: 8px 14px;
 						}
@@ -550,7 +584,7 @@ img {
 							line-height: 24px;
 							text-transform: uppercase;
 
-							@media screen and (max-width: 768px) {
+							@media screen and (max-width: 767px) {
 								font-size: 11px;
 								font-style: normal;
 								font-weight: 700;
@@ -755,17 +789,23 @@ img {
 				width: 100%;
 				overflow: hidden;
 
-				@media screen and(max-width: 768px) {
+				@media screen and(max-width: 767px) {
 					overflow: visible;
 					padding-top: 32px;
 					padding-right: 16px;
 					padding-left: 16px;
 				}
+				@media (min-width: 768px) and (max-width: 1180px) {
+					padding-bottom: 250px;
+				}
 
 				&.collapsed {
 					margin-left: 1%;
 
-					@media screen and(max-width: 768px) {
+					@media screen and(max-width: 767px) {
+						margin-left: 0;
+					}
+					@media (min-width: 768px) and (max-width: 1180px) {
 						margin-left: 0;
 					}
 				}
@@ -775,7 +815,7 @@ img {
 					top: 50%;
 					right: 25px;
 
-					@media screen and(max-width: 768px) {
+					@media screen and(max-width: 767px) {
 						width: 100%;
 						left: 0;
 						right: 0px;
@@ -798,7 +838,7 @@ img {
 						background-color: transparent;
 						filter: drop-shadow(0px 8px 28px rgba(13, 34, 42, 0.30));
 
-						@media screen and(max-width: 768px) {
+						@media screen and(max-width: 767px) {
 							width: 40px;
 							height: 40px;
 						}
@@ -808,7 +848,7 @@ img {
 							background-repeat: no-repeat;
 							background-size: contain;
 
-							@media screen and(max-width: 768px) {
+							@media screen and(max-width: 767px) {
 								background-image: url("../../public/img/ic_arrow_left.png");
 							}
 
@@ -820,7 +860,7 @@ img {
 							background-size: contain;
 							margin-top: 30px;
 
-							@media screen and(max-width: 768px) {
+							@media screen and(max-width: 767px) {
 								background-image: url("../../public/img/ic_arrow_right.png");
 								margin-top: 0;
 							}
@@ -844,7 +884,7 @@ img {
 						font-weight: 700;
 						line-height: 26px;
 
-						@media screen and (max-width: 768px) {
+						@media screen and (max-width: 767px) {
 							font-size: 14px;
 							font-style: normal;
 							font-weight: 700;
@@ -869,9 +909,14 @@ img {
 					border-top: solid 48px transparent;
 					border-bottom: solid 48px transparent;
 
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						left: 47%;
 						top: -43px;
+						transform: rotate(90deg);
+					}
+					@media (min-width: 768px) and (max-width: 1180px) {
+						left: 47%;
+						top: -36px;
 						transform: rotate(90deg);
 					}
 				}
@@ -881,7 +926,7 @@ img {
 					height: 718px;
 					margin-top: 30px;
 
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						margin-top: 24px;
 					}
 
@@ -894,7 +939,7 @@ img {
 						align-items: center;
 						background-color: #fff;
 
-						@media screen and (max-width: 768px) {
+						@media screen and (max-width: 767px) {
 							gap: 8px;
 							justify-content: space-evenly;
 							align-items: stretch;
@@ -909,7 +954,7 @@ img {
 						position: relative;
 						cursor: pointer;
 
-						@media screen and (max-width: 768px) {
+						@media screen and (max-width: 767px) {
 							width: 50% !important;
 							height: 216px;
 							flex-basis: 48%;
@@ -937,7 +982,7 @@ img {
 							justify-content: center;
 							align-items: center;
 
-							@media screen and (max-width: 768px) {
+							@media screen and (max-width: 767px) {
 								width: 20px;
 								height: 20px;
 							}
@@ -946,7 +991,7 @@ img {
 								width: 24px;
 								height: 24px;
 
-								@media screen and (max-width: 768px) {
+								@media screen and (max-width: 767px) {
 									width: 15px;
 									height: 15px;
 								}
@@ -966,7 +1011,7 @@ img {
 							border-bottom-left-radius: 18px;
 							border-bottom-right-radius: 18px;
 
-							@media screen and (max-width: 768px) {
+							@media screen and (max-width: 767px) {
 								height: 99px;
 								padding-right: 8px;
 								padding-left: 8px;
@@ -983,7 +1028,7 @@ img {
 								align-items: center;
 								margin-bottom: 12px;
 
-								@media screen and (max-width: 768px) {
+								@media screen and (max-width: 767px) {
 									margin-bottom: 8px;
 								}
 
@@ -997,13 +1042,13 @@ img {
 									align-items: center;
 									border-radius: 100px;
 
-									@media screen and (max-width: 768px) {
+									@media screen and (max-width: 767px) {
 										width: 18px;
 										height: 18px;
 									}
 
 									img {
-										@media screen and (max-width: 768px) {
+										@media screen and (max-width: 767px) {
 											width: 12px;
 											height: 12px;
 										}
@@ -1052,7 +1097,7 @@ img {
 								text-overflow: ellipsis;
 								height: 70px;
 
-								@media screen and (max-width: 768px) {
+								@media screen and (max-width: 767px) {
 									font-size: 11px;
 									font-style: normal;
 									font-weight: 700;
@@ -1091,11 +1136,20 @@ img {
 				overflow-x: hidden;
 				margin-right: 14px;
 
-				@media screen and (max-width: 768px) {
+				@media screen and (max-width: 767px) {
 					width: 100%;
 					overflow: visible;
 					padding-left: 0px;
 					padding-right: 0px;
+					padding-top: 32px;
+					padding-bottom: 0;
+					margin-right: 0px;
+				}
+				@media (min-width: 768px) and (max-width: 1180px) {
+					width: 100%;
+					overflow: visible;
+					padding-left: 16px;
+					padding-right: 16px;
 					padding-top: 32px;
 					padding-bottom: 0;
 					margin-right: 0px;
@@ -1116,8 +1170,17 @@ img {
 					-moz-transition: width 0.9s linear;
 					-o-transition: width 0.9s linear;
 					transition: width 0.9s linear;
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						height: 28vh;
+						width: 100% !important;
+						-webkit-transition: height 0.9s linear;
+						-moz-transition: height 0.9s linear;
+						-o-transition: height 0.9s linear;
+						transition: height 0.9s linear;
+						margin-bottom: 20px;
+					}
+					@media (min-width: 768px) and (max-width: 1180px) {
+						height: 25vh;
 						width: 100% !important;
 						-webkit-transition: height 0.9s linear;
 						-moz-transition: height 0.9s linear;
@@ -1131,11 +1194,10 @@ img {
 					max-width: 625px;
 					width: 100%;
 
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						padding-left: 24px;
 						padding-right: 24px;
 					}
-
 					h2 {
 						text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
 						font-family: "Poppins";
@@ -1146,7 +1208,7 @@ img {
 						margin-bottom: 30px;
 						color: #fff;
 
-						@media screen and (max-width: 768px) {
+						@media screen and (max-width: 767px) {
 							font-size: 24px;
 							font-style: normal;
 							font-weight: 700;
@@ -1163,7 +1225,7 @@ img {
 						font-weight: 400;
 						line-height: 28px;
 
-						@media screen and (max-width: 768px) {
+						@media screen and (max-width: 767px) {
 							font-size: 12px;
 							font-style: normal;
 							font-weight: 400;
@@ -1175,7 +1237,7 @@ img {
 				.filter {
 					margin-top: 58px;
 
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						margin-top: 24px;
 					}
 
@@ -1184,7 +1246,7 @@ img {
 						display: flex;
 						gap: 16px;
 
-						@media screen and (max-width: 768px) {
+						@media screen and (max-width: 767px) {
 							margin-bottom: 5px;
 							padding-left: 24px;
 							padding-right: 24px;
@@ -1194,7 +1256,7 @@ img {
 					.choose {
 						padding-top: 32px;
 
-						@media screen and (max-width: 768px) {
+						@media screen and (max-width: 767px) {
 							padding-top: 24px;
 						}
 
@@ -1204,7 +1266,7 @@ img {
 							justify-content: space-between;
 							align-items: center;
 
-							@media screen and (max-width: 768px) {
+							@media screen and (max-width: 767px) {
 								background: rgba(255, 255, 255, 0.04);
 								padding-top: 16px;
 								padding-left: 16px;
@@ -1220,7 +1282,7 @@ img {
 								font-weight: 700;
 								line-height: 26px;
 
-								@media screen and (max-width: 768px) {
+								@media screen and (max-width: 767px) {
 									font-size: 12px;
 									font-style: normal;
 									font-weight: 700;
@@ -1238,7 +1300,7 @@ img {
 								text-decoration-line: underline;
 								color: #fff;
 
-								@media screen and (max-width: 768px) {
+								@media screen and (max-width: 767px) {
 									font-size: 12px;
 									font-style: normal;
 									font-weight: 700;
@@ -1252,7 +1314,7 @@ img {
 							border-radius: 8px;
 							background: rgba(255, 255, 255, 0.1);
 
-							@media screen and (max-width: 768px) {
+							@media screen and (max-width: 767px) {
 								background: rgba(255, 255, 255, 0.04);
 								padding: 0px;
 							}
@@ -1266,7 +1328,7 @@ img {
 				padding-left: 64px;
 				height: 718px;
 
-				@media screen and (max-width: 768px) {
+				@media screen and (max-width: 767px) {
 					padding: 16px 16px 0px 16px;
 					height: 100%;
 					width: 100%;
@@ -1279,7 +1341,7 @@ img {
 					padding-bottom: 12px;
 					padding-right: 29px;
 
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						padding-bottom: 0;
 						padding-right: 0px;
 						overflow: visible;
@@ -1306,7 +1368,7 @@ img {
 					cursor: pointer;
 					margin-bottom: 32px;
 
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						width: 24px;
 						height: 24px;
 						margin-bottom: 24px;
@@ -1329,7 +1391,7 @@ img {
 						line-height: 50px;
 						margin-bottom: 32px;
 
-						@media screen and (max-width: 768px) {
+						@media screen and (max-width: 767px) {
 							margin-bottom: 24px;
 							font-size: 28px;
 							font-style: normal;
@@ -1347,7 +1409,7 @@ img {
 						line-height: normal;
 						margin-bottom: 32px;
 
-						@media screen and (max-width: 768px) {
+						@media screen and (max-width: 767px) {
 							font-size: 24px;
 							font-style: normal;
 							font-weight: 700;
@@ -1367,7 +1429,7 @@ img {
 						line-height: 26px;
 						margin-bottom: 32px;
 
-						@media screen and (max-width: 768px) {
+						@media screen and (max-width: 767px) {
 							font-size: 12px;
 							font-style: normal;
 							font-weight: 700;
@@ -1405,7 +1467,7 @@ img {
 					margin-bottom: 46px;
 					height: 280px;
 
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						overflow: visible;
 						height: 100%;
 						margin-bottom: 0px;
@@ -1430,7 +1492,7 @@ img {
 						font-weight: 400;
 						line-height: 26px;
 
-						@media screen and(max-width: 768px) {
+						@media screen and(max-width: 767px) {
 							font-size: 12px;
 							font-style: normal;
 							font-weight: 400;
@@ -1442,7 +1504,7 @@ img {
 				.button {
 					width: 100%;
 
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						background: url("../../public/img/bg-gradient.png"), lightgray 50% / cover no-repeat;
 						width: 100vw;
 						position: fixed;
@@ -1550,14 +1612,14 @@ img {
 				padding-bottom: 64px;
 				position: relative;
 
-				@media screen and (max-width: 768px) {
+				@media screen and (max-width: 767px) {
 					display: none;
 				}
 
 				&.mobile {
 					display: none;
 
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						display: block;
 						height: 327px;
 						width: 227px;
@@ -1611,7 +1673,7 @@ img {
 					filter: drop-shadow(0px 3px 7px rgba(0, 0, 0, 0.31));
 					background-color: #9191918a;
 
-					@media screen and (max-width: 768px) {
+					@media screen and (max-width: 767px) {
 						display: none;
 					}
 				}
@@ -1915,13 +1977,17 @@ img {
 	margin-bottom: 48px;
 	cursor: pointer;
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 767px) {
 		display: none;
 	}
 
 	&.mobile-event {
 
-		@media screen and (max-width: 768px) {
+		@media (min-width: 768px) and (max-width: 1180px) {
+			display: none;
+		}
+
+		@media screen and (max-width: 767px) {
 			margin-bottom: 0;
 			display: flex;
 			justify-content: center;
@@ -1972,7 +2038,7 @@ img {
 		display: block;
 		margin-left: 8px;
 
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 767px) {
 			font-size: 11px;
 			font-style: normal;
 			font-weight: 400;
