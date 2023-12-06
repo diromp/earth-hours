@@ -635,13 +635,13 @@ img {
 				.main {
 					overflow: hidden;
 					background: unset;
-
-					.event-detail {
-						.content {
-							h2 {
-								margin-bottom: 24px;
-							}
-						}
+				}
+			}
+			
+			.event-detail {
+				.content {
+					h2 {
+						margin-bottom: 24px;
 					}
 				}
 			}

@@ -1561,9 +1561,9 @@ img {
     @media screen and (max-width: 767px) {
       .section-discovery .slide-content.slide-3 .main {
         overflow: hidden;
-        background: unset; }
-        .section-discovery .slide-content.slide-3 .main .event-detail .content h2 {
-          margin-bottom: 24px; } }
+        background: unset; } }
+    .section-discovery .slide-content.slide-3 .event-detail .content h2 {
+      margin-bottom: 24px; }
     @media screen and (min-width: 768px) and (max-width: 1180px) {
       .section-discovery .slide-content.slide-4 {
         min-height: 90rem; } }
