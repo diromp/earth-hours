@@ -5,7 +5,7 @@ $(document).ready(function () {
     var containerQuestions = $('.section-question');
     var seeMore = $('.seamore');
     var selectLocations = $('.select-location-container');
-
+    $('#reset-filter').hide();
     $('.item-card .love').click(function () {
         $(this).toggleClass('active');
     });
@@ -51,7 +51,11 @@ $(document).ready(function () {
 
     $('.list-group').on('click', function (e) {
         $(this).toggleClass('active');
+        $('#reset-filter').show();
     });
+    $("#reset-filter").on('click', function(e) {
+        $(".list-group").removeClass('active');
+    })
 
     slider.flipbox({
         vertical: true
@@ -261,6 +265,7 @@ $(document).ready(function () {
         );
         $('.slide-2').removeClass('active');
         $('.slide-3').addClass('active');
+        $(".section-discovery").addClass('active-section');
         setTimeout(function () {
             $('.slide-3').css({
                 'display': 'block',
@@ -309,7 +314,7 @@ $(document).ready(function () {
             })
             $('.slide-2').removeClass('active');
             $('.slide-1').addClass('active');
-
+            $(".section-discovery").removeClass('active-section');
             setTimeout(function () {
                 $('.slide-1').css({
                     'display': 'block',
@@ -327,6 +332,7 @@ $(document).ready(function () {
             })
             $('.slide-3').removeClass('active');
             $('.slide-2').addClass('active');
+            $(".section-discovery").removeClass('active-section');
             setTimeout(function () {
                 $('.slide-2').css({
                     'display': 'block',
@@ -342,6 +348,7 @@ $(document).ready(function () {
             $('.slide-4').css({
                 'display': 'none'
             })
+            $(".section-discovery").removeClass('active-section');
             $('.slide-4').removeClass('active');
             $('.slide-1').addClass('active');
             setTimeout(function () {

@@ -150,6 +150,10 @@
         font-weight: 400;
         line-height: 28px;
         color: #fff; }
+        @media screen and (max-width: 767px) {
+          .select2-dropdown .select2-results .item-select__title {
+            font-size: 11px;
+            line-height: 16px; } }
 
 .scrolling {
   overflow-y: scroll;
@@ -1321,7 +1325,8 @@ img {
       max-width: 495px; }
       @media screen and (max-width: 767px) {
         .apps .saved-list .title-back {
-          padding: 24px 24px 0 24px; } }
+          padding: 24px 24px 0 24px;
+          margin: 0px; } }
       .apps .saved-list .title-back .close-saved {
         width: 48px;
         height: 48px;
@@ -1464,6 +1469,9 @@ img {
   display: flex;
   overflow: hidden;
   background-color: #1a1a1a; }
+  @media screen and (max-width: 767px) {
+    .section-discovery.active-section {
+      height: 100%; } }
   @media (min-width: 768px) and (max-width: 1180px) {
     .section-discovery {
       overflow-y: scroll; } }
@@ -1509,10 +1517,18 @@ img {
         @media screen and (max-width: 767px) {
           .section-discovery .slide-content.saved-list .main .content-wrapper {
             padding-left: 16px !important;
-            padding-right: 16px !important; } }
+            padding-right: 16px !important; }
+      .section-discovery .slide-content.slide-1 .main {
+        overflow-y: hidden;
+        overflow-x: hidden;
+        height: 100%;
+        max-height: 100% !important;
+        margin-top: 16px; } }
     .section-discovery .slide-content.slide-2 .main {
       height: 936px; }
     @media screen and (max-width: 767px) {
+      .section-discovery .slide-content.slide-2 .main {
+        background: unset; }
       .section-discovery .slide-content.slide-2 .listing .list {
         gap: 8px !important;
         overflow: visible !important;
@@ -1533,7 +1549,8 @@ img {
             right: 84px !important; } }
     @media screen and (max-width: 767px) {
       .section-discovery .slide-content.slide-3 .main {
-        overflow: visible; }
+        overflow: hidden;
+        background: unset; }
         .section-discovery .slide-content.slide-3 .main .event-detail .content h2 {
           margin-bottom: 24px; } }
     @media screen and (min-width: 768px) and (max-width: 1180px) {
@@ -1541,7 +1558,8 @@ img {
         min-height: 90rem; } }
     @media screen and (max-width: 767px) {
       .section-discovery .slide-content.slide-4 .main {
-        overflow: visible; } }
+        overflow: visible;
+        background: unset; } }
     .section-discovery .slide-content .main {
       margin-bottom: 32px;
       margin-top: 32px;
@@ -1551,7 +1569,7 @@ img {
       background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(90.32deg, #A0DF9E 12.41%, #4587C2 89.87%) border-box;
       position: relative;
       display: flex;
-      height: 926px;
+      height: 948px;
       overflow: hidden; }
       @media screen and (max-width: 767px) {
         .section-discovery .slide-content .main {
@@ -1559,9 +1577,7 @@ img {
           overflow: visible;
           margin-top: 0px;
           margin-bottom: 0px;
-          max-height: 101vh !important;
-          background: unset;
-          border-radius: 0px; } }
+          max-height: 101vh !important; } }
       @media (min-width: 768px) and (max-width: 1180px) {
         .section-discovery .slide-content .main {
           flex-direction: column;
@@ -1586,6 +1602,9 @@ img {
           .section-discovery .slide-content .main .listing {
             padding-top: 24px;
             padding-bottom: 0px; } }
+        @media screen and (max-width: 767px) {
+          .section-discovery .slide-content .main .listing.family-frendly {
+            display: none; } }
         .section-discovery .slide-content .main .listing .seamore {
           display: flex;
           justify-content: center;
@@ -1607,12 +1626,23 @@ img {
             font-size: 14px;
             font-style: normal;
             font-weight: 700;
-            line-height: normal; }
+            line-height: normal;
+            text-transform: uppercase; }
+            @media screen and (max-width: 767px) {
+              .section-discovery .slide-content .main .listing .seamore span {
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 16px;
+                /* 145.455% */ } }
         .section-discovery .slide-content .main .listing:first-child {
           padding-top: 0px; }
         .section-discovery .slide-content .main .listing:last-child {
           border-bottom: 0px;
           padding-bottom: 0px; }
+          @media screen and (max-width: 767px) {
+            .section-discovery .slide-content .main .listing:last-child {
+              padding-bottom: 16px; } }
         .section-discovery .slide-content .main .listing h4 {
           color: rgba(255, 255, 255, 0.5);
           text-align: left;
@@ -1622,6 +1652,9 @@ img {
           font-weight: 700;
           line-height: normal;
           margin-bottom: 16px; }
+          @media screen and (max-width: 767px) {
+            .section-discovery .slide-content .main .listing h4 {
+              display: none; } }
         .section-discovery .slide-content .main .listing .list {
           display: flex;
           gap: 8px;
@@ -1649,7 +1682,8 @@ img {
             @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .listing .list .list-group {
                 margin-bottom: 16px;
-                padding: 8px 14px; } }
+                padding: 8px 14px;
+                height: 32px; } }
             .section-discovery .slide-content .main .listing .list .list-group span {
               font-family: Poppins;
               font-size: 12px;
@@ -1973,8 +2007,11 @@ img {
             .section-discovery .slide-content .main .content-dis .close,
             .section-discovery .slide-content .main .content-wrapper .close {
               left: 47%;
-              top: -43px;
-              transform: rotate(90deg); } }
+              top: -42px;
+              transform: rotate(90deg);
+              border-top: solid 48px transparent;
+              border-bottom: solid 48px transparent;
+              border-left: solid 14px #1A1A1A; } }
           @media (min-width: 768px) and (max-width: 1180px) {
             .section-discovery .slide-content .main .content-dis .close,
             .section-discovery .slide-content .main .content-wrapper .close {
@@ -2019,7 +2056,8 @@ img {
                 width: 50% !important;
                 height: 216px;
                 flex-basis: 48%;
-                flex-grow: 1; } }
+                flex-grow: 1;
+                border-radius: 8px; } }
             .section-discovery .slide-content .main .content-dis .new-card .item-card img,
             .section-discovery .slide-content .main .content-wrapper .new-card .item-card img {
               -o-object-fit: cover;
@@ -2027,6 +2065,10 @@ img {
               width: 100%;
               height: 100%;
               border-radius: 18px; }
+              @media screen and (max-width: 767px) {
+                .section-discovery .slide-content .main .content-dis .new-card .item-card img,
+                .section-discovery .slide-content .main .content-wrapper .new-card .item-card img {
+                  border-radius: 8px; } }
             .section-discovery .slide-content .main .content-dis .new-card .item-card .love,
             .section-discovery .slide-content .main .content-wrapper .new-card .item-card .love {
               position: absolute;
@@ -2163,6 +2205,10 @@ img {
               left: 0;
               right: 0;
               bottom: 0; }
+              @media screen and (max-width: 767px) {
+                .section-discovery .slide-content .main .content-dis .new-card .item-card .divider,
+                .section-discovery .slide-content .main .content-wrapper .new-card .item-card .divider {
+                  height: 4px; } }
       .section-discovery .slide-content .main .collapse-menu {
         padding-bottom: 56px;
         width: 90%;
@@ -2199,7 +2245,7 @@ img {
           transition: width 0.9s linear; }
           @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .collapse-menu.collapsed {
-              height: 28vh;
+              height: 30vh;
               width: 100% !important;
               transition: height 0.9s linear;
               margin-bottom: 20px; } }
@@ -2349,9 +2395,13 @@ img {
             background-color: #FFFFFF4D; }
           @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .event-detail .back-to {
-              width: 24px;
-              height: 24px;
-              margin-bottom: 30px; } }
+              width: 28px !important;
+              height: 28px !important;
+              margin-bottom: 30px;
+              margin-left: -5px; }
+              .section-discovery .slide-content .main .event-detail .back-to svg {
+                width: 24px !important;
+                height: 24px !important; } }
           .section-discovery .slide-content .main .event-detail .back-to svg {
             width: 40px;
             height: 40px;
@@ -2365,10 +2415,10 @@ img {
           line-height: 50px; }
           @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .event-detail .content h2 {
-              font-size: 28px;
+              font-size: 24px;
               font-style: normal;
               font-weight: 700;
-              line-height: 36px; } }
+              line-height: 30px; } }
         .section-discovery .slide-content .main .event-detail .content h1 {
           color: #fff;
           font-family: Poppins;
@@ -2397,7 +2447,7 @@ img {
             .section-discovery .slide-content .main .event-detail .content p {
               font-size: 12px;
               font-style: normal;
-              font-weight: 700;
+              font-weight: 400;
               line-height: 18px; } }
           .section-discovery .slide-content .main .event-detail .content p:last-child {
             margin-bottom: 0px; }
@@ -2452,12 +2502,14 @@ img {
             opacity: 0.8; }
             @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .event-detail .button .overlay {
-                background: url("../../public/img/bg-gradient.png"), lightgray 50%/cover no-repeat;
+                background: url("../../public/img/bg-gradient.png") no-repeat;
+                background-size: cover;
                 width: 100vw; } }
             @media (min-width: 768px) and (max-width: 1180px) {
               .section-discovery .slide-content .main .event-detail .button .overlay {
-                background: url("../../public/img/bg-gradient.png"), lightgray 50%/cover no-repeat;
-                width: 100vw; } }
+                background: url("../../public/img/bg-gradient.png") no-repeat;
+                width: 100vw;
+                background-size: cover; } }
           .section-discovery .slide-content .main .event-detail .button a {
             padding: 20px 48px;
             border-radius: 12px;
@@ -2477,7 +2529,11 @@ img {
             @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .event-detail .button a {
                 margin: 16px;
-                width: 91%; } }
+                width: 91%;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 18px; } }
             @media (min-width: 768px) and (max-width: 1180px) {
               .section-discovery .slide-content .main .event-detail .button a {
                 margin: 33px;
@@ -2590,6 +2646,12 @@ img {
               font-style: normal;
               font-weight: 400;
               line-height: 18px; }
+              @media screen and (max-width: 767px) {
+                .section-discovery .slide-content .main .event-detail .form-submit .form-group-extend .input-class label {
+                  font-size: 11px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 16px; } }
         .section-discovery .slide-content .main .event-detail .form-submit .form-group {
           margin-bottom: 16px;
           position: relative; }
@@ -2615,6 +2677,12 @@ img {
             font-style: normal;
             font-weight: 400;
             line-height: 18px; }
+            @media screen and (max-width: 767px) {
+              .section-discovery .slide-content .main .event-detail .form-submit .form-group label {
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 16px; } }
           .section-discovery .slide-content .main .event-detail .form-submit .form-group select.form-control {
             -webkit-appearance: none;
                -moz-appearance: none;
@@ -2669,6 +2737,9 @@ img {
         .section-discovery .slide-content .main .event-detail .sosmedia {
           display: flex;
           gap: 14px; }
+          @media screen and (max-width: 767px) {
+            .section-discovery .slide-content .main .event-detail .sosmedia {
+              justify-content: center; } }
           .section-discovery .slide-content .main .event-detail .sosmedia--item {
             border-radius: 50%;
             display: flex;
@@ -2720,7 +2791,8 @@ img {
         .section-discovery .slide-content .main .images-background.last-bc .device {
           top: 43.5%; }
         .section-discovery .slide-content .main .images-background img {
-          border-radius: 18px; }
+          border-radius: 18px;
+          filter: drop-shadow(0px 8px 28px rgba(13, 34, 42, 0.3)); }
         .section-discovery .slide-content .main .images-background .bordered {
           border: 4px solid transparent;
           border-radius: 18px;
@@ -2993,11 +3065,11 @@ img {
     display: inline-block;
     color: #1a1a1a;
     font-family: Poppins;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: 28px;
-    letter-spacing: 0.32px; }
+    letter-spacing: 0.02em; }
   .event .count {
     width: 24px;
     height: 24px;
