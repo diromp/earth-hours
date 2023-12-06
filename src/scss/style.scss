@@ -486,6 +486,7 @@ img {
 	display: flex;
 	overflow: hidden;
 	background-color: #1a1a1a;
+
 	&.active-section {
 		@media screen and (max-width: 767px) {
 			height: 100%;
@@ -528,9 +529,11 @@ img {
 					border-radius: 8px;
 					background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(to right, #a0df9e 12.41%, #4587c2 89.87%) border-box;
 				}
+
 				@media screen and (min-width: 768px) and (max-width: 1180px) {
 					height: 100vh;
 				}
+
 				.content-wrapper {
 					padding-bottom: 66px;
 					border: 0px;
@@ -545,9 +548,11 @@ img {
 							top: 40%;
 						}
 					}
+
 					.new-card {
 						padding-left: 80px;
 						padding-right: 80px;
+
 						@media screen and (max-width: 767px) {
 							padding: 0px !important;
 						}
@@ -586,11 +591,19 @@ img {
 			.main {
 				height: 936px;
 			}
-
+			.listing {
+				.list {
+					.list-group  {
+						pointer-events:none;
+						cursor: none;
+					}
+				}
+			}
 			@media screen and (max-width: 767px) {
 				.main {
 					background: unset;
 				}
+
 				.listing {
 					.list {
 						gap: 8px !important;
@@ -637,7 +650,7 @@ img {
 					background: unset;
 				}
 			}
-			
+
 			.event-detail {
 				.content {
 					h2 {
@@ -680,6 +693,7 @@ img {
 				margin-bottom: 0px;
 				max-height: 101vh !important;
 			}
+
 			@media screen and (max-width: 360px) {
 				margin-right: 16px;
 				margin-left: 16px;
@@ -1179,6 +1193,7 @@ img {
 				}
 
 				.announcment {
+
 					p {
 						color: #1a1a1a;
 						text-align: center;
@@ -1194,8 +1209,9 @@ img {
 							font-weight: 700;
 							line-height: 18px;
 						}
+
 						@media screen and (max-width: 360px) {
-							
+							font-size: 13px;
 						}
 					}
 				}
@@ -1791,6 +1807,7 @@ img {
 						margin-bottom: 0px;
 						padding-right: 0px;
 					}
+
 					@media screen and (max-width: 360px) {
 						overflow-y: scroll;
 						height: 25.5rem;
@@ -2008,6 +2025,7 @@ img {
 								font-style: normal;
 								font-weight: 400;
 								line-height: 18px;
+
 								@media screen and (max-width: 767px) {
 									font-size: 11px;
 									font-style: normal;
@@ -2043,6 +2061,7 @@ img {
 							font-style: normal;
 							font-weight: 400;
 							line-height: 18px;
+
 							@media screen and (max-width: 767px) {
 								font-size: 11px;
 								font-style: normal;
@@ -2101,6 +2120,7 @@ img {
 				.sosmedia {
 					display: flex;
 					gap: 14px;
+
 					@media screen and (max-width: 767px) {
 						justify-content: center;
 					}
@@ -2165,6 +2185,7 @@ img {
 						margin-top: 24px;
 						margin-bottom: 24px;
 						padding: 0px;
+
 						img {
 							border-radius: 8px;
 						}
@@ -2180,6 +2201,7 @@ img {
 				img {
 					border-radius: 18px;
 					filter: drop-shadow(0px 8px 28px rgba(13, 34, 42, 0.30));
+
 					@media screen and (max-width: 767px) {
 						border-radius: 8px;
 					}

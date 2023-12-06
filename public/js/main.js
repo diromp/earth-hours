@@ -49,7 +49,7 @@ $(document).ready(function () {
         })
     });
 
-    $('.list-group').on('click', function (e) {
+    $('.slide-1 .list-group').on('click', function (e) {
         $(this).toggleClass('active');
         $('#reset-filter').show();
     });

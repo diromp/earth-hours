@@ -1537,6 +1537,9 @@ img {
         border-radius: 8px; } }
     .section-discovery .slide-content.slide-2 .main {
       height: 936px; }
+    .section-discovery .slide-content.slide-2 .listing .list .list-group {
+      pointer-events: none;
+      cursor: none; }
     @media screen and (max-width: 767px) {
       .section-discovery .slide-content.slide-2 .main {
         background: unset; }
@@ -2000,6 +2003,10 @@ img {
               font-style: normal;
               font-weight: 700;
               line-height: 18px; } }
+          @media screen and (max-width: 360px) {
+            .section-discovery .slide-content .main .content-dis .announcment p,
+            .section-discovery .slide-content .main .content-wrapper .announcment p {
+              font-size: 13px; } }
         .section-discovery .slide-content .main .content-dis .close,
         .section-discovery .slide-content .main .content-wrapper .close {
           position: absolute;
