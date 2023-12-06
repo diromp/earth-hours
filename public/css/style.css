@@ -1510,6 +1510,9 @@ img {
         .section-discovery .slide-content.saved-list .main .content-wrapper .new-card {
           padding-left: 80px;
           padding-right: 80px; }
+          @media screen and (max-width: 767px) {
+            .section-discovery .slide-content.saved-list .main .content-wrapper .new-card {
+              padding: 0px !important; } }
         @media screen and (min-width: 768px) and (max-width: 1180px) {
           .section-discovery .slide-content.saved-list .main .content-wrapper .new-card {
             padding-left: 110px;
@@ -1523,7 +1526,8 @@ img {
         overflow-x: hidden;
         height: 100%;
         max-height: 100% !important;
-        margin-top: 16px; } }
+        margin-top: 16px;
+        border-radius: 8px; } }
     .section-discovery .slide-content.slide-2 .main {
       height: 936px; }
     @media screen and (max-width: 767px) {
@@ -1578,6 +1582,10 @@ img {
           margin-top: 0px;
           margin-bottom: 0px;
           max-height: 101vh !important; } }
+      @media screen and (max-width: 360px) {
+        .section-discovery .slide-content .main {
+          margin-right: 16px;
+          margin-left: 16px; } }
       @media (min-width: 768px) and (max-width: 1180px) {
         .section-discovery .slide-content .main {
           flex-direction: column;

@@ -528,6 +528,9 @@ img {
 					border-radius: 8px;
 					background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(to right, #a0df9e 12.41%, #4587c2 89.87%) border-box;
 				}
+				@media screen and (min-width: 768px) and (max-width: 1180px) {
+					
+				}
 
 				.content-wrapper {
 					padding-bottom: 66px;
@@ -543,10 +546,12 @@ img {
 							top: 40%;
 						}
 					}
-
 					.new-card {
 						padding-left: 80px;
 						padding-right: 80px;
+						@media screen and (max-width: 767px) {
+							padding: 0px !important;
+						}
 					}
 
 					@media screen and (min-width: 768px) and (max-width: 1180px) {
@@ -573,6 +578,7 @@ img {
 					height: 100%;
 					max-height: 100% !important;
 					margin-top: 16px;
+					border-radius: 8px;
 				}
 			}
 		}
@@ -674,6 +680,10 @@ img {
 				margin-top: 0px;
 				margin-bottom: 0px;
 				max-height: 101vh !important;
+			}
+			@media screen and (max-width: 360px) {
+				margin-right: 16px;
+				margin-left: 16px;
 			}
 
 			@media (min-width: 768px) and (max-width: 1180px) {
