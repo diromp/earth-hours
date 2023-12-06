@@ -42,9 +42,10 @@ img {
 				padding-top: 48px;
 				padding-bottom: 0px;
 			}
+
 			@media (min-width: 768px) and (max-width: 1180px) {
 				padding-right: 32px;
-   				padding-left: 32px;
+				padding-left: 32px;
 			}
 
 			.title {
@@ -282,19 +283,30 @@ img {
 	}
 
 	.saved-list {
+		background-color: #fff;
+
 		.title-back {
 			background-color: #fff;
-			padding-top: 66px;
-			padding-left: 49px;
-			padding-right: 49px;
+			margin-top: 66px;
+			margin-left: 49px;
+			margin-right: 49px;
+			padding: 8px 20px;
+			margin-right: -20px;
+			max-width: 495px;
+
 
 			@media screen and (max-width: 767px) {
 				padding: 24px 24px 0 24px;
 			}
 
 			.close-saved {
-				width: 32px;
-				height: 32px;
+				width: 48px;
+				height: 48px;
+				border-radius: 100px;
+
+				&:hover {
+					background: rgba(26, 26, 26, 0.1);
+				}
 
 				svg {
 					width: 100%;
@@ -325,9 +337,9 @@ img {
 				}
 
 				.count {
-					background-color: #D91F1F;
 					width: 34px;
 					height: 34px;
+					background-color: #D91F1F;
 					border-radius: 50%;
 					text-align: center;
 					font-family: Poppins;
@@ -374,7 +386,7 @@ img {
 		@media (min-width: 768px) and (max-width: 1180px) {
 			top: -2px;
 			min-height: 100vh;
-			
+
 		}
 
 		&::after {
@@ -394,10 +406,12 @@ img {
 			display: flex;
 			align-items: initial;
 			flex-direction: column;
+
 			@media (min-width: 768px) and (max-width: 1180px) {
 				padding-left: 32px;
 				padding-right: 32px;
 			}
+
 			.side-left {
 				z-index: 5;
 
@@ -471,9 +485,11 @@ img {
 	display: flex;
 	overflow: hidden;
 	background-color: #1a1a1a;
+
 	@media (min-width: 768px) and (max-width: 1180px) {
 		overflow-y: scroll;
 	}
+
 	@media screen and (max-width: 767px) {
 		height: 75rem;
 	}
@@ -490,14 +506,17 @@ img {
 		height: 100%;
 		position: relative;
 		background-color: #1a1a1a;
+
 		&.active {
 			.button {
 				display: block !important;
 			}
 		}
+
 		&.saved-list {
 			.main {
 				height: 100%;
+
 				@media screen and (max-width: 767px) {
 					margin-top: 16px;
 					border-radius: 8px;
@@ -506,14 +525,19 @@ img {
 
 				.content-wrapper {
 					padding-bottom: 66px;
+					border: 0px;
+					outline: 0;
+					margin-top: -2px;
 
 					.arrows {
 						top: 38%;
 						right: 80px;
+
 						@media screen and (max-width: 767px) {
 							top: 40%;
 						}
 					}
+
 					.new-card {
 						padding-left: 80px;
 						padding-right: 80px;
@@ -530,34 +554,42 @@ img {
 						padding-left: 16px !important;
 						padding-right: 16px !important;
 					}
-					
+
 				}
 			}
 		}
+
 		&.slide-2 {
+			.main {
+				height: 936px;
+			}
+
 			@media screen and (max-width: 767px) {
 				.listing {
 					.list {
 						gap: 8px !important;
 						overflow: visible !important;
 						flex-flow: wrap !important;
+
 						.list-group {
 							margin-bottom: 8px !important;
 						}
 					}
-	
+
 				}
 			}
+
 			@media screen and (min-width: 768px) and (max-width: 1180px) {
 				.images-background {
 
-					> .love {
+					>.love {
 						top: 52px !important;
 						right: 32px !important;
 					}
 				}
 			}
 		}
+
 		&.slide-3 {
 			@media screen and (min-width: 768px) and (max-width: 1180px) {
 				min-height: 90rem;
@@ -565,12 +597,14 @@ img {
 				.images-background {
 					display: block !important;
 					padding-left: 64px;
-					> .love {
+
+					>.love {
 						top: 32px !important;
 						right: 84px !important;
 					}
 				}
 			}
+
 			@media screen and (max-width: 767px) {
 				.main {
 					overflow: visible;
@@ -585,10 +619,12 @@ img {
 				}
 			}
 		}
+
 		&.slide-4 {
 			@media screen and (min-width: 768px) and (max-width: 1180px) {
 				min-height: 90rem;
 			}
+
 			@media screen and (max-width: 767px) {
 				.main {
 					overflow: visible;
@@ -603,10 +639,10 @@ img {
 			z-index: 9;
 			border: 6px solid transparent;
 			background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-				linear-gradient(to right, #a0df9e 12.41%, #4587c2 89.87%) border-box;
+				linear-gradient(90.32deg, #A0DF9E 12.41%, #4587C2 89.87%) border-box;
 			position: relative;
 			display: flex;
-			height: 962px;
+			height: 926px;
 			overflow: hidden;
 
 			@media screen and (max-width: 767px) {
@@ -656,6 +692,16 @@ img {
 					border: 0px;
 					background: transparent;
 					padding: 8px 20px;
+					border-radius: 100px;
+
+					&:hover {
+						background: rgba(255, 255, 255, 0.10);
+					}
+
+					img {
+						width: 24px;
+						height: 24px;
+					}
 
 					span {
 						color: #fff;
@@ -678,7 +724,7 @@ img {
 				}
 
 				h4 {
-					color: #afafaf;
+					color: rgba(255, 255, 255, 0.50);
 					text-align: left;
 					font-family: Poppins;
 					font-size: 14px;
@@ -711,6 +757,7 @@ img {
 						margin-bottom: 8px;
 						user-select: none;
 						white-space: nowrap;
+						cursor: pointer;
 
 						@media screen and (max-width: 767px) {
 							margin-bottom: 16px;
@@ -742,6 +789,11 @@ img {
 								color: #a0df9e;
 							}
 
+							&:hover {
+								background: rgba(160, 223, 158, 0.70);
+								color: #1A1A1A;
+							}
+
 							&.active {
 								border-color: #a0df9e;
 								background-color: #a0df9e;
@@ -757,6 +809,11 @@ img {
 							border-color: #ffc592;
 							background: rgba(255, 197, 146, 0.1);
 							color: #ffc592;
+
+							&:hover {
+								background: rgba(255, 197, 146, 0.70);
+								color: #1A1A1A;
+							}
 
 							svg {
 								color: #ffc592;
@@ -782,6 +839,11 @@ img {
 								color: #4587c2;
 							}
 
+							&:hover {
+								background: rgba(69, 135, 194, 0.70);
+								color: #1A1A1A;
+							}
+
 							&.active {
 								border-color: #4587c2;
 								background-color: #4587c2;
@@ -800,6 +862,11 @@ img {
 
 							svg {
 								color: #c5baf6;
+							}
+
+							&:hover {
+								background: rgba(197, 186, 246, 0.70);
+								color: #1A1A1A;
 							}
 
 							&.active {
@@ -822,6 +889,11 @@ img {
 								color: #ffc0ff;
 							}
 
+							&:hover {
+								background: rgba(255, 173, 172, 0.70);
+								color: #1A1A1A;
+							}
+
 							&.active {
 								border-color: #ffc0ff;
 								background-color: #ffc0ff;
@@ -840,6 +912,11 @@ img {
 
 							svg {
 								color: #feff4c;
+							}
+
+							&:hover {
+								background: rgba(254, 255, 76, 0.70);
+								color: #1A1A1A;
 							}
 
 							&.active {
@@ -861,6 +938,11 @@ img {
 							svg {
 								color: #fff;
 								display: none;
+							}
+
+							&:hover {
+								background: #fff;
+								color: #1a1a1a;
 							}
 
 							&.active {
@@ -924,7 +1006,7 @@ img {
 			.content-wrapper {
 				padding-top: 48px;
 				padding-right: 48px;
-				padding-left: 48px;
+				padding-left: 24px;
 				position: relative;
 				background-color: #fff;
 				width: 100%;
@@ -936,7 +1018,7 @@ img {
 					padding-right: 16px;
 					padding-left: 16px;
 				}
-			
+
 
 				@media (min-width: 768px) and (max-width: 1180px) {
 					overflow: visible;
@@ -958,7 +1040,7 @@ img {
 				.arrows {
 					position: absolute;
 					top: 48%;
-					right: 25px;
+					right: 35px;
 
 					@media screen and(max-width: 767px) {
 						width: 100%;
@@ -991,13 +1073,19 @@ img {
 							background-image: url("../../public/img/ic-arrow-up.svg");
 							background-repeat: no-repeat;
 							background-size: contain;
-							&:hover, &:focus, &:active{
+
+							&:hover,
+							&:focus,
+							&:active {
 								background-image: url("../../public/img/ic-arrow-up-active.svg");
 							}
 
 							@media screen and(max-width: 767px) {
 								background-image: url("../../public/img/ic_arrow_left.png");
-								&:hover, &:focus, &:active{
+
+								&:hover,
+								&:focus,
+								&:active {
 									background-image: url("../../public/img/ic_arrow_left.png");
 								}
 							}
@@ -1009,14 +1097,20 @@ img {
 							background-repeat: no-repeat;
 							background-size: contain;
 							margin-top: 30px;
-							&:hover, &:focus, &:active{
+
+							&:hover,
+							&:focus,
+							&:active {
 								background-image: url("../../public/img/ic-arrow-down-active.png");
 							}
 
 							@media screen and(max-width: 767px) {
 								background-image: url("../../public/img/ic_arrow_right.png");
 								margin-top: 0;
-								&:hover, &:focus, &:active{
+
+								&:hover,
+								&:focus,
+								&:active {
 									background-image: url("../../public/img/ic_arrow_right.png");
 								}
 							}
@@ -1035,7 +1129,7 @@ img {
 						color: #1a1a1a;
 						text-align: center;
 						font-family: "Poppins";
-						font-size: 16px;
+						font-size: 18px;
 						font-style: normal;
 						font-weight: 700;
 						line-height: 26px;
@@ -1051,7 +1145,7 @@ img {
 
 				.close {
 					position: absolute;
-					left: 0;
+					left: -2px;
 					top: 46%;
 					z-index: 9;
 					cursor: pointer;
@@ -1064,6 +1158,8 @@ img {
 					border-left: solid 24px #1A1A1A;
 					border-top: solid 48px transparent;
 					border-bottom: solid 48px transparent;
+					outline: 0;
+					box-sizing: border-box;
 
 					@media screen and (max-width: 767px) {
 						left: 47%;
@@ -1083,9 +1179,11 @@ img {
 					height: 718px;
 					margin-top: 24px;
 					overflow: hidden;
+
 					@media screen and (max-width: 767px) {
 						height: 440px;
 					}
+
 					.item-card-container {
 						display: flex;
 						gap: 16px;
@@ -1130,12 +1228,13 @@ img {
 							height: 32px;
 							border-radius: 50%;
 							padding: 5px;
-							background-color: #9191918a;
+							background-color: rgba(26, 26, 26, 0.30);
 							right: 16px;
 							top: 16px;
 							display: flex;
 							justify-content: center;
 							align-items: center;
+							box-shadow: 0px 3px 4.2px 0px rgba(0, 0, 0, 0.25);
 
 							@media screen and (max-width: 767px) {
 								width: 20px;
@@ -1161,7 +1260,7 @@ img {
 							position: absolute;
 							bottom: 0;
 							width: 100%;
-							background: rgba(26, 26, 26, 0.9);
+							background: rgba(26, 26, 26, 0.90);
 							height: 151px;
 							border-bottom-left-radius: 18px;
 							border-bottom-right-radius: 18px;
@@ -1244,13 +1343,13 @@ img {
 							p {
 								color: #fff;
 								font-family: Poppins;
-								font-size: 16px;
+								font-size: 18px;
 								font-style: normal;
 								font-weight: 700;
-								line-height: 24px;
+								line-height: 28px;
 								overflow: hidden;
 								text-overflow: ellipsis;
-								height: 70px;
+								height: 80px;
 
 								@media screen and (max-width: 767px) {
 									font-size: 11px;
@@ -1264,7 +1363,7 @@ img {
 
 						.divider {
 							position: absolute;
-							height: 9px;
+							height: 6.31px;
 							background-color: #D9D9D9;
 							width: 100%;
 							top: 55%;
@@ -1375,10 +1474,10 @@ img {
 					p {
 						color: #fff;
 						font-family: 'Poppins';
-						font-size: 18px;
+						font-size: 16px;
 						font-style: normal;
 						font-weight: 400;
-						line-height: 28px;
+						line-height: 26px;
 
 						@media screen and (max-width: 767px) {
 							font-size: 12px;
@@ -1392,15 +1491,18 @@ img {
 
 				.filter {
 					margin-top: 24px;
+
 					.select {
 						display: flex;
-						gap: 16px;
+						gap: 20px;
 						height: 52px;
 
 						@media screen and (max-width: 767px) {
 							margin-bottom: 5px;
 							padding-left: 24px;
 							padding-right: 24px;
+							height: auto;
+							flex-direction: column;
 						}
 					}
 
@@ -1459,10 +1561,9 @@ img {
 						.content-choose {
 							padding: 24px;
 							border-radius: 8px;
-							background: rgba(255, 255, 255, 0.1);
+							background: rgba(255, 255, 255, 0.04);
 
 							@media screen and (max-width: 767px) {
-								background: rgba(255, 255, 255, 0.04);
 								padding: 0px;
 							}
 						}
@@ -1480,6 +1581,7 @@ img {
 					height: 100%;
 					width: 100%;
 				}
+
 				@media (min-width: 768px) and (max-width: 1180px) {
 					padding: 32px 32px 0px 32px;
 					height: 100%;
@@ -1500,9 +1602,10 @@ img {
 							padding-right: 0px;
 						}
 					}
+
 					@media (min-width: 768px) and (max-width: 1180px) {
 						overflow: visible;
-   						padding-right: 0px;
+						padding-right: 0px;
 					}
 
 					&::-webkit-scrollbar {
@@ -1520,6 +1623,13 @@ img {
 					height: 40px;
 					cursor: pointer;
 					margin-bottom: 32px;
+					border-radius: 100px;
+
+					&:hover,
+					&:focus,
+					&:active {
+						background-color: #FFFFFF4D;
+					}
 
 					@media screen and (max-width: 767px) {
 						width: 24px;
@@ -1591,6 +1701,7 @@ img {
 						}
 					}
 				}
+
 				.paragraf {
 					overflow-y: scroll;
 					margin-bottom: 16px;
@@ -1603,8 +1714,9 @@ img {
 						margin-bottom: 0px;
 						padding-right: 0px;
 					}
+
 					@media (min-width: 768px) and (max-width: 1366px) {
-    					height: 320px;
+						height: 320px;
 						padding-bottom: 140px;
 					}
 
@@ -1640,20 +1752,25 @@ img {
 					width: 100%;
 					z-index: 9;
 					display: none;
-					@media screen and (max-width: 767px), (min-width: 768px) and (max-width: 1180px) {
+
+					@media screen and (max-width: 767px),
+					(min-width: 768px) and (max-width: 1180px) {
 						position: fixed;
 						bottom: 0;
 						left: 0;
-						width: 100vw;	
+						width: 100vw;
 					}
+
 					.overlay {
 						height: 100%;
 						position: absolute;
 						opacity: 0.8;
+
 						@media screen and (max-width: 767px) {
 							background: url("../../public/img/bg-gradient.png"), lightgray 50% / cover no-repeat;
 							width: 100vw;
 						}
+
 						@media (min-width: 768px) and (max-width: 1180px) {
 							background: url("../../public/img/bg-gradient.png"), lightgray 50% / cover no-repeat;
 							width: 100vw;
@@ -1665,17 +1782,18 @@ img {
 							margin: 16px;
 							width: 91%;
 						}
+
 						@media (min-width: 768px) and (max-width: 1180px) {
 							margin: 33px;
 							width: 92%;
 						}
-						padding: 16px 50px 16px 48px;
+
+						padding: 20px 48px;
 						border-radius: 12px;
-						border: 2px solid #fff;
 						background-color: #fff;
 						text-align: center;
 						font-family: "Poppins";
-						font-size: 16px;
+						font-size: 18px;
 						font-style: normal;
 						font-weight: 700;
 						line-height: 24px;
@@ -1683,7 +1801,15 @@ img {
 						display: inline-block;
 						width: 100%;
 						position: relative;
+						transition: all 0.5s ease-in-out;
+
 						z-index: 3;
+
+						&:hover {
+							color: #fff;
+							transition: all 0.5s ease-out;
+							background: linear-gradient(90deg, #A0DF9E 12.41%, #4587C2 89.87%);
+						}
 					}
 				}
 
@@ -1705,12 +1831,17 @@ img {
 				}
 
 				.form-submit {
-					.form-group, .form-group-extend, + .form-check-default {
+
+					.form-group,
+					.form-group-extend,
+					+.form-check-default {
 						width: 492px;
+
 						@media screen and (max-width: 767px) {
 							width: 100%;
 						}
 					}
+
 					.form-group-extend {
 						margin-bottom: 16px;
 						display: flex;
@@ -1718,11 +1849,13 @@ img {
 						border-radius: 8px;
 						padding: 16px;
 						gap: 16px;
-						input:not(:placeholder-shown) + label,
-						input:focus + label {
+
+						input:not(:placeholder-shown)+label,
+						input:focus+label {
 							bottom: 125%;
 							opacity: 1;
 						}
+
 						input {
 							font-family: Poppins;
 							font-size: 16px;
@@ -1732,8 +1865,9 @@ img {
 							color: #fff;
 							width: 100%;
 							outline: 0;
-							border: 0px ;
+							border: 0px;
 							background-color: #1a1a1a;
+
 							@media screen and (max-width: 767px) {
 								font-size: 12px;
 								font-style: normal;
@@ -1742,8 +1876,9 @@ img {
 							}
 
 							&:first-child {
-								flex:7%;
+								flex: 7%;
 							}
+
 							&::placeholder {
 								color: #fff;
 								font-family: Poppins;
@@ -1751,6 +1886,7 @@ img {
 								font-style: normal;
 								font-weight: 400;
 								line-height: 26px;
+
 								@media screen and (max-width: 767px) {
 									font-size: 12px;
 									font-style: normal;
@@ -1759,14 +1895,17 @@ img {
 								}
 							}
 						}
+
 						.input-class {
 							flex: 95%;
 							position: relative;
-							.form-control:not(:placeholder-shown) + label,
-							.form-control:focus + label {
+
+							.form-control:not(:placeholder-shown)+label,
+							.form-control:focus+label {
 								bottom: 125%;
 								opacity: 1;
 							}
+
 							label {
 								position: absolute;
 								opacity: 0;
@@ -1785,14 +1924,17 @@ img {
 							}
 						}
 					}
+
 					.form-group {
 						margin-bottom: 16px;
 						position: relative;
-						.form-control:not(:placeholder-shown) + label,
-						.form-control:focus + label {
+
+						.form-control:not(:placeholder-shown)+label,
+						.form-control:focus+label {
 							bottom: 85%;
 							opacity: 1;
 						}
+
 						label {
 							position: absolute;
 							opacity: 0;
@@ -1845,6 +1987,7 @@ img {
 								font-style: normal;
 								font-weight: 400;
 								line-height: 26px;
+
 								@media screen and (max-width: 767px) {
 									font-size: 12px;
 									font-style: normal;
@@ -1870,6 +2013,12 @@ img {
 							linear-gradient(to right, #a0df9e 12.41%, #4587c2 89.87%) border-box;
 						width: 69px;
 						height: 69px;
+
+						&:hover {
+							border: 0px solid transparent;
+							background: linear-gradient(90deg, #A0DF9E 12.41%, #4587C2 89.87%);
+						}
+
 						@media screen and (max-width: 767px) {
 							width: 40px;
 							height: 40px;
@@ -1880,17 +2029,18 @@ img {
 			}
 
 			.images-background {
-				height: 804px;
+				height: 822px;
 				background-repeat: no-repeat;
 				background-size: cover;
-				width: 603px;
+				width: 585px;
 				padding-top: 64px;
-				padding-right: 64px;
+				padding-right: 0px;
 				position: relative;
 
 				@media screen and (max-width: 767px) {
 					display: none;
 				}
+
 				@media (min-width: 768px) and (max-width: 1180px) {
 					display: none;
 					padding-top: 16px;
@@ -1898,11 +2048,13 @@ img {
 
 				&.mobile {
 					display: none;
+
 					@media (min-width: 768px) and (max-width: 1180px) {
 						display: block;
 						margin: 0 auto;
 						padding: 24px 0px;
 					}
+
 					@media screen and (max-width: 767px) {
 						display: block;
 						height: 327px;
@@ -1948,8 +2100,8 @@ img {
 				.love {
 					cursor: pointer;
 					position: absolute;
-					top: 94px;
-					right: 94px;
+					top: 104px;
+					right: 39px;
 					border-radius: 50%;
 					display: flex;
 					justify-content: center;
@@ -2256,12 +2408,24 @@ img {
 
 .event {
 	display: inline-flex;
-	justify-content: flex-end;
 	align-items: center;
-	width: 100%;
-	gap: 8px;
+	width: auto;
+	gap: 4px;
 	margin-bottom: 24px;
 	cursor: pointer;
+	padding: 8px 20px;
+	margin-right: -20px;
+	border-radius: 100px;
+	box-shadow: 0px 0px 21px 0px rgba(70, 77, 43, 0.07);
+
+	&:hover {
+		background: rgba(26, 26, 26, 0.10);
+
+		.count {
+			background-color: #D91F1F;
+			color: #fff;
+		}
+	}
 
 	@media screen and (max-width: 767px) {
 		display: none;
@@ -2269,6 +2433,7 @@ img {
 
 	&.mobile-event {
 		display: none;
+
 		@media screen and (max-width: 767px) {
 			margin-bottom: 0;
 			display: flex;
@@ -2286,22 +2451,21 @@ img {
 		font-style: normal;
 		font-weight: 700;
 		line-height: 28px;
-		/* 175% */
 		letter-spacing: 0.32px;
 	}
 
 	.count {
-		width: 28px;
-		height: 28px;
-		background-color: #D91F1F24;
+		width: 24px;
+		height: 24px;
+		background-color: rgba(217, 31, 31, 0.14);
 		border-radius: 50%;
 		color: #D91F1F;
 		text-align: center;
 		font-family: Poppins;
-		font-size: 16px;
+		font-size: 14px;
 		font-style: normal;
 		font-weight: 700;
-		line-height: 16px;
+		line-height: 14px;
 		padding: 6px;
 	}
 }
@@ -2394,7 +2558,7 @@ img {
 	&.active {
 		svg {
 			#stroke {
-				color: transparent;
+				color: #ED1B1B;
 			}
 
 			#full {

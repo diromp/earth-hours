@@ -2,11 +2,74 @@ $(document).ready(function () {
     var slider = $('#slide-discovery');
     var savedSlider = $('#savedSlider');
     var sliderQuestions = $('.question-slide');
-    var container = $('.section-discovery');
     var containerQuestions = $('.section-question');
     var seeMore = $('.seamore');
     var selectLocations = $('.select-location-container');
 
+    $('.item-card .love').click(function () {
+        $(this).toggleClass('active');
+    });
+    $('.images-backgrounds .love').click(function () {
+        $(this).toggleClass('active');
+    });
+
+    $('.item-card .next-detail').on('click', function (e) {
+        var containerName = $(this).closest('.new-card').attr('id');
+
+        console.log('containerName');
+
+        if (containerName === 'savedSlider') {
+            $('.saved-list').fadeOut(
+                'slow'
+            );
+            $('.slide-2').fadeIn(
+                'slow'
+            );
+        } else {
+            $('.slide-1').fadeOut(
+                'slow'
+            );
+            $('.slide-2').fadeIn(
+                'slow'
+            );
+            $('.slide-2').addClass('active');
+        }
+
+        setTimeout(function () {
+            $('.slide-2').css({
+                'display': 'block',
+            })
+
+        }, 1100);
+        $('.slide-2').find('.main').css({
+            'max-height': '52rem',
+            'border': '0px',
+            'border-radius': '0px',
+        })
+    });
+
+    $('.list-group').on('click', function (e) {
+        $(this).toggleClass('active');
+    });
+
+    slider.flipbox({
+        vertical: true
+    });
+    savedSlider.flipbox({ vertical: true });
+
+
+    $('.btn-discovery.prev').click(function () {
+        slider.flipbox('prev', $(this).hasClass('reverse'));
+    })
+    $('.btn-discovery.next').click(function () {
+        slider.flipbox('next', $(this).hasClass('reverse'));
+    });
+    $('.btn-saved.prev').click(function () {
+        savedSlider.flipbox('prev', $(this).hasClass('reverse'));
+    })
+    $('.btn-saved.next').click(function () {
+        savedSlider.flipbox('next', $(this).hasClass('reverse'));
+    });
 
     function formatIcon(state) {
         if (!state.id) { return state.text; }
@@ -31,7 +94,7 @@ $(document).ready(function () {
     function formatIconGobal(state) {
         if (!state.id) { return state.text; }
         const $item = $(` <span class="item-select">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <mask id="mask0_396_2964" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
                 <rect x="0.5" width="24" height="24" fill="currentColor"/>
                 </mask>
@@ -56,7 +119,15 @@ $(document).ready(function () {
     $('.select-country').select2({
         templateResult: formatTextSelect2,
         templateSelection: formatIcon,
-        placeholder: "Select Language",
+        searchInputPlaceholder: 'type here...',
+        "language": {
+            "noResults": function () {
+                return "<span>Sorry, no result.<br/>Try another word </span>";
+            }
+        },
+        escapeMarkup: function (markup) {
+            return markup;
+        }
     }).on('change', function (e) {
         $('.select-location-container').show();
     });
@@ -64,27 +135,7 @@ $(document).ready(function () {
     $('.select-location').select2({
         templateResult: formatTextSelect2,
         templateSelection: formatIconGobal,
-        placeholder: "Select Location",
     });
-
-    slider.flipbox({
-        vertical: true
-    });
-    savedSlider.flipbox({vertical: true});
-
-    $('.btn-discovery.prev').click(function() {
-        slider.flipbox('prev', $(this).hasClass('reverse'));
-    })
-    $('.btn-discovery.next').click(function() {
-        slider.flipbox('next', $(this).hasClass('reverse'));
-    });
-    $('.btn-saved.prev').click(function() {
-        savedSlider.flipbox('prev', $(this).hasClass('reverse'));
-    })
-    $('.btn-saved.next').click(function() {
-        savedSlider.flipbox('next', $(this).hasClass('reverse'));
-    });
-
 
     sliderQuestions.slick({
         dots: false,
@@ -137,7 +188,7 @@ $(document).ready(function () {
     });
 
     function expandSeeMore() {
-        seeMore.append(`  <img src="./public/img/ic-plus.svg"><span>See More</span>`);
+        seeMore.append(`  <img src="./public/img/ic-plus.svg"><span>SEE MORE</span>`);
     }
     expandSeeMore();
     $('.saved-list').css({
@@ -153,7 +204,7 @@ $(document).ready(function () {
         'display': `none`
     });
 
-    $('.event > .count').on('click', function (e) {
+    $('.event').on('click', function (e) {
         $('.slide-1').fadeOut(
             'slow'
         );
@@ -185,44 +236,13 @@ $(document).ready(function () {
         $('.family-frendly').toggleClass('hidden');
         if (!$('.site').hasClass('hidden')) {
             $(this).find('img').attr('src', './public/img/ic-minus.svg');
+            $(this).find('span').text("SEE LESS")
         } else {
             $(this).find('img').attr('src', './public/img/ic-plus.svg');
+            $(this).find('span').text("SEE MORE")
         }
     });
-    $('.next-detail').on('click', function (e) {
-        var containerName =$(this).closest('.new-card').attr('id');
 
-        console.log('containerName');
-
-        if(containerName === 'savedSlider') {
-            $('.saved-list').fadeOut(
-                'slow'
-            );
-            $('.slide-2').fadeIn(
-                'slow'
-            );
-        } else {
-            $('.slide-1').fadeOut(
-                'slow'
-            );
-            $('.slide-2').fadeIn(
-                'slow'
-            );
-            $('.slide-2').addClass('active');
-        }
-        
-        setTimeout(function () {
-            $('.slide-2').css({
-                'display': 'block',
-            })
-
-        }, 1100);
-        $('.slide-2').find('.main').css({
-            'max-height': '52rem',
-            'border': '0px',
-            'border-radius': '0px',
-        })
-    });
     $('#counting').on('click', function (e) {
         $('.slide-2').fadeOut(
             'slow'
@@ -345,11 +365,6 @@ $(document).ready(function () {
             'transform': `translateX(${fullWidth}px)`,
             'transition': 'all 2s',
         })
-    });
-
-    $('.love').on('click', function () {
-        console.log('masik  ')
-        $(this).toggleClass('active');
     });
     $('.form-check-input').on('click', function () {
         $(this).closest('.checklist-item').toggleClass('active');
