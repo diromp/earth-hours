@@ -81,7 +81,8 @@
     background: #313131;
     padding: 12px 10px;
     border-top-right-radius: 8px;
-    border-top-left-radius: 8px; }
+    border-top-left-radius: 8px;
+    border-bottom: 1px solid #FFFFFF26; }
     .select2-dropdown .select2-search--dropdown input {
       border: 0px !important;
       outline: 0 !important;

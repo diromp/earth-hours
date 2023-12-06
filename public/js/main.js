@@ -25,6 +25,7 @@ $(document).ready(function () {
             $('.slide-2').fadeIn(
                 'slow'
             );
+            $('.slide-2').addClass('active');
         } else {
             $('.slide-1').fadeOut(
                 'slow'
@@ -135,6 +136,14 @@ $(document).ready(function () {
     $('.select-location').select2({
         templateResult: formatTextSelect2,
         templateSelection: formatIconGobal,
+        "language": {
+            "noResults": function () {
+                return "<span>Sorry, no result.<br/>Try another word </span>";
+            }
+        },
+        escapeMarkup: function (markup) {
+            return markup;
+        }
     });
 
     sliderQuestions.slick({
