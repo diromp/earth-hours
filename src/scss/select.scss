@@ -123,6 +123,10 @@
             font-weight: 400;
             color: #fff;
             line-height: 28px;
+            @media screen and (max-width: 767px) {
+                font-size: 11px;
+                line-height: 16px;
+            }
         }
     }
 

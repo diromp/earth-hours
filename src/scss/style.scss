@@ -529,9 +529,8 @@ img {
 					background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(to right, #a0df9e 12.41%, #4587c2 89.87%) border-box;
 				}
 				@media screen and (min-width: 768px) and (max-width: 1180px) {
-					
+					height: 100vh;
 				}
-
 				.content-wrapper {
 					padding-bottom: 66px;
 					border: 0px;
@@ -1195,6 +1194,9 @@ img {
 							font-weight: 700;
 							line-height: 18px;
 						}
+						@media screen and (max-width: 360px) {
+							
+						}
 					}
 				}
 
@@ -1431,6 +1433,7 @@ img {
 
 							@media screen and (max-width: 767px) {
 								height: 4px;
+								top: 53%;
 							}
 
 							width: 100%;
@@ -1787,6 +1790,10 @@ img {
 						height: 60%;
 						margin-bottom: 0px;
 						padding-right: 0px;
+					}
+					@media screen and (max-width: 360px) {
+						overflow-y: scroll;
+						height: 25.5rem;
 					}
 
 					@media (min-width: 768px) and (max-width: 1366px) {
@@ -2158,6 +2165,9 @@ img {
 						margin-top: 24px;
 						margin-bottom: 24px;
 						padding: 0px;
+						img {
+							border-radius: 8px;
+						}
 					}
 				}
 
@@ -2170,6 +2180,9 @@ img {
 				img {
 					border-radius: 18px;
 					filter: drop-shadow(0px 8px 28px rgba(13, 34, 42, 0.30));
+					@media screen and (max-width: 767px) {
+						border-radius: 8px;
+					}
 				}
 
 				.bordered {

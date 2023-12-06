@@ -94,6 +94,10 @@
       font-weight: 400;
       color: #fff;
       line-height: 28px; }
+      @media screen and (max-width: 767px) {
+        .select2-dropdown .select2-search--dropdown input {
+          font-size: 11px;
+          line-height: 16px; } }
   .select2-dropdown .select2-dropdown--below {
     border-radius: 13px !important; }
   .select2-dropdown .select2-results {
