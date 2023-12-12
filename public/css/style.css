@@ -1112,7 +1112,12 @@ img {
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-  user-drag: none; }
+  user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none; }
 
 .apps {
   background-image: url("../../public/img/bg.jpeg");
@@ -1172,7 +1177,7 @@ img {
       .apps .section-hours .timmer-content_desc {
         color: #fff;
         text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
-        font-family: "Poppins";
+        font-family: "Poppins", sans-serif;
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
@@ -1286,7 +1291,7 @@ img {
         bottom: 0; }
       .apps .section-hours .grids .item-grid p {
         color: #fff;
-        font-family: "Poppins";
+        font-family: "Poppins", sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -1297,7 +1302,7 @@ img {
         z-index: 9; }
         .apps .section-hours .grids .item-grid .title-content h6 {
           color: #fff;
-          font-family: "Poppins";
+          font-family: "Poppins", sans-serif;
           font-size: 36px;
           font-style: normal;
           font-weight: 700;
@@ -1426,7 +1431,7 @@ img {
               margin-bottom: 16px; } }
           .apps .section-slide .slide-content .side-left .content span {
             color: #fff;
-            font-family: "Poppins";
+            font-family: "Poppins", sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
@@ -1442,7 +1447,7 @@ img {
           .apps .section-slide .slide-content .side-left .content h3 {
             color: #fff;
             text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
-            font-family: "Poppins";
+            font-family: "Poppins", sans-serif;
             font-size: 36px;
             font-style: normal;
             font-weight: 700;
@@ -1536,13 +1541,12 @@ img {
         margin-top: 16px;
         border-radius: 8px; } }
     .section-discovery .slide-content.slide-2 .main {
-      height: 936px; }
+      height: 936px;
+      background: unset; }
     .section-discovery .slide-content.slide-2 .listing .list .list-group {
       pointer-events: none;
       cursor: none; }
     @media screen and (max-width: 767px) {
-      .section-discovery .slide-content.slide-2 .main {
-        background: unset; }
       .section-discovery .slide-content.slide-2 .listing .list {
         gap: 8px !important;
         overflow: visible !important;
@@ -1552,7 +1556,10 @@ img {
     @media screen and (min-width: 768px) and (max-width: 1180px) {
       .section-discovery .slide-content.slide-2 .images-background > .love {
         top: 52px !important;
-        right: 32px !important; }
+        right: 32px !important; } }
+    .section-discovery .slide-content.slide-3 .main {
+      background: unset; }
+    @media screen and (min-width: 768px) and (max-width: 1180px) {
       .section-discovery .slide-content.slide-3 {
         min-height: 90rem; }
         .section-discovery .slide-content.slide-3 .images-background {
@@ -1567,13 +1574,14 @@ img {
         background: unset; } }
     .section-discovery .slide-content.slide-3 .event-detail .content h2 {
       margin-bottom: 24px; }
+    .section-discovery .slide-content.slide-4 .main {
+      background: unset; }
     @media screen and (min-width: 768px) and (max-width: 1180px) {
       .section-discovery .slide-content.slide-4 {
         min-height: 90rem; } }
     @media screen and (max-width: 767px) {
       .section-discovery .slide-content.slide-4 .main {
-        overflow: visible;
-        background: unset; } }
+        overflow: visible; } }
     .section-discovery .slide-content .main {
       margin-bottom: 32px;
       margin-top: 32px;
@@ -1640,7 +1648,7 @@ img {
           .section-discovery .slide-content .main .listing .seamore span {
             color: #fff;
             text-align: center;
-            font-family: "Poppins";
+            font-family: "Poppins", sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 700;
@@ -1991,7 +1999,7 @@ img {
         .section-discovery .slide-content .main .content-wrapper .announcment p {
           color: #1a1a1a;
           text-align: center;
-          font-family: "Poppins";
+          font-family: "Poppins", sans-serif;
           font-size: 18px;
           font-style: normal;
           font-weight: 700;
@@ -2287,7 +2295,7 @@ img {
               padding-right: 24px; } }
           .section-discovery .slide-content .main .collapse-menu .desc h2 {
             text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
-            font-family: "Poppins";
+            font-family: "Poppins", sans-serif;
             font-size: 48px;
             font-style: normal;
             font-weight: 700;
@@ -2341,7 +2349,7 @@ img {
                   padding-right: 16px; } }
               .section-discovery .slide-content .main .collapse-menu .filter .choose .title h3 {
                 color: #fff;
-                font-family: "Poppins";
+                font-family: "Poppins", sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
@@ -2354,7 +2362,7 @@ img {
                     line-height: 18px; } }
               .section-discovery .slide-content .main .collapse-menu .filter .choose .title a {
                 text-align: right;
-                font-family: "Poppins";
+                font-family: "Poppins", sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
@@ -2501,7 +2509,7 @@ img {
             background: #a8a8a8; }
           .section-discovery .slide-content .main .event-detail .paragraf p {
             color: #fff;
-            font-family: "Poppins";
+            font-family: "Poppins", sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -2515,8 +2523,7 @@ img {
                 line-height: 18px; } }
         .section-discovery .slide-content .main .event-detail .button {
           width: 100%;
-          z-index: 9;
-          display: none; }
+          z-index: 9; }
           @media screen and (max-width: 767px), (min-width: 768px) and (max-width: 1180px) {
             .section-discovery .slide-content .main .event-detail .button {
               position: fixed;
@@ -2542,7 +2549,7 @@ img {
             border-radius: 12px;
             background-color: #fff;
             text-align: center;
-            font-family: "Poppins";
+            font-family: "Poppins", sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 700;
@@ -2785,10 +2792,10 @@ img {
                 height: 40px;
                 padding: 8px; } }
       .section-discovery .slide-content .main .images-background {
-        height: 822px;
+        height: 794px;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 585px;
+        width: 520px;
         padding-top: 64px;
         padding-right: 0px;
         position: relative; }
@@ -2903,7 +2910,7 @@ img {
       .section-question .list-question .content .title {
         margin-bottom: 55px; }
         .section-question .list-question .content .title span {
-          font-family: "Poppins";
+          font-family: "Poppins", sans-serif;
           font-size: 14px;
           font-style: normal;
           font-weight: 700;
@@ -2912,7 +2919,7 @@ img {
           display: block;
           margin-bottom: 8px; }
         .section-question .list-question .content .title h3 {
-          font-family: "Poppins";
+          font-family: "Poppins", sans-serif;
           font-size: 48px;
           font-style: normal;
           font-weight: 700;
@@ -2959,7 +2966,7 @@ img {
             background: linear-gradient(150deg, rgba(160, 223, 158, 0.6) -0.9%, rgba(69, 135, 194, 0.6) 53.08%); }
             .section-question .list-question .content .checklist-item .desc p {
               color: #fff;
-              font-family: "Poppins";
+              font-family: "Poppins", sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 700;

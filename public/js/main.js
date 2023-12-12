@@ -5,37 +5,20 @@ $(document).ready(function () {
     var containerQuestions = $('.section-question');
     var seeMore = $('.seamore');
     var selectLocations = $('.select-location-container');
+
     $('#reset-filter').hide();
     $('.item-card .love').click(function () {
         $(this).toggleClass('active');
     });
-    $('.images-backgrounds .love').click(function () {
+    $('.images-background .love').click(function () {
+        console.log('Loading images')
         $(this).toggleClass('active');
     });
 
     $('.item-card .next-detail').on('click', function (e) {
-        var containerName = $(this).closest('.new-card').attr('id');
-
-        console.log('containerName');
-
-        if (containerName === 'savedSlider') {
-            $('.saved-list').fadeOut(
-                'slow'
-            );
-            $('.slide-2').fadeIn(
-                'slow'
-            );
-            $('.slide-2').addClass('active');
-        } else {
-            $('.slide-1').fadeOut(
-                'slow'
-            );
-            $('.slide-2').fadeIn(
-                'slow'
-            );
-            $('.slide-2').addClass('active');
-        }
-
+    
+        window.location.href = '/earth-hour-2024/detail-event-en.html';
+    
         setTimeout(function () {
             $('.slide-2').css({
                 'display': 'block',
@@ -207,9 +190,6 @@ $(document).ready(function () {
     $('.saved-list').css({
         'display': `none`
     });
-    $('.slide-2').css({
-        'display': `none`
-    });
     $('.slide-3').css({
         'display': `none`
     });
@@ -300,20 +280,8 @@ $(document).ready(function () {
     });
     $('.back-to').on('click', function () {
         const backTo = $(this).parents();
-
-        if (backTo[3].className === 'slide-content slide-2 active') {
-            console.log('Back to slide;');
-            $('.slide-1').fadeIn(
-                'slow'
-            );
-            $('.slide-2').fadeOut(
-                'slow'
-            );
-            $('.slide-2').css({
-                'display': 'none'
-            })
-            $('.slide-2').removeClass('active');
-            $('.slide-1').addClass('active');
+        if (backTo[3].className === 'slide-content slide-2' || backTo[3].className === 'slide-content slide-2 active') {
+            window.location.href = '/earth-hour-2024';
             $(".section-discovery").removeClass('active-section');
             setTimeout(function () {
                 $('.slide-1').css({
@@ -339,15 +307,9 @@ $(document).ready(function () {
                 })
             }, 1100);
         } else if (backTo[3].className === 'slide-content slide-4 active') {
-            $('.slide-1').fadeIn(
-                'slow'
-            );
-            $('.slide-4').fadeOut(
-                'slow'
-            );
-            $('.slide-4').css({
-                'display': 'none'
-            })
+           
+            window.location.href = '/earth-hour-2024';
+
             $(".section-discovery").removeClass('active-section');
             $('.slide-4').removeClass('active');
             $('.slide-1').addClass('active');

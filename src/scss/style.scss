@@ -14,6 +14,11 @@ img {
 	-moz-user-drag: none;
 	-o-user-drag: none;
 	user-drag: none;
+	user-select: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
 }
 
 .apps {
@@ -91,7 +96,7 @@ img {
 				&_desc {
 					color: #fff;
 					text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
-					font-family: "Poppins";
+					font-family: "Poppins", sans-serif;
 					font-size: 24px;
 					font-style: normal;
 					font-weight: 400;
@@ -238,7 +243,7 @@ img {
 
 				p {
 					color: #fff;
-					font-family: "Poppins";
+					font-family: "Poppins", sans-serif;
 					font-size: 16px;
 					font-style: normal;
 					font-weight: 400;
@@ -252,7 +257,7 @@ img {
 
 					h6 {
 						color: #fff;
-						font-family: "Poppins";
+						font-family: "Poppins", sans-serif;
 						font-size: 36px;
 						font-style: normal;
 						font-weight: 700;
@@ -426,7 +431,7 @@ img {
 
 					span {
 						color: #fff;
-						font-family: "Poppins";
+						font-family: "Poppins", sans-serif;
 						font-size: 18px;
 						font-style: normal;
 						font-weight: 400;
@@ -445,7 +450,7 @@ img {
 					h3 {
 						color: #fff;
 						text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
-						font-family: "Poppins";
+						font-family: "Poppins", sans-serif;
 						font-size: 36px;
 						font-style: normal;
 						font-weight: 700;
@@ -590,6 +595,8 @@ img {
 		&.slide-2 {
 			.main {
 				height: 936px;
+				background: unset;
+
 			}
 			.listing {
 				.list {
@@ -600,9 +607,6 @@ img {
 				}
 			}
 			@media screen and (max-width: 767px) {
-				.main {
-					background: unset;
-				}
 
 				.listing {
 					.list {
@@ -630,6 +634,10 @@ img {
 		}
 
 		&.slide-3 {
+			.main { 
+				background: unset;
+			}
+
 			@media screen and (min-width: 768px) and (max-width: 1180px) {
 				min-height: 90rem;
 
@@ -661,6 +669,9 @@ img {
 		}
 
 		&.slide-4 {
+			.main {
+				background: unset;
+			}
 			@media screen and (min-width: 768px) and (max-width: 1180px) {
 				min-height: 90rem;
 			}
@@ -668,7 +679,6 @@ img {
 			@media screen and (max-width: 767px) {
 				.main {
 					overflow: visible;
-					background: unset;
 				}
 			}
 		}
@@ -756,7 +766,7 @@ img {
 					span {
 						color: #fff;
 						text-align: center;
-						font-family: "Poppins";
+						font-family: "Poppins", sans-serif;
 						font-size: 14px;
 						font-style: normal;
 						font-weight: 700;
@@ -1197,7 +1207,7 @@ img {
 					p {
 						color: #1a1a1a;
 						text-align: center;
-						font-family: "Poppins";
+						font-family: "Poppins", sans-serif;
 						font-size: 18px;
 						font-style: normal;
 						font-weight: 700;
@@ -1542,7 +1552,7 @@ img {
 
 					h2 {
 						text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
-						font-family: "Poppins";
+						font-family: "Poppins", sans-serif;
 						font-size: 48px;
 						font-style: normal;
 						font-weight: 700;
@@ -1612,7 +1622,7 @@ img {
 
 							h3 {
 								color: #fff;
-								font-family: "Poppins";
+								font-family: "Poppins", sans-serif;
 								font-size: 16px;
 								font-style: normal;
 								font-weight: 700;
@@ -1628,7 +1638,7 @@ img {
 
 							a {
 								text-align: right;
-								font-family: "Poppins";
+								font-family: "Poppins", sans-serif;
 								font-size: 16px;
 								font-style: normal;
 								font-weight: 700;
@@ -1830,7 +1840,7 @@ img {
 
 					p {
 						color: #fff;
-						font-family: "Poppins";
+						font-family: "Poppins", sans-serif;
 						font-size: 16px;
 						font-style: normal;
 						font-weight: 400;
@@ -1849,7 +1859,6 @@ img {
 				.button {
 					width: 100%;
 					z-index: 9;
-					display: none;
 
 					@media screen and (max-width: 767px),
 					(min-width: 768px) and (max-width: 1180px) {
@@ -1896,7 +1905,7 @@ img {
 						border-radius: 12px;
 						background-color: #fff;
 						text-align: center;
-						font-family: "Poppins";
+						font-family: "Poppins", sans-serif;
 						font-size: 18px;
 						font-style: normal;
 						font-weight: 700;
@@ -2151,10 +2160,10 @@ img {
 			}
 
 			.images-background {
-				height: 822px;
+				height: 794px;
 				background-repeat: no-repeat;
 				background-size: cover;
-				width: 585px;
+				width: 520px;
 				padding-top: 64px;
 				padding-right: 0px;
 				position: relative;
@@ -2311,7 +2320,7 @@ img {
 				margin-bottom: 55px;
 
 				span {
-					font-family: "Poppins";
+					font-family: "Poppins", sans-serif;
 					font-size: 14px;
 					font-style: normal;
 					font-weight: 700;
@@ -2322,7 +2331,7 @@ img {
 				}
 
 				h3 {
-					font-family: "Poppins";
+					font-family: "Poppins", sans-serif;
 					font-size: 48px;
 					font-style: normal;
 					font-weight: 700;
@@ -2387,7 +2396,7 @@ img {
 
 						p {
 							color: #fff;
-							font-family: "Poppins";
+							font-family: "Poppins", sans-serif;
 							font-size: 16px;
 							font-style: normal;
 							font-weight: 700;
