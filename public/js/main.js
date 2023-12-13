@@ -316,7 +316,16 @@ $(document).ready(function () {
     $('.back-to').on('click', function () {
         const backTo = $(this).parents();
         if (backTo[3].className === 'slide-content slide-2' || backTo[3].className === 'slide-content slide-2 active') {
-            window.location.href = '/';
+            if(languageJp) {
+                window.location.href = '/index-jp.html';
+            } else if(languageCs) {
+                window.location.href = '/index-cs.html';
+            } else if(languageBm) {
+                window.location.href = '/index-bm.html';
+            } else {
+                window.location.href = '/';
+            }
+
             $(".section-discovery").removeClass('active-section');
             setTimeout(function () {
                 $('.slide-1').css({
@@ -343,7 +352,15 @@ $(document).ready(function () {
             }, 1100);
         } else if (backTo[3].className === 'slide-content slide-4 active') {
            
-            window.location.href = '/';
+            if(languageJp) {
+                window.location.href = '/index-jp.html';
+            } else if(languageCs) {
+                window.location.href = '/index-cs.html';
+            } else if(languageBm) {
+                window.location.href = '/index-bm.html';
+            } else {
+                window.location.href = '/';
+            }
 
             $(".section-discovery").removeClass('active-section');
             $('.slide-4').removeClass('active');
