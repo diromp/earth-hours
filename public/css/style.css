@@ -1572,6 +1572,9 @@ img {
       .section-discovery .slide-content.slide-3 .main {
         overflow: hidden;
         background: unset; } }
+    @media screen and (max-width: 375px) {
+      .section-discovery .slide-content.slide-3 .main {
+        overflow-y: scroll !important; } }
     .section-discovery .slide-content.slide-3 .event-detail .content h2 {
       margin-bottom: 24px; }
     .section-discovery .slide-content.slide-4 .main {
@@ -1584,7 +1587,7 @@ img {
         overflow: visible; } }
     @media screen and (max-width: 375px) {
       .section-discovery .slide-content.slide-4 .main {
-        overflow-y: scroll;
+        overflow-y: scroll !important;
         margin-bottom: 100px; } }
     .section-discovery .slide-content .main {
       margin-bottom: 32px;
