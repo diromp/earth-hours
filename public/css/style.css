@@ -1582,6 +1582,10 @@ img {
     @media screen and (max-width: 767px) {
       .section-discovery .slide-content.slide-4 .main {
         overflow: visible; } }
+    @media screen and (max-width: 375px) {
+      .section-discovery .slide-content.slide-4 .main {
+        overflow-y: scroll;
+        margin-bottom: 100px; } }
     .section-discovery .slide-content .main {
       margin-bottom: 32px;
       margin-top: 32px;
@@ -2482,11 +2486,6 @@ img {
               line-height: 18px; } }
           .section-discovery .slide-content .main .event-detail .content p:last-child {
             margin-bottom: 0px; }
-        @media screen and (max-width: 767px) {
-          .section-discovery .slide-content .main .event-detail .content .desc {
-            height: 130px;
-            overflow-y: scroll;
-            padding-right: 9px; } }
         .section-discovery .slide-content .main .event-detail .paragraf {
           overflow-y: scroll;
           margin-bottom: 16px;

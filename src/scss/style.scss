@@ -675,10 +675,15 @@ img {
 			@media screen and (min-width: 768px) and (max-width: 1180px) {
 				min-height: 90rem;
 			}
-
 			@media screen and (max-width: 767px) {
 				.main {
 					overflow: visible;
+				}
+			}
+			@media screen and (max-width:375px) {
+				.main {
+					overflow-y: scroll;
+					margin-bottom: 100px;
 				}
 			}
 		}
@@ -1802,13 +1807,6 @@ img {
 						&:last-child {
 							margin-bottom: 0px;
 							
-						}
-					}
-					.desc {
-						@media screen and (max-width: 767px) {
-							height: 130px;
-							overflow-y: scroll;
-							padding-right: 9px;
 						}
 					}
 				}
