@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     $('.item-card .next-detail').on('click', function (e) {
     
-        window.location.href = '/earth-hour-2024/detail-event-en.html';
+        window.location.href = '/detail-event-en.html';
     
         setTimeout(function () {
             $('.slide-2').css({
@@ -281,7 +281,7 @@ $(document).ready(function () {
     $('.back-to').on('click', function () {
         const backTo = $(this).parents();
         if (backTo[3].className === 'slide-content slide-2' || backTo[3].className === 'slide-content slide-2 active') {
-            window.location.href = '/earth-hour-2024';
+            window.location.href = '';
             $(".section-discovery").removeClass('active-section');
             setTimeout(function () {
                 $('.slide-1').css({
@@ -308,7 +308,7 @@ $(document).ready(function () {
             }, 1100);
         } else if (backTo[3].className === 'slide-content slide-4 active') {
            
-            window.location.href = '/earth-hour-2024';
+            window.location.href = '';
 
             $(".section-discovery").removeClass('active-section');
             $('.slide-4').removeClass('active');

@@ -1,4 +1,9 @@
 /* Japanese */
+@media screen and (max-width: 767px) {
+  .language-jp .section-discovery .slide-content .main .event-detail .paragraf {
+    padding-right: 8px;
+    overflow-y: scroll; } }
+
 .language-jp .section-discovery .slide-content .main .event-detail .paragraf p {
   font-family: 'Noto Sans JP', sans-serif; }
 

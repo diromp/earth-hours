@@ -5,6 +5,10 @@
             .main {
                 .event-detail {
                     .paragraf {
+                        @media screen and (max-width: 767px){
+                            padding-right: 8px;
+                            overflow-y: scroll;
+                        }
                         p {
                             font-family: 'Noto Sans JP', sans-serif;
                         }

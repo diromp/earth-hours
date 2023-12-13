@@ -2489,10 +2489,10 @@ img {
           padding-right: 34px; }
           @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .event-detail .paragraf {
-              overflow: visible;
-              height: 60%;
+              overflow-y: scroll;
+              height: 420px;
               margin-bottom: 0px;
-              padding-right: 0px; } }
+              padding-right: 8px; } }
           @media screen and (max-width: 360px) {
             .section-discovery .slide-content .main .event-detail .paragraf {
               overflow-y: scroll;
