@@ -2482,6 +2482,11 @@ img {
               line-height: 18px; } }
           .section-discovery .slide-content .main .event-detail .content p:last-child {
             margin-bottom: 0px; }
+        @media screen and (max-width: 767px) {
+          .section-discovery .slide-content .main .event-detail .content .desc {
+            height: 130px;
+            overflow-y: scroll;
+            padding-right: 9px; } }
         .section-discovery .slide-content .main .event-detail .paragraf {
           overflow-y: scroll;
           margin-bottom: 16px;
@@ -3227,10 +3232,12 @@ img {
     .favorite {
       width: 20px;
       height: 20px; } }
-  .favorite img {
+  .favorite .icon {
     width: 24px;
-    height: 24px; }
+    height: 24px;
+    -o-object-fit: contain !important;
+       object-fit: contain !important; }
     @media screen and (max-width: 767px) {
-      .favorite img {
+      .favorite .icon {
         width: 15px;
         height: 15px; } }
