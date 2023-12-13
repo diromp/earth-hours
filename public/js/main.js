@@ -1,7 +1,6 @@
 $(document).ready(function () {
     var slider = $('#slide-discovery');
     var savedSlider = $('#savedSlider');
-    var sliderQuestions = $('.question-slide');
     var containerQuestions = $('.section-question');
     var seeMore = $('.seamore');
     var selectLocations = $('.select-location-container');
@@ -11,25 +10,36 @@ $(document).ready(function () {
 
     $('#reset-filter').hide();
     $('.item-card .love').click(function () {
+        var activeClass = $(this).hasClass('active');
         $(this).toggleClass('active');
+
+        if (!activeClass) {
+            Toastify({
+                text: "Your activity has been saved. Please check the Saved Activity button to see your list of saved activities.",
+                duration: 3000,
+                style: {
+                    background: "linear-gradient(to right, #a0df9e 8.41%, #4587c2 89.87%)",
+                }
+            }).showToast();
+        }
     });
     $('.images-background .love').click(function () {
         console.log('Loading images')
         $(this).toggleClass('active');
     });
 
-    $('.item-card .next-detail').on('click', function (e) {       
-        if(languageJp) {
+    $('.item-card .next-detail').on('click', function (e) {
+        if (languageJp) {
             window.location.href = '/detail-event-jp.html';
 
-        } else if(languageCs) {
+        } else if (languageCs) {
             window.location.href = '/detail-event-cs.html';
         } else if (languageBm) {
             window.location.href = '/detail-event-bm.html';
         } else {
             window.location.href = '/detail-event-en.html';
         }
-    
+
         setTimeout(function () {
             $('.slide-2').css({
                 'display': 'block',
@@ -46,7 +56,7 @@ $(document).ready(function () {
         $(this).toggleClass('active');
         $('#reset-filter').show();
     });
-    $("#reset-filter").on('click', function(e) {
+    $("#reset-filter").on('click', function (e) {
         $(".list-group").removeClass('active');
     })
 
@@ -143,63 +153,13 @@ $(document).ready(function () {
         }
     });
 
-    sliderQuestions.slick({
-        dots: false,
-        infinite: false,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        arrows: true,
-        autoplay: false,
-        appendArrows: containerQuestions.find('.arrows2'),
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    centerMode: false,
-                    centerPadding: '0px',
-
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    centerMode: false,
-                    centerPadding: '0px',
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: false,
-                    centerPadding: '0px',
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: false,
-                    variableWidth: true,
-                }
-            }
-        ]
-    });
-
     function expandSeeMore() {
-        if(languageJp) {
+        if (languageJp) {
             seeMore.append(`  <img src="./public/img/ic-plus.svg"><span>続きを見る</span>`);
-        } else if(languageCs) {
+        } else if (languageCs) {
             seeMore.append(`  <img src="./public/img/ic-plus.svg"><span>查看更多</span>`);
 
-        } else if(languageBm) {
+        } else if (languageBm) {
             seeMore.append(`  <img src="./public/img/ic-plus.svg"><span>ပိုမိုကြည့်ရှုပါ။</span>`);
         } else {
             seeMore.append(`  <img src="./public/img/ic-plus.svg"><span>SEE MORE</span>`);
@@ -248,11 +208,11 @@ $(document).ready(function () {
         $('.family-frendly').toggleClass('hidden');
         if (!$('.site').hasClass('hidden')) {
             $(this).find('img').attr('src', './public/img/ic-minus.svg');
-            if(languageJp) {
+            if (languageJp) {
                 $(this).find('span').text("表示を減らす")
-            } else if(languageCs) {
+            } else if (languageCs) {
                 $(this).find('span').text("少看")
-            } else if(languageBm) {
+            } else if (languageBm) {
                 $(this).find('span').text("လျှော့ကြည့်ပါ။")
 
             } else {
@@ -260,11 +220,11 @@ $(document).ready(function () {
             }
         } else {
             $(this).find('img').attr('src', './public/img/ic-plus.svg');
-            if(languageJp) {
+            if (languageJp) {
                 $(this).find('span').text("続きを見る")
-            } else if(languageCs) {
+            } else if (languageCs) {
                 $(this).find('span').text("查看更多")
-            } else if(languageBm) {
+            } else if (languageBm) {
                 $(this).find('span').text("ပိုကြည့်")
 
             } else {
@@ -316,11 +276,11 @@ $(document).ready(function () {
     $('.back-to').on('click', function () {
         const backTo = $(this).parents();
         if (backTo[3].className === 'slide-content slide-2' || backTo[3].className === 'slide-content slide-2 active') {
-            if(languageJp) {
+            if (languageJp) {
                 window.location.href = '/index-jp.html';
-            } else if(languageCs) {
+            } else if (languageCs) {
                 window.location.href = '/index-cs.html';
-            } else if(languageBm) {
+            } else if (languageBm) {
                 window.location.href = '/index-bm.html';
             } else {
                 window.location.href = '/';
@@ -351,12 +311,12 @@ $(document).ready(function () {
                 })
             }, 1100);
         } else if (backTo[3].className === 'slide-content slide-4 active') {
-           
-            if(languageJp) {
+
+            if (languageJp) {
                 window.location.href = '/index-jp.html';
-            } else if(languageCs) {
+            } else if (languageCs) {
                 window.location.href = '/index-cs.html';
-            } else if(languageBm) {
+            } else if (languageBm) {
                 window.location.href = '/index-bm.html';
             } else {
                 window.location.href = '/';

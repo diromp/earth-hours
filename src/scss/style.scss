@@ -2717,3 +2717,37 @@ img {
 		}
 	}
 }
+.toastify {
+	font-weight: 600;
+	font-size: 14px;
+	color: #fff !important;
+}
+.favorite {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	padding: 5px;
+	background-color: rgba(26, 26, 26, 0.30);
+	left: 16px;
+	top: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 3px 4.2px 0px rgba(0, 0, 0, 0.25);
+
+	@media screen and (max-width: 767px) {
+		width: 20px;
+		height: 20px;
+	}
+
+	img {
+		width: 24px;
+		height: 24px;
+
+		@media screen and (max-width: 767px) {
+			width: 15px;
+			height: 15px;
+		}
+	}
+}
