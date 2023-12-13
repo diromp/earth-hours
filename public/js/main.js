@@ -16,7 +16,7 @@ $(document).ready(function () {
         if (!activeClass) {
             Toastify({
                 text: "Your activity has been saved. Please check the Saved Activity button to see your list of saved activities.",
-                duration: 3000,
+                duration: 2500,
                 style: {
                     background: "linear-gradient(to right, #a0df9e 8.41%, #4587c2 89.87%)",
                 }
