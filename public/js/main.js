@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     $('.item-card .next-detail').on('click', function (e) {
     
-        window.location.href = '//detail-event-en.html';
+        window.location.href = '/detail-event-en.html';
     
         setTimeout(function () {
             $('.slide-2').css({
