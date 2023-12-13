@@ -2721,7 +2721,11 @@ img {
 	font-weight: 600;
 	font-size: 14px;
 	color: #fff !important;
+	@media screen and (max-width: 767px) {
+		font-size: 12px;
+	}
 }
+
 .favorite {
 	position: absolute;
 	width: 32px;

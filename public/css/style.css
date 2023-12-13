@@ -3206,6 +3206,9 @@ img {
   font-weight: 600;
   font-size: 14px;
   color: #fff !important; }
+  @media screen and (max-width: 767px) {
+    .toastify {
+      font-size: 12px; } }
 
 .favorite {
   position: absolute;
