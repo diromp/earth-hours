@@ -1,4 +1,16 @@
 /* Japanese */
+.language-jp .section-discovery .slide-content .main .collapse-menu .desc h2 {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+.language-jp .section-discovery .slide-content .main .collapse-menu .desc p {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+.language-jp .section-discovery .slide-content .main .collapse-menu .filter .select {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+.language-jp .section-discovery .slide-content .main .collapse-menu .filter .choose {
+  font-family: 'Noto Sans JP', sans-serif; }
+
 @media screen and (max-width: 767px) {
   .language-jp .section-discovery .slide-content .main .event-detail .paragraf {
     padding-right: 8px;
@@ -14,6 +26,12 @@
   font-family: 'Noto Sans JP', sans-serif; }
 
 .language-jp .section-discovery .slide-content .main .event-detail .button a {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+.language-jp .section-discovery .slide-content .main .event-detail .form-submit .form-group label {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+.language-jp .section-discovery .slide-content .main .event-detail .form-submit .form-group input {
   font-family: 'Noto Sans JP', sans-serif; }
 
 .language-jp .section-discovery .slide-content .main .listing .list .list-group span {
@@ -42,20 +60,26 @@
   font-family: 'Noto Sans SC', sans-serif; }
 
 /* Burmese */
-.language-cs .section-discovery .slide-content .main .event-detail .paragraf p {
+.language-bm .apps .saved-list .title-back {
+  max-width: 60%; }
+  @media screen and (max-width: 767px), (min-width: 768px) and (max-width: 1180px) {
+    .language-bm .apps .saved-list .title-back {
+      max-width: 100%; } }
+
+.language-bm .section-discovery .slide-content .main .event-detail .paragraf p {
   font-family: 'Noto Sans Myanmar', sans-serif; }
 
-.language-cs .section-discovery .slide-content .main .event-detail .content h2 {
+.language-bm .section-discovery .slide-content .main .event-detail .content h2 {
   font-family: 'Noto Sans Myanmar', sans-serif; }
 
-.language-cs .section-discovery .slide-content .main .event-detail .content p {
+.language-bm .section-discovery .slide-content .main .event-detail .content p {
   font-family: 'Noto Sans Myanmar', sans-serif; }
 
-.language-cs .section-discovery .slide-content .main .event-detail .button a {
+.language-bm .section-discovery .slide-content .main .event-detail .button a {
   font-family: 'Noto Sans Myanmar', sans-serif; }
 
-.language-cs .section-discovery .slide-content .main .listing .list .list-group span {
+.language-bm .section-discovery .slide-content .main .listing .list .list-group span {
   font-family: 'Noto Sans Myanmar', sans-serif; }
 
-.language-cs .form-check-default label {
+.language-bm .form-check-default label {
   font-family: 'Noto Sans Myanmar', sans-serif; }

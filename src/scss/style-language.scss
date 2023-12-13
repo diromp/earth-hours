@@ -3,12 +3,36 @@
     .section-discovery {
         .slide-content {
             .main {
+                .collapse-menu {
+                    .desc {
+                        h2 {
+                            font-family: 'Noto Sans JP', sans-serif;
+                        }
+
+                        p {
+                            font-family: 'Noto Sans JP', sans-serif;
+                        }
+                    }
+
+                    .filter {
+                        .select {
+                            font-family: 'Noto Sans JP', sans-serif;
+
+                        }
+
+                        .choose {
+                            font-family: 'Noto Sans JP', sans-serif;
+                        }
+                    }
+                }
+
                 .event-detail {
                     .paragraf {
-                        @media screen and (max-width: 767px){
+                        @media screen and (max-width: 767px) {
                             padding-right: 8px;
                             overflow-y: scroll;
                         }
+
                         p {
                             font-family: 'Noto Sans JP', sans-serif;
                         }
@@ -29,11 +53,13 @@
                             font-family: 'Noto Sans JP', sans-serif;
                         }
                     }
+
                     .form-submit {
                         .form-group {
                             label {
                                 font-family: 'Noto Sans JP', sans-serif;
                             }
+
                             input {
                                 font-family: 'Noto Sans JP', sans-serif;
                             }
@@ -111,7 +137,15 @@
 }
 
 /* Burmese */
-.language-cs {
+.language-bm {
+    .apps {
+        .saved-list .title-back {
+            max-width: 60%;
+            @media screen and (max-width: 767px), (min-width: 768px) and (max-width: 1180px) {
+                max-width: 100%;
+            }
+        }
+    }
     .section-discovery {
         .slide-content {
             .main {

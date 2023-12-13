@@ -5,6 +5,9 @@ $(document).ready(function () {
     var containerQuestions = $('.section-question');
     var seeMore = $('.seamore');
     var selectLocations = $('.select-location-container');
+    var languageJp = $('body').hasClass('language-jp');
+    var languageCs = $('body').hasClass('language-cs');
+    var languageBm = $('body').hasClass('language-bm');
 
     $('#reset-filter').hide();
     $('.item-card .love').click(function () {
@@ -15,9 +18,17 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
 
-    $('.item-card .next-detail').on('click', function (e) {
-    
-        window.location.href = '/detail-event-en.html';
+    $('.item-card .next-detail').on('click', function (e) {       
+        if(languageJp) {
+            window.location.href = '/detail-event-jp.html';
+
+        } else if(languageCs) {
+            window.location.href = '/detail-event-cs.html';
+        } else if (languageBm) {
+            window.location.href = '/detail-event-bm.html';
+        } else {
+            window.location.href = '/detail-event-en.html';
+        }
     
         setTimeout(function () {
             $('.slide-2').css({
@@ -183,7 +194,16 @@ $(document).ready(function () {
     });
 
     function expandSeeMore() {
-        seeMore.append(`  <img src="./public/img/ic-plus.svg"><span>SEE MORE</span>`);
+        if(languageJp) {
+            seeMore.append(`  <img src="./public/img/ic-plus.svg"><span>続きを見る</span>`);
+        } else if(languageCs) {
+            seeMore.append(`  <img src="./public/img/ic-plus.svg"><span>查看更多</span>`);
+
+        } else if(languageBm) {
+            seeMore.append(`  <img src="./public/img/ic-plus.svg"><span>ပိုမိုကြည့်ရှုပါ။</span>`);
+        } else {
+            seeMore.append(`  <img src="./public/img/ic-plus.svg"><span>SEE MORE</span>`);
+        }
     }
     expandSeeMore();
     $('.saved-list').css({
@@ -228,10 +248,28 @@ $(document).ready(function () {
         $('.family-frendly').toggleClass('hidden');
         if (!$('.site').hasClass('hidden')) {
             $(this).find('img').attr('src', './public/img/ic-minus.svg');
-            $(this).find('span').text("SEE LESS")
+            if(languageJp) {
+                $(this).find('span').text("表示を減らす")
+            } else if(languageCs) {
+                $(this).find('span').text("少看")
+            } else if(languageBm) {
+                $(this).find('span').text("လျှော့ကြည့်ပါ။")
+
+            } else {
+                $(this).find('span').text("SEE LESS")
+            }
         } else {
             $(this).find('img').attr('src', './public/img/ic-plus.svg');
-            $(this).find('span').text("SEE MORE")
+            if(languageJp) {
+                $(this).find('span').text("続きを見る")
+            } else if(languageCs) {
+                $(this).find('span').text("查看更多")
+            } else if(languageBm) {
+                $(this).find('span').text("ပိုကြည့်")
+
+            } else {
+                $(this).find('span').text("SEE MORE")
+            }
         }
     });
 

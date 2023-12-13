@@ -1105,7 +1105,7 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ; }
 body {
-  font-family: "Poppins", sans-serif; }
+  font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif; }
 
 img {
   -webkit-user-drag: none;
@@ -1146,7 +1146,7 @@ img {
         padding-left: 32px; } }
     .apps .section-hours .timmer .title {
       text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
-      font-family: "Poppins", sans-serif;
+      font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
       font-size: 48px;
       color: #fff;
       font-style: normal;
@@ -1177,7 +1177,7 @@ img {
       .apps .section-hours .timmer-content_desc {
         color: #fff;
         text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
-        font-family: "Poppins", sans-serif;
+        font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
@@ -1291,7 +1291,7 @@ img {
         bottom: 0; }
       .apps .section-hours .grids .item-grid p {
         color: #fff;
-        font-family: "Poppins", sans-serif;
+        font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -1302,7 +1302,7 @@ img {
         z-index: 9; }
         .apps .section-hours .grids .item-grid .title-content h6 {
           color: #fff;
-          font-family: "Poppins", sans-serif;
+          font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
           font-size: 36px;
           font-style: normal;
           font-weight: 700;
@@ -1431,7 +1431,7 @@ img {
               margin-bottom: 16px; } }
           .apps .section-slide .slide-content .side-left .content span {
             color: #fff;
-            font-family: "Poppins", sans-serif;
+            font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
@@ -1447,7 +1447,7 @@ img {
           .apps .section-slide .slide-content .side-left .content h3 {
             color: #fff;
             text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
-            font-family: "Poppins", sans-serif;
+            font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
             font-size: 36px;
             font-style: normal;
             font-weight: 700;
@@ -1648,7 +1648,7 @@ img {
           .section-discovery .slide-content .main .listing .seamore span {
             color: #fff;
             text-align: center;
-            font-family: "Poppins", sans-serif;
+            font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 700;
@@ -1999,7 +1999,7 @@ img {
         .section-discovery .slide-content .main .content-wrapper .announcment p {
           color: #1a1a1a;
           text-align: center;
-          font-family: "Poppins", sans-serif;
+          font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
           font-size: 18px;
           font-style: normal;
           font-weight: 700;
@@ -2295,7 +2295,7 @@ img {
               padding-right: 24px; } }
           .section-discovery .slide-content .main .collapse-menu .desc h2 {
             text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
-            font-family: "Poppins", sans-serif;
+            font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
             font-size: 48px;
             font-style: normal;
             font-weight: 700;
@@ -2349,7 +2349,7 @@ img {
                   padding-right: 16px; } }
               .section-discovery .slide-content .main .collapse-menu .filter .choose .title h3 {
                 color: #fff;
-                font-family: "Poppins", sans-serif;
+                font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
@@ -2362,7 +2362,7 @@ img {
                     line-height: 18px; } }
               .section-discovery .slide-content .main .collapse-menu .filter .choose .title a {
                 text-align: right;
-                font-family: "Poppins", sans-serif;
+                font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
@@ -2509,7 +2509,7 @@ img {
             background: #a8a8a8; }
           .section-discovery .slide-content .main .event-detail .paragraf p {
             color: #fff;
-            font-family: "Poppins", sans-serif;
+            font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -2549,7 +2549,7 @@ img {
             border-radius: 12px;
             background-color: #fff;
             text-align: center;
-            font-family: "Poppins", sans-serif;
+            font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 700;
@@ -2910,7 +2910,7 @@ img {
       .section-question .list-question .content .title {
         margin-bottom: 55px; }
         .section-question .list-question .content .title span {
-          font-family: "Poppins", sans-serif;
+          font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
           font-size: 14px;
           font-style: normal;
           font-weight: 700;
@@ -2919,7 +2919,7 @@ img {
           display: block;
           margin-bottom: 8px; }
         .section-question .list-question .content .title h3 {
-          font-family: "Poppins", sans-serif;
+          font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
           font-size: 48px;
           font-style: normal;
           font-weight: 700;
@@ -2966,7 +2966,7 @@ img {
             background: linear-gradient(150deg, rgba(160, 223, 158, 0.6) -0.9%, rgba(69, 135, 194, 0.6) 53.08%); }
             .section-question .list-question .content .checklist-item .desc p {
               color: #fff;
-              font-family: "Poppins", sans-serif;
+              font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 700;
