@@ -1574,7 +1574,8 @@ img {
         background: unset; } }
     @media screen and (max-width: 375px) {
       .section-discovery .slide-content.slide-3 .main {
-        overflow-y: scroll !important; } }
+        overflow-y: scroll !important;
+        margin-bottom: 50px; } }
     .section-discovery .slide-content.slide-3 .event-detail .content h2 {
       margin-bottom: 24px; }
     .section-discovery .slide-content.slide-4 .main {
