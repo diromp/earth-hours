@@ -169,6 +169,9 @@
   @media screen and (max-width: 767px) {
     .side-right {
       margin-top: 40px; } }
+  @media (min-width: 768px) and (max-width: 1180px) {
+    .side-right {
+      margin-top: 70px; } }
 
 @keyframes animate-top {
   0% {

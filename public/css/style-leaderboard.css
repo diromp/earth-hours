@@ -257,11 +257,13 @@ img {
     @media screen and (max-width: 767px) {
       .section-slide .slide-content .side-left {
         top: 0px;
-        left: 0px; } }
-    @media screen and (max-width: 375px) {
-      .section-slide .slide-content .side-left {
+        left: 0px;
         padding-right: 12px;
         padding-left: 12px; } }
+    @media (min-width: 768px) and (max-width: 1180px) {
+      .section-slide .slide-content .side-left {
+        top: 0px;
+        padding-left: 16px; } }
     .section-slide .slide-content .side-left .content h3 {
       text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
       font-family: Poppins;
@@ -287,6 +289,9 @@ img {
     .circular-slider-start-2 {
       height: 40.504rem;
       top: 135px; } }
+  @media (min-width: 768px) and (max-width: 1180px) {
+    .circular-slider-start-2 {
+      height: 53.5rem; } }
   .circular-slider-start-2 .rotate-right {
     transform: rotate(270deg);
     width: 400px;
@@ -296,6 +301,9 @@ img {
       .circular-slider-start-2 .rotate-right {
         width: 296.597px;
         height: 40.504rem; } }
+    @media (min-width: 768px) and (max-width: 1180px) {
+      .circular-slider-start-2 .rotate-right {
+        height: 53.5rem; } }
   .circular-slider-start-2 .bg-slide {
     background-image: url("../../public/img/bg-slide.png");
     background-repeat: no-repeat;
@@ -337,10 +345,13 @@ img {
         transform: rotate(90deg);
         transition: .8s ease;
         opacity: 1;
-        left: 35%; }
+        left: 45%; }
         @media screen and (max-width: 767px) {
           .circular-slider-start-2 .wrapper .item-slides.active .country-container {
             left: 44%; } }
+        @media (min-width: 768px) and (max-width: 1180px) {
+          .circular-slider-start-2 .wrapper .item-slides.active .country-container {
+            left: 42%; } }
         .circular-slider-start-2 .wrapper .item-slides.active .country-container h4 {
           color: #1A1A1A;
           font-size: 36px;
@@ -467,6 +478,11 @@ img {
             font-style: normal;
             font-weight: 700;
             line-height: 30px; } }
+        @media (min-width: 768px) and (max-width: 1180px) {
+          .circular-slider-start-2 .descriptions__item h4 {
+            font-size: 28px;
+            line-height: 35px;
+            /* 138.889% */ } }
       .circular-slider-start-2 .descriptions__item span {
         text-align: center;
         font-family: 'Poppins', sans-serif;

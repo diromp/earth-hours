@@ -1,5 +1,6 @@
 
 $slider-height: 62.5rem;
+$slider-height-tablet : 53.5rem;
 $slider-height-mobile : 40.504rem;
 $half-slider-height: calc(50rem / 2);
 
@@ -321,14 +322,12 @@ img {
             @media screen and (max-width: 767px) {
                 top: 0px;
                 left: 0px;
+                padding-right: 12px;
+                padding-left: 12px;
             }
-            @media screen and (max-width: 375px) {
-               padding-right: 12px;
-               padding-left: 12px;
-            }
-
-        
             @media (min-width: 768px) and (max-width: 1180px) {
+                top: 0px;
+                padding-left: 16px;
             }
             .content {
                 h3 {
@@ -360,6 +359,9 @@ img {
         height: $slider-height-mobile;
         top: 135px;
     }
+    @media (min-width: 768px) and (max-width: 1180px) {
+        height: $slider-height-tablet;
+    }
     overflow: hidden;
     justify-content: flex-end;
     .rotate-right {
@@ -370,6 +372,9 @@ img {
         @media screen and (max-width: 767px) {
             width: 296.597px;
             height: $slider-height-mobile;
+        }
+        @media (min-width: 768px) and (max-width: 1180px) {
+            height: $slider-height-tablet;
         }
     }
     .bg-slide {
@@ -414,9 +419,12 @@ img {
                 transform: rotate(90deg);
                 transition: .8s ease;
                 opacity: 1;
-                left: 35%;
+                left: 45%;
                 @media screen and (max-width: 767px) {
                     left: 44%;
+                }
+                @media (min-width: 768px) and (max-width: 1180px) {
+                    left: 42%;
                 }
                 h4 {
                     color: #1A1A1A;
@@ -560,6 +568,10 @@ img {
                     font-style: normal;
                     font-weight: 700;
                     line-height: 30px;
+                }
+                @media (min-width: 768px) and (max-width: 1180px) {
+                    font-size: 28px;
+                    line-height: 35px; /* 138.889% */
                 }
             }
             span {
