@@ -1,6 +1,6 @@
-setInterval(function () {
-    doFlip(6);
-}, 1000);
+// setInterval(function () {
+//     doFlip(6);
+// }, 1000);
 
 function doFlip(numberIndex) {
 

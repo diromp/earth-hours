@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/style-leaderboard.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/jquery.flipbox.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    xs: "425px",
+                    "small": "360px",
+                    sm: "576px",
+                    md: "768px",
+                    lg: "992px",
+                    xl: "1024px",
+                    "2xl": "1280px",
+                    "3xl": "1366px",
+                },
+                container: {
+                    center: true,
+                    maxWidth: {
+                        DEFAULT: "1366px"
+                    },
+                },
+            },
+
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+
+<body>
+    <section class="apps">
+        <section class="section-hours">
+            <div class="timmer">
+                <div class="container m-auto">
+                    <h2 class="title">
+                        Together, we created the
+                        <span class="title-gradients">Biggest Hour for Earth</span>
+                    </h2>
+                    <div class="timmer-content">
+                        <div class="timmer-style">
+                            <div class="content-flip">
+                                <div class="counter">
+                                    <span class="number" data-number="0">
+                                        <span class="primary">
+                                        </span>
+                                        <span class="secondary">
+                                        </span>
+                                    </span>
+                                    <span class="number" data-number="4">
+                                        <span class="primary">
+                                        </span>
+                                        <span class="secondary">
+                                        </span>
+                                    </span>
+                                    <span class="number" data-number="3">
+                                        <span class="primary">
+                                        </span>
+                                        <span class="secondary">
+                                        </span>
+                                    </span>
+                                    <span class="number" data-number="4">
+                                        <span class="primary">
+                                        </span>
+                                        <span class="secondary">
+                                        </span>
+                                    </span>
+                                    <span class="number" data-number="6">
+                                        <span class="primary">
+                                        </span>
+                                        <span class="secondary">
+                                        </span>
+                                    </span>
+                                    <span class="number" data-number="6">
+                                        <span class="primary">
+                                        </span>
+                                        <span class="secondary">
+                                        </span>
+                                    </span>
+                                    <span class="number" data-number="5">
+                                        <span class="primary">
+                                        </span>
+                                        <span class="secondary">
+                                        </span>
+                                    </span>
+                                    <span class="number" data-number="7">
+                                        <span class="primary">
+                                        </span>
+                                        <span class="secondary">
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <h5 class="timmer-content_desc">
+                            hours have been given for Earth
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grids">
+                <div class="container m-auto">
+                    <div class="grids-title m-auto">
+                        <h3>
+                            Over <span class="text-gradient-green">798,230</span> people <br /> from
+                            <span class="text-gradient-blue">187</span> countries and territories gave:
+                        </h3>
+                    </div>
+                    <div class="content-slide">
+                        <div class="grids-country">
+                            <div class="item-grid" style="background-image: url(./public/img/item-1.png);">
+                                <div class="bg-overlay-top">
+                                </div>
+                                <div class="title-content">
+                                    <h6>
+                                        34,917
+                                    </h6>
+                                    <span>hours</span>
+                                </div>
+                                <p>
+                                    Reconnecting with our planet
+                                </p>
+                                <div class="bg-overlay-bottom">
+                                </div>
+                            </div>
+                            <div class="item-grid" style="background-image: url(./public/img/item-2.png);">
+                                <div class="bg-overlay-top">
+                                </div>
+
+                                <div class="title-content">
+                                    <h6>
+                                        32,596
+                                    </h6>
+                                    <span>hours</span>
+                                </div>
+                                <p>
+                                    Restoring our planet
+                                </p>
+                                <div class="bg-overlay-bottom">
+                                </div>
+
+                            </div>
+                            <div class="item-grid" style="background-image: url(./public/img/item-3.png);">
+                                <div class="bg-overlay-top">
+                                </div>
+                                <div class="title-content">
+                                    <h6>
+                                        327,870
+                                    </h6>
+                                    <span>hours</span>
+                                </div>
+                                <p>Learning more about our planet</p>
+                                <div class="bg-overlay-bottom">
+                                </div>
+                            </div>
+                            <div class="item-grid" style="background-image: url(./public/img/item-4.png);">
+                                <div class="bg-overlay-top">
+                                </div>
+                                <div class="title-content">
+                                    <h6>
+                                        13,248
+                                    </h6>
+                                    <span>hours</span>
+                                </div>
+                                <p>
+                                    Inspiring to take care for our planet
+                                </p>
+                                <div class="bg-overlay-bottom">
+                                </div>
+                            </div>
+                            <div class="item-grid" style="background-image: url(./public/img/item-5.png);">
+                                <div class="bg-overlay-top">
+                                </div>
+                                <div class="title-content">
+                                    <h6>
+                                        5,727
+                                    </h6>
+                                    <span>hours</span>
+                                </div>
+                                <p>
+                                    Finding other ways to make an impact
+                                </p>
+                                <div class="bg-overlay-bottom">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="arrows sm:hidden"></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </section>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(function () {
+            var $windowWidth = $(window).width();
+            if ($windowWidth < 768) {
+                $('.grids-country').slick({
+                    dots: false,
+                    infinite: true,
+                    slidesToShow: 3,
+                    centerMode: true,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    autoplay: false,
+                    variableWidth: true,
+                    appendArrows: $(this).find('.arrows'),
+                });
+            }
+        });
+
+    </script>
+</body>
+
+</html>
