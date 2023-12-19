@@ -60,10 +60,57 @@ $(document).ready(function () {
         $(".list-group").removeClass('active');
     })
 
-    slider.flipbox({
-        vertical: true
+    // slider.flipbox({
+    //     vertical: true
+    // });
+    // savedSlider.flipbox({ vertical: true });
+    slider.slick({
+        dots: false,
+        infinite: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: false,
+        vertical: true,
+        verticalSwiping: true,
+        centerMode: false,
+        appendArrows: $(this).find('.arrows'),
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    vertical: false,
+                    verticalSwiping: false,
+                    centerMode: false,
+                }
+            },
+
+        ]
     });
-    savedSlider.flipbox({ vertical: true });
+    savedSlider.slick({
+        dots: false,
+        infinite: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: false,
+        vertical: true,
+        verticalSwiping: true,
+        centerMode: false,
+        appendArrows: $(this).find('.arrows-2'),
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    vertical: false,
+                    verticalSwiping: false,
+                    centerMode: false,
+                }
+            },
+
+        ]
+    });
+   
 
 
     $('.btn-discovery.prev').click(function () {
@@ -125,9 +172,9 @@ $(document).ready(function () {
     selectLocations.hide();
 
     $('.select-country').select2({
+        searchInputPlaceholder: 'type here...',
         templateResult: formatTextSelect2,
         templateSelection: formatIcon,
-        searchInputPlaceholder: 'type here...',
         "language": {
             "noResults": function () {
                 return "<span>Sorry, no result.<br/>Try another word </span>";
@@ -139,7 +186,7 @@ $(document).ready(function () {
     }).on('change', function (e) {
         $('.select-location-container').show();
     });
-
+    
     $('.select-location').select2({
         templateResult: formatTextSelect2,
         templateSelection: formatIconGobal,
@@ -183,6 +230,10 @@ $(document).ready(function () {
         $('.saved-list').fadeIn(
             'slow'
         );
+    });
+    $('.mobile-event').on('click', function(e) {
+        console.log('masuk')
+        $("html, body").animate({scrollTop: 0}, 500);
     });
 
 

@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-	font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+	font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
 }
 
 img {
@@ -33,7 +33,7 @@ img {
 	@media (min-width: 768px) and (max-width: 1180px) {
 		background-size: cover;
 	}
-	
+
 	.saved-list {
 		background-color: #fff;
 
@@ -129,7 +129,7 @@ img {
 	}
 
 	.section-slide {
-		background: linear-gradient(0deg, #a0df9e 12.15%, #4587c2 89.83%);
+		background: linear-gradient(1.87deg, #A0DF9E -3.85%, #4587C2 49.83%);
 		position: relative;
 
 		@media screen and (max-width: 767px) {
@@ -178,7 +178,7 @@ img {
 
 					span {
 						color: #fff;
-						font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+						font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
 						font-size: 18px;
 						font-style: normal;
 						font-weight: 400;
@@ -197,7 +197,7 @@ img {
 					h3 {
 						color: #fff;
 						text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
-						font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+						font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
 						font-size: 36px;
 						font-style: normal;
 						font-weight: 700;
@@ -304,7 +304,12 @@ img {
 					.new-card {
 						padding-left: 80px;
 						padding-right: 80px;
-
+						.slick-list {
+							height: 100% !important;
+							.item-card-container {
+								width: 100% !important;
+							}
+						}
 						@media screen and (max-width: 767px) {
 							padding: 0px !important;
 						}
@@ -345,14 +350,16 @@ img {
 				background: unset;
 
 			}
+
 			.listing {
 				.list {
-					.list-group  {
-						pointer-events:none;
+					.list-group {
+						pointer-events: none;
 						cursor: none;
 					}
 				}
 			}
+
 			@media screen and (max-width: 767px) {
 
 				.listing {
@@ -381,7 +388,7 @@ img {
 		}
 
 		&.slide-3 {
-			.main { 
+			.main {
 				background: unset;
 			}
 
@@ -405,6 +412,7 @@ img {
 					background: unset;
 				}
 			}
+
 			@media screen and (max-width:375px) {
 				.main {
 					overflow-y: scroll !important;
@@ -425,14 +433,17 @@ img {
 			.main {
 				background: unset;
 			}
+
 			@media screen and (min-width: 768px) and (max-width: 1180px) {
 				min-height: 90rem;
 			}
+
 			@media screen and (max-width: 767px) {
 				.main {
 					overflow: visible;
 				}
 			}
+
 			@media screen and (max-width:375px) {
 				.main {
 					overflow-y: scroll !important;
@@ -524,7 +535,7 @@ img {
 					span {
 						color: #fff;
 						text-align: center;
-						font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+						font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
 						font-size: 14px;
 						font-style: normal;
 						font-weight: 700;
@@ -797,44 +808,27 @@ img {
 
 			.slick-slider {
 				.slick-slide {
-					margin: 16px;
+					margin: 8px 8px;
+					@media screen and(max-width: 767px) {
+						margin: 4px;
+					}
 				}
 
 				.slick-list {
 					margin-right: 0px;
 					margin-top: 10px;
-					padding: 35px 0px 0px 80px !important;
+					padding: 35px 0px 0px 40px !important;
+					height: 100% !important;
+					.item-card-container {
+						width: 100% !important;
+						@media screen and(max-width: 767px) {
+							width: auto !important;
+						}
+					}
 				}
 
 				.slick-track {
 					margin-top: -40px;
-				}
-			}
-
-
-			.collapsed-slide {
-				.slick-list {
-					padding: 35px 0px 0px 0px !important;
-				}
-			}
-
-			.slick-arrow {
-				width: 48px;
-				height: 48px;
-				display: block;
-				font-size: 0px !important;
-
-				&.slick-prev {
-					background-image: url("../../public/img/ic-arrow-up.svg");
-					background-repeat: no-repeat;
-					background-size: contain;
-				}
-
-				&.slick-next {
-					background-image: url("../../public/img/ic-arrow-down.svg");
-					background-repeat: no-repeat;
-					background-size: contain;
-					margin-top: 30px;
 				}
 			}
 
@@ -871,6 +865,17 @@ img {
 					@media (min-width: 768px) and (max-width: 1180px) {
 						margin-left: 0;
 					}
+					.item-card-container {
+						width: 100% !important;
+						.item-card {
+							&:last-child {
+								display: block !important;
+							}
+						}
+					}
+					.slick-list {
+						padding: 35px 0px 0px 0px!important;
+					}
 				}
 
 				.arrows {
@@ -888,10 +893,7 @@ img {
 						padding-left: 8px;
 					}
 
-
-
-					.button,
-					.button2 {
+					.slick-arrow {
 						width: 48px;
 						height: 48px;
 						display: block;
@@ -904,50 +906,53 @@ img {
 							width: 40px;
 							height: 40px;
 						}
-
-						&.next {
-							background-image: url("../../public/img/ic-arrow-up.svg");
-							background-repeat: no-repeat;
-							background-size: contain;
-
-							&:hover,
-							&:focus,
-							&:active {
-								background-image: url("../../public/img/ic-arrow-up-active.svg");
-							}
-
-							@media screen and(max-width: 767px) {
-								background-image: url("../../public/img/ic_arrow_left.png");
-
-								&:hover,
-								&:focus,
-								&:active {
-									background-image: url("../../public/img/ic_arrow_left.png");
-								}
-							}
-
+						&.slick-disabled {
+							opacity: .4;
+							cursor: none;
+							pointer-events: none;
 						}
-
-						&.prev {
+						&.slick-next {
 							background-image: url("../../public/img/ic-arrow-down.svg");
 							background-repeat: no-repeat;
 							background-size: contain;
-							margin-top: 30px;
 
 							&:hover,
-							&:focus,
-							&:active {
+							&:focus {
 								background-image: url("../../public/img/ic-arrow-down-active.png");
 							}
 
 							@media screen and(max-width: 767px) {
 								background-image: url("../../public/img/ic_arrow_right.png");
-								margin-top: 0;
 
 								&:hover,
-								&:focus,
-								&:active {
+								&:focus {
 									background-image: url("../../public/img/ic_arrow_right.png");
+
+								}
+							}
+
+						}
+
+						&.slick-prev {
+							background-image: url("../../public/img/ic-arrow-up.svg");
+
+							background-repeat: no-repeat;
+							background-size: contain;
+							margin-top: 30px;
+
+							&:hover,
+							&:focus {
+								background-image: url("../../public/img/ic-arrow-up-active.svg");
+
+							}
+
+							@media screen and(max-width: 767px) {
+								background-image: url("../../public/img/ic_arrow_left.png");
+								margin-top: 0 !important;
+
+								&:hover,
+								&:focus {
+									background-image: url("../../public/img/ic_arrow_left.png");
 								}
 							}
 						}
@@ -956,8 +961,82 @@ img {
 
 				.arrows-2 {
 					position: absolute;
-					top: 20%;
-					right: 25px;
+					top: 48%;
+					right: 35px;
+					@media screen and(max-width: 767px) {
+						width: 100%;
+						left: 0;
+						right: 0px;
+						display: flex;
+						justify-content: space-between;
+						padding-right: 8px;
+						padding-left: 8px;
+					}
+
+					.slick-arrow {
+						width: 48px;
+						height: 48px;
+						display: block;
+						font-size: 0px !important;
+						border: 0px;
+						background-color: transparent;
+						filter: drop-shadow(0px 8px 28px rgba(13, 34, 42, 0.30));
+
+						@media screen and(max-width: 767px) {
+							width: 40px;
+							height: 40px;
+						}
+						&.slick-disabled {
+							opacity: .4;
+							cursor: none;
+							pointer-events: none;
+						}
+						&.slick-next {
+							background-image: url("../../public/img/ic-arrow-down.svg");
+							background-repeat: no-repeat;
+							background-size: contain;
+
+							&:hover,
+							&:focus {
+								background-image: url("../../public/img/ic-arrow-down-active.png");
+							}
+
+							@media screen and(max-width: 767px) {
+								background-image: url("../../public/img/ic_arrow_right.png");
+
+								&:hover,
+								&:focus {
+									background-image: url("../../public/img/ic_arrow_right.png");
+
+								}
+							}
+
+						}
+
+						&.slick-prev {
+							background-image: url("../../public/img/ic-arrow-up.svg");
+
+							background-repeat: no-repeat;
+							background-size: contain;
+							margin-top: 30px;
+
+							&:hover,
+							&:focus {
+								background-image: url("../../public/img/ic-arrow-up-active.svg");
+
+							}
+
+							@media screen and(max-width: 767px) {
+								background-image: url("../../public/img/ic_arrow_left.png");
+								margin-top: 0 !important;
+
+								&:hover,
+								&:focus {
+									background-image: url("../../public/img/ic_arrow_left.png");
+								}
+							}
+						}
+					}
 				}
 
 				.announcment {
@@ -965,7 +1044,7 @@ img {
 					p {
 						color: #1a1a1a;
 						text-align: center;
-						font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+						font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
 						font-size: 18px;
 						font-style: normal;
 						font-weight: 700;
@@ -1020,12 +1099,13 @@ img {
 
 				.new-card {
 					width: 100%;
-					height: 718px;
-					margin-top: 24px;
+					height: 748px;
+					margin-top: 14px;
 					overflow: hidden;
 
 					@media screen and (max-width: 767px) {
-						height: 440px;
+						height: 460px;
+						margin-left: -20px;
 					}
 
 					.item-card-container {
@@ -1035,6 +1115,17 @@ img {
 						justify-content: center;
 						align-items: center;
 						background-color: #fff;
+						outline: none;
+						
+							.item-card {
+								&:last-child {
+									display: none;
+									@media screen and (max-width: 767px) {
+										display: block;
+									}
+								}
+							}
+					
 
 						@media screen and (max-width: 767px) {
 							gap: 8px;
@@ -1054,7 +1145,7 @@ img {
 						@media screen and (max-width: 767px) {
 							width: 50% !important;
 							height: 216px;
-							flex-basis: 48%;
+							flex-basis: 2%;
 							flex-grow: 1;
 							border-radius: 8px;
 
@@ -1297,6 +1388,7 @@ img {
 						transition: height 0.9s linear;
 						margin-bottom: 20px;
 					}
+				
 				}
 
 				.desc {
@@ -1310,7 +1402,7 @@ img {
 
 					h2 {
 						text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
-						font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+						font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
 						font-size: 48px;
 						font-style: normal;
 						font-weight: 700;
@@ -1380,7 +1472,7 @@ img {
 
 							h3 {
 								color: #fff;
-								font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+								font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
 								font-size: 16px;
 								font-style: normal;
 								font-weight: 700;
@@ -1396,7 +1488,7 @@ img {
 
 							a {
 								text-align: right;
-								font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+								font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
 								font-size: 16px;
 								font-style: normal;
 								font-weight: 700;
@@ -1559,7 +1651,7 @@ img {
 
 						&:last-child {
 							margin-bottom: 0px;
-							
+
 						}
 					}
 				}
@@ -1599,7 +1691,7 @@ img {
 
 					p {
 						color: #fff;
-						font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+						font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
 						font-size: 16px;
 						font-style: normal;
 						font-weight: 400;
@@ -1664,7 +1756,11 @@ img {
 						border-radius: 12px;
 						background-color: #fff;
 						text-align: center;
-						font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+						font-family: "Noto Sans JP",
+						"Noto Sans SC",
+						"Noto Sans Myanmar",
+						"Poppins",
+						sans-serif;
 						font-size: 18px;
 						font-style: normal;
 						font-weight: 700;
@@ -2079,7 +2175,7 @@ img {
 				margin-bottom: 55px;
 
 				span {
-					font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+					font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
 					font-size: 14px;
 					font-style: normal;
 					font-weight: 700;
@@ -2090,7 +2186,7 @@ img {
 				}
 
 				h3 {
-					font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+					font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
 					font-size: 48px;
 					font-style: normal;
 					font-weight: 700;
@@ -2155,7 +2251,7 @@ img {
 
 						p {
 							color: #fff;
-							font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+							font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
 							font-size: 16px;
 							font-style: normal;
 							font-weight: 700;
@@ -2284,24 +2380,6 @@ img {
 		display: flex;
 		align-items: center;
 		gap: 16px;
-	}
-
-	.slick-arrow {
-		width: 40px;
-		height: 40px;
-		font-size: 0px;
-
-		&.slick-prev {
-			background-image: url("../../public/img/arrow_circle_left.svg");
-			background-repeat: no-repeat;
-			background-size: contain;
-		}
-
-		&.slick-next {
-			background-image: url("../../public/img/arrow_circle_right.svg");
-			background-repeat: no-repeat;
-			background-size: contain;
-		}
 	}
 }
 
@@ -2476,10 +2554,12 @@ img {
 		}
 	}
 }
+
 .toastify {
 	font-weight: 600;
 	font-size: 14px;
 	color: #fff !important;
+
 	@media screen and (max-width: 767px) {
 		font-size: 12px;
 	}

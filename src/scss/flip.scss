@@ -141,7 +141,7 @@ body {
     font-weight: 700;
     line-height: normal;
     width: 120px;
-    height: 100%;
+    height: 170px;
 
     @media screen and (max-width: 768px) {
       font-size: 48px;
@@ -154,7 +154,7 @@ body {
 
     &:before {
       display: block;
-      height: 40%;
+      height: 50%;
       overflow: hidden;
       line-height: 1.52em;
       border-bottom: none;
@@ -179,7 +179,7 @@ body {
 
     &:after {
       display: block;
-      height: 43%;
+      height: 47%;
       overflow: hidden;
       line-height: 0;
       border: 3px solid rgba(255, 255, 255, 0.40);
@@ -232,7 +232,13 @@ body {
     transform: translateX(0) translateY(-0.28em) translateZ(0.35em) rotateX(91deg) rotateY(0deg) rotateZ(0deg);
     -webkit-transform: translateX(0) translateY(-0.28em) translateZ(0.35em) rotateX(91deg) rotateY(0deg) rotateZ(0deg);
   }
-
+  &::before {
+      top: 23px;
+      background: transparent !important;
+      border: unset !important;
+      position: relative;
+      height: 36% !important;
+  }
   z-index: 2;
 }
 
@@ -240,7 +246,6 @@ body {
   z-index: 1;
 
   &::after {
-    background: rgba(228, 228, 228, 0.45) !important;
   }
 }
 

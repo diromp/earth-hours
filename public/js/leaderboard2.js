@@ -1,7 +1,7 @@
-$('.select-country').select2({
+$('.select-country-2').select2({
+	searchInputPlaceholder: 'type here...',
 	templateResult: formatTextSelect2,
 	templateSelection: formatIcon,
-	searchInputPlaceholder: 'type here...',
 	"language": {
 		"noResults": function () {
 			return "<span>Sorry, no result.<br/>Try another word </span>";
@@ -10,8 +10,8 @@ $('.select-country').select2({
 	escapeMarkup: function (markup) {
 		return markup;
 	}
-}).on('change', function (e) {
-	$('.select-location-container').show();
+}).on('select2:open', function (e) {
+	$('input.select2-search__field').attr('placeholder', 'type here...');
 });
 
 

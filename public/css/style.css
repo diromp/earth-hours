@@ -246,7 +246,7 @@ body {
     font-weight: 700;
     line-height: normal;
     width: 120px;
-    height: 100%; }
+    height: 170px; }
     @media screen and (max-width: 768px) {
       .number span {
         font-size: 48px;
@@ -256,7 +256,7 @@ body {
         width: 100px; } }
     .number span:before {
       display: block;
-      height: 40%;
+      height: 50%;
       overflow: hidden;
       line-height: 1.52em;
       border-bottom: none;
@@ -277,7 +277,7 @@ body {
           height: 45%; } }
     .number span:after {
       display: block;
-      height: 43%;
+      height: 47%;
       overflow: hidden;
       line-height: 0;
       border: 3px solid rgba(255, 255, 255, 0.4);
@@ -315,11 +315,15 @@ body {
     opacity: 0;
     transform: translateX(0) translateY(-0.28em) translateZ(0.35em) rotateX(91deg) rotateY(0deg) rotateZ(0deg);
     -webkit-transform: translateX(0) translateY(-0.28em) translateZ(0.35em) rotateX(91deg) rotateY(0deg) rotateZ(0deg); }
+  .primary::before {
+    top: 23px;
+    background: transparent !important;
+    border: unset !important;
+    position: relative;
+    height: 36% !important; }
 
 .secondary {
   z-index: 1; }
-  .secondary::after {
-    background: rgba(228, 228, 228, 0.45) !important; }
 
 [data-number="0"] span.primary:before {
   content: "0"; }
@@ -930,7 +934,7 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ; }
 body {
-  font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif; }
+  font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif; }
 
 img {
   -webkit-user-drag: none;
@@ -1024,7 +1028,7 @@ img {
         padding-right: 0px !important;
         padding-left: 0px !important; }
   .apps .section-slide {
-    background: linear-gradient(0deg, #a0df9e 12.15%, #4587c2 89.83%);
+    background: linear-gradient(1.87deg, #A0DF9E -3.85%, #4587C2 49.83%);
     position: relative; }
     @media screen and (max-width: 767px) {
       .apps .section-slide {
@@ -1062,7 +1066,7 @@ img {
               margin-bottom: 16px; } }
           .apps .section-slide .slide-content .side-left .content span {
             color: #fff;
-            font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+            font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
@@ -1078,7 +1082,7 @@ img {
           .apps .section-slide .slide-content .side-left .content h3 {
             color: #fff;
             text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
-            font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+            font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
             font-size: 36px;
             font-style: normal;
             font-weight: 700;
@@ -1153,6 +1157,10 @@ img {
         .section-discovery .slide-content.saved-list .main .content-wrapper .new-card {
           padding-left: 80px;
           padding-right: 80px; }
+          .section-discovery .slide-content.saved-list .main .content-wrapper .new-card .slick-list {
+            height: 100% !important; }
+            .section-discovery .slide-content.saved-list .main .content-wrapper .new-card .slick-list .item-card-container {
+              width: 100% !important; }
           @media screen and (max-width: 767px) {
             .section-discovery .slide-content.saved-list .main .content-wrapper .new-card {
               padding: 0px !important; } }
@@ -1287,7 +1295,7 @@ img {
           .section-discovery .slide-content .main .listing .seamore span {
             color: #fff;
             text-align: center;
-            font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+            font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 700;
@@ -1469,29 +1477,22 @@ img {
                   color: #1a1a1a;
                   display: inline-block; }
       .section-discovery .slide-content .main .slick-slider .slick-slide {
-        margin: 16px; }
+        margin: 8px 8px; }
+        @media screen and (max-width: 767px) {
+          .section-discovery .slide-content .main .slick-slider .slick-slide {
+            margin: 4px; } }
       .section-discovery .slide-content .main .slick-slider .slick-list {
         margin-right: 0px;
         margin-top: 10px;
-        padding: 35px 0px 0px 80px !important; }
+        padding: 35px 0px 0px 40px !important;
+        height: 100% !important; }
+        .section-discovery .slide-content .main .slick-slider .slick-list .item-card-container {
+          width: 100% !important; }
+          @media screen and (max-width: 767px) {
+            .section-discovery .slide-content .main .slick-slider .slick-list .item-card-container {
+              width: auto !important; } }
       .section-discovery .slide-content .main .slick-slider .slick-track {
         margin-top: -40px; }
-      .section-discovery .slide-content .main .collapsed-slide .slick-list {
-        padding: 35px 0px 0px 0px !important; }
-      .section-discovery .slide-content .main .slick-arrow {
-        width: 48px;
-        height: 48px;
-        display: block;
-        font-size: 0px !important; }
-        .section-discovery .slide-content .main .slick-arrow.slick-prev {
-          background-image: url("../../public/img/ic-arrow-up.svg");
-          background-repeat: no-repeat;
-          background-size: contain; }
-        .section-discovery .slide-content .main .slick-arrow.slick-next {
-          background-image: url("../../public/img/ic-arrow-down.svg");
-          background-repeat: no-repeat;
-          background-size: contain;
-          margin-top: 30px; }
       .section-discovery .slide-content .main .content-dis,
       .section-discovery .slide-content .main .content-wrapper {
         padding-top: 48px;
@@ -1524,6 +1525,15 @@ img {
             .section-discovery .slide-content .main .content-dis.collapsed,
             .section-discovery .slide-content .main .content-wrapper.collapsed {
               margin-left: 0; } }
+          .section-discovery .slide-content .main .content-dis.collapsed .item-card-container,
+          .section-discovery .slide-content .main .content-wrapper.collapsed .item-card-container {
+            width: 100% !important; }
+            .section-discovery .slide-content .main .content-dis.collapsed .item-card-container .item-card:last-child,
+            .section-discovery .slide-content .main .content-wrapper.collapsed .item-card-container .item-card:last-child {
+              display: block !important; }
+          .section-discovery .slide-content .main .content-dis.collapsed .slick-list,
+          .section-discovery .slide-content .main .content-wrapper.collapsed .slick-list {
+            padding: 35px 0px 0px 0px !important; }
         .section-discovery .slide-content .main .content-dis .arrows,
         .section-discovery .slide-content .main .content-wrapper .arrows {
           position: absolute;
@@ -1539,10 +1549,8 @@ img {
               justify-content: space-between;
               padding-right: 8px;
               padding-left: 8px; } }
-          .section-discovery .slide-content .main .content-dis .arrows .button,
-          .section-discovery .slide-content .main .content-dis .arrows .button2,
-          .section-discovery .slide-content .main .content-wrapper .arrows .button,
-          .section-discovery .slide-content .main .content-wrapper .arrows .button2 {
+          .section-discovery .slide-content .main .content-dis .arrows .slick-arrow,
+          .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow {
             width: 48px;
             height: 48px;
             display: block;
@@ -1551,94 +1559,126 @@ img {
             background-color: transparent;
             filter: drop-shadow(0px 8px 28px rgba(13, 34, 42, 0.3)); }
             @media screen and (max-width: 767px) {
-              .section-discovery .slide-content .main .content-dis .arrows .button,
-              .section-discovery .slide-content .main .content-dis .arrows .button2,
-              .section-discovery .slide-content .main .content-wrapper .arrows .button,
-              .section-discovery .slide-content .main .content-wrapper .arrows .button2 {
+              .section-discovery .slide-content .main .content-dis .arrows .slick-arrow,
+              .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow {
                 width: 40px;
                 height: 40px; } }
-            .section-discovery .slide-content .main .content-dis .arrows .button.next,
-            .section-discovery .slide-content .main .content-dis .arrows .button2.next,
-            .section-discovery .slide-content .main .content-wrapper .arrows .button.next,
-            .section-discovery .slide-content .main .content-wrapper .arrows .button2.next {
-              background-image: url("../../public/img/ic-arrow-up.svg");
+            .section-discovery .slide-content .main .content-dis .arrows .slick-arrow.slick-disabled,
+            .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow.slick-disabled {
+              opacity: .4;
+              cursor: none;
+              pointer-events: none; }
+            .section-discovery .slide-content .main .content-dis .arrows .slick-arrow.slick-next,
+            .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow.slick-next {
+              background-image: url("../../public/img/ic-arrow-down.svg");
               background-repeat: no-repeat;
               background-size: contain; }
-              .section-discovery .slide-content .main .content-dis .arrows .button.next:hover, .section-discovery .slide-content .main .content-dis .arrows .button.next:focus, .section-discovery .slide-content .main .content-dis .arrows .button.next:active,
-              .section-discovery .slide-content .main .content-dis .arrows .button2.next:hover,
-              .section-discovery .slide-content .main .content-dis .arrows .button2.next:focus,
-              .section-discovery .slide-content .main .content-dis .arrows .button2.next:active,
-              .section-discovery .slide-content .main .content-wrapper .arrows .button.next:hover,
-              .section-discovery .slide-content .main .content-wrapper .arrows .button.next:focus,
-              .section-discovery .slide-content .main .content-wrapper .arrows .button.next:active,
-              .section-discovery .slide-content .main .content-wrapper .arrows .button2.next:hover,
-              .section-discovery .slide-content .main .content-wrapper .arrows .button2.next:focus,
-              .section-discovery .slide-content .main .content-wrapper .arrows .button2.next:active {
-                background-image: url("../../public/img/ic-arrow-up-active.svg"); }
+              .section-discovery .slide-content .main .content-dis .arrows .slick-arrow.slick-next:hover, .section-discovery .slide-content .main .content-dis .arrows .slick-arrow.slick-next:focus,
+              .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow.slick-next:hover,
+              .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow.slick-next:focus {
+                background-image: url("../../public/img/ic-arrow-down-active.png"); }
               @media screen and (max-width: 767px) {
-                .section-discovery .slide-content .main .content-dis .arrows .button.next,
-                .section-discovery .slide-content .main .content-dis .arrows .button2.next,
-                .section-discovery .slide-content .main .content-wrapper .arrows .button.next,
-                .section-discovery .slide-content .main .content-wrapper .arrows .button2.next {
-                  background-image: url("../../public/img/ic_arrow_left.png"); }
-                  .section-discovery .slide-content .main .content-dis .arrows .button.next:hover, .section-discovery .slide-content .main .content-dis .arrows .button.next:focus, .section-discovery .slide-content .main .content-dis .arrows .button.next:active,
-                  .section-discovery .slide-content .main .content-dis .arrows .button2.next:hover,
-                  .section-discovery .slide-content .main .content-dis .arrows .button2.next:focus,
-                  .section-discovery .slide-content .main .content-dis .arrows .button2.next:active,
-                  .section-discovery .slide-content .main .content-wrapper .arrows .button.next:hover,
-                  .section-discovery .slide-content .main .content-wrapper .arrows .button.next:focus,
-                  .section-discovery .slide-content .main .content-wrapper .arrows .button.next:active,
-                  .section-discovery .slide-content .main .content-wrapper .arrows .button2.next:hover,
-                  .section-discovery .slide-content .main .content-wrapper .arrows .button2.next:focus,
-                  .section-discovery .slide-content .main .content-wrapper .arrows .button2.next:active {
-                    background-image: url("../../public/img/ic_arrow_left.png"); } }
-            .section-discovery .slide-content .main .content-dis .arrows .button.prev,
-            .section-discovery .slide-content .main .content-dis .arrows .button2.prev,
-            .section-discovery .slide-content .main .content-wrapper .arrows .button.prev,
-            .section-discovery .slide-content .main .content-wrapper .arrows .button2.prev {
-              background-image: url("../../public/img/ic-arrow-down.svg");
+                .section-discovery .slide-content .main .content-dis .arrows .slick-arrow.slick-next,
+                .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow.slick-next {
+                  background-image: url("../../public/img/ic_arrow_right.png"); }
+                  .section-discovery .slide-content .main .content-dis .arrows .slick-arrow.slick-next:hover, .section-discovery .slide-content .main .content-dis .arrows .slick-arrow.slick-next:focus,
+                  .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow.slick-next:hover,
+                  .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow.slick-next:focus {
+                    background-image: url("../../public/img/ic_arrow_right.png"); } }
+            .section-discovery .slide-content .main .content-dis .arrows .slick-arrow.slick-prev,
+            .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow.slick-prev {
+              background-image: url("../../public/img/ic-arrow-up.svg");
               background-repeat: no-repeat;
               background-size: contain;
               margin-top: 30px; }
-              .section-discovery .slide-content .main .content-dis .arrows .button.prev:hover, .section-discovery .slide-content .main .content-dis .arrows .button.prev:focus, .section-discovery .slide-content .main .content-dis .arrows .button.prev:active,
-              .section-discovery .slide-content .main .content-dis .arrows .button2.prev:hover,
-              .section-discovery .slide-content .main .content-dis .arrows .button2.prev:focus,
-              .section-discovery .slide-content .main .content-dis .arrows .button2.prev:active,
-              .section-discovery .slide-content .main .content-wrapper .arrows .button.prev:hover,
-              .section-discovery .slide-content .main .content-wrapper .arrows .button.prev:focus,
-              .section-discovery .slide-content .main .content-wrapper .arrows .button.prev:active,
-              .section-discovery .slide-content .main .content-wrapper .arrows .button2.prev:hover,
-              .section-discovery .slide-content .main .content-wrapper .arrows .button2.prev:focus,
-              .section-discovery .slide-content .main .content-wrapper .arrows .button2.prev:active {
-                background-image: url("../../public/img/ic-arrow-down-active.png"); }
+              .section-discovery .slide-content .main .content-dis .arrows .slick-arrow.slick-prev:hover, .section-discovery .slide-content .main .content-dis .arrows .slick-arrow.slick-prev:focus,
+              .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow.slick-prev:hover,
+              .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow.slick-prev:focus {
+                background-image: url("../../public/img/ic-arrow-up-active.svg"); }
               @media screen and (max-width: 767px) {
-                .section-discovery .slide-content .main .content-dis .arrows .button.prev,
-                .section-discovery .slide-content .main .content-dis .arrows .button2.prev,
-                .section-discovery .slide-content .main .content-wrapper .arrows .button.prev,
-                .section-discovery .slide-content .main .content-wrapper .arrows .button2.prev {
-                  background-image: url("../../public/img/ic_arrow_right.png");
-                  margin-top: 0; }
-                  .section-discovery .slide-content .main .content-dis .arrows .button.prev:hover, .section-discovery .slide-content .main .content-dis .arrows .button.prev:focus, .section-discovery .slide-content .main .content-dis .arrows .button.prev:active,
-                  .section-discovery .slide-content .main .content-dis .arrows .button2.prev:hover,
-                  .section-discovery .slide-content .main .content-dis .arrows .button2.prev:focus,
-                  .section-discovery .slide-content .main .content-dis .arrows .button2.prev:active,
-                  .section-discovery .slide-content .main .content-wrapper .arrows .button.prev:hover,
-                  .section-discovery .slide-content .main .content-wrapper .arrows .button.prev:focus,
-                  .section-discovery .slide-content .main .content-wrapper .arrows .button.prev:active,
-                  .section-discovery .slide-content .main .content-wrapper .arrows .button2.prev:hover,
-                  .section-discovery .slide-content .main .content-wrapper .arrows .button2.prev:focus,
-                  .section-discovery .slide-content .main .content-wrapper .arrows .button2.prev:active {
-                    background-image: url("../../public/img/ic_arrow_right.png"); } }
+                .section-discovery .slide-content .main .content-dis .arrows .slick-arrow.slick-prev,
+                .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow.slick-prev {
+                  background-image: url("../../public/img/ic_arrow_left.png");
+                  margin-top: 0 !important; }
+                  .section-discovery .slide-content .main .content-dis .arrows .slick-arrow.slick-prev:hover, .section-discovery .slide-content .main .content-dis .arrows .slick-arrow.slick-prev:focus,
+                  .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow.slick-prev:hover,
+                  .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow.slick-prev:focus {
+                    background-image: url("../../public/img/ic_arrow_left.png"); } }
         .section-discovery .slide-content .main .content-dis .arrows-2,
         .section-discovery .slide-content .main .content-wrapper .arrows-2 {
           position: absolute;
-          top: 20%;
-          right: 25px; }
+          top: 48%;
+          right: 35px; }
+          @media screen and (max-width: 767px) {
+            .section-discovery .slide-content .main .content-dis .arrows-2,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2 {
+              width: 100%;
+              left: 0;
+              right: 0px;
+              display: flex;
+              justify-content: space-between;
+              padding-right: 8px;
+              padding-left: 8px; } }
+          .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow,
+          .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow {
+            width: 48px;
+            height: 48px;
+            display: block;
+            font-size: 0px !important;
+            border: 0px;
+            background-color: transparent;
+            filter: drop-shadow(0px 8px 28px rgba(13, 34, 42, 0.3)); }
+            @media screen and (max-width: 767px) {
+              .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow {
+                width: 40px;
+                height: 40px; } }
+            .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-disabled,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-disabled {
+              opacity: .4;
+              cursor: none;
+              pointer-events: none; }
+            .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next {
+              background-image: url("../../public/img/ic-arrow-down.svg");
+              background-repeat: no-repeat;
+              background-size: contain; }
+              .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next:hover, .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next:focus,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next:hover,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next:focus {
+                background-image: url("../../public/img/ic-arrow-down-active.png"); }
+              @media screen and (max-width: 767px) {
+                .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next,
+                .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next {
+                  background-image: url("../../public/img/ic_arrow_right.png"); }
+                  .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next:hover, .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next:focus,
+                  .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next:hover,
+                  .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next:focus {
+                    background-image: url("../../public/img/ic_arrow_right.png"); } }
+            .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev {
+              background-image: url("../../public/img/ic-arrow-up.svg");
+              background-repeat: no-repeat;
+              background-size: contain;
+              margin-top: 30px; }
+              .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev:hover, .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev:focus,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev:hover,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev:focus {
+                background-image: url("../../public/img/ic-arrow-up-active.svg"); }
+              @media screen and (max-width: 767px) {
+                .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev,
+                .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev {
+                  background-image: url("../../public/img/ic_arrow_left.png");
+                  margin-top: 0 !important; }
+                  .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev:hover, .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev:focus,
+                  .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev:hover,
+                  .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev:focus {
+                    background-image: url("../../public/img/ic_arrow_left.png"); } }
         .section-discovery .slide-content .main .content-dis .announcment p,
         .section-discovery .slide-content .main .content-wrapper .announcment p {
           color: #1a1a1a;
           text-align: center;
-          font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+          font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
           font-size: 18px;
           font-style: normal;
           font-weight: 700;
@@ -1690,13 +1730,14 @@ img {
         .section-discovery .slide-content .main .content-dis .new-card,
         .section-discovery .slide-content .main .content-wrapper .new-card {
           width: 100%;
-          height: 718px;
-          margin-top: 24px;
+          height: 748px;
+          margin-top: 14px;
           overflow: hidden; }
           @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .content-dis .new-card,
             .section-discovery .slide-content .main .content-wrapper .new-card {
-              height: 440px; } }
+              height: 460px;
+              margin-left: -20px; } }
           .section-discovery .slide-content .main .content-dis .new-card .item-card-container,
           .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container {
             display: flex;
@@ -1704,8 +1745,15 @@ img {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            background-color: #fff; }
-            @media screen and (max-width: 767px) {
+            background-color: #fff;
+            outline: none; }
+            .section-discovery .slide-content .main .content-dis .new-card .item-card-container .item-card:last-child,
+            .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container .item-card:last-child {
+              display: none; }
+              @media screen and (max-width: 767px) {
+                .section-discovery .slide-content .main .content-dis .new-card .item-card-container .item-card:last-child,
+                .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container .item-card:last-child {
+                  display: block; }
               .section-discovery .slide-content .main .content-dis .new-card .item-card-container,
               .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container {
                 gap: 8px;
@@ -1724,7 +1772,7 @@ img {
               .section-discovery .slide-content .main .content-wrapper .new-card .item-card {
                 width: 50% !important;
                 height: 216px;
-                flex-basis: 48%;
+                flex-basis: 2%;
                 flex-grow: 1;
                 border-radius: 8px; } }
             .section-discovery .slide-content .main .content-dis .new-card .item-card img,
@@ -1934,7 +1982,7 @@ img {
               padding-right: 24px; } }
           .section-discovery .slide-content .main .collapse-menu .desc h2 {
             text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
-            font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+            font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
             font-size: 48px;
             font-style: normal;
             font-weight: 700;
@@ -1988,7 +2036,7 @@ img {
                   padding-right: 16px; } }
               .section-discovery .slide-content .main .collapse-menu .filter .choose .title h3 {
                 color: #fff;
-                font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+                font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
@@ -2001,7 +2049,7 @@ img {
                     line-height: 18px; } }
               .section-discovery .slide-content .main .collapse-menu .filter .choose .title a {
                 text-align: right;
-                font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+                font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
@@ -2148,7 +2196,7 @@ img {
             background: #a8a8a8; }
           .section-discovery .slide-content .main .event-detail .paragraf p {
             color: #fff;
-            font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+            font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -2188,7 +2236,7 @@ img {
             border-radius: 12px;
             background-color: #fff;
             text-align: center;
-            font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+            font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 700;
@@ -2549,7 +2597,7 @@ img {
       .section-question .list-question .content .title {
         margin-bottom: 55px; }
         .section-question .list-question .content .title span {
-          font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+          font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
           font-size: 14px;
           font-style: normal;
           font-weight: 700;
@@ -2558,7 +2606,7 @@ img {
           display: block;
           margin-bottom: 8px; }
         .section-question .list-question .content .title h3 {
-          font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+          font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
           font-size: 48px;
           font-style: normal;
           font-weight: 700;
@@ -2605,7 +2653,7 @@ img {
             background: linear-gradient(150deg, rgba(160, 223, 158, 0.6) -0.9%, rgba(69, 135, 194, 0.6) 53.08%); }
             .section-question .list-question .content .checklist-item .desc p {
               color: #fff;
-              font-family: "Noto Sans JP","Noto Sans SC","Noto Sans Myanmar","Poppins", sans-serif;
+              font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 700;
@@ -2698,18 +2746,6 @@ img {
     display: flex;
     align-items: center;
     gap: 16px; }
-  .section-question .slick-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 0px; }
-    .section-question .slick-arrow.slick-prev {
-      background-image: url("../../public/img/arrow_circle_left.svg");
-      background-repeat: no-repeat;
-      background-size: contain; }
-    .section-question .slick-arrow.slick-next {
-      background-image: url("../../public/img/arrow_circle_right.svg");
-      background-repeat: no-repeat;
-      background-size: contain; }
 
 .event {
   display: inline-flex;
