@@ -972,7 +972,8 @@ img {
     .apps {
       background-size: cover; } }
   .apps .saved-list {
-    background-color: #fff; }
+    background-color: #fff;
+    display: none; }
     .apps .saved-list .title-back {
       background-color: #fff;
       margin-top: 66px;
@@ -2682,7 +2683,8 @@ img {
 .form-check-default {
   display: flex;
   align-items: center;
-  gap: 16px; }
+  gap: 16px;
+  position: relative; }
   .form-check-default label {
     color: #FFF;
     font-family: 'Poppins';
@@ -2736,7 +2738,6 @@ img {
       height: 24px; }
     .form-check-default .form-check-input[type="checkbox"]::after {
       position: absolute;
-      top: 0;
       left: 0;
       content: "";
       width: 24px;

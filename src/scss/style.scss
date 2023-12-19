@@ -33,9 +33,9 @@ img {
 	@media (min-width: 768px) and (max-width: 1180px) {
 		background-size: cover;
 	}
-
 	.saved-list {
 		background-color: #fff;
+		display: none;
 
 		.title-back {
 			background-color: #fff;
@@ -2260,6 +2260,7 @@ img {
 	display: flex;
 	align-items: center;
 	gap: 16px;
+	position: relative;
 
 	label {
 		color: #FFF;
@@ -2327,7 +2328,6 @@ img {
 
 		&::after {
 			position: absolute;
-			top: 0;
 			left: 0;
 			content: "";
 			width: 24px;

@@ -223,9 +223,6 @@ $(document).ready(function () {
         }
     }
     expandSeeMore();
-    $('.saved-list').css({
-        'display': `none`
-    });
     $('.slide-3').css({
         'display': `none`
     });
