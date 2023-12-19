@@ -85,10 +85,12 @@ body {
     @media screen and (max-width: 768px) {
       .number span {
         font-size: 48px;
-        width: 40px; } }
+        width: 40px;
+        height: 65px; } }
     @media (min-width: 768px) and (max-width: 1366px) {
       .number span {
-        width: 100px; } }
+        width: 100px;
+        height: 150px; } }
     .number span:before {
       display: block;
       height: 50%;
@@ -106,7 +108,11 @@ body {
         .number span:before {
           border-top-left-radius: 8px;
           border-top-right-radius: 8px;
-          height: 50%; } }
+          height: 50%;
+          border-top: 1.5px solid rgba(255, 255, 255, 0.4);
+          border-left: 1.5px solid rgba(255, 255, 255, 0.4);
+          border-right: 1.5px solid rgba(255, 255, 255, 0.4);
+          margin-bottom: 1.81px; } }
       @media (min-width: 768px) and (max-width: 1366px) {
         .number span:before {
           height: 45%; } }
@@ -125,7 +131,10 @@ body {
       @media screen and (max-width: 768px) {
         .number span:after {
           border-bottom-left-radius: 8px;
-          border-bottom-right-radius: 8px; } }
+          border-bottom-right-radius: 8px;
+          border-bottom: 1.5px solid rgba(255, 255, 255, 0.4);
+          border-left: 1.5px solid rgba(255, 255, 255, 0.4);
+          border-right: 1.5px solid rgba(255, 255, 255, 0.4); } }
 
 .flip .primary:before {
   animation: animate-top 450ms;
@@ -156,6 +165,10 @@ body {
     border: unset !important;
     position: relative;
     height: 36% !important; }
+    @media screen and (max-width: 768px) {
+      .primary::before {
+        height: 50% !important;
+        top: 0px; } }
 
 .secondary {
   z-index: 1; }

@@ -146,10 +146,12 @@ body {
     @media screen and (max-width: 768px) {
       font-size: 48px;
       width: 40px;
+      height: 65px;
     }
 
     @media (min-width: 768px) and (max-width: 1366px) {
       width: 100px;
+      height: 150px;
     }
 
     &:before {
@@ -170,6 +172,10 @@ body {
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
         height: 50%;
+        border-top: 1.5px solid rgba(255, 255, 255, 0.40);
+        border-left: 1.5px solid rgba(255, 255, 255, 0.40);
+        border-right: 1.5px solid rgba(255, 255, 255, 0.40);
+        margin-bottom: 1.81px;
       }
 
       @media (min-width: 768px) and (max-width: 1366px) {
@@ -193,6 +199,9 @@ body {
       @media screen and (max-width: 768px) {
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
+        border-bottom: 1.5px solid rgba(255, 255, 255, 0.40);
+        border-left: 1.5px solid rgba(255, 255, 255, 0.40);
+        border-right: 1.5px solid rgba(255, 255, 255, 0.40);
       }
     }
   }
@@ -238,6 +247,10 @@ body {
       border: unset !important;
       position: relative;
       height: 36% !important;
+      @media screen and (max-width: 768px) {
+        height: 50% !important;
+        top: 0px;
+      }
   }
   z-index: 2;
 }

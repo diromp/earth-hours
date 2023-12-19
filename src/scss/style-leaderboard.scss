@@ -442,10 +442,11 @@ img {
                     font-size: 36px;
                     font-style: normal;
                     font-weight: 700;
-                    line-height: 50px;
-                    margin-bottom: 19px;
+                    line-height: 50px; /* 138.889% */
+                    text-transform: capitalize;
+                    margin-bottom: 14px;
                     @media screen and (max-width: 767px) {
-                        font-size: 24px;
+                        font-size: 20px;
                         font-style: normal;
                         font-weight: 700;
                         line-height: 30px;
@@ -461,13 +462,14 @@ img {
                     font-weight: 700;
                     line-height: normal;
                     border-bottom: solid 2px #1A1A1A;
-                    margin-bottom: 24px;
+                    padding: 0px 8px 4px 8px;
+                    margin-bottom: 4px;
                     @media screen and (max-width: 767px) {
                         font-size: 24px;
                         font-style: normal;
                         font-weight: 700;
                         line-height: 30px;
-                        margin-bottom: 8px;
+                        margin-bottom: 4px;
 
                     }
 
@@ -513,25 +515,27 @@ img {
                     font-style: normal;
                     font-weight: 400;
                     line-height: 44px;
-                    margin-bottom: 16px;
+                    margin-bottom: 8px;
                     text-shadow: 0px 3px 8px rgba(70, 77, 43, 0.23);
                     @media screen and (max-width: 767px) {
                         font-size: 12px;
                         font-style: normal;
                         font-weight: 400;
                         line-height: 18px;
+                        margin-bottom: 8px;
                     }
                 }
                 h6 {
                     color: #4587C2;
-                    padding-bottom: 5px;
                     text-align: center;
                     font-family: 'Poppins', sans-serif;
                     font-size: 18px;
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal;
-                    border-bottom: solid 1px #4587c2;
+                    border-bottom: solid 2px #4587c2;
+                    padding: 0px 6px 4px 6px;
+                    margin-bottom: 4px;
                     @media screen and (max-width: 767px) {
                         font-size: 11px;
                         font-style: normal;

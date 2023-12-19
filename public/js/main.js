@@ -1,5 +1,6 @@
 $(document).ready(function () {
     var slider = $('#slide-discovery');
+    var sliderMobile = $('#slide-discovery-mobile');
     var savedSlider = $('#savedSlider');
     var containerQuestions = $('.section-question');
     var seeMore = $('.seamore');
@@ -60,10 +61,6 @@ $(document).ready(function () {
         $(".list-group").removeClass('active');
     })
 
-    // slider.flipbox({
-    //     vertical: true
-    // });
-    // savedSlider.flipbox({ vertical: true });
     slider.slick({
         dots: false,
         infinite: false,
@@ -87,6 +84,19 @@ $(document).ready(function () {
 
         ]
     });
+    sliderMobile.slick({
+        dots: false,
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: false,
+        vertical: false,
+        verticalSwiping: false,
+        centerMode: false,
+        appendArrows: $(this).find('.arrows-mobile'),
+    });
+
     savedSlider.slick({
         dots: false,
         infinite: false,
@@ -230,6 +240,7 @@ $(document).ready(function () {
         $('.saved-list').fadeIn(
             'slow'
         );
+        savedSlider.slick('setPosition'); 
     });
     $('.mobile-event').on('click', function(e) {
         console.log('masuk')
@@ -244,6 +255,8 @@ $(document).ready(function () {
         $('.slide-1').fadeIn(
             'slow'
         );
+        slider.slick('setPosition'); 
+        sliderMobile.slick('setPosition'); 
     });
 
     $('.close').on('click', function (e) {
