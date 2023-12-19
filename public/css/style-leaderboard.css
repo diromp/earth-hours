@@ -263,7 +263,7 @@ img {
         left: 0px;
         padding-right: 12px;
         padding-left: 12px; } }
-    @media screen and (min-width: 1200px) and (max-width: 1300px) {
+    @media screen and (min-width: 1200px) and (max-width: 1366px) {
       .section-slide .slide-content .side-left {
         padding-left: 151px; } }
     @media (min-width: 768px) and (max-width: 1180px) {
@@ -342,6 +342,9 @@ img {
       .circular-slider-start-2 .wrapper {
         top: 80%;
         height: 90%; } }
+    @media screen and (max-width: 375px) {
+      .circular-slider-start-2 .wrapper {
+        height: 81%; } }
     .circular-slider-start-2 .wrapper .item-slides {
       position: absolute;
       top: 0;

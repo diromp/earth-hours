@@ -105,6 +105,9 @@ body {
   height: 100%;
   justify-content: flex-start;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    gap: 4px;
+  }
 }
 
 .number {
@@ -241,25 +244,27 @@ body {
     transform: translateX(0) translateY(-0.28em) translateZ(0.35em) rotateX(91deg) rotateY(0deg) rotateZ(0deg);
     -webkit-transform: translateX(0) translateY(-0.28em) translateZ(0.35em) rotateX(91deg) rotateY(0deg) rotateZ(0deg);
   }
+
   &::before {
-      top: 23px;
-      background: transparent !important;
-      border: unset !important;
-      position: relative;
-      height: 36% !important;
-      @media screen and (max-width: 768px) {
-        height: 50% !important;
-        top: 0px;
-      }
+    top: 23px;
+    background: transparent !important;
+    border: unset !important;
+    position: relative;
+    height: 36% !important;
+
+    @media screen and (max-width: 768px) {
+      height: 50% !important;
+      top: 0px;
+    }
   }
+
   z-index: 2;
 }
 
 .secondary {
   z-index: 1;
 
-  &::after {
-  }
+  &::after {}
 }
 
 [data-number="0"] {
