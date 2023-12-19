@@ -871,6 +871,7 @@ img {
 						margin-left: 0;
 					}
 					.item-card-container {
+						width: 100% !important;
 						.item-card {
 							&:last-child {
 								display: block !important;
@@ -965,7 +966,7 @@ img {
 
 				.arrows {
 					position: absolute;
-					top: 48%;
+					top: 50%;
 					right: 35px;
 					@media screen and(max-width: 767px) {
 						display: none;
@@ -1004,7 +1005,6 @@ img {
 								&:hover,
 								&:focus {
 									background-image: url("../../public/img/ic_arrow_right.png");
-
 								}
 							}
 
@@ -1015,12 +1015,11 @@ img {
 
 							background-repeat: no-repeat;
 							background-size: contain;
-							margin-top: 30px;
+							margin-bottom: 24px;
 
 							&:hover,
 							&:focus {
 								background-image: url("../../public/img/ic-arrow-up-active.svg");
-
 							}
 
 							@media screen and(max-width: 767px) {
@@ -1038,8 +1037,8 @@ img {
 
 				.arrows-2 {
 					position: absolute;
-					top: 48%;
-					right: 35px;
+					top: 38%;
+					right: 110px;
 					@media screen and(max-width: 767px) {
 						width: 100%;
 						left: 0;
@@ -1073,7 +1072,6 @@ img {
 							background-image: url("../../public/img/ic-arrow-down.svg");
 							background-repeat: no-repeat;
 							background-size: contain;
-
 							&:hover,
 							&:focus {
 								background-image: url("../../public/img/ic-arrow-down-active.png");
@@ -1093,10 +1091,9 @@ img {
 
 						&.slick-prev {
 							background-image: url("../../public/img/ic-arrow-up.svg");
-
+							margin-bottom: 24px;
 							background-repeat: no-repeat;
 							background-size: contain;
-							margin-top: 30px;
 
 							&:hover,
 							&:focus {
