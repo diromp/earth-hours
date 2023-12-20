@@ -1148,9 +1148,6 @@ img {
   background-color: #1a1a1a;
   min-height: 100vh;
   height: 100%; }
-  @media screen and (max-width: 767px) {
-    .section-discovery.active-section {
-      height: 100%; } }
   @media (min-width: 768px) and (max-width: 1180px) {
     .section-discovery {
       overflow-y: scroll; } }
@@ -1212,23 +1209,25 @@ img {
         margin-top: 16px;
         margin-bottom: 16px;
         border-radius: 8px; } }
-    .section-discovery .slide-content.slide-2 .main {
-      height: 936px;
-      background: unset; }
-    .section-discovery .slide-content.slide-2 .listing .list .list-group {
-      pointer-events: none;
-      cursor: none; }
-    @media screen and (max-width: 767px) {
-      .section-discovery .slide-content.slide-2 .listing .list {
-        gap: 8px !important;
-        overflow: visible !important;
-        flex-flow: wrap !important; }
-        .section-discovery .slide-content.slide-2 .listing .list .list-group {
-          margin-bottom: 8px !important; } }
-    @media screen and (min-width: 768px) and (max-width: 1180px) {
-      .section-discovery .slide-content.slide-2 .images-background > .love {
-        top: 52px !important;
-        right: 32px !important; } }
+    .section-discovery .slide-content.slide-2 {
+      height: 75rem; }
+      .section-discovery .slide-content.slide-2 .main {
+        height: 936px;
+        background: unset; }
+      .section-discovery .slide-content.slide-2 .listing .list .list-group {
+        pointer-events: none;
+        cursor: none; }
+      @media screen and (max-width: 767px) {
+        .section-discovery .slide-content.slide-2 .listing .list {
+          gap: 8px !important;
+          overflow: visible !important;
+          flex-flow: wrap !important; }
+          .section-discovery .slide-content.slide-2 .listing .list .list-group {
+            margin-bottom: 8px !important; } }
+      @media screen and (min-width: 768px) and (max-width: 1180px) {
+        .section-discovery .slide-content.slide-2 .images-background > .love {
+          top: 52px !important;
+          right: 32px !important; } }
     .section-discovery .slide-content.slide-3 .main {
       background: unset; }
     @media screen and (min-width: 768px) and (max-width: 1180px) {
@@ -1255,8 +1254,10 @@ img {
       .section-discovery .slide-content.slide-4 {
         min-height: 90rem; } }
     @media screen and (max-width: 767px) {
-      .section-discovery .slide-content.slide-4 .main {
-        overflow: visible; } }
+      .section-discovery .slide-content.slide-4 {
+        height: 60rem; }
+        .section-discovery .slide-content.slide-4 .main {
+          overflow: visible; } }
     @media screen and (max-width: 375px) {
       .section-discovery .slide-content.slide-4 .main {
         margin-bottom: 235px; } }
@@ -1557,7 +1558,11 @@ img {
               margin-left: 0; } }
           .section-discovery .slide-content .main .content-dis.collapsed .item-card-container,
           .section-discovery .slide-content .main .content-wrapper.collapsed .item-card-container {
-            width: 100% !important; }
+            width: 100%; }
+            @media screen and (max-width: 767px) {
+              .section-discovery .slide-content .main .content-dis.collapsed .item-card-container,
+              .section-discovery .slide-content .main .content-wrapper.collapsed .item-card-container {
+                max-width: 268px; } }
             .section-discovery .slide-content .main .content-dis.collapsed .item-card-container .item-card:last-child,
             .section-discovery .slide-content .main .content-wrapper.collapsed .item-card-container .item-card:last-child {
               display: block !important; }
@@ -2720,7 +2725,12 @@ img {
         justify-content: center;
         padding-bottom: 16px;
         padding-top: 24px;
-        margin-right: 0px; } }
+        margin-right: 0px; }
+        .event.mobile-event span {
+          overflow: hidden;
+          height: 25px;
+          word-break: break-all;
+          text-overflow: ellipsis; } }
   .event span {
     display: inline-block;
     color: #1a1a1a;
@@ -2866,4 +2876,8 @@ img {
 
 @media screen and (max-width: 767px) {
   #savedSlider {
+    display: none; } }
+
+@media screen and (min-width: 768px) {
+  #savedSliderMobile {
     display: none; } }

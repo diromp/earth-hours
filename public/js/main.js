@@ -26,7 +26,6 @@ $(document).ready(function () {
         }
     });
     $('.images-background .love').click(function () {
-        console.log('Loading images')
         $(this).toggleClass('active');
     });
 
