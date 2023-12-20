@@ -2,12 +2,13 @@ $(document).ready(function () {
     var slider = $('#slide-discovery');
     var sliderMobile = $('#slide-discovery-mobile');
     var savedSlider = $('#savedSlider');
-    var containerQuestions = $('.section-question');
+    var savedSliderMobile = $('#savedSliderMobile');
     var seeMore = $('.seamore');
     var selectLocations = $('.select-location-container');
     var languageJp = $('body').hasClass('language-jp');
     var languageCs = $('body').hasClass('language-cs');
     var languageBm = $('body').hasClass('language-bm');
+    var $window = $(window);
 
     $('#reset-filter').hide();
     $('.item-card .love').click(function () {
@@ -111,29 +112,34 @@ $(document).ready(function () {
         responsive: [
             {
                 breakpoint: 768,
+                settings: "unslick"
+            },
+
+        ]
+    });
+    savedSliderMobile.slick({
+        dots: false,
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: false,
+        vertical: false,
+        verticalSwiping: false,
+        appendArrows: $(this).find('.arrows-2-mobile'),
+        responsive: [
+            {
+                breakpoint: 1920,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 768,
                 settings: {
-                    vertical: false,
-                    verticalSwiping: false,
                     centerMode: false,
                 }
             },
 
         ]
-    });
-   
-
-
-    $('.btn-discovery.prev').click(function () {
-        slider.flipbox('prev', $(this).hasClass('reverse'));
-    })
-    $('.btn-discovery.next').click(function () {
-        slider.flipbox('next', $(this).hasClass('reverse'));
-    });
-    $('.btn-saved.prev').click(function () {
-        savedSlider.flipbox('prev', $(this).hasClass('reverse'));
-    })
-    $('.btn-saved.next').click(function () {
-        savedSlider.flipbox('next', $(this).hasClass('reverse'));
     });
 
     function formatIcon(state) {
@@ -238,9 +244,9 @@ $(document).ready(function () {
             'slow'
         );
         savedSlider.slick('setPosition'); 
+        savedSliderMobile.slick('setPosition'); 
     });
     $('.mobile-event').on('click', function(e) {
-        console.log('masuk')
         $("html, body").animate({scrollTop: 0}, 500);
     });
 
@@ -304,6 +310,9 @@ $(document).ready(function () {
         $('.slide-2').removeClass('active');
         $('.slide-3').addClass('active');
         $(".section-discovery").addClass('active-section');
+        if($window.width() < 768) {
+            $("html, body").animate({scrollTop: 0}, 500);
+        }
         setTimeout(function () {
             $('.slide-3').css({
                 'display': 'block',
@@ -324,6 +333,9 @@ $(document).ready(function () {
         );
         $('.slide-3').removeClass('active');
         $('.slide-4').addClass('active');
+        if($window.width() < 768) {
+            $("html, body").animate({scrollTop: 0}, 500);
+        }
         setTimeout(function () {
             $('.slide-4').css({
                 'display': 'block',

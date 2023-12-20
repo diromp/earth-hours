@@ -977,6 +977,20 @@ img {
   .apps .saved-list {
     background-color: #fff;
     display: none; }
+    .apps .saved-list .overlay-bg {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      width: 10%;
+      height: 530px;
+      z-index: 2;
+      background: #fff; }
+      @media screen and (min-width: 767px) {
+        .apps .saved-list .overlay-bg {
+          display: none; } }
+      @media screen and (max-width: 375px) {
+        .apps .saved-list .overlay-bg {
+          width: 10.5%; } }
     .apps .saved-list .title-back {
       background-color: #fff;
       margin-top: 66px;
@@ -1131,17 +1145,15 @@ img {
 
 .section-discovery {
   display: flex;
-  overflow: hidden;
-  background-color: #1a1a1a; }
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  height: 100%; }
   @media screen and (max-width: 767px) {
     .section-discovery.active-section {
       height: 100%; } }
   @media (min-width: 768px) and (max-width: 1180px) {
     .section-discovery {
       overflow-y: scroll; } }
-  @media screen and (max-width: 767px) {
-    .section-discovery {
-      height: 75rem; } }
   .section-discovery::-webkit-scrollbar {
     display: none; }
   .section-discovery .slide-content {
@@ -1161,7 +1173,9 @@ img {
           .section-discovery .slide-content.saved-list .main {
             margin-top: 16px;
             border-radius: 8px;
-            background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(to right, #a0df9e 12.41%, #4587c2 89.87%) border-box; } }
+            background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(to right, #a0df9e 12.41%, #4587c2 89.87%) border-box;
+            overflow: hidden;
+            margin-bottom: 16px; } }
         @media screen and (min-width: 768px) and (max-width: 1180px) {
           .section-discovery .slide-content.saved-list .main {
             height: 100vh; } }
@@ -1181,9 +1195,7 @@ img {
             padding-right: 80px; }
             @media screen and (max-width: 767px) {
               .section-discovery .slide-content.saved-list .main .content-wrapper .new-card {
-                padding: 0px !important; }
-              .section-discovery .slide-content.saved-list .main .content-wrapper .new-card .item-card-container .item-card {
-                flex: 1 0 50%; } }
+                padding: 0px !important; } }
           @media screen and (min-width: 768px) and (max-width: 1180px) {
             .section-discovery .slide-content.saved-list .main .content-wrapper .new-card {
               padding-left: 110px;
@@ -1198,6 +1210,7 @@ img {
         height: 100%;
         max-height: 100% !important;
         margin-top: 16px;
+        margin-bottom: 16px;
         border-radius: 8px; } }
     .section-discovery .slide-content.slide-2 .main {
       height: 936px;
@@ -1233,8 +1246,7 @@ img {
         background: unset; } }
     @media screen and (max-width: 375px) {
       .section-discovery .slide-content.slide-3 .main {
-        overflow-y: scroll !important;
-        margin-bottom: 50px; } }
+        margin-bottom: 80px; } }
     .section-discovery .slide-content.slide-3 .event-detail .content h2 {
       margin-bottom: 24px; }
     .section-discovery .slide-content.slide-4 .main {
@@ -1247,8 +1259,7 @@ img {
         overflow: visible; } }
     @media screen and (max-width: 375px) {
       .section-discovery .slide-content.slide-4 .main {
-        overflow-y: scroll !important;
-        margin-bottom: 100px; } }
+        margin-bottom: 235px; } }
     .section-discovery .slide-content .main {
       margin-bottom: 32px;
       margin-top: 32px;
@@ -1508,7 +1519,8 @@ img {
         height: 100% !important; }
         @media screen and (max-width: 767px) {
           .section-discovery .slide-content .main .slick-slider .slick-list {
-            padding: 35px 0px 0px 37px !important; } }
+            padding: 35px 0px 0px 37px !important;
+            overflow: visible; } }
       .section-discovery .slide-content .main .slick-slider .slick-track {
         margin-top: -40px; }
       .section-discovery .slide-content .main .content-dis,
@@ -1570,7 +1582,8 @@ img {
               display: flex;
               justify-content: space-between;
               padding-right: 8px;
-              padding-left: 8px; } }
+              padding-left: 8px;
+              z-index: 9; } }
           .section-discovery .slide-content .main .content-dis .arrows-mobile .slick-arrow,
           .section-discovery .slide-content .main .content-wrapper .arrows-mobile .slick-arrow {
             display: block;
@@ -1688,14 +1701,23 @@ img {
                   .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow.slick-prev:hover,
                   .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow.slick-prev:focus {
                     background-image: url("../../public/img/ic_arrow_left.png"); } }
-        .section-discovery .slide-content .main .content-dis .arrows-2,
-        .section-discovery .slide-content .main .content-wrapper .arrows-2 {
+        .section-discovery .slide-content .main .content-dis .arrows-2-mobile,
+        .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile {
+          z-index: 9; }
+          @media screen and (min-width: 768px) {
+            .section-discovery .slide-content .main .content-dis .arrows-2-mobile,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile {
+              display: none; } }
+        .section-discovery .slide-content .main .content-dis .arrows-2, .section-discovery .slide-content .main .content-dis .arrows-2-mobile,
+        .section-discovery .slide-content .main .content-wrapper .arrows-2,
+        .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile {
           position: absolute;
           top: 38%;
           right: 110px; }
           @media screen and (max-width: 767px) {
-            .section-discovery .slide-content .main .content-dis .arrows-2,
-            .section-discovery .slide-content .main .content-wrapper .arrows-2 {
+            .section-discovery .slide-content .main .content-dis .arrows-2, .section-discovery .slide-content .main .content-dis .arrows-2-mobile,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile {
               width: 100%;
               left: 0;
               top: 40%;
@@ -1704,8 +1726,9 @@ img {
               justify-content: space-between;
               padding-right: 8px;
               padding-left: 8px; } }
-          .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow,
-          .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow {
+          .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow,
+          .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow,
+          .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow {
             width: 48px;
             height: 48px;
             display: block;
@@ -1714,50 +1737,64 @@ img {
             background-color: transparent;
             filter: drop-shadow(0px 8px 28px rgba(13, 34, 42, 0.3)); }
             @media screen and (max-width: 767px) {
-              .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow,
-              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow {
+              .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow {
                 width: 40px;
                 height: 40px; } }
-            .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-disabled,
-            .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-disabled {
+            .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-disabled, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-disabled,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-disabled,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-disabled {
               opacity: .4;
               cursor: none;
               pointer-events: none; }
-            .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next,
-            .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next {
+            .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next {
               background-image: url("../../public/img/ic-arrow-down.svg");
               background-repeat: no-repeat;
               background-size: contain; }
-              .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next:hover, .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next:focus,
+              .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next:hover, .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next:focus, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next:hover, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next:focus,
               .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next:hover,
-              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next:focus {
+              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next:focus,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next:hover,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next:focus {
                 background-image: url("../../public/img/ic-arrow-down-active.png"); }
               @media screen and (max-width: 767px) {
-                .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next,
-                .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next {
+                .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next,
+                .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next,
+                .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next {
                   background-image: url("../../public/img/ic_arrow_right.png"); }
-                  .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next:hover, .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next:focus,
+                  .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next:hover, .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next:focus, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next:hover, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next:focus,
                   .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next:hover,
-                  .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next:focus {
+                  .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next:focus,
+                  .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next:hover,
+                  .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next:focus {
                     background-image: url("../../public/img/ic_arrow_right.png"); } }
-            .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev,
-            .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev {
+            .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev {
               background-image: url("../../public/img/ic-arrow-up.svg");
               margin-bottom: 24px;
               background-repeat: no-repeat;
               background-size: contain; }
-              .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev:hover, .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev:focus,
+              .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev:hover, .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev:focus, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev:hover, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev:focus,
               .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev:hover,
-              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev:focus {
+              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev:focus,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev:hover,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev:focus {
                 background-image: url("../../public/img/ic-arrow-up-active.svg"); }
               @media screen and (max-width: 767px) {
-                .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev,
-                .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev {
+                .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev,
+                .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev,
+                .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev {
                   background-image: url("../../public/img/ic_arrow_left.png");
                   margin-top: 0 !important; }
-                  .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev:hover, .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev:focus,
+                  .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev:hover, .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev:focus, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev:hover, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev:focus,
                   .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev:hover,
-                  .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev:focus {
+                  .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev:focus,
+                  .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev:hover,
+                  .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev:focus {
                     background-image: url("../../public/img/ic_arrow_left.png"); } }
         .section-discovery .slide-content .main .content-dis .announcment p,
         .section-discovery .slide-content .main .content-wrapper .announcment p {
@@ -1774,7 +1811,9 @@ img {
               font-size: 14px;
               font-style: normal;
               font-weight: 700;
-              line-height: 18px; } }
+              line-height: 18px;
+              position: relative;
+              z-index: 3; } }
           @media screen and (max-width: 360px) {
             .section-discovery .slide-content .main .content-dis .announcment p,
             .section-discovery .slide-content .main .content-wrapper .announcment p {
@@ -1812,6 +1851,23 @@ img {
               left: 47%;
               top: -36px;
               transform: rotate(90deg); } }
+        .section-discovery .slide-content .main .content-dis .overlay-bg,
+        .section-discovery .slide-content .main .content-wrapper .overlay-bg {
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          width: 10%;
+          height: 530px;
+          z-index: 2;
+          background: #fff; }
+          @media screen and (min-width: 767px) {
+            .section-discovery .slide-content .main .content-dis .overlay-bg,
+            .section-discovery .slide-content .main .content-wrapper .overlay-bg {
+              display: none; } }
+          @media screen and (max-width: 375px) {
+            .section-discovery .slide-content .main .content-dis .overlay-bg,
+            .section-discovery .slide-content .main .content-wrapper .overlay-bg {
+              width: 10.5%; } }
         .section-discovery .slide-content .main .content-dis .new-card,
         .section-discovery .slide-content .main .content-wrapper .new-card {
           width: 100%;
@@ -1822,7 +1878,8 @@ img {
             .section-discovery .slide-content .main .content-dis .new-card,
             .section-discovery .slide-content .main .content-wrapper .new-card {
               height: 455px;
-              margin-left: -20px; } }
+              margin-left: -20px;
+              overflow: visible; } }
           .section-discovery .slide-content .main .content-dis .new-card .item-card-container,
           .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container {
             display: flex;
@@ -1858,7 +1915,8 @@ img {
                 width: 45% !important;
                 height: 216px;
                 border-radius: 8px;
-                flex: 1 0 40%; } }
+                flex: 1 0 40%;
+                box-shadow: 0px 3px 5px 0px rgba(27, 27, 28, 0.37); } }
             .section-discovery .slide-content .main .content-dis .new-card .item-card img,
             .section-discovery .slide-content .main .content-wrapper .new-card .item-card img {
               -o-object-fit: cover;
@@ -2320,7 +2378,7 @@ img {
             border-radius: 12px;
             background-color: #fff;
             text-align: center;
-            font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
+            font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 700;
@@ -2804,4 +2862,8 @@ img {
 
 @media screen and (min-width: 768px) {
   #slide-discovery-mobile {
+    display: none; } }
+
+@media screen and (max-width: 767px) {
+  #savedSlider {
     display: none; } }

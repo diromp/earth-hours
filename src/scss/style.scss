@@ -37,6 +37,22 @@ img {
 		background-color: #fff;
 		display: none;
 
+		.overlay-bg {
+			position: absolute;
+			@media screen and (min-width: 767px) {
+				display: none;
+			}
+			@media screen and (max-width: 375px) {
+				width: 10.5%;
+			}
+			right: 0px;
+			top: 0px;
+			width: 10%;
+			height: 530px;
+			z-index: 2;
+			background: #fff;
+		}
+
 		.title-back {
 			background-color: #fff;
 			margin-top: 66px;
@@ -241,8 +257,9 @@ img {
 
 .section-discovery {
 	display: flex;
-	overflow: hidden;
 	background-color: #1a1a1a;
+	min-height: 100vh;
+	height: 100%;
 
 	&.active-section {
 		@media screen and (max-width: 767px) {
@@ -252,10 +269,6 @@ img {
 
 	@media (min-width: 768px) and (max-width: 1180px) {
 		overflow-y: scroll;
-	}
-
-	@media screen and (max-width: 767px) {
-		height: 75rem;
 	}
 
 	&::-webkit-scrollbar {
@@ -286,6 +299,8 @@ img {
 					margin-top: 16px;
 					border-radius: 8px;
 					background: linear-gradient(#1a1a1a, #1a1a1a) padding-box, linear-gradient(to right, #a0df9e 12.41%, #4587c2 89.87%) border-box;
+					overflow: hidden;
+    				margin-bottom: 16px;
 				}
 
 				@media screen and (min-width: 768px) and (max-width: 1180px) {
@@ -313,13 +328,6 @@ img {
 						@media screen and (max-width: 767px) {
 							padding: 0px !important;
 						}
-						.item-card-container {
-							.item-card{
-								@media screen and (max-width: 767px) {
-									flex: 1 0 50%;
-								}
-							}
-						}
 					}
 
 					@media screen and (min-width: 768px) and (max-width: 1180px) {
@@ -346,6 +354,7 @@ img {
 					height: 100%;
 					max-height: 100% !important;
 					margin-top: 16px;
+					margin-bottom: 16px;
 					border-radius: 8px;
 				}
 			}
@@ -422,8 +431,7 @@ img {
 
 			@media screen and (max-width:375px) {
 				.main {
-					overflow-y: scroll !important;
-					margin-bottom: 50px;
+					margin-bottom: 80px;
 				}
 			}
 
@@ -453,8 +461,7 @@ img {
 
 			@media screen and (max-width:375px) {
 				.main {
-					overflow-y: scroll !important;
-					margin-bottom: 100px;
+					margin-bottom: 235px;
 				}
 			}
 		}
@@ -828,10 +835,10 @@ img {
 					height: 100% !important;
 					@media screen and(max-width: 767px) {
 						padding: 35px 0px 0px 37px !important;
+						overflow: visible;
 
 					}
 				}
-
 				.slick-track {
 					margin-top: -40px;
 				}
@@ -899,6 +906,7 @@ img {
 						justify-content: space-between;
 						padding-right: 8px;
 						padding-left: 8px;
+						z-index: 9;
 					}
 					.slick-arrow {
 						display: block;
@@ -1034,8 +1042,13 @@ img {
 						}
 					}
 				}
-
-				.arrows-2 {
+				.arrows-2-mobile {
+					@media screen and(min-width: 768px) {
+						display: none;
+					}
+					z-index: 9;
+				}
+				.arrows-2, .arrows-2-mobile {
 					position: absolute;
 					top: 38%;
 					right: 110px;
@@ -1130,6 +1143,8 @@ img {
 							font-style: normal;
 							font-weight: 700;
 							line-height: 18px;
+							position: relative;
+							z-index: 3;
 						}
 
 						@media screen and (max-width: 360px) {
@@ -1171,6 +1186,21 @@ img {
 						transform: rotate(90deg);
 					}
 				}
+				.overlay-bg {
+					position: absolute;
+					@media screen and (min-width: 767px) {
+						display: none;
+					}
+					@media screen and (max-width: 375px) {
+						width: 10.5%;
+					}
+					right: 0px;
+					top: 0px;
+					width: 10%;
+					height: 530px;
+					z-index: 2;
+					background: #fff;
+				}
 
 				.new-card {
 					width: 100%;
@@ -1181,6 +1211,7 @@ img {
 					@media screen and (max-width: 767px) {
 						height: 455px;
 						margin-left: -20px;
+						overflow: visible;
 					}
 
 					.item-card-container {
@@ -1222,6 +1253,7 @@ img {
 							height: 216px;
 							border-radius: 8px;
 							flex: 1 0 40%;
+							box-shadow: 0px 3px 5px 0px rgba(27, 27, 28, 0.37);
 						}
 
 						img {
@@ -2411,6 +2443,11 @@ img {
 
 #slide-discovery-mobile {
 	@media screen and (min-width: 768px) {
+		display: none;
+	}
+}
+#savedSlider {
+	@media screen and (max-width: 767px) {
 		display: none;
 	}
 }

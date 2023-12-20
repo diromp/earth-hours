@@ -32,6 +32,7 @@ function initCarousel( options ) {
 		this.pagination  = this.node.querySelector( '.wrapper' );
 		this.pagTransf   = 'translate( -50%, -50% )';
 		this.dots        = this.pagination.children;
+		this.country	 = this.pagination.querySelector('.country-container');
 		this.dotsN       = this.dots.length;
 		this.step        = -360/this.dotsN;
 		this.angle       = 0;
@@ -45,7 +46,9 @@ function initCarousel( options ) {
 
 		this.setSlide( this.activeN );
 		this.arrangeDots();
-		this.pagination.style.transitionDuration = this.speed +'ms';
+		this.pagination.style.transitionDuration = '500ms';
+		//remove animation
+		// this.pagination.style.transitionDuration = 0;
 		if ( this.autoplay ) this.startAutoplay();
 	}
 
@@ -107,6 +110,13 @@ function initCarousel( options ) {
 			}( this.dotsN, this.activeN, this.prevN, this.step )
 
 			this.pagination.style.transform = this.pagTransf +'rotate('+ this.angle +'deg)';
+			var itemCountry = this.pagination.querySelectorAll('.country-container');
+			for ( var i = 0; i < itemCountry.length; i++ ) {
+				var basePosition = 360 - (360/itemCountry.length*i);
+				var count = 90 + (-this.angle);
+				var total = basePosition + count;
+				itemCountry[i].style.transform = 'rotate('+ total + 'deg)';
+			}
 		}
 	};
 
