@@ -982,7 +982,7 @@ img {
       right: 0px;
       top: 0px;
       width: 10%;
-      height: 530px;
+      height: 515px;
       z-index: 2;
       background: #fff; }
       @media screen and (min-width: 767px) {
@@ -1558,7 +1558,7 @@ img {
               margin-left: 0; } }
           .section-discovery .slide-content .main .content-dis.collapsed .item-card-container,
           .section-discovery .slide-content .main .content-wrapper.collapsed .item-card-container {
-            width: 100%; }
+            width: 100% !important; }
             @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .content-dis.collapsed .item-card-container,
               .section-discovery .slide-content .main .content-wrapper.collapsed .item-card-container {
@@ -1603,7 +1603,6 @@ img {
                 height: 40px; } }
             .section-discovery .slide-content .main .content-dis .arrows-mobile .slick-arrow.slick-disabled,
             .section-discovery .slide-content .main .content-wrapper .arrows-mobile .slick-arrow.slick-disabled {
-              opacity: .4;
               cursor: none;
               pointer-events: none; }
             .section-discovery .slide-content .main .content-dis .arrows-mobile .slick-arrow.slick-next,
@@ -1750,7 +1749,6 @@ img {
             .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-disabled, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-disabled,
             .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-disabled,
             .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-disabled {
-              opacity: .4;
               cursor: none;
               pointer-events: none; }
             .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next,
@@ -1862,7 +1860,7 @@ img {
           right: 0px;
           top: 0px;
           width: 10%;
-          height: 530px;
+          height: 515px;
           z-index: 2;
           background: #fff; }
           @media screen and (min-width: 767px) {
@@ -2387,7 +2385,7 @@ img {
             border-radius: 12px;
             background-color: #fff;
             text-align: center;
-            font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
+            font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 700;
@@ -2727,9 +2725,12 @@ img {
         margin-bottom: 0;
         display: flex;
         justify-content: center;
-        padding-bottom: 16px;
-        padding-top: 24px;
-        margin-right: 0px; }
+        padding-bottom: 24px;
+        padding-top: 16px;
+        margin-right: 0px;
+        box-shadow: none; }
+        .event.mobile-event:hover {
+          background: unset; }
         .event.mobile-event span {
           overflow: hidden;
           height: 25px;
