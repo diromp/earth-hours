@@ -95,7 +95,6 @@ function initCarousel( options ) {
 		} else {
 			this.dots[ this.activeN - 1 ].style.left = '0';
 			this.dots[ this.activeN - 1 ].style.top = '0';
-
 		}
 		this.prevN = this.activeN;
 		this.activeN = slideN;
@@ -109,6 +108,11 @@ function initCarousel( options ) {
 			if(this.screen < 768) {
 				this.dots[ this.activeN + 9 ].style.left = '-40px';
 				this.dots[ this.activeN + 9 ].style.top = '15px';
+
+				this.dots[ this.activeN + 8 ].style.top = '50px';
+
+				this.dots[ this.activeN + 1 ].style.left = '-10px';
+				this.dots[ this.activeN + 1 ].style.top = '-10px';
 			} else {
 				this.dots[ this.activeN + 9 ].style.left = '-50px';
 			}
@@ -117,6 +121,10 @@ function initCarousel( options ) {
 			if(this.screen < 768) {
 				this.dots[ this.activeN - 1 ].style.left = '-33px';
 				this.dots[ this.activeN - 1 ].style.top = '-5px';
+
+
+				this.dots[ this.activeN + 1 ].style.left = '-5px';
+				this.dots[ this.activeN + 1 ].style.top = '-13px';
 	
 			} else {
 				this.dots[ this.activeN - 1 ].style.left = '-43px';
@@ -127,6 +135,11 @@ function initCarousel( options ) {
 			if(this.screen < 768) {
 				this.dots[ this.activeN - 1 ].style.left = '-30px';
 				this.dots[ this.activeN - 1 ].style.top = '-25px';
+				this.dots[ this.activeN + 1 ].style.left = '-5px';
+				this.dots[ this.activeN + 1 ].style.top = '-13px';
+
+				this.dots[ this.activeN - 2 ].style.top = '-10px';
+				this.dots[ this.activeN - 2 ].style.left = '-40px';	
 	
 			} else {
 				this.dots[ this.activeN - 1 ].style.top = '-35px';
@@ -137,6 +150,11 @@ function initCarousel( options ) {
 			if(this.screen < 768) {
 				this.dots[ this.activeN - 1 ].style.left = '0px';
 				this.dots[ this.activeN - 1 ].style.top = '-40px';
+				this.dots[ this.activeN + 1 ].style.left = '5px';
+				this.dots[ this.activeN + 1 ].style.top = '-16px';
+
+				this.dots[ this.activeN - 2 ].style.top = '-10px';
+				this.dots[ this.activeN - 2 ].style.left = '-50px';	
 	
 			} else {
 				this.dots[ this.activeN - 1 ].style.top = '-43px';
@@ -144,28 +162,76 @@ function initCarousel( options ) {
 			}
 		}
 		if ( this.activeN === 4 ) {
-			this.dots[ this.activeN - 1 ].style.top = '-33px';
-			this.dots[ this.activeN - 1 ].style.left = '15px';
+			if(this.screen < 768) {
+				this.dots[ this.activeN + 1 ].style.left = '15px';
+				this.dots[ this.activeN + 1 ].style.top = '-3px';
+				this.dots[ this.activeN - 1 ].style.top = '-33px';
+				this.dots[ this.activeN - 1 ].style.left = '15px';
+				
+				this.dots[ this.activeN - 2 ].style.top = '-40px';
+				this.dots[ this.activeN - 2 ].style.left = '-40px';	
+			} else {
+				this.dots[ this.activeN - 1 ].style.top = '-33px';
+				this.dots[ this.activeN - 1 ].style.left = '15px';	
+			}
 		}
 		if ( this.activeN === 5 ) {
-			this.dots[ this.activeN - 1 ].style.top = '-14px';
-			this.dots[ this.activeN - 1 ].style.left = '30px';
+			if(this.screen < 768) {
+				this.dots[ this.activeN + 1 ].style.left = '13px';
+				this.dots[ this.activeN + 1 ].style.top = '7px';
+				this.dots[ this.activeN - 1 ].style.top = '-14px';
+				this.dots[ this.activeN - 1 ].style.left = '30px';
+				this.dots[ this.activeN - 2 ].style.top = '-50px';
+
+			} else {
+				this.dots[ this.activeN - 1 ].style.top = '-14px';
+				this.dots[ this.activeN - 1 ].style.left = '30px';	
+			}
 		}
 		if ( this.activeN === 6 ) {
-			this.dots[ this.activeN - 1 ].style.left = '40px';
+			if(this.screen < 768) {
+				this.dots[ this.activeN + 1 ].style.top = '10px';
+				this.dots[ this.activeN - 1 ].style.left = '40px';
+				
+				this.dots[ this.activeN - 2 ].style.top = '-40px';
+				this.dots[ this.activeN - 2 ].style.left = '25px';
+			} else {
+				this.dots[ this.activeN - 1 ].style.left = '40px';
+
+			}
 		}
 		if ( this.activeN === 7 ) {
-			this.dots[ this.activeN - 1 ].style.top = '29px';
-			this.dots[ this.activeN - 1 ].style.left = '25px';
+			if(this.screen < 768) {
+				this.dots[ this.activeN + 1 ].style.top = '10px';
+				this.dots[ this.activeN - 1 ].style.top = '29px';
+				this.dots[ this.activeN - 1 ].style.left = '25px';
+				this.dots[ this.activeN - 2 ].style.top = '-20px';
+				this.dots[ this.activeN - 2 ].style.left = '45px';
+			} else {
+				this.dots[ this.activeN - 1 ].style.top = '29px';
+				this.dots[ this.activeN - 1 ].style.left = '25px';
+			}
 		}
 		if ( this.activeN === 8 ) {
-			this.dots[ this.activeN - 1 ].style.top = '38px';
-			this.dots[ this.activeN - 1 ].style.left = '4px';
+			if(this.screen < 768) {
+				this.dots[ this.activeN + 1 ].style.left = '-10px';
+				this.dots[ this.activeN + 1 ].style.top = '10px';
+				this.dots[ this.activeN - 2 ].style.top = '10px';
+				this.dots[ this.activeN - 2 ].style.left = '55px';
 
+			} else {
+				this.dots[ this.activeN - 1 ].style.top = '38px';
+				this.dots[ this.activeN - 1 ].style.left = '4px';
+			}
 		}
 		if ( this.activeN === 9 ) {
+			if(this.screen < 768) {
+				this.dots[ this.activeN - 2 ].style.top = '35px';
+				this.dots[ this.activeN - 2 ].style.left = '35px';
+			}
 			this.dots[ this.activeN - 1 ].style.left = '-15px';
 			this.dots[ this.activeN - 1 ].style.top = '30px';
+
 		}
 
 		this.rotate();

@@ -1873,6 +1873,10 @@ img {
             .section-discovery .slide-content .main .content-dis .overlay-bg,
             .section-discovery .slide-content .main .content-wrapper .overlay-bg {
               width: 10.5%; } }
+          @media screen and (max-width: 360px) {
+            .section-discovery .slide-content .main .content-dis .overlay-bg,
+            .section-discovery .slide-content .main .content-wrapper .overlay-bg {
+              width: 11.5%; } }
         .section-discovery .slide-content .main .content-dis .new-card,
         .section-discovery .slide-content .main .content-wrapper .new-card {
           width: 100%;
