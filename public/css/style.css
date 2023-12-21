@@ -1982,8 +1982,8 @@ img {
                   padding-left: 8px;
                   padding-bottom: 8px;
                   padding-top: 12px;
-                  border-bottom-left-radius: 14px;
-                  border-bottom-right-radius: 14px; } }
+                  border-bottom-left-radius: 8px;
+                  border-bottom-right-radius: 8px; } }
               .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon,
               .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon {
                 display: flex;
@@ -2383,7 +2383,7 @@ img {
             border-radius: 12px;
             background-color: #fff;
             text-align: center;
-            font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
+            font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 700;

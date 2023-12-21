@@ -64,6 +64,9 @@ img {
                 background: linear-gradient(to right, #a0df9e 12.41%, #4587c2 89.87%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                @media screen and (max-width: 767px) {
+                    display: inline;
+                }
             }
         }
 

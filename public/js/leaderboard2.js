@@ -43,6 +43,7 @@ function initCarousel( options ) {
 		this.speed       = options.speed || 300;
 		this.autoplay    = options.autoplay || false;
 		this.autoplayId  = null;
+		this.screen		 = screen.width;
 
 		this.setSlide( this.activeN );
 		this.arrangeDots();
@@ -50,6 +51,7 @@ function initCarousel( options ) {
 		//remove animation
 		// this.pagination.style.transitionDuration = 0;
 		if ( this.autoplay ) this.startAutoplay();
+		console.log(this.screen)
 	}
 
 	CustomCarousel.prototype.addListeners = function () {
@@ -87,7 +89,14 @@ function initCarousel( options ) {
 	CustomCarousel.prototype.setSlide = function ( slideN ) {
 		this.slides[ this.activeN ].classList.remove( 'active' );
 		if ( this.dots[ this.activeN ] ) this.dots[ this.activeN ].classList.remove( 'active' );
+		if ( this.activeN === 0) {
+			this.dots[ this.activeN + 9 ].style.left = '0';
+			this.dots[ this.activeN + 9 ].style.top = '0';
+		} else {
+			this.dots[ this.activeN - 1 ].style.left = '0';
+			this.dots[ this.activeN - 1 ].style.top = '0';
 
+		}
 		this.prevN = this.activeN;
 		this.activeN = slideN;
 		if ( this.activeN < 0 ) this.activeN = this.slidesN -1;
@@ -95,6 +104,69 @@ function initCarousel( options ) {
 
 		this.slides[ this.activeN ].classList.toggle( 'active' );	
 		if ( this.dots[ this.activeN ] ) this.dots[ this.activeN ].classList.toggle( 'active' );
+
+		if ( this.activeN === 0) {
+			if(this.screen < 768) {
+				this.dots[ this.activeN + 9 ].style.left = '-40px';
+				this.dots[ this.activeN + 9 ].style.top = '15px';
+			} else {
+				this.dots[ this.activeN + 9 ].style.left = '-50px';
+			}
+		}
+		if ( this.activeN === 1 ) {
+			if(this.screen < 768) {
+				this.dots[ this.activeN - 1 ].style.left = '-33px';
+				this.dots[ this.activeN - 1 ].style.top = '-5px';
+	
+			} else {
+				this.dots[ this.activeN - 1 ].style.left = '-43px';
+				this.dots[ this.activeN - 1 ].style.top = '-30px';
+			}
+		}
+		if ( this.activeN === 2 ) {
+			if(this.screen < 768) {
+				this.dots[ this.activeN - 1 ].style.left = '-30px';
+				this.dots[ this.activeN - 1 ].style.top = '-25px';
+	
+			} else {
+				this.dots[ this.activeN - 1 ].style.top = '-35px';
+				this.dots[ this.activeN - 1 ].style.left = '-6px';	
+			}
+		}
+		if ( this.activeN === 3 ) {
+			if(this.screen < 768) {
+				this.dots[ this.activeN - 1 ].style.left = '0px';
+				this.dots[ this.activeN - 1 ].style.top = '-40px';
+	
+			} else {
+				this.dots[ this.activeN - 1 ].style.top = '-43px';
+				this.dots[ this.activeN - 1 ].style.left = '5px';	
+			}
+		}
+		if ( this.activeN === 4 ) {
+			this.dots[ this.activeN - 1 ].style.top = '-33px';
+			this.dots[ this.activeN - 1 ].style.left = '15px';
+		}
+		if ( this.activeN === 5 ) {
+			this.dots[ this.activeN - 1 ].style.top = '-14px';
+			this.dots[ this.activeN - 1 ].style.left = '30px';
+		}
+		if ( this.activeN === 6 ) {
+			this.dots[ this.activeN - 1 ].style.left = '40px';
+		}
+		if ( this.activeN === 7 ) {
+			this.dots[ this.activeN - 1 ].style.top = '29px';
+			this.dots[ this.activeN - 1 ].style.left = '25px';
+		}
+		if ( this.activeN === 8 ) {
+			this.dots[ this.activeN - 1 ].style.top = '38px';
+			this.dots[ this.activeN - 1 ].style.left = '4px';
+
+		}
+		if ( this.activeN === 9 ) {
+			this.dots[ this.activeN - 1 ].style.left = '-15px';
+			this.dots[ this.activeN - 1 ].style.top = '30px';
+		}
 
 		this.rotate();
 	};
@@ -111,10 +183,12 @@ function initCarousel( options ) {
 
 			this.pagination.style.transform = this.pagTransf +'rotate('+ this.angle +'deg)';
 			var itemCountry = this.pagination.querySelectorAll('.country-container');
+
 			for ( var i = 0; i < itemCountry.length; i++ ) {
 				var basePosition = 360 - (360/itemCountry.length*i);
 				var count = 90 + (-this.angle);
 				var total = basePosition + count;
+				
 				itemCountry[i].style.transform = 'rotate('+ total + 'deg)';
 			}
 		}
