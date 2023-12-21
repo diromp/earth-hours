@@ -251,7 +251,7 @@ img {
   @media screen and (max-width: 767px) {
     .section-slide {
       padding-top: 48px;
-      min-height: 105vh !important;
+      min-height: 55rem !important;
       background: linear-gradient(355deg, #A0DF9E 3.45%, #4587C2 95.36%) !important; } }
   @media screen and (max-width: 375px) {
     .section-slide {

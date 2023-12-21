@@ -308,15 +308,13 @@ img {
     justify-content: center;
     align-items: center;
 }
-
 .section-slide {
     padding-top: 114px;
     border-radius: 18px;
     @media screen and (max-width: 767px) {
         padding-top: 48px;
-        min-height: 105vh !important;
+        min-height: 55rem !important;
         background: linear-gradient(355deg, #A0DF9E 3.45%, #4587C2 95.36%) !important;
-
     }
     @media screen and (max-width: 375px) {
         min-height: 56rem !important;
