@@ -982,7 +982,7 @@ img {
       right: 0px;
       top: 0px;
       width: 10%;
-      height: 515px;
+      height: 528px;
       z-index: 2;
       background: #fff; }
       @media screen and (min-width: 767px) {
@@ -1595,7 +1595,8 @@ img {
             font-size: 0px !important;
             border: 0px;
             background-color: transparent;
-            filter: drop-shadow(0px 8px 28px rgba(13, 34, 42, 0.3)); }
+            box-shadow: 0px 8px 28px rgba(13, 34, 42, 0.3);
+            border-radius: 50px; }
             @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .content-dis .arrows-mobile .slick-arrow,
               .section-discovery .slide-content .main .content-wrapper .arrows-mobile .slick-arrow {
@@ -1861,7 +1862,7 @@ img {
           right: 0px;
           top: 0px;
           width: 10%;
-          height: 515px;
+          height: 528px;
           z-index: 2;
           background: #fff; }
           @media screen and (min-width: 767px) {
