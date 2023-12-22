@@ -1604,7 +1604,6 @@ img {
                 overflow: visible; } }
             .section-discovery .slide-content .main .content-dis .arrows-mobile .slick-arrow.slick-disabled,
             .section-discovery .slide-content .main .content-wrapper .arrows-mobile .slick-arrow.slick-disabled {
-              opacity: 0.4;
               cursor: none;
               pointer-events: none; }
             .section-discovery .slide-content .main .content-dis .arrows-mobile .slick-arrow.slick-next,
