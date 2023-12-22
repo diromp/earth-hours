@@ -892,83 +892,6 @@ img {
 	
 					}
 				}
-				.arrows-mobile {
-					display: none;
-					@media screen and(max-width: 767px) {
-						position: absolute;
-						top: 48%;
-						width: 100%;
-						left: 0;
-						right: 0px;
-						display: flex;
-						justify-content: space-between;
-						padding-right: 8px;
-						padding-left: 8px;
-						z-index: 9;
-					}
-					.slick-arrow {
-						display: block;
-						font-size: 0px !important;
-						border: 0px;
-						background-color: transparent;
-						box-shadow: 0px 8px 28px rgba(13, 34, 42, 0.30);
-						border-radius: 50px;
-						@media screen and(max-width: 767px) {
-							width: 40px;
-							height: 40px;
-							overflow: visible;
-						}
-						&.slick-disabled {
-							cursor: none;
-							pointer-events: none;
-						}
-						&.slick-next {
-							background-image: url("../../public/img/ic-arrow-down.svg");
-							background-repeat: no-repeat;
-							background-size: contain;
-
-							&:hover,
-							&:focus {
-								background-image: url("../../public/img/ic-arrow-down-active.png");
-							}
-
-							@media screen and(max-width: 767px) {
-								background-image: url("../../public/img/ic_arrow_right.png");
-
-								&:hover,
-								&:focus {
-									background-image: url("../../public/img/ic_arrow_right.png");
-
-								}
-							}
-
-						}
-
-						&.slick-prev {
-							background-image: url("../../public/img/ic-arrow-up.svg");
-
-							background-repeat: no-repeat;
-							background-size: contain;
-							margin-top: 30px;
-
-							&:hover,
-							&:focus {
-								background-image: url("../../public/img/ic-arrow-up-active.svg");
-
-							}
-
-							@media screen and(max-width: 767px) {
-								background-image: url("../../public/img/ic_arrow_left.png");
-								margin-top: 0 !important;
-
-								&:hover,
-								&:focus {
-									background-image: url("../../public/img/ic_arrow_left.png");
-								}
-							}
-						}
-					}
-				}
 
 				.arrows {
 					position: absolute;
@@ -984,8 +907,7 @@ img {
 						font-size: 0px !important;
 						border: 0px;
 						background-color: transparent;
-						filter: drop-shadow(0px 8px 28px rgba(13, 34, 42, 0.30));
-
+						border-radius: 40px;
 						@media screen and(max-width: 767px) {
 							width: 40px;
 							height: 40px;
@@ -1040,16 +962,136 @@ img {
 						}
 					}
 				}
+				.arrows-mobile {
+					display: none;
+					@media screen and(max-width: 767px) {
+						position: absolute;
+						top: 48%;
+						width: 100%;
+						left: 0;
+						right: 0px;
+						display: flex;
+						justify-content: space-between;
+						padding-right: 8px;
+						padding-left: 8px;
+						z-index: 9;
+					}
+					.slick-arrow {
+						display: block;
+						font-size: 0px !important;
+						border: 0px;
+						background-color: transparent;
+						box-shadow: 0px 8px 28px rgba(13, 34, 42, 0.30);
+						border-radius: 50px;
+						@media screen and(max-width: 767px) {
+							width: 40px;
+							height: 40px;
+							overflow: visible;
+						}
+						&.slick-disabled {
+							opacity: 0.4;
+							cursor: none;
+							pointer-events: none;
+						}
+						&.slick-next {
+							background-image: url("../../public/img/ic-arrow-down.svg");
+							background-repeat: no-repeat;
+							background-size: contain;
+
+							&:hover,
+							&:focus {
+								background-image: url("../../public/img/ic-arrow-down-active.png");
+							}
+
+							@media screen and(max-width: 767px) {
+								background-image: url("../../public/img/ic_arrow_right.png");
+
+								&:hover,
+								&:focus {
+									background-image: url("../../public/img/ic_arrow_right.png");
+
+								}
+							}
+
+						}
+
+						&.slick-prev {
+							background-image: url("../../public/img/ic-arrow-up.svg");
+
+							background-repeat: no-repeat;
+							background-size: contain;
+							margin-top: 30px;
+
+							&:hover,
+							&:focus {
+								background-image: url("../../public/img/ic-arrow-up-active.svg");
+
+							}
+
+							@media screen and(max-width: 767px) {
+								background-image: url("../../public/img/ic_arrow_left.png");
+								margin-top: 0 !important;
+
+								&:hover,
+								&:focus {
+									background-image: url("../../public/img/ic_arrow_left.png");
+								}
+							}
+						}
+					}
+				}
+				.arrows-2 {
+					position: absolute;
+					top: 38%;
+					right: 110px;
+
+					@media screen and(max-width: 767px) {
+						display: none;
+					}
+
+					.slick-arrow {
+						width: 48px;
+						height: 48px;
+						display: block;
+						font-size: 0px !important;
+						border: 0px;
+						background-color: transparent;
+						border-radius: 50px;
+						
+						&.slick-disabled {
+							cursor: none;
+							opacity: .4;
+							pointer-events: none;
+						}
+						&.slick-next {
+							background-image: url("../../public/img/ic-arrow-down.svg");
+							background-repeat: no-repeat;
+							background-size: contain;
+							&:hover,
+							&:focus {
+								background-image: url("../../public/img/ic-arrow-down-active.png");
+							}
+						}
+						&.slick-prev {
+							background-image: url("../../public/img/ic-arrow-up.svg");
+							margin-bottom: 24px;
+							background-repeat: no-repeat;
+							background-size: contain;
+
+							&:hover,
+							&:focus {
+								background-image: url("../../public/img/ic-arrow-up-active.svg");
+
+							}
+						}
+					}
+				}
 				.arrows-2-mobile {
+					position: absolute;
 					@media screen and(min-width: 768px) {
 						display: none;
 					}
 					z-index: 9;
-				}
-				.arrows-2, .arrows-2-mobile {
-					position: absolute;
-					top: 38%;
-					right: 110px;
 					@media screen and(max-width: 767px) {
 						width: 100%;
 						left: 0;
@@ -1068,14 +1110,15 @@ img {
 						font-size: 0px !important;
 						border: 0px;
 						background-color: transparent;
-						filter: drop-shadow(0px 8px 28px rgba(13, 34, 42, 0.30));
-
+						box-shadow: 0px 8px 28px rgba(13, 34, 42, 0.30);
+						border-radius: 50px;
 						@media screen and(max-width: 767px) {
 							width: 40px;
 							height: 40px;
 						}
 						&.slick-disabled {
 							cursor: none;
+							opacity: .4;
 							pointer-events: none;
 						}
 						&.slick-next {
