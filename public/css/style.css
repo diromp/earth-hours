@@ -461,6 +461,92 @@ body {
 [data-number="1"] span.secondary:before {
   content: ""; }
 
+/* Japanese */
+.language-jp .section-discovery .slide-content .main .collapse-menu .desc h2 {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+.language-jp .section-discovery .slide-content .main .collapse-menu .desc p {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+.language-jp .section-discovery .slide-content .main .collapse-menu .filter .select {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+.language-jp .section-discovery .slide-content .main .collapse-menu .filter .choose {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+@media screen and (max-width: 767px) {
+  .language-jp .section-discovery .slide-content .main .event-detail .paragraf {
+    padding-right: 8px;
+    overflow-y: scroll; } }
+
+.language-jp .section-discovery .slide-content .main .event-detail .paragraf p {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+.language-jp .section-discovery .slide-content .main .event-detail .content h2 {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+.language-jp .section-discovery .slide-content .main .event-detail .content p {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+.language-jp .section-discovery .slide-content .main .event-detail .button a {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+.language-jp .section-discovery .slide-content .main .event-detail .form-submit .form-group label {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+.language-jp .section-discovery .slide-content .main .event-detail .form-submit .form-group input {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+.language-jp .section-discovery .slide-content .main .listing .list .list-group span {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+.language-jp .form-check-default label {
+  font-family: 'Noto Sans JP', sans-serif; }
+
+/* chines */
+.language-cs .section-discovery .slide-content .main .event-detail .paragraf p {
+  font-family: 'Noto Sans SC', sans-serif; }
+
+.language-cs .section-discovery .slide-content .main .event-detail .content h2 {
+  font-family: 'Noto Sans SC', sans-serif; }
+
+.language-cs .section-discovery .slide-content .main .event-detail .content p {
+  font-family: 'Noto Sans SC', sans-serif; }
+
+.language-cs .section-discovery .slide-content .main .event-detail .button a {
+  font-family: 'Noto Sans SC', sans-serif; }
+
+.language-cs .section-discovery .slide-content .main .listing .list .list-group span {
+  font-family: 'Noto Sans SC', sans-serif; }
+
+.language-cs .form-check-default label {
+  font-family: 'Noto Sans SC', sans-serif; }
+
+/* Burmese */
+.language-bm .apps .saved-list .title-back {
+  max-width: 60%; }
+  @media screen and (max-width: 767px), (min-width: 768px) and (max-width: 1180px) {
+    .language-bm .apps .saved-list .title-back {
+      max-width: 100%; } }
+
+.language-bm .section-discovery .slide-content .main .event-detail .paragraf p {
+  font-family: 'Noto Sans Myanmar', sans-serif; }
+
+.language-bm .section-discovery .slide-content .main .event-detail .content h2 {
+  font-family: 'Noto Sans Myanmar', sans-serif; }
+
+.language-bm .section-discovery .slide-content .main .event-detail .content p {
+  font-family: 'Noto Sans Myanmar', sans-serif; }
+
+.language-bm .section-discovery .slide-content .main .event-detail .button a {
+  font-family: 'Noto Sans Myanmar', sans-serif; }
+
+.language-bm .section-discovery .slide-content .main .listing .list .list-group span {
+  font-family: 'Noto Sans Myanmar', sans-serif; }
+
+.language-bm .form-check-default label {
+  font-family: 'Noto Sans Myanmar', sans-serif; }
+
 /* ! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com */
 
 /*
@@ -1364,13 +1450,19 @@ img {
           display: flex;
           gap: 8px;
           flex-flow: wrap;
-          align-items: center; }
+          align-items: center;
+          cursor: pointer; }
           @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .listing .list {
               overflow-x: auto;
               scroll-snap-type: x mandatory;
               scrollbar-width: none;
               flex-flow: nowrap; } }
+          .section-discovery .slide-content .main .listing .list::-webkit-scrollbar-thumb {
+            background-color: #A8A8A8; }
+          .section-discovery .slide-content .main .listing .list::-webkit-scrollbar {
+            height: 5px;
+            background-color: transparent; }
           .section-discovery .slide-content .main .listing .list .list-group {
             border-radius: 30px;
             border: 2px solid;
@@ -1590,7 +1682,8 @@ img {
             font-size: 0px !important;
             border: 0px;
             background-color: transparent;
-            border-radius: 40px; }
+            border-radius: 40px;
+            cursor: pointer; }
             @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .content-dis .arrows .slick-arrow,
               .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow {
@@ -1725,30 +1818,31 @@ img {
             font-size: 0px !important;
             border: 0px;
             background-color: transparent;
-            border-radius: 50px; }
+            border-radius: 50px;
+            cursor: pointer; }
             .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-disabled,
             .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-disabled {
               cursor: none;
               opacity: .4;
               pointer-events: none; }
-            .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next,
-            .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next {
+            .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next-saved,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next-saved {
               background-image: url("../../public/img/ic-arrow-down.svg");
               background-repeat: no-repeat;
               background-size: contain; }
-              .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next:hover, .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next:focus,
-              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next:hover,
-              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next:focus {
+              .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next-saved:hover, .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-next-saved:focus,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next-saved:hover,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-next-saved:focus {
                 background-image: url("../../public/img/ic-arrow-down-active.png"); }
-            .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev,
-            .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev {
+            .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev-saved,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev-saved {
               background-image: url("../../public/img/ic-arrow-up.svg");
               margin-bottom: 24px;
               background-repeat: no-repeat;
               background-size: contain; }
-              .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev:hover, .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev:focus,
-              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev:hover,
-              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev:focus {
+              .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev-saved:hover, .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow.slick-prev-saved:focus,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev-saved:hover,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow.slick-prev-saved:focus {
                 background-image: url("../../public/img/ic-arrow-up-active.svg"); }
         .section-discovery .slide-content .main .content-dis .arrows-2-mobile,
         .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile {
@@ -1789,41 +1883,41 @@ img {
               cursor: none;
               opacity: .4;
               pointer-events: none; }
-            .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next,
-            .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next {
+            .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next-saved,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next-saved {
               background-image: url("../../public/img/ic-arrow-down.svg");
               background-repeat: no-repeat;
               background-size: contain; }
-              .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next:hover, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next:focus,
-              .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next:hover,
-              .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next:focus {
+              .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next-saved:hover, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next-saved:focus,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next-saved:hover,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next-saved:focus {
                 background-image: url("../../public/img/ic-arrow-down-active.png"); }
               @media screen and (max-width: 767px) {
-                .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next,
-                .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next {
+                .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next-saved,
+                .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next-saved {
                   background-image: url("../../public/img/ic_arrow_right.png"); }
-                  .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next:hover, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next:focus,
-                  .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next:hover,
-                  .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next:focus {
+                  .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next-saved:hover, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-next-saved:focus,
+                  .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next-saved:hover,
+                  .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-next-saved:focus {
                     background-image: url("../../public/img/ic_arrow_right.png"); } }
-            .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev,
-            .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev {
+            .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev-saved,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev-saved {
               background-image: url("../../public/img/ic-arrow-up.svg");
               margin-bottom: 24px;
               background-repeat: no-repeat;
               background-size: contain; }
-              .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev:hover, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev:focus,
-              .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev:hover,
-              .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev:focus {
+              .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev-saved:hover, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev-saved:focus,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev-saved:hover,
+              .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev-saved:focus {
                 background-image: url("../../public/img/ic-arrow-up-active.svg"); }
               @media screen and (max-width: 767px) {
-                .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev,
-                .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev {
+                .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev-saved,
+                .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev-saved {
                   background-image: url("../../public/img/ic_arrow_left.png");
                   margin-top: 0 !important; }
-                  .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev:hover, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev:focus,
-                  .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev:hover,
-                  .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev:focus {
+                  .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev-saved:hover, .section-discovery .slide-content .main .content-dis .arrows-2-mobile .slick-arrow.slick-prev-saved:focus,
+                  .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev-saved:hover,
+                  .section-discovery .slide-content .main .content-wrapper .arrows-2-mobile .slick-arrow.slick-prev-saved:focus {
                     background-image: url("../../public/img/ic_arrow_left.png"); } }
         .section-discovery .slide-content .main .content-dis .announcment p,
         .section-discovery .slide-content .main .content-wrapper .announcment p {
@@ -1904,15 +1998,13 @@ img {
         .section-discovery .slide-content .main .content-dis .new-card,
         .section-discovery .slide-content .main .content-wrapper .new-card {
           width: 100%;
-          height: 748px;
+          height: 730px;
           margin-top: 14px;
           overflow: hidden; }
           @media screen and (max-width: 767px) {
             .section-discovery .slide-content .main .content-dis .new-card,
             .section-discovery .slide-content .main .content-wrapper .new-card {
-              height: 455px;
-              margin-left: -20px;
-              overflow: visible; } }
+              height: 442px; } }
           .section-discovery .slide-content .main .content-dis .new-card .item-card-container,
           .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container {
             display: flex;
@@ -1922,20 +2014,15 @@ img {
             align-items: center;
             background-color: #fff;
             outline: none; }
-            .section-discovery .slide-content .main .content-dis .new-card .item-card-container .item-card:last-child,
-            .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container .item-card:last-child {
-              display: none; }
-              @media screen and (max-width: 767px) {
-                .section-discovery .slide-content .main .content-dis .new-card .item-card-container .item-card:last-child,
-                .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container .item-card:last-child {
-                  display: block; }
+            @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .content-dis .new-card .item-card-container,
               .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container {
                 gap: 8px;
                 justify-content: space-evenly;
                 align-items: stretch; } }
-          .section-discovery .slide-content .main .content-dis .new-card .item-card,
-          .section-discovery .slide-content .main .content-wrapper .new-card .item-card {
+          .section-discovery .slide-content .main .content-dis .new-card .item-card, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved,
+          .section-discovery .slide-content .main .content-wrapper .new-card .item-card,
+          .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved {
             width: 230px !important;
             height: 350px;
             box-shadow: 0px 3px 15px 0px rgba(27, 27, 28, 0.37);
@@ -1943,26 +2030,30 @@ img {
             position: relative;
             cursor: pointer; }
             @media screen and (max-width: 767px) {
-              .section-discovery .slide-content .main .content-dis .new-card .item-card,
-              .section-discovery .slide-content .main .content-wrapper .new-card .item-card {
+              .section-discovery .slide-content .main .content-dis .new-card .item-card, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved,
+              .section-discovery .slide-content .main .content-wrapper .new-card .item-card,
+              .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved {
                 width: 45% !important;
                 height: 216px;
                 border-radius: 8px;
                 flex: 1 0 40%;
                 box-shadow: 0px 3px 5px 0px rgba(27, 27, 28, 0.37); } }
-            .section-discovery .slide-content .main .content-dis .new-card .item-card img,
-            .section-discovery .slide-content .main .content-wrapper .new-card .item-card img {
+            .section-discovery .slide-content .main .content-dis .new-card .item-card img, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved img,
+            .section-discovery .slide-content .main .content-wrapper .new-card .item-card img,
+            .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved img {
               -o-object-fit: cover;
                  object-fit: cover;
               width: 100%;
               height: 100%;
               border-radius: 18px; }
               @media screen and (max-width: 767px) {
-                .section-discovery .slide-content .main .content-dis .new-card .item-card img,
-                .section-discovery .slide-content .main .content-wrapper .new-card .item-card img {
+                .section-discovery .slide-content .main .content-dis .new-card .item-card img, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved img,
+                .section-discovery .slide-content .main .content-wrapper .new-card .item-card img,
+                .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved img {
                   border-radius: 8px; } }
-            .section-discovery .slide-content .main .content-dis .new-card .item-card .love,
-            .section-discovery .slide-content .main .content-wrapper .new-card .item-card .love {
+            .section-discovery .slide-content .main .content-dis .new-card .item-card .love, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .love,
+            .section-discovery .slide-content .main .content-wrapper .new-card .item-card .love,
+            .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .love {
               position: absolute;
               width: 32px;
               height: 32px;
@@ -1976,21 +2067,25 @@ img {
               align-items: center;
               box-shadow: 0px 3px 4.2px 0px rgba(0, 0, 0, 0.25); }
               @media screen and (max-width: 767px) {
-                .section-discovery .slide-content .main .content-dis .new-card .item-card .love,
-                .section-discovery .slide-content .main .content-wrapper .new-card .item-card .love {
+                .section-discovery .slide-content .main .content-dis .new-card .item-card .love, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .love,
+                .section-discovery .slide-content .main .content-wrapper .new-card .item-card .love,
+                .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .love {
                   width: 20px;
                   height: 20px; } }
-              .section-discovery .slide-content .main .content-dis .new-card .item-card .love svg,
-              .section-discovery .slide-content .main .content-wrapper .new-card .item-card .love svg {
+              .section-discovery .slide-content .main .content-dis .new-card .item-card .love svg, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .love svg,
+              .section-discovery .slide-content .main .content-wrapper .new-card .item-card .love svg,
+              .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .love svg {
                 width: 24px;
                 height: 24px; }
                 @media screen and (max-width: 767px) {
-                  .section-discovery .slide-content .main .content-dis .new-card .item-card .love svg,
-                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .love svg {
+                  .section-discovery .slide-content .main .content-dis .new-card .item-card .love svg, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .love svg,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .love svg,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .love svg {
                     width: 15px;
                     height: 15px; } }
-            .section-discovery .slide-content .main .content-dis .new-card .item-card .desc,
-            .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc {
+            .section-discovery .slide-content .main .content-dis .new-card .item-card .desc, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .desc,
+            .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc,
+            .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .desc {
               padding-right: 16px;
               padding-left: 16px;
               padding-top: 20px;
@@ -2003,8 +2098,9 @@ img {
               border-bottom-left-radius: 18px;
               border-bottom-right-radius: 18px; }
               @media screen and (max-width: 767px) {
-                .section-discovery .slide-content .main .content-dis .new-card .item-card .desc,
-                .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc {
+                .section-discovery .slide-content .main .content-dis .new-card .item-card .desc, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .desc,
+                .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc,
+                .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .desc {
                   height: 99px;
                   padding-right: 8px;
                   padding-left: 8px;
@@ -2012,19 +2108,22 @@ img {
                   padding-top: 12px;
                   border-bottom-left-radius: 8px;
                   border-bottom-right-radius: 8px; } }
-              .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon,
-              .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon {
+              .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .desc .icon,
+              .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon,
+              .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .desc .icon {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 margin-bottom: 12px;
                 gap: 6px; }
                 @media screen and (max-width: 767px) {
-                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon,
-                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon {
+                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .desc .icon,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .desc .icon {
                     margin-bottom: 8px; } }
-                .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item,
-                .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item {
+                .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .desc .icon .icon-item,
+                .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item,
+                .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .desc .icon .icon-item {
                   width: 24px;
                   height: 24px;
                   display: flex;
@@ -2032,44 +2131,53 @@ img {
                   align-items: center;
                   border-radius: 100px; }
                   @media screen and (max-width: 767px) {
-                    .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item,
-                    .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item {
+                    .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .desc .icon .icon-item,
+                    .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item,
+                    .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .desc .icon .icon-item {
                       width: 18px;
                       height: 18px; } }
-                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item img,
-                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item img {
+                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item img, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .desc .icon .icon-item img,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item img,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .desc .icon .icon-item img {
                     width: 13px;
                     height: 13px;
                     display: block;
                     -o-object-fit: contain;
                        object-fit: contain; }
                     @media screen and (max-width: 767px) {
-                      .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item img,
-                      .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item img {
+                      .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item img, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .desc .icon .icon-item img,
+                      .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item img,
+                      .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .desc .icon .icon-item img {
                         width: 12px;
                         height: 12px; } }
-                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.yellow,
-                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.yellow {
+                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.yellow, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .desc .icon .icon-item.yellow,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.yellow,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .desc .icon .icon-item.yellow {
                     border: 1px solid #feff4c;
                     background: #feff4c; }
-                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.orange,
-                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.orange {
+                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.orange, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .desc .icon .icon-item.orange,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.orange,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .desc .icon .icon-item.orange {
                     border: 1px solid #ffc592;
                     background: #ffc592; }
-                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.purple,
-                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.purple {
+                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.purple, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .desc .icon .icon-item.purple,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.purple,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .desc .icon .icon-item.purple {
                     border: 1px solid #ffc0ff;
                     background: #ffc0ff; }
-                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.green,
-                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.green {
+                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.green, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .desc .icon .icon-item.green,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.green,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .desc .icon .icon-item.green {
                     border: 1px solid #a0df9e;
                     background: #a0df9e; }
-                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.blue,
-                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.blue {
+                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc .icon .icon-item.blue, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .desc .icon .icon-item.blue,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc .icon .icon-item.blue,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .desc .icon .icon-item.blue {
                     border: 1px solid #4587c2;
                     background: #4587c2; }
-              .section-discovery .slide-content .main .content-dis .new-card .item-card .desc p,
-              .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc p {
+              .section-discovery .slide-content .main .content-dis .new-card .item-card .desc p, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .desc p,
+              .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc p,
+              .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .desc p {
                 color: #fff;
                 font-family: Poppins;
                 font-size: 18px;
@@ -2080,15 +2188,17 @@ img {
                 text-overflow: ellipsis;
                 height: 80px; }
                 @media screen and (max-width: 767px) {
-                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc p,
-                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc p {
+                  .section-discovery .slide-content .main .content-dis .new-card .item-card .desc p, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .desc p,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card .desc p,
+                  .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .desc p {
                     font-size: 11px;
                     font-style: normal;
                     font-weight: 700;
                     line-height: 16px;
                     height: 50px; } }
-            .section-discovery .slide-content .main .content-dis .new-card .item-card .divider,
-            .section-discovery .slide-content .main .content-wrapper .new-card .item-card .divider {
+            .section-discovery .slide-content .main .content-dis .new-card .item-card .divider, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .divider,
+            .section-discovery .slide-content .main .content-wrapper .new-card .item-card .divider,
+            .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .divider {
               position: absolute;
               height: 6.31px;
               background-color: #D9D9D9;
@@ -2098,8 +2208,9 @@ img {
               right: 0;
               bottom: 0; }
               @media screen and (max-width: 767px) {
-                .section-discovery .slide-content .main .content-dis .new-card .item-card .divider,
-                .section-discovery .slide-content .main .content-wrapper .new-card .item-card .divider {
+                .section-discovery .slide-content .main .content-dis .new-card .item-card .divider, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved .divider,
+                .section-discovery .slide-content .main .content-wrapper .new-card .item-card .divider,
+                .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved .divider {
                   height: 4px;
                   top: 53%; } }
       .section-discovery .slide-content .main .collapse-menu {
@@ -2411,7 +2522,7 @@ img {
             border-radius: 12px;
             background-color: #fff;
             text-align: center;
-            font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
+            font-family: "Noto Sans JP", "Noto Sans SC", "Noto Sans Myanmar", "Poppins", sans-serif;
             font-size: 18px;
             font-style: normal;
             font-weight: 700;
@@ -2897,18 +3008,4 @@ img {
     @media screen and (max-width: 767px) {
       .favorite .icon {
         width: 15px;
-        height: 15px; }
-  #slide-discovery {
-    display: none; } }
-
-@media screen and (min-width: 768px) {
-  #slide-discovery-mobile {
-    display: none; } }
-
-@media screen and (max-width: 767px) {
-  #savedSlider {
-    display: none; } }
-
-@media screen and (min-width: 768px) {
-  #savedSliderMobile {
-    display: none; } }
+        height: 15px; } }
