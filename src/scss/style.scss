@@ -974,6 +974,7 @@ img {
 						}
 					}
 				}
+				
 				.arrows-mobile {
 					display: none;
 					@media screen and(max-width: 767px) {
@@ -987,6 +988,7 @@ img {
 						padding-right: 8px;
 						padding-left: 8px;
 						z-index: 9;
+						cursor: pointer;
 					}
 					.slick-arrow {
 						display: block;

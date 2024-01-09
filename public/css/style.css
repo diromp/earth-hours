@@ -1745,7 +1745,8 @@ img {
               justify-content: space-between;
               padding-right: 8px;
               padding-left: 8px;
-              z-index: 9; } }
+              z-index: 9;
+              cursor: pointer; } }
           .section-discovery .slide-content .main .content-dis .arrows-mobile .slick-arrow,
           .section-discovery .slide-content .main .content-wrapper .arrows-mobile .slick-arrow {
             display: block;
