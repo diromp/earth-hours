@@ -1745,8 +1745,7 @@ img {
               justify-content: space-between;
               padding-right: 8px;
               padding-left: 8px;
-              z-index: 9;
-              cursor: pointer; } }
+              z-index: 9; } }
           .section-discovery .slide-content .main .content-dis .arrows-mobile .slick-arrow,
           .section-discovery .slide-content .main .content-wrapper .arrows-mobile .slick-arrow {
             display: block;
@@ -1754,7 +1753,8 @@ img {
             border: 0px;
             background-color: transparent;
             box-shadow: 0px 8px 28px rgba(13, 34, 42, 0.3);
-            border-radius: 50px; }
+            border-radius: 50px;
+            cursor: pointer; }
             @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .content-dis .arrows-mobile .slick-arrow,
               .section-discovery .slide-content .main .content-wrapper .arrows-mobile .slick-arrow {
@@ -2014,13 +2014,26 @@ img {
             justify-content: center;
             align-items: center;
             background-color: #fff;
-            outline: none; }
+            outline: none;
+            position: relative; }
             @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .content-dis .new-card .item-card-container,
               .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container {
+                flex-wrap: unset;
                 gap: 8px;
-                justify-content: space-evenly;
-                align-items: stretch; } }
+                justify-content: flex-start;
+                align-items: flex-start; }
+                .section-discovery .slide-content .main .content-dis .new-card .item-card-container .container-card, .section-discovery .slide-content .main .content-dis .new-card .item-card-container .container-card-saved,
+                .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container .container-card,
+                .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container .container-card-saved {
+                  gap: 8px;
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: space-evenly;
+                  align-items: stretch;
+                  width: 100%;
+                  flex: 1 0 100%;
+                  position: relative; } }
           .section-discovery .slide-content .main .content-dis .new-card .item-card, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved,
           .section-discovery .slide-content .main .content-wrapper .new-card .item-card,
           .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved {

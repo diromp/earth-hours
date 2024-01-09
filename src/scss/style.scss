@@ -988,7 +988,6 @@ img {
 						padding-right: 8px;
 						padding-left: 8px;
 						z-index: 9;
-						cursor: pointer;
 					}
 					.slick-arrow {
 						display: block;
@@ -997,6 +996,7 @@ img {
 						background-color: transparent;
 						box-shadow: 0px 8px 28px rgba(13, 34, 42, 0.30);
 						border-radius: 50px;
+						cursor: pointer;
 						@media screen and(max-width: 767px) {
 							width: 40px;
 							height: 40px;
@@ -1276,15 +1276,28 @@ img {
 						justify-content: center;
 						align-items: center;
 						background-color: #fff;
-						outline: none;		
+						outline: none;
+						position: relative;
 
 						@media screen and (max-width: 767px) {
+							flex-wrap: unset;
 							gap: 8px;
-							justify-content: space-evenly;
-							align-items: stretch;
+							justify-content: flex-start;
+							align-items: flex-start;
+	
+							.container-card, .container-card-saved {
+								gap: 8px;
+								display: flex;
+								flex-wrap: wrap;
+								justify-content: space-evenly;
+								align-items: stretch;
+								width: 100%;
+								flex: 1 0 100%;
+								position: relative;
+							}
 						}
 					}
-
+					
 					.item-card, .item-card-saved {
 						width: 230px !important;
 						height: 350px;
