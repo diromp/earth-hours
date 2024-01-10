@@ -1278,6 +1278,7 @@ img {
 						background-color: #fff;
 						outline: none;
 						position: relative;
+						transition: transform 0.5s ease;
 
 						@media screen and (max-width: 767px) {
 							flex-wrap: unset;

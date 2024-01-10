@@ -2015,7 +2015,8 @@ img {
             align-items: center;
             background-color: #fff;
             outline: none;
-            position: relative; }
+            position: relative;
+            transition: transform 0.5s ease; }
             @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .content-dis .new-card .item-card-container,
               .section-discovery .slide-content .main .content-wrapper .new-card .item-card-container {
