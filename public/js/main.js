@@ -4,124 +4,10 @@ $(document).ready(function () {
     var languageJp = $('body').hasClass('language-jp');
     var languageCs = $('body').hasClass('language-cs');
     var languageBm = $('body').hasClass('language-bm');
+
     var $window = $(window);
-    var $itemSaveDSlide = $('.item-card-saved'),
-        index2 = 0,
-        visible2 = 3,
-        endIndexSaved = ($itemSaveDSlide.length / visible2) - 1;
-
-    var $item = $('.item-card'), //Cache your DOM selector
-        visible = 4, //Set the number of items that will be visible
-        index = 0, //Starting index
-        endIndex = ($item.length / visible) - 1;
-
-    var heightSlide = $('.new-card').height() / 4;
-    var heightSlide2 = $('.new-card').height() / 3;
-
-
-    $('.event').on('click', function (e) {
-        $('.slide-1').fadeOut(
-            'slow'
-        );
-        $('.saved-list').fadeIn(
-            'slow'
-        );
-        $itemSaveDSlide.animate({ 'top': '0px' })
-        index2 = 0;
-    });
-    $('.close-saved').on('click', function () {
-        $('.saved-list').fadeOut(
-            'slow'
-        );
-        $('.slide-1').fadeIn(
-            'slow'
-        );
-        $item.animate({ 'top': '0px' })
-        index = 0;
-    });
-
-    if ($window.width() > 1080) {
-        $('.slick-next').on("click", function () {
-            console.log(index);
-            console.log(endIndexSaved);
-            if (index < endIndex) {
-                index++;
-                $item.animate({
-                    'top': `-=${heightSlide}`
-                });
-            }
-        });
-
-        $('.slick-prev').on("click", function () {
-
-            if (index > 0) {
-                index--;
-                $item.animate({
-                    'top': `+=${heightSlide}`
-                });
-            }
-        });
-    } else {
-        $('.slick-next').on("click", function () {
-            if (index < endIndex) {
-                index++;
-                $item.animate({
-                    'top': '-=337px'
-                });
-            }
-        });
-
-        $('.slick-prev').on("click", function () {
-
-            if (index > 0) {
-                index--;
-                $item.animate({
-                    'top': '+=337px'
-                });
-            }
-        });
-    }
-
-    if ($window.width() > 1080) {
-        $('.slick-next-saved').on("click", function () {
-            if (index2 < endIndexSaved) {
-                index2++;
-                $itemSaveDSlide.animate({
-                    'top': `-=${heightSlide2}`
-                });
-            }
-        });
-
-        $('.slick-prev-saved').on("click", function () {
-            if (index2 > 0) {
-                index2--;
-                $itemSaveDSlide.animate({
-                    'top': `+=${heightSlide2}`
-                });
-            }
-        });
-    }
-    else {
-        $('.slick-next-saved').on("click", function () {
-            if (index2 < endIndexSaved) {
-                index2++;
-                $itemSaveDSlide.animate({
-                    'top': '-=330px'
-                });
-            }
-        });
-
-        $('.slick-prev-saved').on("click", function () {
-            if (index2 > 0) {
-                index2--;
-                $itemSaveDSlide.animate({
-                    'top': '+=330px'
-                });
-            }
-        });
-    }
-
     $('#reset-filter').hide();
+    
     $('.item-card .love').click(function () {
         var activeClass = $(this).hasClass('active');
         $(this).toggleClass('active');
@@ -441,41 +327,45 @@ $(document).ready(function () {
     });
 });
 
+
+
+// scroll on browser
+
 const slider = document.querySelector('.list');
 let isDown = false;
 let startX;
 let scrollLeft;
 
 slider.addEventListener('mousedown', (e) => {
-  isDown = true;
-  slider.classList.add('active');
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-  cancelMomentumTracking();
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+    cancelMomentumTracking();
 });
 
 
 slider.addEventListener('mouseleave', () => {
-  isDown = false;
-  slider.classList.remove('active');
+    isDown = false;
+    slider.classList.remove('active');
 });
 
 
 slider.addEventListener('mouseup', () => {
-  isDown = false;
-  slider.classList.remove('active');
-  beginMomentumTracking();
+    isDown = false;
+    slider.classList.remove('active');
+    beginMomentumTracking();
 });
 
 
 slider.addEventListener('mousemove', (e) => {
-  if(!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 3; //scroll-fast
-  var prevScrollLeft = slider.scrollLeft;
-  slider.scrollLeft = scrollLeft - walk;
-  velX = slider.scrollLeft - prevScrollLeft;
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    var prevScrollLeft = slider.scrollLeft;
+    slider.scrollLeft = scrollLeft - walk;
+    velX = slider.scrollLeft - prevScrollLeft;
 });
 
 // Momentum 
@@ -484,21 +374,21 @@ var velX = 0;
 var momentumID;
 
 slider.addEventListener('wheel', (e) => {
-  cancelMomentumTracking();
-});  
+    cancelMomentumTracking();
+});
 
-function beginMomentumTracking(){
-  cancelMomentumTracking();
-  momentumID = requestAnimationFrame(momentumLoop);
-}
-function cancelMomentumTracking(){
-  cancelAnimationFrame(momentumID);
-}
-function momentumLoop(){
-  slider.scrollLeft += velX;
-  velX *= 0.95; 
-  if (Math.abs(velX) > 0.5){
+function beginMomentumTracking() {
+    cancelMomentumTracking();
     momentumID = requestAnimationFrame(momentumLoop);
-  }
+}
+function cancelMomentumTracking() {
+    cancelAnimationFrame(momentumID);
+}
+function momentumLoop() {
+    slider.scrollLeft += velX;
+    velX *= 0.95;
+    if (Math.abs(velX) > 0.5) {
+        momentumID = requestAnimationFrame(momentumLoop);
+    }
 }
 
