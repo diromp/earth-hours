@@ -68,7 +68,6 @@ $(document).ready(function () {
             $itemCardContainer.css({ 'transform' : `translateX(-${currentIndex * totalWidth}%` })
         }
     }
-
     function showSlideSaved(index,verticalView) {
         var checkVisible = Math.ceil($itemSaved.length / visibleSaved)
         var totalHeight = getHeightSaved / checkVisible;
@@ -130,29 +129,32 @@ $(document).ready(function () {
         $('.content-dis').toggleClass('collapsed');
         $('.filter').toggleClass('!hidden');
         $(this).toggleClass('active');
-
         if($window.width() > 1010) {
+            var height = 0;
             if($('.content-dis').hasClass('collapsed')) {
-                var height = 0;
                 visible = 6
-                getWidth = $itemCardContainer.width();
-                getHeight = $itemCardContainer.height();
-
                 if(currentIndex == (checkVisible - 1)) {
-                    console.log('masuk - 6')
-                    console.log(currentIndex)
-                    height = (Math.ceil(getHeight / checkVisible+1));
+                    height = (Math.ceil(getHeight / checkVisible));
                     currentIndex = currentIndex - 1;
                     slidesHeight = height * currentIndex;
+                    $itemCardContainer.css({ 'transform' : `translateY(-${slidesHeight}px` })
+                } else if(currentIndex == checkVisible) {
+                    height = (Math.ceil(getHeight / checkVisible));
+                    slidesHeight = (currentIndex - 2) * height;
                     $itemCardContainer.css({ 'transform' : `translateY(-${slidesHeight}px` })
                 }
             } else {
                 visible = 4
+
                 if(currentIndex == (checkVisible - 2)) {
-                    console.log('masuk - 4')
-                    currentIndex = currentIndex + 1;
                     height = (Math.ceil(getHeight / checkVisible));
+                    currentIndex = currentIndex + 1;
                     slidesHeight = height * currentIndex;
+                    $itemCardContainer.css({ 'transform' : `translateY(-${slidesHeight}px` })
+                } else if(currentIndex == (checkVisible - 1)) {
+                    height = (Math.ceil(getHeight / checkVisible));
+                    slidesHeight =  (currentIndex * height) + 182;
+                    currentIndex = currentIndex + 1;
                     $itemCardContainer.css({ 'transform' : `translateY(-${slidesHeight}px` })
                 }
             }
