@@ -155,13 +155,7 @@ $(document).ready(function () {
     $('.mobile-event').on('click', function (e) {
         $("html, body").animate({ scrollTop: 0 }, 500);
     });
-    $('.close').on('click', function (e) {
-        $('.collapse-menu').toggleClass('collapsed');
-        $('.content-dis').toggleClass('collapsed');
-        $('.filter').toggleClass('!hidden');
-        $(this).toggleClass('active');
-    });
-
+   
     $(seeMore).on('click', function (e) {
         $('.site').toggleClass('hidden');
         $('.collapse-menu').toggleClass('scrolling');
