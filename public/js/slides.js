@@ -138,8 +138,9 @@ $(document).ready(function () {
                     currentIndex = currentIndex - 1;
                     slidesHeight = height * currentIndex;
                     $itemCardContainer.css({ 'transform' : `translateY(-${slidesHeight}px` })
-                } else if(currentIndex == checkVisible) {
+                } else if( currentIndex > 0 && currentIndex == checkVisible) {
                     height = (Math.ceil(getHeight / checkVisible));
+                    currentIndex = currentIndex - 2;
                     slidesHeight = currentIndex * height;
                     $itemCardContainer.css({ 'transform' : `translateY(-${slidesHeight}px` })
                 }
@@ -154,6 +155,7 @@ $(document).ready(function () {
                 } else if(currentIndex == (checkVisible - 1)) {
                     height = (Math.ceil(getHeight / checkVisible));
                     slidesHeight =  (currentIndex * height) + 180;
+                    currentIndex = currentIndex + 1;
                     $itemCardContainer.css({ 'transform' : `translateY(-${slidesHeight}px` })
                 }
             }
