@@ -75,13 +75,10 @@ $(document).ready(function () {
         var totalWidth = $('body').width() - getWidth + 28;
 
         if($('.content-dis').hasClass('collapsed')) {
-            totalHeight = (getHeight / (checkVisible+2))
+            totalHeight = (getHeight / (checkVisible+1))
         } else {
             totalHeight = (getHeight / checkVisible)
         }
-
-        console.log(totalHeight)
-
 
         if (index < 0) {
             currentIndex = checkVisible;
