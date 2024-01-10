@@ -15,6 +15,20 @@ $(document).ready(function () {
     var getWidthSaved = 0;
     var getHeightSaved = 0;
 
+    $('.close').on('click', function (e) {
+        $('.collapse-menu').toggleClass('collapsed');
+        $('.content-dis').toggleClass('collapsed');
+        $('.filter').toggleClass('!hidden');
+        $(this).toggleClass('active');
+        if($('.content-dis').hasClass('collapsed')) {
+            visible = 6
+            getWidth = $itemCardContainer.width();
+            getHeight = $itemCardContainer.height();
+        } else {
+            visible = 4
+        }
+    });
+
     if(currentIndex == 0) {
         $('.slick-prev').addClass('slick-disabled');
     }
@@ -57,8 +71,17 @@ $(document).ready(function () {
 
     function showSlide(index,verticalView) {
         var checkVisible = Math.ceil($item.length / visible);
-        var totalHeight = getHeight / checkVisible;
+        var totalHeight = 0;
         var totalWidth = $('body').width() - getWidth + 28;
+
+        if($('.content-dis').hasClass('collapsed')) {
+            totalHeight = (getHeight / (checkVisible+2))
+        } else {
+            totalHeight = (getHeight / checkVisible)
+        }
+
+        console.log(totalHeight)
+
 
         if (index < 0) {
             currentIndex = checkVisible;
