@@ -137,19 +137,22 @@ $(document).ready(function () {
                 visible = 6
                 getWidth = $itemCardContainer.width();
                 getHeight = $itemCardContainer.height();
+
                 if(currentIndex == (checkVisible - 1)) {
+                    console.log('masuk - 6')
+                    console.log(currentIndex)
                     height = (Math.ceil(getHeight / checkVisible+1));
-                    slidesHeight = slidesHeight - height;
                     currentIndex = currentIndex - 1;
+                    slidesHeight = height * currentIndex;
                     $itemCardContainer.css({ 'transform' : `translateY(-${slidesHeight}px` })
                 }
             } else {
                 visible = 4
                 if(currentIndex == (checkVisible - 2)) {
-                    console.log('masuk sini');
-                    height = (Math.ceil(getHeight / checkVisible+1));
-                    slidesHeight = slidesHeight + height;
-                    console.log(slidesHeight)
+                    console.log('masuk - 4')
+                    currentIndex = currentIndex + 1;
+                    height = (Math.ceil(getHeight / checkVisible));
+                    slidesHeight = height * currentIndex;
                     $itemCardContainer.css({ 'transform' : `translateY(-${slidesHeight}px` })
                 }
             }
