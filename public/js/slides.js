@@ -34,11 +34,11 @@ $(document).ready(function () {
         }
     }
     
-    if($itemSaved.length < 7 ) {
+    if($itemSaved.length <= 6 ) {
         $('.arrows-2').css({ 'display': 'none' });
         $('.arrows-2-mobile').css({ 'display': 'none' });
     }
-    if($item.length < 7) {
+    if($item.length <= 6) {
         $('.arrows').css({ 'display': 'none' });
         $('.arrows-mobile').css({ 'display': 'none' });
     }
