@@ -38,7 +38,7 @@ $(document).ready(function () {
         $('.arrows-2').css({ 'display': 'none' });
         $('.arrows-2-mobile').css({ 'display': 'none' });
     }
-    if($item.length < 5) {
+    if($item.length < 7) {
         $('.arrows').css({ 'display': 'none' });
         $('.arrows-mobile').css({ 'display': 'none' });
     }
