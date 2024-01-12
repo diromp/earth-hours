@@ -1,9 +1,9 @@
 $(document).ready(function () {
     var $window = $(window);
-    
+
     let currentIndex = 0;
     var $itemCardContainer = $('#slide-discovery .item-card-container');
-    var visible = 4 ;
+    var visible = 4;
     var $item = $('.item-card');
     var getWidth = $itemCardContainer.width();
     var getHeight = $itemCardContainer.height();
@@ -13,16 +13,16 @@ $(document).ready(function () {
 
     let currentIndexSaved = 0;
     var $itemCardContainerSaved = $('#savedSlider .item-card-container');
-    var visibleSaved = $window.width() < 800 ? 4 : 6 ;
+    var visibleSaved = $window.width() < 768 ? 4 : 6;
     var $itemSaved = $('.item-card-saved');
     var getWidthSaved = 0;
     var getHeightSaved = 0;
 
-    if(currentIndex == 0) {
+    if (currentIndex == 0) {
         $('.slick-prev').addClass('slick-disabled');
     }
 
-    if ($window.width() < 800) {
+    if ($window.width() < 768) {
         var splitItemMobile = $("#slide-discovery .item-card-container .item-card");
         var splitItemMobileSaved = $("#savedSlider .item-card-container .item-card-saved");
 
@@ -33,23 +33,22 @@ $(document).ready(function () {
             splitItemMobileSaved.slice(i, i + 4).wrapAll(`<div class="container-card-saved"></div>`);
         }
     }
-    
-    if($itemSaved.length <= 6 ) {
+
+    if ($itemSaved.length <= 6) {
         $('.arrows-2').css({ 'display': 'none' });
         $('.arrows-2-mobile').css({ 'display': 'none' });
     }
-    if($item.length <= 6) {
+    if ($item.length <= 6) {
         $('.arrows').css({ 'display': 'none' });
         $('.arrows-mobile').css({ 'display': 'none' });
     }
 
-    function showSlide(index,verticalView) {
-        var totalWidth = $('body').width() - getWidth + 28;
+    function showSlide(index, verticalView) {
+        var totalWidth = $itemCardContainer.width() + 8;
 
         checkVisible = Math.ceil($item.length / visible);
-      
-        if($('.content-dis').hasClass('collapsed')) {
-            totalHeight = Math.ceil(getHeight / (checkVisible+1))
+        if ($('.content-dis').hasClass('collapsed')) {
+            totalHeight = Math.ceil(getHeight / (checkVisible + 1))
         } else {
             totalHeight = Math.ceil(getHeight / checkVisible)
         }
@@ -60,29 +59,29 @@ $(document).ready(function () {
             currentIndex = 0;
         }
 
-        if( index == (checkVisible - 1) ) {
+        if (index == (checkVisible - 1)) {
             $('.slick-next').addClass('slick-disabled');
         } else {
             $('.slick-next').removeClass('slick-disabled');
 
         }
-        if( index < 1) {
+        if (index < 1) {
             $('.slick-prev').addClass('slick-disabled');
         } else {
             $('.slick-prev').removeClass('slick-disabled');
         }
 
-        if(verticalView) {
+        if (verticalView) {
             slidesHeight = currentIndex * totalHeight;
-            $itemCardContainer.css({ 'transform' : `translateY(-${slidesHeight}px` })
+            $itemCardContainer.css({ 'transform': `translateY(-${slidesHeight}px` })
         } else {
-            $itemCardContainer.css({ 'transform' : `translateX(-${currentIndex * totalWidth}%` })
+            $itemCardContainer.css({ 'transform': `translateX(-${currentIndex * totalWidth}px` })
         }
     }
-    function showSlideSaved(index,verticalView) {
+    function showSlideSaved(index, verticalView) {
         var checkVisible = Math.ceil($itemSaved.length / visibleSaved)
         var totalHeight = getHeightSaved / checkVisible;
-        var totalWidth = $('body').width() - getWidthSaved + 29;
+        var totalWidth = $itemCardContainerSaved.width() + 8;
 
         if (index < 0) {
             currentIndexSaved = checkVisible;
@@ -90,27 +89,29 @@ $(document).ready(function () {
             currentIndexSaved = 0;
         }
 
-        if( index == (checkVisible - 1) ) {
+        if (index == (checkVisible - 1)) {
             $('.slick-next-saved').addClass('slick-disabled');
         } else {
             $('.slick-next-saved').removeClass('slick-disabled');
 
         }
-        if( index < 1) {
+        if (index < 1) {
             $('.slick-prev-saved').addClass('slick-disabled');
         } else {
             $('.slick-prev-saved').removeClass('slick-disabled');
         }
 
-        if(verticalView) {
-            $itemCardContainerSaved.css({ 'transform' : `translateY(-${currentIndexSaved * totalHeight}px` })
+        if (verticalView) {
+            $itemCardContainerSaved.css({ 'transform': `translateY(-${currentIndexSaved * totalHeight}px` })
         } else {
-            $itemCardContainerSaved.css({ 'transform' : `translateX(-${currentIndexSaved * totalWidth}%` })
+            $itemCardContainerSaved.css({ 'transform': `translateX(-${currentIndexSaved * totalWidth}px` })
         }
 
     }
 
     $('.event').on('click', function (e) {
+        currentIndexSaved = 0;
+
         $('.slide-1').fadeOut(
             'slow'
         );
@@ -118,13 +119,22 @@ $(document).ready(function () {
             'slow'
         );
         $('.slick-prev-saved').addClass('slick-disabled');
-        currentIndex = 0;
+        if ($('.slick-next-saved').hasClass('slick-disabled')) {
+            $('.slick-next-saved').removeClass('slick-disabled')
+        }
+        if($window.width() > 768) {
+            $itemCardContainerSaved.css({ 'transform' : `translateY(-${0}px` })
+        } else {
+            $itemCardContainerSaved.css({ 'transform' : `translateX(-${0}px` })
+        }
         getHeightSaved = $itemCardContainerSaved.height();
         getWidthSaved = $itemCardContainerSaved.width();
     });
-    
+
     // click back to home button
     $('.close-saved').on('click', function () {
+        currentIndex = 0;
+
         $('.saved-list').fadeOut(
             'slow'
         );
@@ -132,7 +142,16 @@ $(document).ready(function () {
             'slow'
         );
         $('.slick-prev').addClass('slick-disabled');
-        currentIndexSaved = 0;
+
+        if ($('.slick-next').hasClass('slick-disabled')) {
+            $('.slick-next').removeClass('slick-disabled')
+        }
+        if ($window.width() > 768) {
+            console.log('masuk')
+            $itemCardContainer.css({ 'transform': `translateY(-${0}px` })
+        } else {
+            $itemCardContainer.css({ 'transform': `translateX(-${0}px` })
+        }
     });
 
     $('.close').on('click', function (e) {
@@ -140,40 +159,40 @@ $(document).ready(function () {
         $('.content-dis').toggleClass('collapsed');
         $('.filter').toggleClass('!hidden');
         $(this).toggleClass('active');
-        if($window.width() > 1010) {
+        if ($window.width() > 768) {
             var height = 0;
-            if($('.content-dis').hasClass('collapsed')) {
+            if ($('.content-dis').hasClass('collapsed')) {
                 visible = 6
-                if(currentIndex == (checkVisible - 1)) {
+                if (currentIndex == (checkVisible - 1)) {
                     height = (Math.ceil(getHeight / checkVisible));
                     currentIndex = currentIndex - 1;
                     slidesHeight = height * currentIndex;
-                    $itemCardContainer.css({ 'transform' : `translateY(-${slidesHeight}px` })
-                } else if( currentIndex > 0 && currentIndex == checkVisible) {
+                    $itemCardContainer.css({ 'transform': `translateY(-${slidesHeight}px` })
+                } else if (currentIndex > 0 && currentIndex == checkVisible) {
                     height = (Math.ceil(getHeight / checkVisible));
                     currentIndex = currentIndex - 2;
                     slidesHeight = currentIndex * height;
-                    $itemCardContainer.css({ 'transform' : `translateY(-${slidesHeight}px` })
+                    $itemCardContainer.css({ 'transform': `translateY(-${slidesHeight}px` })
                 }
             } else {
                 visible = 4
 
-                if(currentIndex == (checkVisible - 2)) {
+                if (currentIndex == (checkVisible - 2)) {
                     height = (Math.ceil(getHeight / checkVisible));
                     currentIndex = currentIndex + 1;
                     slidesHeight = height * currentIndex;
-                    $itemCardContainer.css({ 'transform' : `translateY(-${slidesHeight}px` })
-                } else if(currentIndex == (checkVisible - 1)) {
+                    $itemCardContainer.css({ 'transform': `translateY(-${slidesHeight}px` })
+                } else if (currentIndex == (checkVisible - 1)) {
                     height = (Math.ceil(getHeight / checkVisible));
-                    slidesHeight =  (currentIndex * height) + 180;
+                    slidesHeight = (currentIndex * height) + 180;
                     currentIndex = currentIndex + 1;
-                    $itemCardContainer.css({ 'transform' : `translateY(-${slidesHeight}px` })
+                    $itemCardContainer.css({ 'transform': `translateY(-${slidesHeight}px` })
                 }
             }
         }
     });
 
-    if ($window.width() > 1080) {
+    if ($window.width() > 768) {
         $('.slick-next').on("click", function () {
             currentIndex++;
             showSlide(currentIndex, true)
@@ -195,7 +214,7 @@ $(document).ready(function () {
         });
     }
 
-    if ($window.width() > 1080) {
+    if ($window.width() > 768) {
         $('.slick-next-saved').on("click", function () {
             currentIndexSaved++;
             showSlideSaved(currentIndexSaved, true)
