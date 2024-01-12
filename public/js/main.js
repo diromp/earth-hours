@@ -26,10 +26,9 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
 
-    $('.item-card .next-detail').on('click', function (e) {
+    $('.slider-root').on('click', '.item-card .next-detail', function (e) {
         if (languageJp) {
             window.location.href = '/detail-event-jp.html';
-
         } else if (languageCs) {
             window.location.href = '/detail-event-cs.html';
         } else if (languageBm) {
