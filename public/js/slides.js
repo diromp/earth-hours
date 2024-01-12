@@ -71,6 +71,7 @@ $(document).ready(function () {
 
     const vm = $(this);
     let sliderDiscovery = null;
+    let lastSlide = 0;
 
     const createSlider = (vm, selector, rows, responsive, arrowsElement) => {
         let defaultResponsive = [
@@ -87,7 +88,7 @@ $(document).ready(function () {
         ];
         let defaulfArrow = vm.find('.arrows');
 
-        if(arrowsElement) {
+        if (arrowsElement) {
             defaulfArrow = arrowsElement
         }
         if (responsive) {
@@ -108,13 +109,25 @@ $(document).ready(function () {
                 appendArrows: defaulfArrow,
                 responsive: defaultResponsive
             });
+
+            if (lastSlide) {
+                let index = lastSlide.currentSlide;
+                if (index > sliderDiscovery.slick('getSlick').slideCount) {
+                    index = sliderDiscovery.slick('getSlick').slideCount;
+                }
+                sliderDiscovery.slick('slickGoTo', index - 2)
+            }
+
+            sliderDiscovery.on('afterChange', function (slick, currentSlide, currentIndex) {
+                lastSlide = currentSlide;
+            })
         });
     }
 
     const destroySlider = (vm, selector) => {
         $(selector).each(function () {
             sliderDiscovery = $(this);
-            sliderDiscovery.slick('unslick');
+            sliderDiscovery.slick('destroy');
             sliderDiscovery = null;
         });
     }
@@ -128,25 +141,19 @@ $(document).ready(function () {
         $('.saved-list').fadeIn(
             'slow'
         );
-        let responsive = [
+
+        createSlider(vm, '#savedSlider .item-card-container', 4, [
             {
-                breakpoint: 1024,
+                breakpoint: 940,
                 settings: {
-                    rows: 2,
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    vertical: false,
-                    slidesToShow: 2,
                     rows: 1,
-                    slidesPerRow: 2,
                     draggable: false,
+                    vertical: false,
+                    slidesToShow: 1,
+                    slidesPerRow: 1
                 }
             }
-        ]
-        createSlider(vm, '#savedSlider .item-card-container', 4, responsive, vm.find('.arrows-2'));
+        ], vm.find('.arrows-2'));
     });
 
     // click back to home button
