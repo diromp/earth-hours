@@ -1601,10 +1601,11 @@ img {
                   color: #1a1a1a;
                   display: inline-block; }
       .section-discovery .slide-content .main .slick-slider .slick-slide {
-        margin: 8px 8px; }
-        @media screen and (max-width: 767px) {
-          .section-discovery .slide-content .main .slick-slider .slick-slide {
-            margin: 4px; } }
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .section-discovery .slide-content .main .slick-slider .slick-slide div:first-child {
+          margin-right: 4px; }
       .section-discovery .slide-content .main .slick-slider .slick-list {
         margin-right: 0px;
         margin-top: 10px;
@@ -1670,10 +1671,6 @@ img {
           position: absolute;
           top: 50%;
           right: 35px; }
-          @media screen and (max-width: 767px) {
-            .section-discovery .slide-content .main .content-dis .arrows,
-            .section-discovery .slide-content .main .content-wrapper .arrows {
-              display: none; } }
           .section-discovery .slide-content .main .content-dis .arrows .slick-arrow,
           .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow {
             width: 48px;
@@ -2048,7 +2045,7 @@ img {
               .section-discovery .slide-content .main .content-dis .new-card .item-card, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved,
               .section-discovery .slide-content .main .content-wrapper .new-card .item-card,
               .section-discovery .slide-content .main .content-wrapper .new-card .item-card-saved {
-                width: 45% !important;
+                width: 100% !important;
                 height: 216px;
                 border-radius: 8px;
                 flex: 1 0 40%;

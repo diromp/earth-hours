@@ -1,157 +1,45 @@
 $(document).ready(function () {
-    var $window = $(window);
+    var $sliderDiscovery = $('#slide-discovery .item-card-container');
 
-    let currentIndex = 0;
-    var $itemCardContainer = $('#slide-discovery .item-card-container');
-    var visible = 4;
-    var $item = $('.item-card');
-    var getWidth = $itemCardContainer.width();
-    var getHeight = $itemCardContainer.height();
-    var totalHeight = 0;
-    var slidesHeight = null;
-    var checkVisible = 0;
-
-    let currentIndexSaved = 0;
-    var $itemCardContainerSaved = $('#savedSlider .item-card-container');
-    var visibleSaved = $window.width() < 768 ? 4 : 6;
-    var $itemSaved = $('.item-card-saved');
-    var getWidthSaved = 0;
-    var getHeightSaved = 0;
-
-    if (currentIndex == 0) {
-        $('.slick-prev').addClass('slick-disabled');
-    }
-
-    if ($window.width() < 768) {
-        var splitItemMobile = $("#slide-discovery .item-card-container .item-card");
-        var splitItemMobileSaved = $("#savedSlider .item-card-container .item-card-saved");
-
-        for (var i = 0; i < splitItemMobile.length; i += 4) {
-            splitItemMobile.slice(i, i + 4).wrapAll(`<div class="container-card"></div>`);
-        }
-        for (var i = 0; i < splitItemMobileSaved.length; i += 4) {
-            splitItemMobileSaved.slice(i, i + 4).wrapAll(`<div class="container-card-saved"></div>`);
-        }
-    }
-
-    if ($itemSaved.length <= 6) {
-        $('.arrows-2').css({ 'display': 'none' });
-        $('.arrows-2-mobile').css({ 'display': 'none' });
-    }
-    if ($item.length <= 6) {
-        $('.arrows').css({ 'display': 'none' });
-        $('.arrows-mobile').css({ 'display': 'none' });
-    }
-
-    function showSlide(index, verticalView) {
-        var totalWidth = $itemCardContainer.width() + 8;
-
-        checkVisible = Math.ceil($item.length / visible);
-        if ($('.content-dis').hasClass('collapsed')) {
-            totalHeight = Math.ceil(getHeight / (checkVisible + 1))
-        } else {
-            totalHeight = Math.ceil(getHeight / checkVisible)
-        }
-
-        if (index < 0) {
-            currentIndex = checkVisible;
-        } else if (index >= checkVisible) {
-            currentIndex = 0;
-        }
-
-        if (index == (checkVisible - 1)) {
-            $('.slick-next').addClass('slick-disabled');
-        } else {
-            $('.slick-next').removeClass('slick-disabled');
-
-        }
-        if (index < 1) {
-            $('.slick-prev').addClass('slick-disabled');
-        } else {
-            $('.slick-prev').removeClass('slick-disabled');
-        }
-
-        if (verticalView) {
-            slidesHeight = currentIndex * totalHeight;
-            $itemCardContainer.css({ 'transform': `translateY(-${slidesHeight}px` })
-        } else {
-            $itemCardContainer.css({ 'transform': `translateX(-${currentIndex * totalWidth}px` })
-        }
-    }
-    function showSlideSaved(index, verticalView) {
-        var checkVisible = Math.ceil($itemSaved.length / visibleSaved)
-        var totalHeight = getHeightSaved / checkVisible;
-        var totalWidth = $itemCardContainerSaved.width() + 8;
-
-        if (index < 0) {
-            currentIndexSaved = checkVisible;
-        } else if (index >= checkVisible) {
-            currentIndexSaved = 0;
-        }
-
-        if (index == (checkVisible - 1)) {
-            $('.slick-next-saved').addClass('slick-disabled');
-        } else {
-            $('.slick-next-saved').removeClass('slick-disabled');
-
-        }
-        if (index < 1) {
-            $('.slick-prev-saved').addClass('slick-disabled');
-        } else {
-            $('.slick-prev-saved').removeClass('slick-disabled');
-        }
-
-        if (verticalView) {
-            $itemCardContainerSaved.css({ 'transform': `translateY(-${currentIndexSaved * totalHeight}px` })
-        } else {
-            $itemCardContainerSaved.css({ 'transform': `translateX(-${currentIndexSaved * totalWidth}px` })
-        }
-
-    }
-
+    $sliderDiscovery.slick({
+        dots: false,
+        infinite: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        rows: 2,
+        draggable: false,
+        arrows: true,
+        autoplay: false,
+        vertical: true,
+        appendArrows: $(this).find('.arrows'),
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    vertical: false,
+                }
+            }
+        ]
+    });
+    
     $('.event').on('click', function (e) {
-        currentIndexSaved = 0;
-
         $('.slide-1').fadeOut(
             'slow'
         );
         $('.saved-list').fadeIn(
             'slow'
         );
-        $('.slick-prev-saved').addClass('slick-disabled');
-        if ($('.slick-next-saved').hasClass('slick-disabled')) {
-            $('.slick-next-saved').removeClass('slick-disabled')
-        }
-        if($window.width() > 768) {
-            $itemCardContainerSaved.css({ 'transform' : `translateY(-${0}px` })
-        } else {
-            $itemCardContainerSaved.css({ 'transform' : `translateX(-${0}px` })
-        }
-        getHeightSaved = $itemCardContainerSaved.height();
-        getWidthSaved = $itemCardContainerSaved.width();
     });
 
     // click back to home button
     $('.close-saved').on('click', function () {
-        currentIndex = 0;
-
+        //slider.slick('setPosition'); 
         $('.saved-list').fadeOut(
             'slow'
         );
         $('.slide-1').fadeIn(
             'slow'
         );
-        $('.slick-prev').addClass('slick-disabled');
-
-        if ($('.slick-next').hasClass('slick-disabled')) {
-            $('.slick-next').removeClass('slick-disabled')
-        }
-        if ($window.width() > 768) {
-            console.log('masuk')
-            $itemCardContainer.css({ 'transform': `translateY(-${0}px` })
-        } else {
-            $itemCardContainer.css({ 'transform': `translateX(-${0}px` })
-        }
     });
 
     $('.close').on('click', function (e) {
@@ -159,80 +47,17 @@ $(document).ready(function () {
         $('.content-dis').toggleClass('collapsed');
         $('.filter').toggleClass('!hidden');
         $(this).toggleClass('active');
-        if ($window.width() > 768) {
-            var height = 0;
-            if ($('.content-dis').hasClass('collapsed')) {
-                visible = 6
-                if (currentIndex == (checkVisible - 1)) {
-                    height = (Math.ceil(getHeight / checkVisible));
-                    currentIndex = currentIndex - 1;
-                    slidesHeight = height * currentIndex;
-                    $itemCardContainer.css({ 'transform': `translateY(-${slidesHeight}px` })
-                } else if (currentIndex > 0 && currentIndex == checkVisible) {
-                    height = (Math.ceil(getHeight / checkVisible));
-                    currentIndex = currentIndex - 2;
-                    slidesHeight = currentIndex * height;
-                    $itemCardContainer.css({ 'transform': `translateY(-${slidesHeight}px` })
-                }
-            } else {
-                visible = 4
 
-                if (currentIndex == (checkVisible - 2)) {
-                    height = (Math.ceil(getHeight / checkVisible));
-                    currentIndex = currentIndex + 1;
-                    slidesHeight = height * currentIndex;
-                    $itemCardContainer.css({ 'transform': `translateY(-${slidesHeight}px` })
-                } else if (currentIndex == (checkVisible - 1)) {
-                    height = (Math.ceil(getHeight / checkVisible));
-                    slidesHeight = (currentIndex * height) + 180;
-                    currentIndex = currentIndex + 1;
-                    $itemCardContainer.css({ 'transform': `translateY(-${slidesHeight}px` })
-                }
-            }
+        console.log('muask')
+        $sliderDiscovery.slick('slickSetOption', 'rows', 3);
+        if ($('.content-dis').hasClass('collapsed')) {
+            
+        } else {
+            // console.log('masuk')
+            // for (var i = 0; i < $sliderDiscoveryItem.length; i += 6) {
+            //     $sliderDiscoveryItem.slice(i, i + 4).wrapAll(`<div class="container-card"></div>`);
+            // }
         }
+        
     });
-
-    if ($window.width() > 768) {
-        $('.slick-next').on("click", function () {
-            currentIndex++;
-            showSlide(currentIndex, true)
-        });
-
-        $('.slick-prev').on("click", function () {
-            currentIndex--;
-            showSlide(currentIndex, true)
-        });
-    } else {
-        $('.slick-next').on("click", function () {
-            currentIndex++;
-            showSlide(currentIndex, false)
-        });
-
-        $('.slick-prev').on("click", function () {
-            currentIndex--;
-            showSlide(currentIndex, false)
-        });
-    }
-
-    if ($window.width() > 768) {
-        $('.slick-next-saved').on("click", function () {
-            currentIndexSaved++;
-            showSlideSaved(currentIndexSaved, true)
-        });
-
-        $('.slick-prev-saved').on("click", function () {
-            currentIndexSaved--;
-            showSlideSaved(currentIndexSaved, true)
-        });
-    } else {
-        $('.slick-next-saved').on("click", function () {
-            currentIndexSaved++;
-            showSlideSaved(currentIndexSaved, false)
-        });
-
-        $('.slick-prev-saved').on("click", function () {
-            currentIndexSaved--;
-            showSlideSaved(currentIndexSaved, false)
-        });
-    }
 });
