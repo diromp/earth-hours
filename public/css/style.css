@@ -547,7 +547,7 @@ body {
 .language-bm .form-check-default label {
   font-family: 'Noto Sans Myanmar', sans-serif; }
 
-/* ! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com */
+/* ! tailwindcss v3.3.7 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -652,8 +652,10 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -661,7 +663,9 @@ kbd,
 samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
 }
 
 /*
@@ -1603,7 +1607,8 @@ img {
       .section-discovery .slide-content .main .slick-slider .slick-slide {
         display: flex;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        width: 100% !important; }
         .section-discovery .slide-content .main .slick-slider .slick-slide div:first-child {
           margin-right: 4px; }
       .section-discovery .slide-content .main .slick-slider .slick-list {
@@ -1616,7 +1621,8 @@ img {
             padding: 35px 0px 0px 37px !important;
             overflow: visible; } }
       .section-discovery .slide-content .main .slick-slider .slick-track {
-        margin-top: -40px; }
+        margin: -40px auto;
+        display: grid; }
       .section-discovery .slide-content .main .content-dis,
       .section-discovery .slide-content .main .content-wrapper {
         padding-top: 48px;
@@ -2040,7 +2046,8 @@ img {
             box-shadow: 0px 3px 15px 0px rgba(27, 27, 28, 0.37);
             border-radius: 18px;
             position: relative;
-            cursor: pointer; }
+            cursor: pointer;
+            margin: 0.5rem 0; }
             @media screen and (max-width: 767px) {
               .section-discovery .slide-content .main .content-dis .new-card .item-card, .section-discovery .slide-content .main .content-dis .new-card .item-card-saved,
               .section-discovery .slide-content .main .content-wrapper .new-card .item-card,
