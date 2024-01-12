@@ -7,8 +7,7 @@ $(document).ready(function () {
 
     var $window = $(window);
     $('#reset-filter').hide();
-    
-    $('.item-card .love').click(function () {
+    $('.slider-root').on('click', '.item-card .love', function (e) {
         var activeClass = $(this).hasClass('active');
         $(this).toggleClass('active');
 
@@ -22,6 +21,7 @@ $(document).ready(function () {
             }).showToast();
         }
     });
+    
     $('.images-background .love').click(function () {
         $(this).toggleClass('active');
     });

@@ -1,16 +1,95 @@
 $(document).ready(function () {
+    // var $window = $(window);
+    // var $sliderDiscovery = $('#slide-discovery .item-card-container');
+    // var $slideSaved = $('#savedSlider .item-card-container');
+    // var $optionsSaved = {
+    //     rows: 4,
+    //     dots: false,
+    //     loop: false,
+    //     infinite: false,
+    //     slidesToShow: 2,
+    //     slidesToScroll: 1,
+    //     draggable: false,
+    //     arrows: true,
+    //     autoplay: false,
+    //     vertical: true,
+    //     appendArrows: $(this).find('.arrows-2'),
+    //     responsive: [
+    //         {
+    //             breakpoint: 1024,
+    //             settings: {
+    //                 rows: 2,
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 576,
+    //             settings: {
+    //                 vertical: false,
+    //                 slidesToShow: 2,
+    //                 rows: 1,
+    //                 slidesPerRow: 2,
+    //                 draggable: false,
+    //             }
+    //         }
+    //     ]
+    // };
+    // var $options = [
+    //     {
+    //         rows: 2,
+    //     },
+    //     {
+    //         rows: 3,
+    //     },
+    // ]
+    // var curOptions = 0;
+    // var myCarouselSaved = $slideSaved.slick();
+    // var myCarouselDiscovery = $sliderDiscovery.slick($.extend({
+    //     dots: false,
+    //     loop: false,
+    //     infinite: false,
+    //     slidesToShow: 2,
+    //     slidesToScroll: 1,
+    //     draggable: false,
+    //     arrows: true,
+    //     autoplay: false,
+    //     vertical: true,
+    //     appendArrows: $(this).find('.arrows'),
+    //     responsive: [
+    //         {
+    //             breakpoint: 576,
+    //             settings: {
+    //                 rows: 1,
+    //                 draggable: false,
+    //                 vertical: false,
+    //                 slidesToShow: 2,
+    //                 slidesPerRow: 2
+    //             }
+    //         }
+    //     ]
+
+    // }, $options[curOptions]));
 
     const vm = $(this);
     let sliderDiscovery = null;
-    const createSlider = (vm, selector, rows, responsive) => {
-        let defaultResponsive =  [
+
+    const createSlider = (vm, selector, rows, responsive, arrowsElement) => {
+        let defaultResponsive = [
             {
-                breakpoint: 767,
+                breakpoint: 576,
                 settings: {
+                    rows: 1,
+                    draggable: false,
                     vertical: false,
+                    slidesToShow: 2,
+                    slidesPerRow: 2
                 }
             }
         ];
+        let defaulfArrow = vm.find('.arrows');
+
+        if(arrowsElement) {
+            defaulfArrow = arrowsElement
+        }
         if (responsive) {
             defaultResponsive = responsive;
         }
@@ -26,12 +105,9 @@ $(document).ready(function () {
                 arrows: true,
                 autoplay: false,
                 vertical: true,
-                appendArrows: vm.find('.arrows'),
+                appendArrows: defaulfArrow,
                 responsive: defaultResponsive
             });
-            // sliderDiscovery.on('destroy', function (event, slick, currentSlide, nextSlide) {
-            //     console.log(event);
-            // });
         });
     }
 
@@ -42,23 +118,35 @@ $(document).ready(function () {
             sliderDiscovery = null;
         });
     }
+
     createSlider(vm, '#slide-discovery .item-card-container', 2);
 
     $('.event').on('click', function (e) {
-        $('.slide-1').fadeOut('slow');
-        $('.saved-list').fadeIn('slow');
+        $('.slide-1').fadeOut(
+            'slow'
+        );
+        $('.saved-list').fadeIn(
+            'slow'
+        );
         let responsive = [
             {
-                breakpoint: 767,
+                breakpoint: 1024,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    rows: 1,
+                    rows: 2,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
                     vertical: false,
+                    slidesToShow: 2,
+                    rows: 1,
+                    slidesPerRow: 2,
+                    draggable: false,
                 }
             }
         ]
-        createSlider(vm, '#savedSlider .item-card-container', 4, responsive);
+        createSlider(vm, '#savedSlider .item-card-container', 4, responsive, vm.find('.arrows-2'));
     });
 
     // click back to home button
@@ -66,7 +154,7 @@ $(document).ready(function () {
         //slider.slick('setPosition');
         $('.saved-list').fadeOut('slow');
         $('.slide-1').fadeIn('slow');
-        setTimeout(function() {
+        setTimeout(function () {
             destroySlider(vm, '#savedSlider .item-card-container');
         }, 1000)
     });
@@ -85,12 +173,8 @@ $(document).ready(function () {
                 createSlider(vm, '#slide-discovery .item-card-container', 3);
             } else {
                 createSlider(vm, '#slide-discovery .item-card-container', 2);
-                // for (var i = 0; i < $sliderDiscoveryItem.length; i += 6) {
-                //     $sliderDiscoveryItem.slice(i, i + 4).wrapAll(`<div class="container-card"></div>`);
-                // }
             }
         }, 100);
 
     });
-
 });
