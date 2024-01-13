@@ -155,13 +155,10 @@ $(document).ready(function () {
     createSlider(vm, '#slide-discovery .item-card-container', 2);
 
     $('.event').on('click', function (e) {
-        $('.slide-1').fadeOut(
-            'slow'
-        );
-        $('.saved-list').fadeIn(
-            'slow'
-        );
+        $('.slide-1').fadeOut('slow');
+        $('.saved-list').fadeIn('slow');
 
+        destroySlider(vm, '#slide-discovery .item-card-container');
         createSlider(vm, '#savedSlider .item-card-container', 4, [
             {
                 breakpoint: 940,
@@ -183,6 +180,9 @@ $(document).ready(function () {
         $('.slide-1').fadeIn('slow');
         setTimeout(function () {
             destroySlider(vm, '#savedSlider .item-card-container');
+            lastSlide = 0;
+            lastCount = 0;
+            createSlider(vm, '#slide-discovery .item-card-container', 2);
         }, 1000)
     });
 
