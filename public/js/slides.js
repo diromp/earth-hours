@@ -159,6 +159,12 @@ $(document).ready(function () {
         $('.saved-list').fadeIn('slow');
 
         destroySlider(vm, '#slide-discovery .item-card-container');
+        if ($('.content-dis').hasClass('collapsed')) {
+            $('.collapse-menu').toggleClass('collapsed');
+            $('.content-dis').toggleClass('collapsed');
+            $('.filter').toggleClass('!hidden');
+            $(this).toggleClass('active');
+        }
         createSlider(vm, '#savedSlider .item-card-container', 4, [
             {
                 breakpoint: 940,
@@ -182,14 +188,8 @@ $(document).ready(function () {
             destroySlider(vm, '#savedSlider .item-card-container');
             lastSlide = 0;
             lastCount = 0;
-            if ($('.content-dis').hasClass('collapsed')) {
-                $('.collapse-menu').toggleClass('collapsed');
-                $('.content-dis').toggleClass('collapsed');
-                $('.filter').toggleClass('!hidden');
-                $(this).toggleClass('active');
-            }
             createSlider(vm, '#slide-discovery .item-card-container', 2);
-        }, 1000)
+        }, 100)
     });
 
 
