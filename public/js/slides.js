@@ -168,8 +168,8 @@ $(document).ready(function () {
                     rows: 1,
                     draggable: false,
                     vertical: false,
-                    slidesToShow: 1,
-                    slidesPerRow: 1
+                    slidesToShow: 2,
+                    slidesPerRow: 2
                 }
             }
         ], vm.find('.arrows-2'));
