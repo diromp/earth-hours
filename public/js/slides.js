@@ -182,6 +182,12 @@ $(document).ready(function () {
             destroySlider(vm, '#savedSlider .item-card-container');
             lastSlide = 0;
             lastCount = 0;
+            if ($('.content-dis').hasClass('collapsed')) {
+                $('.collapse-menu').toggleClass('collapsed');
+                $('.content-dis').toggleClass('collapsed');
+                $('.filter').toggleClass('!hidden');
+                $(this).toggleClass('active');
+            }
             createSlider(vm, '#slide-discovery .item-card-container', 2);
         }, 1000)
     });
