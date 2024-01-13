@@ -72,6 +72,7 @@ $(document).ready(function () {
     const vm = $(this);
     let sliderDiscovery = null;
     let lastSlide = 0;
+    let lastCount = 0;
 
     const createSlider = (vm, selector, rows, responsive, arrowsElement) => {
         let defaultResponsive = [
@@ -112,14 +113,32 @@ $(document).ready(function () {
 
             if (lastSlide) {
                 let index = lastSlide.currentSlide;
-                if (index > sliderDiscovery.slick('getSlick').slideCount) {
-                    index = sliderDiscovery.slick('getSlick').slideCount;
+                let currentCount = sliderDiscovery.slick('getSlick').slideCount;
+                // untuk expand
+                if (currentCount < lastCount) {
+                    if (index > currentCount) {
+                        index = Math.round((index * 2 / 3));
+                        sliderDiscovery.slick('slickGoTo', index)
+                    } else if (index < currentCount) {
+                        index = Math.floor((index / (2 / 3)));
+                        sliderDiscovery.slick('slickGoTo', index - 2)
+                    }
+                } else {
+                    // untuk collapse
+                    if (index > currentCount) {
+                        index = Math.round((index * 2 / 3));
+                        sliderDiscovery.slick('slickGoTo', index)
+                    } else if (index < currentCount) {
+                        index = Math.floor((index / (2 / 3)));
+                        sliderDiscovery.slick('slickGoTo', index + 1)
+                    }
                 }
-                sliderDiscovery.slick('slickGoTo', index - 2)
             }
 
             sliderDiscovery.on('afterChange', function (slick, currentSlide, currentIndex) {
                 lastSlide = currentSlide;
+                lastCount = slick.currentTarget.slick.slideCount;
+                console.log(lastCount);
             })
         });
     }
