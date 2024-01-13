@@ -74,7 +74,7 @@ $(document).ready(function () {
     let lastSlide = 0;
     let lastCount = 0;
 
-    const createSlider = (vm, selector, rows, responsive, arrowsElement) => {
+    const createSlider = (vm, selector, rows, responsive, arrowsElement, reset) => {
         let defaultResponsive = [
             {
                 breakpoint: 576,
@@ -111,26 +111,28 @@ $(document).ready(function () {
                 responsive: defaultResponsive
             });
 
-            if (lastSlide) {
-                let index = lastSlide.currentSlide;
-                let currentCount = sliderDiscovery.slick('getSlick').slideCount;
-                // untuk expand
-                if (currentCount < lastCount) {
-                    if (index > currentCount) {
-                        index = Math.round((index * 2 / 3));
-                        sliderDiscovery.slick('slickGoTo', index)
-                    } else if (index < currentCount) {
-                        index = Math.floor((index / (2 / 3)));
-                        sliderDiscovery.slick('slickGoTo', index - 2)
-                    }
-                } else {
-                    // untuk collapse
-                    if (index > currentCount) {
-                        index = Math.round((index * 2 / 3));
-                        sliderDiscovery.slick('slickGoTo', index)
-                    } else if (index < currentCount) {
-                        index = Math.floor((index / (2 / 3)));
-                        sliderDiscovery.slick('slickGoTo', index + 1)
+            if (!reset) {
+                if (lastSlide) {
+                    let index = lastSlide.currentSlide;
+                    let currentCount = sliderDiscovery.slick('getSlick').slideCount;
+                    // untuk expand
+                    if (currentCount < lastCount) {
+                        if (index > currentCount) {
+                            index = Math.round((index * 2 / 3));
+                            sliderDiscovery.slick('slickGoTo', index)
+                        } else if (index < currentCount) {
+                            index = Math.floor((index / (2 / 3)));
+                            sliderDiscovery.slick('slickGoTo', index - 2)
+                        }
+                    } else {
+                        // untuk collapse
+                        if (index > currentCount) {
+                            index = Math.round((index * 2 / 3));
+                            sliderDiscovery.slick('slickGoTo', index)
+                        } else if (index < currentCount) {
+                            index = Math.floor((index / (2 / 3)));
+                            sliderDiscovery.slick('slickGoTo', index + 1)
+                        }
                     }
                 }
             }
@@ -138,7 +140,6 @@ $(document).ready(function () {
             sliderDiscovery.on('afterChange', function (slick, currentSlide, currentIndex) {
                 lastSlide = currentSlide;
                 lastCount = slick.currentTarget.slick.slideCount;
-                console.log(lastCount);
             })
         });
     }
@@ -172,7 +173,7 @@ $(document).ready(function () {
                     slidesPerRow: 2
                 }
             }
-        ], vm.find('.arrows-2'));
+        ], vm.find('.arrows-2'), true);
     });
 
     // click back to home button
