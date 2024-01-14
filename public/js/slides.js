@@ -111,7 +111,7 @@ $(document).ready(function () {
                 settings: {
                     rows: 2,
                     slidesToShow: 2,
-                    slidesToScroll: 1,
+                    slidesToScroll: 2,
                 }
             },
             {
@@ -132,30 +132,30 @@ $(document).ready(function () {
         //slider.slick('setPosition');
         $('.saved-list').fadeOut('slow');
         $('.slide-1').fadeIn('slow');
+        lastSlide = 0;
+        lastCount = 0;
+        createSlider(vm, '#slide-discovery .item-card-container', 2, [
+            {
+                breakpoint: 1180,
+                settings: {
+                    rows: 2,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    rows: 1,
+                    draggable: false,
+                    vertical: false,
+                    slidesToShow: 2,
+                    slidesPerRow: 2
+                }
+            }
+        ], null, false, 'min');
         setTimeout(function () {
             destroySlider(vm, '#savedSlider .item-card-container');
-            lastSlide = 0;
-            lastCount = 0;
-            createSlider(vm, '#slide-discovery .item-card-container', 2, [
-                {
-                    breakpoint: 1180,
-                    settings: {
-                        rows: 2,
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                    }
-                },
-                {
-                    breakpoint: 575,
-                    settings: {
-                        rows: 1,
-                        draggable: false,
-                        vertical: false,
-                        slidesToShow: 2,
-                        slidesPerRow: 2
-                    }
-                }
-            ], null, false, 'min');
         }, 100)
     });
 
