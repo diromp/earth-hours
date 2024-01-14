@@ -1677,6 +1677,21 @@ img {
               padding-right: 8px;
               padding-left: 8px;
               z-index: 9; } }
+          @media (min-width: 576px) and (max-width: 767px) {
+            .section-discovery .slide-content .main .content-dis .arrows,
+            .section-discovery .slide-content .main .content-wrapper .arrows {
+              top: 40%;
+              right: 70px; } }
+          @media (min-width: 768px) and (max-width: 1000px) {
+            .section-discovery .slide-content .main .content-dis .arrows,
+            .section-discovery .slide-content .main .content-wrapper .arrows {
+              top: 48%;
+              right: 70px; } }
+          @media (min-width: 1001px) and (max-width: 1180px) {
+            .section-discovery .slide-content .main .content-dis .arrows,
+            .section-discovery .slide-content .main .content-wrapper .arrows {
+              top: 48%;
+              right: 190px; } }
           .section-discovery .slide-content .main .content-dis .arrows .slick-arrow,
           .section-discovery .slide-content .main .content-wrapper .arrows .slick-arrow {
             width: 48px;
@@ -1740,7 +1755,7 @@ img {
           position: absolute;
           top: 38%;
           right: 110px; }
-          @media screen and (max-width: 767px) {
+          @media screen and (max-width: 575px) {
             .section-discovery .slide-content .main .content-dis .arrows-2,
             .section-discovery .slide-content .main .content-wrapper .arrows-2 {
               width: 100%;
@@ -1751,6 +1766,15 @@ img {
               justify-content: space-between;
               padding-right: 8px;
               padding-left: 8px; } }
+          @media (min-width: 576px) and (max-width: 767px) {
+            .section-discovery .slide-content .main .content-dis .arrows-2,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2 {
+              top: 34%;
+              right: 70px; } }
+          @media (min-width: 1030px) and (max-width: 1350px) {
+            .section-discovery .slide-content .main .content-dis .arrows-2,
+            .section-discovery .slide-content .main .content-wrapper .arrows-2 {
+              right: 70px; } }
           .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow,
           .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow {
             width: 48px;
@@ -1761,7 +1785,7 @@ img {
             background-color: transparent;
             border-radius: 50px;
             cursor: pointer; }
-            @media screen and (max-width: 767px) {
+            @media screen and (max-width: 575px) {
               .section-discovery .slide-content .main .content-dis .arrows-2 .slick-arrow,
               .section-discovery .slide-content .main .content-wrapper .arrows-2 .slick-arrow {
                 width: 40px;
