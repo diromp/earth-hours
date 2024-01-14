@@ -124,7 +124,7 @@ $(document).ready(function () {
                     slidesPerRow: 2
                 }
             }
-        ], vm.find('.arrows-2'), true, 'min');
+        ], vm.find('.arrows-2'), true);
     });
 
     // click back to home button
@@ -153,10 +153,10 @@ $(document).ready(function () {
                     slidesPerRow: 2
                 }
             }
-        ], null, false, 'min');
+        ], null, false);
         setTimeout(function () {
             destroySlider(vm, '#savedSlider .item-card-container');
-        }, 100)
+        }, 1000)
     });
 
 
@@ -212,7 +212,7 @@ $(document).ready(function () {
                         }
                     ]);
                 }
-            }, 100);
+            }, 1000);
         }
     });
 });
