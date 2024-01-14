@@ -1,74 +1,5 @@
 $(document).ready(function () {
-    // var $window = $(window);
-    // var $sliderDiscovery = $('#slide-discovery .item-card-container');
-    // var $slideSaved = $('#savedSlider .item-card-container');
-    // var $optionsSaved = {
-    //     rows: 4,
-    //     dots: false,
-    //     loop: false,
-    //     infinite: false,
-    //     slidesToShow: 2,
-    //     slidesToScroll: 1,
-    //     draggable: false,
-    //     arrows: true,
-    //     autoplay: false,
-    //     vertical: true,
-    //     appendArrows: $(this).find('.arrows-2'),
-    //     responsive: [
-    //         {
-    //             breakpoint: 1024,
-    //             settings: {
-    //                 rows: 2,
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 576,
-    //             settings: {
-    //                 vertical: false,
-    //                 slidesToShow: 2,
-    //                 rows: 1,
-    //                 slidesPerRow: 2,
-    //                 draggable: false,
-    //             }
-    //         }
-    //     ]
-    // };
-    // var $options = [
-    //     {
-    //         rows: 2,
-    //     },
-    //     {
-    //         rows: 3,
-    //     },
-    // ]
-    // var curOptions = 0;
-    // var myCarouselSaved = $slideSaved.slick();
-    // var myCarouselDiscovery = $sliderDiscovery.slick($.extend({
-    //     dots: false,
-    //     loop: false,
-    //     infinite: false,
-    //     slidesToShow: 2,
-    //     slidesToScroll: 1,
-    //     draggable: false,
-    //     arrows: true,
-    //     autoplay: false,
-    //     vertical: true,
-    //     appendArrows: $(this).find('.arrows'),
-    //     responsive: [
-    //         {
-    //             breakpoint: 576,
-    //             settings: {
-    //                 rows: 1,
-    //                 draggable: false,
-    //                 vertical: false,
-    //                 slidesToShow: 2,
-    //                 slidesPerRow: 2
-    //             }
-    //         }
-    //     ]
-
-    // }, $options[curOptions]));
-
+    const windows = $(window);
     const vm = $(this);
     let sliderDiscovery = null;
     let lastSlide = 0;
@@ -89,7 +20,7 @@ $(document).ready(function () {
         ];
         let defaulfArrow = vm.find('.arrows');
 
-        if (arrowsElement) {
+        if(arrowsElement) {
             defaulfArrow = arrowsElement
         }
         if (responsive) {
@@ -167,7 +98,23 @@ $(document).ready(function () {
         }
         createSlider(vm, '#savedSlider .item-card-container', 4, [
             {
-                breakpoint: 940,
+                breakpoint: 1285,
+                settings: {
+                    rows: 3,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    rows: 2,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 575,
                 settings: {
                     rows: 1,
                     draggable: false,
@@ -188,7 +135,26 @@ $(document).ready(function () {
             destroySlider(vm, '#savedSlider .item-card-container');
             lastSlide = 0;
             lastCount = 0;
-            createSlider(vm, '#slide-discovery .item-card-container', 2);
+            createSlider(vm, '#slide-discovery .item-card-container', 2, [
+                {
+                    breakpoint: 1180,
+                    settings: {
+                        rows: 2,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        rows: 1,
+                        draggable: false,
+                        vertical: false,
+                        slidesToShow: 2,
+                        slidesPerRow: 2
+                    }
+                }
+            ]);
         }, 100)
     });
 
@@ -199,15 +165,53 @@ $(document).ready(function () {
         $('.filter').toggleClass('!hidden');
         $(this).toggleClass('active');
 
-        //$sliderDiscovery.slick('slickSetOption', 'rows', 3);
-        destroySlider(vm, '#slide-discovery .item-card-container');
-        setTimeout(function () {
-            if ($('.content-dis').hasClass('collapsed')) {
-                createSlider(vm, '#slide-discovery .item-card-container', 3);
-            } else {
-                createSlider(vm, '#slide-discovery .item-card-container', 2);
-            }
-        }, 100);
-
+        if(windows.width() > 1180) {
+            destroySlider(vm, '#slide-discovery .item-card-container');
+            setTimeout(function () {
+                if ($('.content-dis').hasClass('collapsed')) {
+                    createSlider(vm, '#slide-discovery .item-card-container', 3, [
+                        {
+                            breakpoint: 1180,
+                            settings: {
+                                rows: 2,
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                            }
+                        },
+                        {
+                            breakpoint: 575,
+                            settings: {
+                                rows: 1,
+                                draggable: false,
+                                vertical: false,
+                                slidesToShow: 2,
+                                slidesPerRow: 2
+                            }
+                        }
+                    ]);
+                } else {
+                    createSlider(vm, '#slide-discovery .item-card-container', 2, [
+                        {
+                            breakpoint: 1180,
+                            settings: {
+                                rows: 2,
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                            }
+                        },
+                        {
+                            breakpoint: 575,
+                            settings: {
+                                rows: 1,
+                                draggable: false,
+                                vertical: false,
+                                slidesToShow: 2,
+                                slidesPerRow: 2
+                            }
+                        }
+                    ]);
+                }
+            }, 100);
+        }
     });
 });
