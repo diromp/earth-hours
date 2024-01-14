@@ -49,8 +49,9 @@ $(document).ready(function () {
                     let currentCount = sliderDiscovery.slick('getSlick').slideCount;
                     // untuk expand
                     if (currentCount < lastCount) {
-                        if (index > currentCount) {
-                            index = Math.round((index * 2 / 3));
+                        if (index >= currentCount) {
+                            index = Math.floor((index * 2 / 3));
+                            console.log('last:' + index)
                             sliderDiscovery.slick('slickGoTo', index)
                         } else if (index < currentCount) {
                             index = Math.floor((index / (2 / 3)));
@@ -58,12 +59,12 @@ $(document).ready(function () {
                         }
                     } else {
                         // untuk collapse
-                        if (index > currentCount) {
+                        if (index >= currentCount) {
                             index = Math.round((index * 2 / 3));
-                            sliderDiscovery.slick('slickGoTo', index)
+                            sliderDiscovery.slick('slickGoTo', index);
                         } else if (index < currentCount) {
                             index = Math.floor((index / (2 / 3)));
-                            sliderDiscovery.slick('slickGoTo', index + 1)
+                            sliderDiscovery.slick('slickGoTo', index + 1);
                         }
                     }
                 }
