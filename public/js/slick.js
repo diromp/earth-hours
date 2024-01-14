@@ -627,7 +627,6 @@
                     }
                 }
             }
-            console.log(respondToWidth)
 
             if (targetBreakpoint !== null) {
                 if (_.activeBreakpoint !== null) {
