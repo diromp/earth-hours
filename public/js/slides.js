@@ -155,7 +155,7 @@ $(document).ready(function () {
                         slidesPerRow: 2
                     }
                 }
-            ]);
+            ], null, false, 'min');
         }, 100)
     });
 
