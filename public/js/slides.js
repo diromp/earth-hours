@@ -4,6 +4,8 @@ $(document).ready(function () {
     let sliderDiscovery = null;
     let lastSlide = 0;
     let lastCount = 0;
+    let expandedSlide = null;
+    let isExpand = false;
 
     const createSlider = (vm, selector, rows, responsive, arrowsElement, reset, respondTo) => {
         let defaultResponsive = [
@@ -20,7 +22,7 @@ $(document).ready(function () {
         ];
         let defaulfArrow = vm.find('.arrows');
 
-        if(arrowsElement) {
+        if (arrowsElement) {
             defaulfArrow = arrowsElement
         }
         if (responsive) {
@@ -44,6 +46,9 @@ $(document).ready(function () {
             });
 
             if (!reset) {
+                if (isExpand && sliderDiscovery && sliderDiscovery.slick('getSlick').slideCount <= 4) {
+                    expandedSlide = lastSlide;
+                }
                 if (lastSlide) {
                     let index = lastSlide.currentSlide;
                     let currentCount = sliderDiscovery.slick('getSlick').slideCount;
@@ -51,7 +56,6 @@ $(document).ready(function () {
                     if (currentCount < lastCount) {
                         if (index >= currentCount) {
                             index = Math.floor((index * 2 / 3));
-                            console.log('last:' + index)
                             sliderDiscovery.slick('slickGoTo', index)
                         } else if (index < currentCount) {
                             index = Math.floor((index / (2 / 3)));
@@ -59,12 +63,15 @@ $(document).ready(function () {
                         }
                     } else {
                         // untuk collapse
+                        if (expandedSlide) {
+                            index = expandedSlide.currentSlide;
+                        }
                         if (index >= currentCount) {
                             index = Math.round((index * 2 / 3));
                             sliderDiscovery.slick('slickGoTo', index);
                         } else if (index < currentCount) {
                             index = Math.floor((index / (2 / 3)));
-                            index = currentCount <= 3 ? index : (index + 1);
+                            index = currentCount <= 4 ? (index) : (index + 1);
                             sliderDiscovery.slick('slickGoTo', index);
                         }
                     }
@@ -165,12 +172,13 @@ $(document).ready(function () {
 
 
     $('.close').on('click', function (e) {
+        isExpand = !isExpand;
         $('.collapse-menu').toggleClass('collapsed');
         $('.content-dis').toggleClass('collapsed');
         $('.filter').toggleClass('!hidden');
         $(this).toggleClass('active');
 
-        if(windows.width() > 1180) {
+        if (windows.width() > 1180) {
             destroySlider(vm, '#slide-discovery .item-card-container');
             setTimeout(function () {
                 if ($('.content-dis').hasClass('collapsed')) {
