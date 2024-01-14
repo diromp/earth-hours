@@ -70,8 +70,10 @@ $(document).ready(function () {
                             index = Math.round((index * 2 / 3));
                             sliderDiscovery.slick('slickGoTo', index);
                         } else if (index < currentCount) {
-                            index = Math.floor((index / (2 / 3)));
-                            index = currentCount <= 4 ? (index) : (index + 1);
+                            if (index > 0) {
+                                index = Math.floor((index / (2 / 3)));
+                                index = currentCount <= 4 ? (index) : (index + 1);
+                            }
                             sliderDiscovery.slick('slickGoTo', index);
                         }
                     }
