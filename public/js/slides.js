@@ -5,7 +5,7 @@ $(document).ready(function () {
     let lastSlide = 0;
     let lastCount = 0;
 
-    const createSlider = (vm, selector, rows, responsive, arrowsElement, reset) => {
+    const createSlider = (vm, selector, rows, responsive, arrowsElement, reset, respondTo) => {
         let defaultResponsive = [
             {
                 breakpoint: 576,
@@ -39,7 +39,8 @@ $(document).ready(function () {
                 autoplay: false,
                 vertical: true,
                 appendArrows: defaulfArrow,
-                responsive: defaultResponsive
+                responsive: defaultResponsive,
+                respondTo: respondTo ? respondTo : 'window'
             });
 
             if (!reset) {
@@ -123,7 +124,7 @@ $(document).ready(function () {
                     slidesPerRow: 2
                 }
             }
-        ], vm.find('.arrows-2'), true);
+        ], vm.find('.arrows-2'), true, 'min');
     });
 
     // click back to home button
