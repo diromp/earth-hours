@@ -64,9 +64,12 @@ $(document).ready(function () {
                             sliderDiscovery.slick('slickGoTo', index);
                         } else if (index < currentCount) {
                             index = Math.floor((index / (2 / 3)));
-                            sliderDiscovery.slick('slickGoTo', index + 1);
+                            index = currentCount <= 3 ? index : (index + 1);
+                            sliderDiscovery.slick('slickGoTo', index);
                         }
                     }
+                } else {
+                    sliderDiscovery.slick('slickGoTo', 0);
                 }
             }
 
