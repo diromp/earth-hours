@@ -56,29 +56,31 @@ $(document).ready(function () {
                     if (currentCount < lastCount) {
                         if (index >= currentCount) {
                             index = Math.floor((index * 2 / 3));
-                            sliderDiscovery.slick('slickGoTo', index)
+                            sliderDiscovery.slick('slickGoTo', index, true)
                         } else if (index < currentCount) {
                             index = Math.floor((index / (2 / 3)));
-                            sliderDiscovery.slick('slickGoTo', index - 2)
+                            sliderDiscovery.slick('slickGoTo', index - 2, true)
                         }
-                    } else {
+                    } else if (currentCount > lastCount) {
                         // untuk collapse
                         if (expandedSlide) {
                             index = expandedSlide.currentSlide;
                         }
                         if (index >= currentCount) {
                             index = Math.round((index * 2 / 3));
-                            sliderDiscovery.slick('slickGoTo', index);
+                            sliderDiscovery.slick('slickGoTo', index, true);
                         } else if (index < currentCount) {
                             if (index > 0) {
                                 index = Math.floor((index / (2 / 3)));
                                 index = currentCount <= 4 ? (index) : (index + 1);
                             }
-                            sliderDiscovery.slick('slickGoTo', index);
+                            sliderDiscovery.slick('slickGoTo', index, true);
                         }
+                    } else if (currentCount === lastCount) {
+                        sliderDiscovery.slick('slickGoTo', index, true);
                     }
                 } else {
-                    sliderDiscovery.slick('slickGoTo', 0);
+                    sliderDiscovery.slick('slickGoTo', 0, true);
                 }
             }
 
