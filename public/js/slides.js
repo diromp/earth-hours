@@ -144,7 +144,70 @@ $(document).ready(function () {
                         }
                     ]);
                 }
-            }, 1000);
+            }, 100);
+        } else {
+            destroySlider(vm, '#slide-discovery .item-card-container');
+            if ($('.content-dis').hasClass('collapsed')) {
+                createSlider(vm, '#slide-discovery .item-card-container', 1, [
+                    {
+                        breakpoint: 1920,
+                        settings: {
+                            rows: 3,
+                            infinite: false,
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 1180,
+                        settings: {
+                            rows: 2,
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            rows: 1,
+                            draggable: false,
+                            vertical: false,
+                            slidesToShow: 2,
+                            slidesPerRow: 2
+                        }
+                    }
+                ]);
+            } else {
+                createSlider(vm, '#slide-discovery .item-card-container', 1, [
+                    {
+                        breakpoint: 1920,
+                        settings: {
+                            rows: 2,
+                            infinite: false,
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 1180,
+                        settings: {
+                            rows: 2,
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            rows: 1,
+                            draggable: false,
+                            vertical: false,
+                            slidesToShow: 2,
+                            slidesPerRow: 2
+                        }
+                    }
+                ]);
+            }
         }
     }
 
