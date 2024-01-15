@@ -71,7 +71,7 @@ $(document).ready(function () {
                             sliderDiscovery.slick('slickGoTo', index, true);
                         } else if (index < currentCount) {
                             if (index > 0) {
-                                index = Math.floor((index / (2 / 3)));
+                                index = Math.ceil((index / (2 / 3)));
                                 index = currentCount <= 4 ? (index) : (index + 1);
                             }
                             sliderDiscovery.slick('slickGoTo', index, true);
