@@ -5,7 +5,7 @@ $(document).ready(function () {
     let lastSlide = 0;
     let lastCount = 0;
     let expandedSlide = null;
-    let isExpand = false;
+    var isExpand = false;
 
     const createSlider = (vm, selector, rows, responsive, arrowsElement, reset, respondTo) => {
         let defaultResponsive = [
@@ -20,10 +20,10 @@ $(document).ready(function () {
                 }
             }
         ];
-        let defaulfArrow = vm.find('.arrows');
+        let defaultArrow = vm.find('.arrows');
 
         if (arrowsElement) {
-            defaulfArrow = arrowsElement
+            defaultArrow = arrowsElement
         }
         if (responsive) {
             defaultResponsive = responsive;
@@ -40,7 +40,7 @@ $(document).ready(function () {
                 arrows: true,
                 autoplay: false,
                 vertical: true,
-                appendArrows: defaulfArrow,
+                appendArrows: defaultArrow,
                 responsive: defaultResponsive,
                 respondTo: respondTo ? respondTo : 'window'
             });
@@ -97,7 +97,67 @@ $(document).ready(function () {
         });
     }
 
+    function updateSlider() {
+        if (windows.width() > 1180) {
+            destroySlider(vm, '#slide-discovery .item-card-container');
+            setTimeout(function () {
+                if ($('.content-dis').hasClass('collapsed')) {
+                    createSlider(vm, '#slide-discovery .item-card-container', 3, [
+                        {
+                            breakpoint: 1180,
+                            settings: {
+                                rows: 2,
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                            }
+                        },
+                        {
+                            breakpoint: 576,
+                            settings: {
+                                rows: 1,
+                                draggable: false,
+                                vertical: false,
+                                slidesToShow: 2,
+                                slidesPerRow: 2
+                            }
+                        }
+                    ]);
+                } else {
+                    createSlider(vm, '#slide-discovery .item-card-container', 2, [
+                        {
+                            breakpoint: 1180,
+                            settings: {
+                                rows: 2,
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                            }
+                        },
+                        {
+                            breakpoint: 576,
+                            settings: {
+                                rows: 1,
+                                draggable: false,
+                                vertical: false,
+                                slidesToShow: 2,
+                                slidesPerRow: 2
+                            }
+                        }
+                    ]);
+                }
+            }, 1000);
+        }
+    }
+
     createSlider(vm, '#slide-discovery .item-card-container', 2);
+
+    $(window).resize(
+        function () {
+            const width = $(window).width;
+            if (isExpand && width > 1281) {
+                $(".close").click();
+            }
+        }
+    );
 
     $('.event').on('click', function (e) {
         $('.slide-1').fadeOut('slow');
@@ -179,54 +239,7 @@ $(document).ready(function () {
         $('.content-dis').toggleClass('collapsed');
         $('.filter').toggleClass('!hidden');
         $(this).toggleClass('active');
-
-        if (windows.width() > 1180) {
-            destroySlider(vm, '#slide-discovery .item-card-container');
-            setTimeout(function () {
-                if ($('.content-dis').hasClass('collapsed')) {
-                    createSlider(vm, '#slide-discovery .item-card-container', 3, [
-                        {
-                            breakpoint: 1180,
-                            settings: {
-                                rows: 2,
-                                slidesToShow: 2,
-                                slidesToScroll: 1,
-                            }
-                        },
-                        {
-                            breakpoint: 576,
-                            settings: {
-                                rows: 1,
-                                draggable: false,
-                                vertical: false,
-                                slidesToShow: 2,
-                                slidesPerRow: 2
-                            }
-                        }
-                    ]);
-                } else {
-                    createSlider(vm, '#slide-discovery .item-card-container', 2, [
-                        {
-                            breakpoint: 1180,
-                            settings: {
-                                rows: 2,
-                                slidesToShow: 2,
-                                slidesToScroll: 1,
-                            }
-                        },
-                        {
-                            breakpoint: 576,
-                            settings: {
-                                rows: 1,
-                                draggable: false,
-                                vertical: false,
-                                slidesToShow: 2,
-                                slidesPerRow: 2
-                            }
-                        }
-                    ]);
-                }
-            }, 1000);
-        }
+        updateSlider();
     });
+
 });
